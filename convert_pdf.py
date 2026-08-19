@@ -55,10 +55,11 @@ def find_browser() -> str:
 
 
 def convert_html_to_pdf(html_path: str, browser: str, output_pdf_path: str = None) -> str:
+    import urllib.request
     if not output_pdf_path:
         output_pdf_path = os.path.splitext(html_path)[0] + ".pdf"
 
-    url = "file:///" + os.path.abspath(html_path).replace("\\", "/")
+    url = "file:" + urllib.request.pathname2url(os.path.abspath(html_path))
     cmd = [
         browser,
         "--headless=new",
@@ -71,9 +72,15 @@ def convert_html_to_pdf(html_path: str, browser: str, output_pdf_path: str = Non
         url,
     ]
 
-    res = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=180)
+    try:
+        res = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=60)
+        stderr_msg = res.stderr
+    except subprocess.TimeoutExpired as e:
+        # Chromium headless 有時會在產生 PDF 後卡住不結束。若檔案已成功生成則視為成功。
+        stderr_msg = f"Browser timed out after {e.timeout}s."
+
     if not os.path.exists(output_pdf_path):
-        raise RuntimeError(f"PDF 產製失敗：{html_path}\nstderr: {res.stderr}")
+        raise RuntimeError(f"PDF 產製失敗：{html_path}\nstderr: {stderr_msg}")
     return output_pdf_path
 
 

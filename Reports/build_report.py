@@ -57,8 +57,8 @@ SCRIPT_DIR    = os.path.dirname(os.path.abspath(__file__))
 REPORTS_DIR   = SCRIPT_DIR
 TEMPLATES_DIR = os.path.join(REPORTS_DIR, "templates")
 
-GOLDEN_SRC_HTML = os.path.join(REPORTS_DIR, "PaperLuz-006_2026-08-05.html")
-GOLDEN_SRC_MD   = os.path.join(REPORTS_DIR, "PaperLuz-006_2026-08-05.md")
+GOLDEN_SRC_HTML = os.path.join(REPORTS_DIR, "PaperLuz-003_2026-08-14.html")
+GOLDEN_SRC_MD   = os.path.join(REPORTS_DIR, "PaperLuz-003_2026-08-14.md")
 
 TMPL_HTML     = os.path.join(TEMPLATES_DIR, "report_template.html")
 TMPL_MD       = os.path.join(TEMPLATES_DIR, "report_template.md")
@@ -107,14 +107,14 @@ def cmd_init(args):
         html, count=1,
     )
     html = re.sub(
-        r"情報週期：\d{4}-\d{2}-\d{2} ～ \d{4}-\d{2}-\d{2}（第 \d+ 週）"
+        r"情報週期：\d{4}-\d{2}-\d{2} ～ \d{4}-\d{2}-\d{2}（\d{4}年 第 \d+ 週 每週五 出刊）"
         r"　·　發布日期：\d{4}-\d{2}-\d{2}",
-        "情報週期：{{WEEK_START}} ～ {{WEEK_END}}（第 {{WEEK_NUM}} 週）"
+        "情報週期：{{WEEK_START}} ～ {{WEEK_END}}（{{YEAR}}年 第 {{WEEK_NUM}} 週 每週五 出刊）"
         "　·　發布日期：{{PUBLISH_DATE}}",
         html, count=1,
     )
     html = re.sub(
-        r"(本期主軸：).*?(\n)",
+        r"(本期主軸\s*).*?(\n)",
         r"\g<1>{{THEME}}\g<2>",
         html, count=1,
     )
@@ -144,13 +144,12 @@ def cmd_init(args):
         r"\g<1>{{ISSUE_NUM}}\g<2>", md, count=1,
     )
     md = re.sub(
-        r"(\*\*情報週期\*\* )\d{4}-\d{2}-\d{2} ～ \d{4}-\d{2}-\d{2}"
-        r"（\d{4} 年第 \d+ 週）",
-        r"\g<1>{{WEEK_START}} ～ {{WEEK_END}}（{{YEAR}} 年第 {{WEEK_NUM}} 週）",
+        r"(\*\*情報週期\*\*：)\d{4}-\d{2}-\d{2} ～ \d{4}-\d{2}-\d{2}（\d{4}年 第 \d+ 週 每週五 出刊）",
+        r"\g<1>{{WEEK_START}} ～ {{WEEK_END}}（{{YEAR}}年 第 {{WEEK_NUM}} 週 每週五 出刊）",
         md, count=1,
     )
     md = re.sub(
-        r"(\*\*發布日\*\* )\d{4}-\d{2}-\d{2}",
+        r"(\*\*發布日期\*\*：)\d{4}-\d{2}-\d{2}",
         r"\g<1>{{PUBLISH_DATE}}", md, count=1,
     )
     md = re.sub(

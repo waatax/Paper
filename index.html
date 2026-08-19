@@ -58,6 +58,34 @@
       --shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
     }
 
+    /* ── Reading Mode (Paper Texture) ── */
+    [data-theme="paper"] {
+      --bg: #f4ecd8;
+      --bg-card: #fdfaf2;
+      --bg-card-hover: #fcf6e8;
+      --bg-glass: rgba(244, 236, 216, 0.9);
+      --fg: #3d362d;
+      --fg-muted: #756a5c;
+      --border: #e0d5ba;
+      --border-accent: #b05c36;
+      --accent: #b05c36;
+      --accent-hover: #8f4625;
+      --accent-glow: rgba(176, 92, 54, 0.15);
+      --gold: #b37700;
+      --gold-bg: #eaddb6;
+      --green: #2d7a5d;
+      --green-bg: #cce0d6;
+      --red: #b83a3a;
+      --red-bg: #eecaca;
+      --purple: #6a4a9c;
+      --purple-bg: #d9cfee;
+      --shadow: 0 4px 20px rgba(61, 54, 45, 0.08);
+    }
+
+    body[data-theme="paper"] {
+      background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -837,6 +865,7 @@
         <li><a href="#forecast">全鏈預測</a></li>
         <li><a href="#regulations">法規倒數</a></li>
         <li><a href="#calculator">敏感度試算</a></li>
+        <li><a href="#coatings">造紙塗料</a></li>
       </ul>
       <div class="nav-actions">
         <button id="themeToggle" class="theme-toggle-btn" aria-label="切換主題">
@@ -1114,10 +1143,33 @@
         </div>
       </section>
 
-      
+      <!-- ── Section: Paper Coatings & Chemicals ── -->
+      <section id="coatings" style="scroll-margin-top: 80px; margin-bottom: 60px;">
+        <div class="section-header" style="margin-bottom: 16px;">
+          <div>
+            <h2 class="section-title">造紙塗料與化工趨勢 (Paper Coatings & Chemicals)</h2>
+            <p class="section-subtitle">聚焦綠色轉型、無氟防油塗層與高附加價值功能性阻隔材料</p>
+          </div>
+        </div>
+        <div class="news-grid">
+          <div class="news-card">
+            <span class="news-tag tag-reg">Sustainability</span>
+            <h3 class="news-title">以紙代塑浪潮：生物基與水性塗料崛起</h3>
+            <p class="news-excerpt">為取代一次性塑膠包裝，並確保紙包裝具備防潮、防油功能且符合回收標準，造紙塗料產業正加速開發生物基 (Bio-based) 與水性環保塗層，這成為推動產業成長的核心動力。</p>
+          </div>
+          <div class="news-card">
+            <span class="news-tag tag-reg">Compliance</span>
+            <h3 class="news-title">無毒化與 PFAS 禁用趨勢</h3>
+            <p class="news-excerpt">因應全球對食品安全與環境健康的高標準要求（如歐盟法規），不含 PFAS（永久化學物質）的防油阻隔塗層已成為造紙化工領域研發的首要重點，並加速市場技術汰換。</p>
+          </div>
+          <div class="news-card">
+            <span class="news-tag tag-market">Innovation</span>
+            <h3 class="news-title">高功能性阻隔塗層與智慧化生產</h3>
+            <p class="news-excerpt">受惠於電商與食品配送需求，包裝用紙塗料需求大幅超越傳統印刷用紙。同時，造紙業透過導入 AI 智慧產銷，優化塗佈均勻度並提升製程效能，降低原料與能源成本。</p>
+          </div>
+        </div>
+      </section>
 
-      
-      
       <!-- ── Section: Financials ── -->
       <section id="financials" style="scroll-margin-top: 80px; margin-bottom: 60px;">
         <div class="section-header" style="margin-bottom: 16px;">
@@ -1589,15 +1641,33 @@
     const themeBtn = document.getElementById("themeToggle");
     const themeIcon = document.getElementById("themeIcon");
     const currentTheme = localStorage.getItem("paperluz_theme") || "dark";
+    
+    // Cycle: dark -> light -> paper -> dark
+    function getThemeIcon(theme) {
+      if (theme === "dark") return "☀️";
+      if (theme === "light") return "📖";
+      return "🌙"; // paper
+    }
+    
     document.documentElement.setAttribute("data-theme", currentTheme);
-    themeIcon.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+    // document.body attribute needed for background-image
+    if(currentTheme === "paper") document.body.setAttribute("data-theme", "paper");
+    themeIcon.textContent = getThemeIcon(currentTheme);
 
     themeBtn.addEventListener("click", () => {
       const now = document.documentElement.getAttribute("data-theme");
-      const next = now === "dark" ? "light" : "dark";
+      let next = "dark";
+      if (now === "dark") next = "light";
+      else if (now === "light") next = "paper";
+      
       document.documentElement.setAttribute("data-theme", next);
+      if (next === "paper") {
+        document.body.setAttribute("data-theme", "paper");
+      } else {
+        document.body.removeAttribute("data-theme");
+      }
       localStorage.setItem("paperluz_theme", next);
-      themeIcon.textContent = next === "dark" ? "☀️" : "🌙";
+      themeIcon.textContent = getThemeIcon(next);
     });
 
     // ── Radar Tab Switching ──
