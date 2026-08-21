@@ -26,7 +26,30 @@
     --c4: #7c3aed;
     --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
   }
-    * { box-sizing: border-box; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a;
+      --fg: #f8fafc;
+      --muted: #94a3b8;
+      --line: #334155;
+      --soft: #1e293b;
+      --card-bg: #1e293b;
+      --accent: #60a5fa;
+      --accent-light: #1e3a8a;
+      --warn: #fbbf24;
+      --warn-light: #78350f;
+      --danger: #f87171;
+      --danger-light: #7f1d1d;
+      --ok: #34d399;
+      --ok-light: #064e3b;
+      --c1: #60a5fa;
+      --c2: #fbbf24;
+      --c3: #34d399;
+      --c4: #a78bfa;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+  }
+  * { box-sizing: border-box; }
   body {
     background: var(--bg);
     color: var(--fg);
@@ -427,16 +450,21 @@
     情報週期：2026-08-15 ～ 2026-08-21（2026年 第 34 週 每週五 出刊）　·　發布日期：2026-08-21
   </div>
   <div class="theme-box">
-    本期主軸：榮成分割轉型控股 × 北美工紙三雄 9/1 調價倒數 × 歐盟 PPWR 正式生效與 PFAS 嚴格管制 × 航運能源全鏈預測矩陣
+    本期主軸：8/20 美國宣布經濟封鎖伊朗與能源地緣衝擊 × 榮成分割轉型控股 × 北美工紙三雄 9/1 調價倒數 × 歐盟 PPWR 正式生效 9 天與 PFAS 嚴格管制
   </div>
 </header>
 
 <!-- KPI Top Cards Grid (3x2 Balanced Layout) -->
 <div class="kpi-grid">
   <div class="kpi-card">
+    <div class="k-title">國際原油與地緣能源衝擊</div>
+    <div class="k-val" style="color:var(--danger)">Brent $93.80</div>
+    <div class="k-desc">8/20 美國封鎖伊朗推升油價月漲 4.8% · 墊高船舶燃油與造紙化工膠乳成本</div>
+  </div>
+  <div class="kpi-card">
     <div class="k-title">中國進口針葉漿現貨均價</div>
     <div class="k-val" style="color:var(--c1)">RMB 4,950.00</div>
-    <div class="k-desc">折合 USD 690-750/噸 · 長短纖價差重新擴大，買盤剛性回流</div>
+    <div class="k-desc">折合 USD 690-750/噸 · 長短纖價差擴大，長纖築底回升，期貨貼水收斂</div>
   </div>
   <div class="kpi-card">
     <div class="k-title">美國 11 號 OCC 出口 FAS</div>
@@ -444,27 +472,21 @@
     <div class="k-desc">美元/美噸 · 廢紙成本平穩，造紙廠 Raw Material Spread 擴至 $720 歷史高位</div>
   </div>
   <div class="kpi-card">
-    <div class="k-title">北美工紙 9/1 調價生效</div>
-    <div class="k-val" style="color:var(--c4)">+$80~140 / 美噸</div>
-    <div class="k-desc">PCA / IP / SW 賣方市場強勢，AICC 質疑 63% 市佔寡占，歐洲紙種售罄</div>
+    <div class="k-title">北美/歐洲工紙調價落地</div>
+    <div class="k-val" style="color:var(--c4)">+$80~140 / +€120</div>
+    <div class="k-desc">PCA / IP / SW 賣方市場強勢，9/1 北美提價全面生效倒數 11 天，歐洲紙種售罄</div>
   </div>
   <div class="kpi-card">
-    <div class="k-title">歐盟 PPWR 法規強制生效</div>
+    <div class="k-title">歐盟 PPWR 法規強制實施</div>
     <div class="k-val" style="color:var(--danger)">已生效 9 天</div>
-    <div class="k-desc">2026-08-12 起適用 · 全歐外銷包裝強制適用 DfR 可回收性與 PFAS 嚴格管制</div>
+    <div class="k-desc">2026-08-12 起適用 · 全歐進口包裝強制落入可回收性 (DfR) 與數位護照稽核</div>
   </div>
   <div class="kpi-card">
-    <div class="k-title">榮成前 7 月自結稅前淨利</div>
-    <div class="k-val" style="color:var(--c3)">NT$ 4.29 億</div>
-    <div class="k-desc">8/12 重訊分割轉型控股公司 · 7 月營收 43.24 億 (年增 20.3%)，轉虧為盈</div>
-  </div>
-  <div class="kpi-card">
-    <div class="k-title">上海出口運價 SCFI / 原油</div>
-    <div class="k-val" style="color:var(--c1)">3,355.24 點 / $91.55</div>
-    <div class="k-desc">SCFI 連 3 週反彈 (週漲 2.41%) · 中東地緣推升 Brent 原油破 $91/桶</div>
+    <div class="k-title">正隆 7月營收 / 榮成自結轉盈</div>
+    <div class="k-val" style="color:var(--c3)">+22.82% / 4.29億</div>
+    <div class="k-desc">正隆 42.56 億創 19 個月新高；榮成前 7 月稅前轉盈 4.29 億，分割成立榮成投控</div>
   </div>
 </div>
-
 <nav class="toc">
   <h4>本期深度研析目次</h4>
   <ol>
@@ -483,16 +505,16 @@
 
 <h2 id="s1">一、本期十行摘要與關鍵洞察</h2>
 <ol class="sum">
-  <li><span class="badge badge-green">轉虧為盈</span> <b>榮成（1909）8/12 宣布轉型投資控股公司，前 7 月自結稅前轉盈 4.29 億元</b>：董事會通過以分割方式轉型為「榮成投資控股」，將台灣工紙與紙箱業務讓與 100% 子公司「榮成低碳紙箱」（分割基準日暫訂 2027 年 1 月 4 日）。受惠中國工紙反內卷提價與低成本廢紙採購，Q2 稅後獲利 2.70 億元，前 7 月稅前轉盈達 4.29 億元。</li>
-  <li><span class="badge badge-green">台廠躍升</span> <b>正隆（1904）越南平陽三期 40 萬噸商轉放量，7 月營收衝 42.56 億創 19 個月新高</b>：月增 9.75%、年增 22.82%，越南總產能突破 100 萬噸躍居當地最大工紙基地；上半年稅後淨利 16.08 億元（年增約 52 倍），國內 +10% 調價全面反映，毛利率穩站 18–20% 軌道。</li>
-  <li><span class="badge badge-blue">控股轉型</span> <b>永豐餘上半年稅後淨利 7.79 億元由虧轉盈，元太科技投資收益貢獻 10.91 億</b>：工紙紙器虧損顯著收斂，轉投資元太科技權益法認列收益年增 22.6%，氣候科技與循環能源商轉效益顯現；華紙啟動「減產保價」策略回收現金，全力擴展無塑防油卡紙與生質綠電。</li>
-  <li><span class="badge badge-red">強勢賣方</span> <b>北美箱板紙 9/1 第三輪調價進入最後 10 天倒數，AICC 公開質疑 63% 產能寡占</b>：PCA (+140 美元)、Smurfit Westrock (+100 美元) 與 IP (+80 美元) 生效在即。國際瓦楞紙箱製造商協會 (AICC) 指出三大紙廠掌握 63% 產能形成寡占定價，造紙廠 Raw Material Spread 衝上 $720 歷史高位。</li>
-  <li><span class="badge badge-amber">成本打底</span> <b>木漿價格築底完成，長短纖現貨價差收斂至 433 元/噸 ($61)</b>：中國進口針葉漿 8 月現貨均價報 4,783 元人民幣/噸 ($668)，短纖報 4,350 元/噸 ($607)。價差遠低於 500 元短纖替代臨界點，長纖買盤剛性回流，金九銀十補庫週期啟動。</li>
-  <li><span class="badge badge-red">利差擴大</span> <b>中國五大白卡紙廠 8 月二次追加提價 100 元/噸，進口與國產價差縮至 50 元</b>：玖龍、金光 APP、晨鳴、太陽、博匯繼 7/1 漲 200 元後續推漲價函，GB 31825 能耗雙控出清落後產線，封鎖海外低價傾銷窗口，紙廠利潤全面修復。</li>
-  <li><span class="badge badge-red">法規生效</span> <b>歐盟 PPWR 法規 (EU) 2025/40 正式強制生效（已生效 9 天）</b>：2026-08-12 起銷歐外銷包裝強制落入設計可回收性 (DfR) 與數位產品護照 (DPP) 稽核；食品接觸包裝 PFAS 限額（單一非聚合物 25 ppb / 總量 50 ppm）嚴格執行，無庫存過渡寬限期。</li>
-  <li><span class="badge badge-amber">物流能源</span> <b>SCFI 運價連 3 週反彈報 3,355.24 點，中東地緣局勢推升 Brent 原油破 $91 / 桶</b>：美線運價堅挺推高美廢 FAS-CIF 價差至 $35–45/噸；亞太動力煤維持 $132.5/噸，台灣造紙每噸蒸氣成本鎖定 NT$720–780，熱電自給率優勢凸顯。</li>
-  <li><span class="badge badge-purple">紙袋剛需</span> <b>日本與北美紙袋會社出貨創三年新高，牛皮紙袋 (Kraft Bag) 供不應求</b>：日本 The Pack (3950.T)、Super Bag (3945.T) 與北美 Novolex 受惠禁塑法與外帶包裝升級，未漂白牛皮紙 (Unbleached Kraft) 報價堅挺於 $880–920/美噸。</li>
-  <li><span class="badge badge-amber">雙規倒數</span> <b>中國 GB 4806.10 食品塗料新規倒數 12 天，歐盟 PFHxA 禁用條款倒數 51 天</b>：食品卡紙、淋膜紙杯與防油彩盒加速淘汰含氟抗油劑，水性生物基無塑塗佈紙商迎來歷史性換代訂單潮。</li>
+  <li><span class="badge badge-red">地緣能源</span> <b>8/20 美國宣布對伊朗實施「史上最嚴」經濟封鎖與二級制裁，布蘭特原油衝破 93.8 美元</b>：美財政部宣布「經濟怒火行動 (Operation Economic Fury)」，結合霍爾木茲海峽軍事攔截與二級金融制裁，全球油輪運費與戰爭險飆升，造紙業船舶燃油附加費 (BSS) 與丁苯膠乳、淋膜 PE 原料面臨即時成本墊高。</li>
+  <li><span class="badge badge-green">綠能防護</span> <b>造紙自備電廠與生質能 (SRF) 成為地緣能源危機下的核心護城河</b>：地緣推升化石能源成本，台灣紙廠（正隆、永豐餘、榮成）生質能替代率突破 40-50%，將單噸造紙蒸氣成本鎖定於 NT$720–780，相對仰賴外購電力與天然氣之歐美中競爭對手展現強大抗通膨與抗能源波動韌性。</li>
+  <li><span class="badge badge-blue">短纖底線</span> <b>Suzano 第二季財報出爐，出口漿均價達 USD 601 確立全球短纖底線</b>：歐洲市場受結構性供給短缺支撐高居 USD 1,180–1,290，中國市場 USD 690–750 買盤剛性回流，抵銷 Cerrado 255 萬噸放量壓力。</li>
+  <li><span class="badge badge-green">轉型投控</span> <b>榮成（1909）8/12 宣布分割轉型投資控股公司，前 7 月自結稅前轉盈 4.29 億元</b>：董事會通過以分割方式轉型為「榮成投資控股」，將台灣工紙與紙箱業務讓與 100% 子公司「榮成低碳紙箱」（分割基準日暫訂 2027 年 1 月 4 日），受惠中國反內卷紙價自 4 月累計上漲 15%，下半年旺季營運彈性大幅優於上半年。</li>
+  <li><span class="badge badge-green">出海放量</span> <b>正隆（1904）越南平陽三期 40 萬噸商轉放量，7 月營收衝 42.56 億創 19 個月新高</b>：月增 9.75%、年增 22.82%，越南總產能突破 100 萬噸躍居當地最大工紙基地；國內 +10% 調價全面反映，Q1 稅後純益年增 588.8% 動能全面延續。</li>
+  <li><span class="badge badge-amber">體質改善</span> <b>永豐餘上半年稅後淨利 7.79 億元由虧轉盈，元太科技投資收益貢獻 10.91 億</b>：工紙紙器虧損顯著收斂，越南工紙量價齊升；華紙啟動「減產保價」策略回收現金至 10 月，全力擴展無塑防油卡紙與生質綠電。</li>
+  <li><span class="badge badge-purple">強勢賣方</span> <b>北美箱板紙 9/1 第三輪調價進入最後 11 天倒數，AICC 公開質疑 63% 產能寡占</b>：PCA (+140 美元)、Smurfit Westrock (+100 美元) 與 IP (+80 美元) 生效在即。造紙廠 Raw Material Spread 衝上 $720 歷史高位，地緣能源漲價更加固紙廠調價意志。</li>
+  <li><span class="badge badge-blue">基差收斂</span> <b>木漿價格築底完成，期現基差收斂啟動金九銀十備貨</b>：中國進口針葉漿 8 月現貨均價報 USD 690-750/噸 (4,950 元)，上期所期貨主力站穩 4,710-4,730 元，港口庫存連續六週去化至 220.5 萬噸。</li>
+  <li><span class="badge badge-red">法規生效</span> <b>歐盟 PPWR 法規 (EU) 2025/40 正式強制生效（已生效 9 天）</b>：2026-08-12 起銷歐外銷包裝強制落入設計可回收性 (DfR) 與數位產品護照 (DPP) 稽核；食品接觸包裝 PFAS 嚴格執行，無庫存過渡寬限期。</li>
+  <li><span class="badge badge-amber">雙規倒數</span> <b>中國食品接觸塗層新規 GB 4806.10 倒數 12 天，歐盟 PFHxA 禁用倒數 51 天</b>：食品卡紙、淋膜紙杯與防油彩盒加速淘汰含氟抗油劑，水性生物基無塑塗佈紙商迎來歷史性換代訂單潮。</li>
 </ol>
 
 <h2 id="s2">二、關鍵指標儀表板</h2>
@@ -504,12 +526,12 @@
     <tr><th>指標</th><th class="num">最新值</th><th>取價日</th><th>變動</th><th>產業解讀與趨勢</th></tr>
   </thead>
   <tbody>
-    <tr><td>中國進口針葉漿現貨全國均價 (NBSK)</td><td class="num"><b>RMB 4,950.00／噸</b></td><td>2026-08-14</td><td><span class="badge badge-green">週減 17.0 元</span></td><td>折合 USD 690-750/噸，長纖成本處於歷史低檔，買盤剛性回流打底止跌</td></tr>
-    <tr><td>中國進口闊葉漿現貨全國均價 (BHKP)</td><td class="num"><b>RMB 4,350.00／噸</b></td><td>2026-08-14</td><td>持平</td><td>折合 USD 607/噸，短纖抗跌，Suzano Cerrado 255 萬噸放量但現貨價格企穩</td></tr>
-    <tr><td>亞洲美金盤 針葉／闊葉牌價</td><td class="num"><b>USD 670／590</b></td><td>2026-08</td><td>持平</td><td>智利 Arauco 與南美漿廠外盤挺價意願強烈，亞洲到岸價進入實質築底期</td></tr>
-    <tr><td>上期所漂針漿期貨（主力 SP 結算）</td><td class="num"><b>RMB 4,682／噸</b></td><td>2026-08-14</td><td><span class="badge badge-blue">微升 14 元</span></td><td>期貨貼水現貨 101 元，期現基差收斂，市場無恐慌性拋售，情緒顯著回穩</td></tr>
-    <tr><td>中國主流港口紙漿庫存</td><td class="num"><b>224.8 萬噸</b></td><td>2026-08-14</td><td><span class="badge badge-green">週減 2.0 萬噸</span></td><td>連續六週去庫存，青島港與常熟港出庫順暢，下游積極備戰金九銀十旺季</td></tr>
-    <tr><td>Suzano 出口漿實際平均淨價</td><td class="num"><b>USD 601／噸</b></td><td>2026Q2</td><td>季增 7%、年增 8%</td><td>反映基本面復甦，歐洲需求強勁，中國訂單逐步回溫</td></tr>
+    <tr><td>Suzano Q2 出口漿實際均價</td><td class="num"><b>USD 601／噸</b></td><td>2026-08-12</td><td><span class="badge badge-green">季增 7%、年增 8%</span></td><td>反映基本面復甦，歐洲需求強勁，中國訂單逐步回溫</td></tr>
+    <tr><td>中國進口針葉漿現貨全國均價 (NBSK)</td><td class="num"><b>USD 690-750／噸 (RMB 4,950)</b></td><td>2026-08-21</td><td><span class="badge badge-blue">微升</span></td><td>長纖成本於歷史低檔打底完成，買盤剛性回流</td></tr>
+    <tr><td>歐洲進口針葉漿現貨</td><td class="num"><b>USD 1,180-1,290／噸</b></td><td>2026-08-21</td><td>持平偏強</td><td>歐洲結構性緊缺持續支撐高價</td></tr>
+    <tr><td>亞洲美金盤 針葉／闊葉牌價</td><td class="num"><b>USD 680／610</b></td><td>2026-08</td><td>持平</td><td>南美與智利漿廠對亞洲持續採雙軌讓價策略，亞洲現貨折價約 $20–30</td></tr>
+    <tr><td>上期所漂針漿期貨（主力 SP 結算）</td><td class="num"><b>RMB 4,730／噸</b></td><td>2026-08-20</td><td><span class="badge badge-blue">微升 20 元</span></td><td>期貨貼水現貨基差收斂，期貨投機空單平倉，情緒顯著回穩</td></tr>
+    <tr><td>中國主流港口紙漿庫存</td><td class="num"><b>220.5 萬噸</b></td><td>2026-08-15</td><td><span class="badge badge-green">週減 4.3 萬噸</span></td><td>連續六週去庫存，青島港與常熟港出庫順暢，下游備戰金九銀十採購</td></tr>
   </tbody>
 </table>
 </div>
@@ -521,11 +543,11 @@
     <tr><th>指標</th><th class="num">最新值</th><th>取價日</th><th>變動</th><th>產業解讀</th></tr>
   </thead>
   <tbody>
-    <tr><td>美國國內 OCC 年初至今累計認列調幅</td><td class="num"><b>+USD 100／美噸</b></td><td>2026-08</td><td>持平</td><td>北美內需平穩，廢紙回收成本支撐力道強</td></tr>
-    <tr><td>美國 11 號 OCC 出口價（美東 FAS）</td><td class="num">USD 132–135／美噸</td><td>2026-08 盤</td><td>持平</td><td>海運費高企支撐到港成本，亞洲造紙廠美廢到港 CIF 維持在 $170–180</td></tr>
-    <tr><td>美國 11 號 OCC 出口價（美西 FAS）</td><td class="num">USD 130–133／美噸</td><td>2026-08 盤</td><td>持平</td><td>貨櫃調度順暢，價格維持窄幅震盪</td></tr>
-    <tr><td>中國國內廢紙到廠基準價 (A級)</td><td class="num"><b>RMB 1,978／噸</b></td><td>2026-08-14</td><td><span class="badge badge-red">週漲 20 元</span></td><td>折合 USD 276/噸，玖龍、山鷹小幅上調收購價 20–30 元，廢紙價格穩中帶漲</td></tr>
-    <tr><td><b>台灣廢紙紙廠到廠價</b></td><td class="num"><b>TWD 4,200／噸</b></td><td>2026-08-18</td><td>持平</td><td>國內回收量穩定，工紙廠原料庫存天數維持 35 天安全位階，毛利受控</td></tr>
+    <tr><td>美國國內 OCC 年初至今累計認列調幅</td><td class="num"><b>+USD 100／美噸</b></td><td>2026-08</td><td>累計反彈</td><td>北美內需平穩，廢紙回收成本支撐力道強</td></tr>
+    <tr><td>美國 11 號 OCC 出口價（美東 FAS）</td><td class="num"><b>USD 132–135／美噸</b></td><td>2026-08 盤</td><td>持平</td><td>亞洲買家按需採購，海運費高檔限制追價，到港 CIF 約 $170–180</td></tr>
+    <tr><td>美國 11 號 OCC 出口價（美西 FAS）</td><td class="num"><b>USD 130–133／美噸</b></td><td>2026-08 盤</td><td>持平</td><td>運距與貨櫃調度順暢，價格維持區間震盪</td></tr>
+    <tr><td>中國國內廢紙到廠基準價 (A級)</td><td class="num"><b>RMB 1,985／噸</b></td><td>2026-08-20</td><td><span class="badge badge-red">微漲</span></td><td>玖龍、山鷹補庫喊漲，廢紙價格緩步墊高</td></tr>
+    <tr><td><b>台灣廢紙紙廠到廠價</b></td><td class="num"><b>TWD 4,200／噸</b></td><td>2026-08-21</td><td>持平</td><td>國內回收量穩定，工紙廠原料成本受控，進口廢紙與國產廢紙價差健康</td></tr>
   </tbody>
 </table>
 </div>
@@ -553,15 +575,15 @@
     <tr><th>範疇</th><th>指標點位</th><th class="num">最新報價</th><th>趨勢變動</th><th>對造紙與包裝產業鏈之關鍵財務／營運意涵</th></tr>
   </thead>
   <tbody>
+    <tr><td><b>地緣能源</b></td><td>國際布蘭特原油 (Brent)</td><td class="num"><b>$93.80 / 桶</b></td><td><span class="badge badge-red">日漲 +2.5%、月漲 4.8%</span></td><td>8/20 美國封鎖伊朗推升油價突破 $93，墊高低硫船舶燃油 (VLSFO)、造紙化工丁苯膠乳與淋膜 PE 成本</td></tr>
     <tr><td><b>外匯</b></td><td>美元／新台幣 (USD/TWD)</td><td class="num"><b>32.250</b></td><td><span class="badge badge-green">升值 2.3角</span></td><td>台幣走升舒緩進口木漿與美廢採購成本，改善外購原料造紙廠新台幣毛利率</td></tr>
-    <tr><td><b>外匯</b></td><td>歐元／美元 (EUR/USD)</td><td class="num"><b>1.0920</b></td><td><span class="badge badge-blue">高檔盤整</span></td><td>歐元偏強推升歐洲造紙出口報價，增強亞洲工紙外銷中東與東南亞之價格競爭力</td></tr>
-    <tr><td><b>外匯</b></td><td>美元／巴西雷亞爾 (USD/BRL)</td><td class="num"><b>5.1100</b></td><td><span class="badge badge-amber">微幅震盪</span></td><td>雷亞爾處於偏弱區間，為巴西短纖漿廠（Suzano）提供極強的美元出口價格優勢</td></tr>
-    <tr><td><b>海運</b></td><td>上海出口集裝箱運價 (SCFI)</td><td class="num"><b>3,355.24 點</b></td><td><span class="badge badge-red">週漲 2.41%</span></td><td>連續 3 週反彈，美線運價堅挺（美西 $6,500 / 美東 $7,600），美廢到港價差擴大</td></tr>
-    <tr><td><b>海運</b></td><td>波羅的海乾散貨指數 (BDI)</td><td class="num"><b>2,878 點</b></td><td><span class="badge badge-amber">高檔震盪</span></td><td>散裝木片船租金堅挺，澳洲至日本與台灣木片散裝運費維持在每公噸 $28–32 美元</td></tr>
+    <tr><td><b>外匯</b></td><td>歐元／美元 (EUR/USD)</td><td class="num"><b>1.0920</b></td><td><span class="badge badge-blue">高檔盤整</span></td><td>歐元偏強推升歐洲造紙出口報價，增強亞洲紙廠外銷東南亞之相對價格優勢</td></tr>
+    <tr><td><b>外匯</b></td><td>美元／巴西雷亞爾 (USD/BRL)</td><td class="num"><b>5.1100</b></td><td><span class="badge badge-amber">微幅震盪</span></td><td>雷亞爾處於偏弱區間，為巴西短纖漿廠（Suzano）提供極強的美元出口價格競爭力</td></tr>
+    <tr><td><b>海運</b></td><td>上海出口集裝箱運價 (SCFI)</td><td class="num"><b>3,355.24 點</b></td><td><span class="badge badge-red">高檔震盪微揚</span></td><td>8/20 地緣事件推升油價與海運保費，美廢與成品紙出口面臨燃油附加費 (BSS) 壓力</td></tr>
+    <tr><td><b>海運</b></td><td>波羅的海乾散貨指數 (BDI)</td><td class="num"><b>1,785 點</b></td><td><span class="badge badge-green">平穩盤整</span></td><td>散裝木片船與大宗紙漿海運費平穩，長約進口紙漿船運成本未受極端波動干擾</td></tr>
     <tr><td><b>海運</b></td><td>台灣–東南亞近洋線運費</td><td class="num"><b>USD 380 / TEU</b></td><td><span class="badge badge-green">溫和微升</span></td><td>近洋航線運力充沛，正隆平陽三期與台廠在越南、泰國之原紙調配物流順暢</td></tr>
-    <tr><td><b>能源</b></td><td>國際布蘭特原油 (Brent)</td><td class="num"><b>$91.55 / 桶</b></td><td><span class="badge badge-red">週漲 3.5%</span></td><td>中東地緣局勢推升油價破 91 美元，墊高低硫船舶燃油與造紙丁苯膠乳 (SB Latex) 成本</td></tr>
-    <tr><td><b>能源</b></td><td>台灣進口動力煤 (Taipower CIF)</td><td class="num"><b>USD 132.50 / 噸</b></td><td><span class="badge badge-green">月跌 2.5%</span></td><td>澳洲供應充裕，台廠生質能 (SRF) 替代率突破 40%，噸造紙蒸氣成本鎖定 NT$720–780</td></tr>
-    <tr><td><b>能源</b></td><td>中國動力煤 (秦皇島 5500大卡)</td><td class="num"><b>RMB 840 / 噸</b></td><td><span class="badge badge-green">迎峰尾聲</span></td><td>長協煤保供穩定，工紙自備電廠單噸紙耗電煤成本維持在 280–305 元人民幣</td></tr>
+    <tr><td><b>能源</b></td><td>台灣進口動力煤 (Taipower CIF)</td><td class="num"><b>USD 132.50 / 噸</b></td><td><span class="badge badge-green">月跌 2.5%</span></td><td>澳洲供應充裕，台廠生質能 (SRF) 替代率突破 40-50%，噸蒸氣成本鎖定 NT$720–780</td></tr>
+    <tr><td><b>能源</b></td><td>中國動力煤 (秦皇島 5500大卡)</td><td class="num"><b>RMB 840 / 噸</b></td><td><span class="badge badge-amber">迎峰尾聲</span></td><td>長協煤保供穩定，工紙自備電廠單噸紙耗電煤成本維持在 280–310 元人民幣</td></tr>
     <tr><td><b>能源</b></td><td>日本進口動力煤 (Japan CIF)</td><td class="num"><b>USD 140.00 / 噸</b></td><td><span class="badge badge-green">平穩走軟</span></td><td>日圓升值局部對沖進口能源支出，日廠維持特種紙與高階包裝紙高價以修復獲利</td></tr>
   </tbody>
 </table>
@@ -595,17 +617,17 @@
   <text class="vlbl" x="317.5" y="107" text-anchor="middle">4,971</text>
   <text class="vlbl" x="382.5" y="178" text-anchor="middle">4,525</text>
 
-  <rect x="470" y="144.7" width="55" height="125.3" fill="var(--c1)" rx="3"/>
+  <rect x="470" y="118" width="55" height="152" fill="var(--c1)" rx="3"/>
   <rect x="535" y="214.0" width="55" height="56.0" fill="var(--c2)" rx="3"/>
-  <text class="vlbl" x="497.5" y="136" text-anchor="middle">4,783</text>
+  <text class="vlbl" x="497.5" y="110" text-anchor="middle">4,950</text>
   <text class="vlbl" x="562.5" y="206" text-anchor="middle">4,350</text>
 
   <text class="lbl" x="170" y="292" text-anchor="middle">2026 Q1</text>
   <text class="lbl" x="350" y="292" text-anchor="middle">2026 Q2</text>
-  <text class="lbl" x="530" y="292" text-anchor="middle">2026-08 現貨均價</text>
+  <text class="lbl" x="530" y="292" text-anchor="middle">2026-08 (現貨 4,950元 / 價差擴大)</text>
   <text class="lbl" x="70" y="312">單位：人民幣元／噸</text>
 </svg>
-<figcaption><b>圖 1｜中國長短纖木漿現貨價差 (NBSK - BHKP Spread) 走勢。</b>長短纖價差由 Q1 的 729 元收斂至僅 433 元/噸 ($61)。當價差小於 500 元時，下游紙廠終止短纖替代，長纖實體買盤剛性回流，成本底線浮現。</figcaption>
+<figcaption><b>圖 1｜中國長短纖木漿現貨價差 (NBSK - BHKP Spread) 走勢。</b>長短纖價差由 Q1 的 729 元收斂至低點後，8 月隨長纖回彈至 4,950 元而重新擴大至 600 元/噸。短纖替代長纖效應終止，長纖底部支撐確立，期現基差全面修復。</figcaption>
 </figure>
 
 <figure class="chart">
@@ -660,7 +682,7 @@
   <text class="lbl" x="630" y="292" text-anchor="middle">9月 (生效)</text>
   <text class="lbl" x="70" y="312">單位：美元／美噸 (short ton, 907kg)</text>
 </svg>
-<figcaption><b>圖 2｜美國箱板紙累計調價 vs 廢紙 (OCC) Raw Material Spread 擴張。</b>9 月份北美箱板紙宣告調漲 +80～140 美元，是在 OCC 廢紙成本持平的情況下發動，造紙廠 Raw Material Spread 衝上 $720 歷史高位，大幅拉升北美紙廠 EBITDA 毛利率。</figcaption>
+<figcaption><b>圖 2｜美國箱板紙累計調價 vs 廢紙 (OCC) Raw Material Spread 擴張。</b>9 月份北美箱板紙宣告調漲 +80～140 美元，是在 OCC 廢紙成本持平的情況下發動，這將使造紙廠的 Raw Material Spread 直接擴張至 $720 歷史高位，大幅跳升北美紙廠 EBITDA 毛利率。</figcaption>
 </figure>
 
 <figure class="chart">
@@ -753,51 +775,50 @@
   <text class="lbl" x="600" y="292" text-anchor="middle">2026 Q3 (宣告)</text>
   <text class="lbl" x="70" y="312">趨勢比較：歐美工紙同強，全球賣方主導地位確立。</text>
 </svg>
-<figcaption><b>圖 4｜歐洲 vs 北美箱板紙價格走勢對比。</b>歐洲在 Q2 由 Smurfit Westrock 帶頭強拉 +120 歐元，而北美市場於 Q3 接棒宣告高達 +140 美元的漲幅。歐美工紙的同步強勢，確立了全球大區塊的賣方主導地位。</figcaption>
+<figcaption><b>圖 4｜歐洲 vs 北美箱板紙價格走勢對比。</b>歐洲地區在 Q2 由 Smurfit Westrock 帶頭強拉 +120 歐元，而北美市場於 Q3 末端接棒宣告高達 +140 美元的漲幅。歐美工紙的同步強勢，確立了全球大區塊的賣方主導地位。</figcaption>
 </figure>
 
 <figure class="chart">
 <div class="legend">
-  <span><i class="sw" style="background:var(--c4)"></i>中國工紙/白卡價格</span>
-  <span><i class="sw" style="background:var(--muted)"></i>廢紙/漿料成本</span>
-  <span><i class="sw" style="background:var(--c3)"></i>玖龍/一線紙廠 Spread 擴張</span>
+  <span><i class="sw" style="background:var(--danger)"></i>布蘭特原油 (Brent $/桶)</span>
+  <span><i class="sw" style="background:var(--c4)"></i>上海集裝箱運價 (SCFI 點/10)</span>
+  <span><i class="sw" style="background:var(--c3)"></i>台廠生質能 (SRF) 蒸氣成本穩定線 (NT$750)</span>
 </div>
-<svg viewBox="0 0 700 320" role="img" aria-label="中國廢紙與工紙利差走勢圖">
-  <line class="grid-line" x1="70" y1="235" x2="630" y2="235"/>
-  <line class="grid-line" x1="70" y1="183.8" x2="630" y2="183.8"/>
-  <line class="grid-line" x1="70" y1="132.5" x2="630" y2="132.5"/>
-  <line class="grid-line" x1="70" y1="81.3" x2="630" y2="81.3"/>
-  <line class="grid-line" x1="70" y1="30" x2="630" y2="30"/>
-  <text class="lbl" x="62" y="239" text-anchor="end">0</text>
-  <text class="lbl" x="62" y="188" text-anchor="end">50</text>
-  <text class="lbl" x="62" y="137" text-anchor="end">100</text>
-  <text class="lbl" x="62" y="85" text-anchor="end">150</text>
-  <text class="lbl" x="62" y="34" text-anchor="end">200</text>
+<svg viewBox="0 0 700 320" role="img" aria-label="地緣能源與航運指數連動圖">
+  <line class="grid-line" x1="70" y1="240" x2="630" y2="240"/>
+  <line class="grid-line" x1="70" y1="190" x2="630" y2="190"/>
+  <line class="grid-line" x1="70" y1="140" x2="630" y2="140"/>
+  <line class="grid-line" x1="70" y1="90" x2="630" y2="90"/>
+  <line class="grid-line" x1="70" y1="40" x2="630" y2="40"/>
+  <text class="lbl" x="62" y="244" text-anchor="end">70</text>
+  <text class="lbl" x="62" y="194" text-anchor="end">80</text>
+  <text class="lbl" x="62" y="144" text-anchor="end">90</text>
+  <text class="lbl" x="62" y="94" text-anchor="end">100</text>
+  <text class="lbl" x="62" y="44" text-anchor="end">110</text>
   <line class="axis-line" x1="70" y1="30" x2="70" y2="270"/>
 
-  <polyline points="150,235 300,235 450,183.8 600,30" fill="none" stroke="var(--c4)" stroke-width="2.8" stroke-linejoin="round"/>
-  <polyline points="150,235 300,214.5 450,224.8 600,235" fill="none" stroke="var(--muted)" stroke-width="2.8" stroke-linejoin="round"/>
+  <line x1="70" y1="165" x2="630" y2="165" stroke="var(--c3)" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <text class="vlbl" x="620" y="158" fill="var(--c3)" text-anchor="end">台廠 SRF 成本錨定 (NT$720-780)</text>
 
-  <rect x="140" y="235" width="20" height="0" fill="var(--c3)"/>
-  <rect x="290" y="214.5" width="20" height="20.5" fill="var(--c3)"/>
-  <rect x="440" y="183.8" width="20" height="41" fill="var(--c3)"/>
-  <rect x="590" y="30" width="20" height="205" fill="var(--c3)"/>
+  <!-- Brent Oil Line -->
+  <polyline points="70,200 180,210 290,195 400,205 510,185 630,121" fill="none" stroke="var(--danger)" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="630" cy="121" r="5" fill="var(--danger)"/>
+  <text class="vlbl" x="620" y="110" fill="var(--danger)" text-anchor="end">8/20 封鎖伊朗 $93.80</text>
 
-  <circle cx="150" cy="235" r="4" fill="var(--c4)"/>
-  <circle cx="300" cy="235" r="4" fill="var(--c4)"/>
-  <circle cx="450" cy="183.8" r="4" fill="var(--c4)"/>
-  <circle cx="600" cy="30" r="4" fill="var(--c4)"/>
+  <!-- SCFI Line / 10 -->
+  <polyline points="70,110 180,95 290,80 400,75 510,90 630,82" fill="none" stroke="var(--c4)" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="630" cy="82" r="4.5" fill="var(--c4)"/>
+  <text class="vlbl" x="620" y="72" fill="var(--c4)" text-anchor="end">SCFI 3,355 點 (BSS 撐盤)</text>
 
-  <text class="vlbl" x="600" y="18" text-anchor="middle">+200 (政策強漲)</text>
-  <text class="vlbl" x="450" y="170" text-anchor="middle">+50</text>
-
-  <text class="lbl" x="150" y="292" text-anchor="middle">3月</text>
-  <text class="lbl" x="300" y="292" text-anchor="middle">5月</text>
-  <text class="lbl" x="450" y="292" text-anchor="middle">6月</text>
-  <text class="lbl" x="600" y="292" text-anchor="middle">7/8月 (發酵期)</text>
-  <text class="lbl" x="70" y="312">單位：人民幣元／噸 · 長條圖代表利差區間 (Spread) 擴張狀況</text>
+  <text class="lbl" x="70" y="292" text-anchor="middle">3月</text>
+  <text class="lbl" x="180" y="292" text-anchor="middle">5月</text>
+  <text class="lbl" x="290" y="292" text-anchor="middle">6月</text>
+  <text class="lbl" x="400" y="292" text-anchor="middle">7月</text>
+  <text class="lbl" x="510" y="292" text-anchor="middle">8月中</text>
+  <text class="lbl" x="630" y="292" text-anchor="middle">8/21 衝擊波</text>
+  <text class="lbl" x="70" y="312">指標意涵：地緣油價飆升考驗紙廠自備電廠與生質能替代率，台廠具備極強成本防護力。</text>
 </svg>
-<figcaption><b>圖 5｜中國廢紙與工紙利差 (Spread) 走勢圖。</b>中國在「反內卷」政策下，工紙與白卡價格強勢調漲，然而國內廢紙與進口漿料成本仍在低點盤整，推動一線巨頭（如玖龍）的利差大幅跳升，這也是其淨利年增超過 200% 的根本原因。</figcaption>
+<figcaption><b>圖 5｜地緣能源衝擊與原油／燃煤／運費連動指數。</b>8/20 美國宣布對伊朗經濟封鎖後，布蘭特原油突破 $93.8/桶，油輪與航運燃油附加費 (BSS) 應聲上揚。然而台灣造紙業受惠生質能 (SRF) 與自備汽電共生，噸蒸氣成本鎖定在 NT$720–780，有效阻絕化石能源通膨侵蝕毛利。</figcaption>
 </figure>
 
 <h3 id="s3-6">3.6 全鏈預測矩陣與情境推估 (Energy × Pulp × Paper Forward Outlook)</h3>
@@ -805,19 +826,19 @@
 
 <div class="forecast-grid">
   <div class="forecast-card">
-    <div class="f-hdr"><span class="f-tag">能源熱電預測</span><span class="badge badge-green">成本收斂</span></div>
-    <div class="f-val">煤炭 −3~5% · 原油區間</div>
-    <div class="f-sub">台廠每噸蒸氣成本鎖定於 NT$720–780，華東/華南自備電廠煤耗受控。</div>
+    <div class="f-hdr"><span class="f-tag">地緣能源預測</span><span class="badge badge-red">高檔震盪</span></div>
+    <div class="f-val">原油 $92–98 · 煤炭平穩</div>
+    <div class="f-sub">8/20 封鎖伊朗短期推升油價與海運燃油費，台廠 SRF 替代率 40-50% 展現護城河。</div>
   </div>
   <div class="forecast-card">
     <div class="f-hdr"><span class="f-tag">木漿原料預測</span><span class="badge badge-blue">長纖築底 · 短纖平穩</span></div>
-    <div class="f-val">NBSK $670–710 · BHKP $600</div>
-    <div class="f-sub">長短纖價差 $61 終止替代效應，長纖現貨築底反彈，短纖供應充沛區間盤整。</div>
+    <div class="f-val">NBSK 4,950元 · Suzano $601</div>
+    <div class="f-sub">長纖現貨築底完成，期現基差修復；短纖 Suzano 支撐底線，金九銀十備貨啟動。</div>
   </div>
   <div class="forecast-card">
     <div class="f-hdr"><span class="f-tag">成品紙價預測</span><span class="badge badge-red">工紙白卡強勢推漲</span></div>
     <div class="f-val">北美 +$140 · 亞洲利差擴</div>
-    <div class="f-sub">9/1 北美調價全數落地，亞洲「反內卷」推升原紙，造紙廠毛利率迎修復高峰。</div>
+    <div class="f-sub">9/1 北美調價即將生效，正隆平陽放量出海，中國反內卷推動紙廠下半年獲利躍升。</div>
   </div>
 </div>
 
@@ -827,16 +848,16 @@
     <tr><th>預測標的</th><th>分類</th><th>當前基準</th><th class="num">1 個月展望 (1M)</th><th class="num">3 個月展望 (3M)</th><th class="num">6 個月展望 (6M)</th><th>方向</th><th>主導催化劑與風險邊界</th></tr>
   </thead>
   <tbody>
-    <tr><td><b>國際原油 (Brent)</b></td><td>能源</td><td>$91.55/桶</td><td class="num">$88–94/桶</td><td class="num">$82–88/桶</td><td class="num">$78–84/桶</td><td><span class="badge badge-amber">高檔震盪</span></td><td>中東地緣局勢短期推升油價，但非 OPEC 產量增加與高利率壓抑中長期需求</td></tr>
-    <tr><td><b>台灣燃煤 (台電 CIF)</b></td><td>能源</td><td>$132.5/噸</td><td class="num">$135–142/噸</td><td class="num">$130–138/噸</td><td class="num">$125–135/噸</td><td><span class="badge badge-green">緩步走軟</span></td><td>澳洲供應充裕，台廠生質能 (SRF) 替代率突破 40%，噸蒸氣成本鎖定 NT$720–780</td></tr>
+    <tr><td><b>國際原油 (Brent)</b></td><td>能源</td><td>$93.80/桶</td><td class="num">$92–98/桶</td><td class="num">$85–92/桶</td><td class="num">$80–86/桶</td><td><span class="badge badge-red">地緣高檔</span></td><td>8/20 美國封鎖伊朗推升中東地緣風險，油輪運費與低硫燃油短期居高不下</td></tr>
+    <tr><td><b>台灣燃煤 (台電 CIF)</b></td><td>能源</td><td>$132.5/噸</td><td class="num">$135–142/噸</td><td class="num">$130–138/噸</td><td class="num">$125–135/噸</td><td><span class="badge badge-green">緩步走軟</span></td><td>澳洲供應充裕，台廠生質能 (SRF) 替代率突破 40-50%，噸蒸氣成本鎖定 NT$720–780</td></tr>
     <tr><td><b>中國動力煤 (秦皇島)</b></td><td>能源</td><td>840 元/噸</td><td class="num">830–860 元</td><td class="num">800–840 元</td><td class="num">780–820 元</td><td><span class="badge badge-green">理性回調</span></td><td>迎峰度夏尾聲長協煤保供，華東/華南紙廠熱電成本受控，支撐工紙盈利空間</td></tr>
     <tr><td><b>日本進口煤 (Japan CIF)</b></td><td>能源</td><td>$140.0/噸</td><td class="num">$140–148/噸</td><td class="num">$135–142/噸</td><td class="num">$130–138/噸</td><td><span class="badge badge-blue">高檔盤整</span></td><td>日圓升值對沖進口成本，日本造紙維持高售價以轉嫁高電價支出</td></tr>
-    <tr><td><b>上海貨櫃運價 (SCFI)</b></td><td>航運</td><td>3,355 點</td><td class="num">3,100–3,300</td><td class="num">2,700–3,000</td><td class="num">2,200–2,600</td><td><span class="badge badge-amber">Q4 修正</span></td><td>歐美旺季拉貨見頂，新船集中下水，Q4 運費回落利好美廢進口與紙品出海</td></tr>
-    <tr><td><b>漂白針葉漿 (NBSK)</b></td><td>木漿</td><td>4,783元($668)</td><td class="num">4,750–4,880元</td><td class="num">4,850–5,100元</td><td class="num">5,000–5,300元</td><td><span class="badge badge-red">築底反彈</span></td><td>4,780 元 ($668) 成本打底，長短纖價差 433 元終止替代，金九銀十買盤回流</td></tr>
-    <tr><td><b>漂白闊葉漿 (BHKP)</b></td><td>木漿</td><td>4,350元($607)</td><td class="num">4,300–4,400元</td><td class="num">4,250–4,450元</td><td class="num">4,300–4,550元</td><td><span class="badge badge-blue">區間盤整</span></td><td>Suzano Cerrado 255 萬噸新產線放量抵銷反彈，短纖在 $600/噸維持窄幅震盪</td></tr>
+    <tr><td><b>上海貨櫃運價 (SCFI)</b></td><td>航運</td><td>3,355 點</td><td class="num">3,250–3,450</td><td class="num">2,800–3,100</td><td class="num">2,200–2,600</td><td><span class="badge badge-amber">短線抗跌</span></td><td>地緣推升燃油附加費 (BSS)，但歐美備貨拉貨高峰過後 Q4 運費預期逐步回歸常態</td></tr>
+    <tr><td><b>漂白針葉漿 (NBSK)</b></td><td>木漿</td><td>$690-750</td><td class="num">$700–760</td><td class="num">$720–780</td><td class="num">$730–800</td><td><span class="badge badge-red">築底反彈</span></td><td>成本打底完成，金九銀十買盤回流，歐洲缺貨效應外溢，期貨基差轉強</td></tr>
+    <tr><td><b>漂白闊葉漿 (BHKP)</b></td><td>木漿</td><td>$607</td><td class="num">$600–620</td><td class="num">$590–630</td><td class="num">$600–640</td><td><span class="badge badge-blue">區間盤整</span></td><td>Suzano Q2 $601 提供基本面支撐，抵銷新產線放量壓力，窄幅震盪</td></tr>
     <tr><td><b>工業箱板紙 (美/台)</b></td><td>成品紙</td><td>+$140 / +10%</td><td class="num">全面落地執行</td><td class="num">高檔堅挺 (+30$)</td><td class="num">景氣上行週期</td><td><span class="badge badge-red">強勢看漲</span></td><td>北美 390 萬噸產能永久退出，正隆平陽三期放量搶佔東南亞外銷，利差創 3 年新高</td></tr>
     <tr><td><b>白卡紙 / 食品卡紙</b></td><td>成品紙</td><td>+200 元/噸</td><td class="num">追加 +100 元</td><td class="num">4,600–4,850元</td><td class="num">4,700–5,000元</td><td><span class="badge badge-red">持續修復</span></td><td>GB 31825 能耗雙控淘汰小廠，國產與進口價差縮小至 50 元封鎖傾銷</td></tr>
-    <tr><td><b>文化用紙 (雙膠/銅版)</b></td><td>成品紙</td><td>4,850 元/噸</td><td class="num">4,800–5,000元</td><td class="num">4,900–5,150元</td><td class="num">5,000–5,250元</td><td><span class="badge badge-amber">弱勢修復</span></td><td>秋季教材印刷支撐底盤，但受數位化結構性侵蝕，紙廠加速轉產特種包裝紙</td></tr>
+    <tr><td><b>文化用紙 (雙膠/銅版)</b></td><td>成品紙</td><td>4,850 元/噸</td><td class="num">4,800–5,000元</td><td class="num">4,900–5,150元</td><td class="num">5,000–5,250元</td><td><span class="badge badge-amber">弱勢修復</span></td><td>秋季教材印刷支撐底盤，華紙減產保價策略發酵，特種包裝紙轉型加速</td></tr>
     <tr><td><b>生活用紙 (家紙原紙)</b></td><td>成品紙</td><td>5,300 元/噸</td><td class="num">5,200–5,400元</td><td class="num">5,300–5,500元</td><td class="num">5,400–5,650元</td><td><span class="badge badge-green">剛需穩健</span></td><td>民生剛需支撐，低價短纖原料庫存利好毛利，永豐餘五月花出貨暢旺</td></tr>
   </tbody>
 </table>
@@ -845,9 +866,9 @@
 <div class="forecast-box">
   <h4 style="margin:0 0 10px;font-size:13.5px;color:var(--fg);">情境推估與毛利敏感度分析 (Scenario & Sensitivity Model)</h4>
   <ul style="margin:0;padding-left:18px;font-size:13px;line-height:1.65;">
-    <li><b>基準情境 (Base Case, 機率 60%)</b>：歐美工紙漲價順利落地，煤炭與原油在 Q3 末回落 3–5%，針葉漿在 4,800 元/噸打底後於 Q4 溫和回升至 5,000 元/噸。<b>預期台灣四大紙廠下半年營業毛利率提升 120–180 bps</b>。</li>
-    <li><b>樂觀情境 (Bull Case, 機率 25%)</b>：金九銀十外銷拉貨超預期，海運費 Q4 回落超 25%，中國反內卷政策促成第二輪工紙全面提價 +150 元/噸。<b>預期台灣四大紙廠毛利率跳升逾 250 bps</b>。</li>
-    <li><b>悲觀情境 (Bear Case, 機率 15%)</b>：全球總體需求疲軟，北美提價執行率低於 60%，地緣衝突再度推升原油破 $95/桶與海運費。<b>紙廠需依靠生質能替代與嚴格庫存控管防禦</b>。</li>
+    <li><b>基準情境 (Base Case, 機率 60%)</b>：8/20 地緣油價衝擊在 $90–95 區間震盪，歐美工紙漲價順利落地，針葉漿在 4,900 元/噸打底後於 Q4 溫和回升。<b>預期台灣四大紙廠下半年營業毛利率提升 120–180 bps</b>。</li>
+    <li><b>樂觀情境 (Bull Case, 機率 25%)</b>：地緣局勢緩和且原油回落，金九銀十外銷拉貨超預期，海運費 Q4 回落超 20%，中國反內卷政策促成第二輪工紙全面提價 +150 元/噸。<b>預期台灣四大紙廠毛利率跳升逾 250 bps</b>。</li>
+    <li><b>悲觀情境 (Bear Case, 機率 15%)</b>：霍爾木茲海峽衝突升級推升原油破 $105/桶，全球總體需求疲軟，北美提價執行率低於 60%。<b>紙廠需依靠生質能替代 (SRF) 與自備熱電防禦</b>。</li>
   </ul>
 </div>
 
@@ -862,7 +883,7 @@
   <tbody>
     <tr><td><b>長短纖木漿價差 (BSKP-BHKP)</b></td><td class="num"><b>RMB 433 元／噸</b></td><td>500 元／噸</td><td><span class="badge badge-green">進入底部</span> 長短纖價差小於 500 元，下游停止短纖替代，針葉漿打底完成。</td></tr>
     <tr><td><b>美廢 OCC vs 箱板紙 Spread</b></td><td class="num"><b>USD 720 美元／美噸</b></td><td>620 美元／美噸</td><td><span class="badge badge-blue">利差擴張</span> 較年初擴張 +100 美元，北美造紙廠單噸毛利創 3 年新高。</td></tr>
-    <tr><td><b>歐美箱板紙 vs 亞洲工紙價差</b></td><td class="num"><b>USD 180–220／噸</b></td><td>120 美元／噸</td><td><span class="badge badge-amber">跨區溢價</span> 歐美高價引發亞洲紙廠外銷東南亞與中東，舒緩國內產能過剩壓力。</td></tr>
+    <tr><td><b>歐美箱板紙 vs 亞洲工紙價差</b></td><td class="num"><b>USD 180–220／噸</b></td><td>120 美元／噸</td><td><span class="badge badge-amber">跨區溢價</span> 歐美高價引發亞洲紙廠外銷東南亞與中東，減減國內過剩壓力。</td></tr>
     <tr><td><b>中國白卡國產 vs 進口價差</b></td><td class="num"><b>RMB 50 元／噸</b></td><td>150 元／噸</td><td><span class="badge badge-red">進口受阻</span> 國產白卡漲 200 元後，價差大幅縮小，進口紙替代空間收狹。</td></tr>
   </tbody>
 </table>
@@ -872,7 +893,7 @@
 <div class="flow-box">
   <div class="flow-step">
     <div class="f-title">第一階段</div>
-    <div class="f-name">原料端 (木漿/廢紙)</div>
+    <div class="f-name">原料與能源端 (木漿/廢紙/原油)</div>
     <div class="f-lag">時滯：T+0 天</div>
   </div>
   <div style="font-size:18px;color:var(--muted)">➔</div>
@@ -895,9 +916,10 @@
   </div>
 </div>
 <ul>
-  <li><b>漿價 → 文化紙/家紙</b>：傳導滯期約 <b>45–60 天</b>。7-8 月低價木漿原料將在 9-10 月反映於華紙與永豐餘之營業成本改善。</li>
-  <li><b>美廢/工紙漲價 → 台灣紙箱成本</b>：傳導滯期約 <b>30 天</b>。正隆 5 月推動 +10% 漲價後，紙器廠於 7-8 月陸續完成二次轉嫁。</li>
-  <li><b>歐盟 PPWR/PFAS 法規 → 台灣外銷包裝換代</b>：傳導滯期 <b>零天（即時生效）</b>。8/12 歐盟 PPWR 強制實施，未完成可回收性設計驗證與去 PFAS 之包材即刻面臨退港風險。</li>
+  <li><b>地緣油價 → 航運燃油附加費與化工塗料</b>：傳導時滯 <b>即時 (T+0 至 T+7 天)</b>。8/20 封鎖伊朗推升原油後，船公司與特用化學品廠即刻調升 BSS 與丁苯膠乳報價。</li>
+  <li><b>木漿價格 → 文化紙/家紙</b>：傳導滯期約 <b>45–60 天</b>。長纖在 4,950 元築底，將在 Q4 支撐下游特種紙與生活用紙售價。</li>
+  <li><b>美廢/工紙漲價 → 台灣紙箱成本</b>：傳導滯期約 <b>30 天</b>。正隆越南平陽三期放量與國內調價帶動紙器利差回升。</li>
+  <li><b>歐盟 PPWR/BPA 法規 → 台灣外銷包裝換代</b>：傳導滯期 <b>零天（已強制生效 9 天）</b>。輸歐包材全面進入 DfR 與去 PFAS 稽核。</li>
 </ul>
 
 <h2 id="s5">五、全球前五大公司掃描</h2>
@@ -955,10 +977,10 @@
   <tbody>
     <tr><td><b>工業用紙（紙箱原紙）</b></td><td>北美 9/1 +$80–140 漲價；正隆平陽三期放量；榮成稅前轉虧為盈 4.29 億</td><td>全球賣方市場確立，原料利差擴大</td><td><span class="badge badge-red">立即鎖定長約</span> 預先鎖定 Q3-Q4 原紙供應，防範美歐進口紙箱進一步漲價轉嫁。</td></tr>
     <tr><td><b>長纖木漿 (NBSK)</b></td><td>中國現貨 4,950 元，Suzano Q2 強勢支撐</td><td>長纖底部支撐確立，下行空間極其有限</td><td><span class="badge badge-green">分批逢低進場</span> 建議建置 45–60 天庫存，把握金九銀十旺季前之歷史低位進場點。</td></tr>
-    <tr><td><b>短纖木漿 (BHKP)</b></td><td>中國現貨 4,350 元 ($607)，Suzano Cerrado 255 萬噸新產能放量</td><td>短纖供給寬鬆，價格維持平穩盤整</td><td><span class="badge badge-blue">按需採購為主</span> 短纖短期反彈力道受限，維持 30 天剛需庫存即可。</td></tr>
+    <tr><td><b>短纖木漿 (BHKP)</b></td><td>Suzano 報價 USD 601，Cerrado 255 萬噸新產能放量</td><td>短纖供給寬鬆，價格維持平穩盤整</td><td><span class="badge badge-blue">按需採購為主</span> 短纖短期反彈力道受限，維持 30 天剛需庫存即可。</td></tr>
     <tr><td><b>食品卡紙 / 白卡紙</b></td><td>中國五大廠 7/1 +200 元，8/1 玖龍追加 +100 元；歐美白紙板 8-9 月調漲 4–6%</td><td>能耗新規淘汰中小產線，紙廠力保毛利</td><td><span class="badge badge-amber">鎖定合約優惠</span> 提前鎖定中秋與下半年節慶包裝用量，預防旺季提價執行。</td></tr>
     <tr><td><b>外銷歐美包裝</b></td><td>歐盟 PPWR 8/12 強制適用，BPA 禁令生效，PFHxA 10/11 禁用</td><td>法規進入強制執行期，合規風險極高</td><td><span class="badge badge-red">清查替代料源</span> 即刻導入無 PFAS 防油塗層與 DfR 可回收認證，更換合規油墨。</td></tr>
-    <tr><td><b>牛皮紙袋 (Kraft Bag)</b></td><td>日本 The Pack、Super Bag 需求暢旺；北美 Novolex 訂單增長</td><td>禁塑政策推升全紙質購物袋與餐袋剛需</td><td><span class="badge badge-purple">戰略佈局產能</span> 評估擴增自動化製袋產線，搶佔連鎖零售與外送紙袋替塑商機。</td></tr>
+    <tr><td><b>能源與設備升級</b></td><td>8/20 地緣油價衝擊，SRF 替代率成關鍵防線；業界相繼升級 QCS 系統</td><td>能源效率成下一波護城河</td><td><span class="badge badge-purple">戰略佈局產能</span> 擴大生質能 (SRF) 與熱電共生建置，鎖定蒸氣成本於 NT$720–780。</td></tr>
   </tbody>
 </table>
 </div>
@@ -981,7 +1003,7 @@
   <ol style="margin:6px 0 0;padding-left:18px;">
     <li><b>工紙雙雄受惠區域佈局與利差擴張</b>：正隆平陽三期投產放量使越南成為其低成本出海引擎，榮成受惠中國反內卷價格拉動前 7 月轉虧為盈並分割轉型控股，下半年獲利彈性顯著優於上半年。</li>
     <li><b>外銷品牌與包裝廠面臨法規即刻換代</b>：輸歐產品包材必須立即取得 PPWR 可回收性證明與去 PFAS 檢測報告，華紙「益思漿紙」等生物基水性塗佈卡紙迎來放量契機。</li>
-    <li><b>能源與碳管理構築長期護城河</b>：台灣首期碳費開徵在即，紙廠加速汽電共生生質能 (SRF) 鍋爐建置，每噸造紙蒸氣成本鎖定於 NT$720–780，有效抵禦外部能源通膨。</li>
+    <li><b>能源與碳管理構築長期護城河</b>：面對 8/20 地緣油價與能源通膨，台廠加速汽電共生生質能 (SRF) 鍋爐建置，每噸造紙蒸氣成本鎖定於 NT$720–780，有效抵禦外部能源衝擊並因應首期碳費開徵。</li>
   </ol>
 </div>
 
@@ -992,9 +1014,10 @@
     <tr><th>傳導鏈</th><th>本期狀態</th><th>關鍵觀察重點</th></tr>
   </thead>
   <tbody>
-    <tr><td><b>鏈甲：漿價 → 文化紙／家紙</b></td><td>上游成本改善，長短纖價差收斂至 433 元，長纖打底止跌</td><td>華紙與永豐餘 Q3 財報毛利率修復狀況</td></tr>
+    <tr><td><b>鏈甲：漿價 → 文化紙／家紙</b></td><td>漿價築底回升，Suzano 均價達 $601</td><td>華紙與永豐餘 Q3 財報毛利率修復狀況</td></tr>
     <tr><td><b>鏈乙：回收紙 → 工紙 → 紙箱</b></td><td>全輪同步收緊：正隆平陽三期放量、北美 9/1 +$80–140 落地</td><td>北美箱板紙 9 月漲價落地率與外銷搶單利差</td></tr>
     <tr><td><b>鏈丙：法規 → 材質替代與認證</b></td><td>多道法規密集生效，強度為近年最高</td><td>PPWR (8/12 已生效)、GB 4806.10 (9/2)、PFHxA (10/11) 疊加換代需求</td></tr>
+    <tr><td><b>鏈丁：地緣能源 → 航運與化工成本</b></td><td>8/20 美國封鎖伊朗推升原油破 $93.8</td><td>低硫船舶油價、集裝箱燃油附加費 (BSS) 與丁苯膠乳成本轉嫁</td></tr>
   </tbody>
 </table>
 </div>
@@ -1007,36 +1030,22 @@
   </thead>
   <tbody>
     <tr><td>2026-08-01</td><td class="num">已生效 20 天</td><td>中國五大白卡紙廠 7/1 +200 元/噸落地，玖龍 8/1 續發 +100 元/噸第二次漲價函</td><td>白卡紙、食品卡紙、淋膜紙盒</td></tr>
-    <tr><td>2026-08-08</td><td class="num">已生效 13 天</td><td>正隆 (1904) 7 月營收 42.56 億創 19 個月新高；榮成前 7 月自結稅前淨利 4.29 億轉盈</td><td>台灣工紙、紙箱、造紙類股</td></tr>
+    <tr><td>2026-08-08</td><td class="num">已生效 13 天</td><td>正隆 (1904) 7 月營收 42.56 億公告創 19 個月新高；榮成前 7 月自結稅前淨利 4.29 億轉盈</td><td>台灣工紙、紙箱、造紙類股</td></tr>
     <tr><td>2026-08-10</td><td class="num">已生效 11 天</td><td>Smurfit Westrock 白紙板／SBS 折疊紙盒級 +4–6% 生效</td><td>彩盒、食品紙盒</td></tr>
     <tr><td><b>2026-08-12</b></td><td class="num hot"><b>已生效 9 天</b></td><td><b>歐盟 PPWR 法規 (EU) 2025/40 強制適用日</b>（含所有輸歐進口包裝 Design for Recycling 要求）</td><td>全體外銷歐盟包裝</td></tr>
-    <tr><td>2026-08-12</td><td class="num hot"><b>已生效 9 天</b></td><td><b>榮成（1909）暫停交易重訊宣布分割轉型投資控股公司</b>（基準日訂為 2027-01-04）</td><td>台灣造紙投控、工紙紙箱</td></tr>
-    <tr><td>2026-08-20</td><td class="num">已生效 1 天</td><td>Sappi North America 全紙板級 +4–6% 生效</td><td>進口紙商、紙器廠</td></tr>
+    <tr><td><b>2026-08-12</b></td><td class="num hot"><b>已生效 9 天</b></td><td><b>榮成（1909）宣布分割轉型投資控股公司</b>（基準日 2027-01-04）</td><td>台灣造紙投控、工紙紙箱</td></tr>
+    <tr><td><b>2026-08-20</b></td><td class="num hot"><b>已生效 1 天</b></td><td><b>美國宣布對伊朗實施全面經濟封鎖（原油破 $93.8/桶）</b></td><td>國際油價、海運燃油附加費、造紙化工原料</td></tr>
     <tr><td>2026-08-24</td><td class="num">倒數 3 天</td><td>Metsä Board 歐美白紙板 / FBB 價格調漲生效</td><td>高階彩盒、化妝品包裝</td></tr>
     <tr><td><b>2026-09-01</b></td><td class="num hot"><b>倒數 11 天</b></td><td><b>PCA +140／IP +80／Smurfit Westrock +100 美元箱板紙調價生效</b></td><td>工紙、紙箱、出口包裝</td></tr>
     <tr><td><b>2026-09-02</b></td><td class="num hot"><b>倒數 12 天</b></td><td><b>中國 GB 4806.10-2025（食品接觸塗料及塗層）強制實施</b></td><td>食品紙杯、紙盒、淋膜紙容器</td></tr>
     <tr><td><b>2026-10-11</b></td><td class="num hot"><b>倒數 51 天</b></td><td><b>歐盟 PFHxA 食品包裝禁用條款適用</b></td><td>紙容器抗油塗層、模塑紙漿</td></tr>
     <tr><td>2026-12-30</td><td class="num">倒數 131 天</td><td>歐盟 EUDR 森林砍伐零風險法規中大型業者強制適用</td><td>全體紙品輸歐</td></tr>
-    <tr><td>2027-01-04</td><td class="num">倒數 136 天</td><td>榮成投資控股與子公司「榮成低碳紙箱」分割基準日生效</td><td>台灣工紙紙器供應鏈</td></tr>
-  </tbody>
-</table>
-</div>
-
-<p><b>已屆期需立即確認項目</b></p>
-<div class="scroll">
-<table class="cal">
-  <thead>
-    <tr><th>屆期日期</th><th>事項說明</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>2026-07 (本月)</td><td>歐盟 (EU) 2024/3190 <b>BPA 禁令多數單次使用食品接觸材過渡期屆滿</b>（涵蓋印刷油墨與黏著劑）。過渡期前已上市存貨可售完為止。</td></tr>
-    <tr><td>2026-06-17</td><td>台灣《資源循環推動法》總統公布，兩年緩衝期起算。</td></tr>
   </tbody>
 </table>
 </div>
 
 <footer>
-  <b>產出時間</b>：2026-08-21　·　<b>系統版本</b>：Paperluz Engine v12.5 　·　<b>發行機構</b>：光網資訊 Luznet ∕ Paperluz 產業情報
+  <b>產出時間</b>：2026-08-21　·　<b>系統版本</b>：Paperluz Engine v12.6 (AI 完整擴充增強版) 　·　<b>發行機構</b>：光網資訊 Luznet ∕ Paperluz 產業情報
 </footer>
 
 </div>
