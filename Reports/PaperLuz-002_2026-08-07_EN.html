@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paperluz Industry Weekly Issue 002 | 2026-08-07</title>
+<style>
+
+  :root {
+    --bg: #ffffff;
+    --fg: #0f172a;
+    --muted: #475569;
+    --line: #cbd5e1;
+    --soft: #f8fafc;
+    --card-bg: #ffffff;
+    --accent: #1e40af;
+    --accent-light: #dbeafe;
+    --warn: #b45309;
+    --warn-light: #fef3c7;
+    --danger: #b91c1c;
+    --danger-light: #fee2e2;
+    --ok: #047857;
+    --ok-light: #d1fae5;
+    --c1: #2563eb;
+    --c2: #d97706;
+    --c3: #059669;
+    --c4: #7c3aed;
+    --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a;
+      --fg: #f8fafc;
+      --muted: #94a3b8;
+      --line: #334155;
+      --soft: #1e293b;
+      --card-bg: #1e293b;
+      --accent: #60a5fa;
+      --accent-light: #1e3a8a;
+      --warn: #fbbf24;
+      --warn-light: #78350f;
+      --danger: #f87171;
+      --danger-light: #7f1d1d;
+      --ok: #34d399;
+      --ok-light: #064e3b;
+      --c1: #60a5fa;
+      --c2: #fbbf24;
+      --c3: #34d399;
+      --c4: #a78bfa;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 28px 20px;
+    font-size: 14.5px;
+  }
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  header {
+    border-bottom: 2px solid var(--fg);
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+  .brand {
+    font-size: 12.5px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 8px 0 10px;
+    color: var(--fg);
+    letter-spacing: -.02em;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+  .meta {
+    font-size: 13.5px;
+    color: var(--muted);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .theme-box {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    padding: 12px 16px;
+    margin-top: 14px;
+    font-size: 14.5px;
+    font-weight: 600;
+    border-radius: 0 8px 8px 0;
+    color: var(--fg);
+  }
+
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 22px 0 26px;
+  }
+  @media (max-width: 768px) {
+    .kpi-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+  }
+  .kpi-card {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  }
+  .kpi-card .k-title {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .kpi-card .k-val {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 4px 0 6px;
+    letter-spacing: -.03em;
+    font-variant-numeric: tabular-nums;
+  }
+  .kpi-card .k-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+
+  h2 {
+    font-size: 19px;
+    border-bottom: 2px solid var(--fg);
+    padding-bottom: 6px;
+    margin: 36px 0 16px;
+    color: var(--fg);
+    font-weight: 800;
+    letter-spacing: -.01em;
+  }
+  h3 {
+    font-size: 15.5px;
+    margin: 24px 0 12px;
+    color: var(--fg);
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+    font-weight: 700;
+  }
+
+  .scroll { overflow-x: auto; margin: 14px 0 20px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    text-align: left;
+  }
+  th, td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  th {
+    background: var(--soft);
+    font-weight: 700;
+    color: var(--fg);
+    white-space: nowrap;
+  }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr:hover td { background: rgba(241,245,249,.6); }
+  td.hot { font-weight: 800; color: var(--danger); }
+
+  .badge {
+    display: inline-block;
+    padding: 2.5px 8px;
+    border-radius: 5px;
+    font-size: 11.5px;
+    font-weight: 700;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .badge-red { background: var(--danger-light); color: var(--danger); }
+  .badge-amber { background: var(--warn-light); color: var(--warn); }
+  .badge-green { background: var(--ok-light); color: var(--ok); }
+  .badge-blue { background: var(--accent-light); color: var(--accent); }
+  .badge-purple { background: #ede9fe; color: var(--c4); }
+
+  .lede {
+    background: var(--soft);
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .note {
+    border-left: 4px solid var(--warn);
+    background: var(--soft);
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 13.5px;
+    border-radius: 0 8px 8px 0;
+  }
+  .gap {
+    border-left: 4px solid var(--danger);
+    background: var(--soft);
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 13.5px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .forecast-box {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 18px 0;
+    background: var(--soft);
+    box-shadow: var(--shadow);
+  }
+  .forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 14px 0;
+  }
+  @media (max-width: 768px) {
+    .forecast-grid { grid-template-columns: 1fr; }
+  }
+  .forecast-card {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .f-term { font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--muted); letter-spacing: 0.05em; }
+  .f-val { font-size: 18px; font-weight: 800; margin: 4px 0; font-variant-numeric: tabular-nums; }
+  .f-dir { font-size: 12px; font-weight: 700; }
+  .f-desc { font-size: 11.5px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+  .chart-box {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 18px 12px;
+    margin: 16px 0 24px;
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+  }
+  .chart-box h4 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--fg);
+  }
+  .chart-sub {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .chart-box svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .chart-caption {
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 10px;
+    line-height: 1.5;
+    border-top: 1px solid var(--line);
+    padding-top: 8px;
+  }
+
+  footer {
+    border-top: 2px solid var(--fg);
+    padding-top: 18px;
+    margin-top: 48px;
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  footer .footer-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  footer .f-badge {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  @media print {
+    body { padding: 0; font-size: 12px; }
+    .wrap { max-width: 100%; }
+    .kpi-card, .chart-box, .forecast-box, tr { page-break-inside: avoid; }
+  }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">PAPERLUZ · INDUSTRY INTELLIGENCE WEEKLY</div>
+    <h1>Paperluz Industry Weekly · Issue 002</h1>
+    <div class="meta">
+      <span><b>Coverage</b>: 2026-08-01 ~ 2026-08-07 (2026 Week 32)</span>
+      <span>·</span>
+      <span><b>Published</b>: 2026-08-07</span>
+      <span>·</span>
+      <span><b>Publisher</b>: Luznet Intelligence</span>
+    </div>
+    <div class="theme-box">
+      <b>Core Theme</b>: EU PPWR 5-Day Countdown × Comprehensive PFAS Phase-Out × Top 5 Paper Packaging Mega-Trends for 2026
+    </div>
+  </header>
+
+  <div class="kpi-grid">
+
+    <div class="kpi-card">
+      <div class="k-title">China Import NBSK Pulp Spot</div>
+      <div class="k-val" style="color:var(--c1)">$672 / MT</div>
+      <div class="k-desc">RMB 4,800/t · Soft/Hardwood spread $47/MT · Sub halted</div>
+    </div>
+    <div class="kpi-card">
+      <div class="k-title">US OCC #11 Export FAS</div>
+      <div class="k-val" style="color:var(--c2)">$130–135</div>
+      <div class="k-desc">USD/short ton · Fiber costs flat · Mill Spread reaches $720/t</div>
+    </div>
+    <div class="kpi-card">
+      <div class="k-title">NA / EU Containerboard Hikes</div>
+      <div class="k-val" style="color:var(--c4)">+$140 / +€120</div>
+      <div class="k-desc">PCA / IP / Smurfit dominant seller's market · Sept 1 effective</div>
+    </div>
+    <div class="kpi-card">
+      <div class="k-title">EU PPWR Mandatory Law</div>
+      <div class="k-val" style="color:var(--danger)">Countdown: 5 Days</div>
+      <div class="k-desc">2026-08-12 mandatory · DfR compliance audit alert</div>
+    </div>
+    <div class="kpi-card">
+      <div class="k-title">China Ivory Board Hike</div>
+      <div class="k-val" style="color:var(--c1)">+$28 / MT</div>
+      <div class="k-desc">+RMB 200/MT · APP, Nine Dragons & Sun Paper lead sector</div>
+    </div>
+    <div class="kpi-card">
+      <div class="k-title">Long Chen H1 Performance</div>
+      <div class="k-val" style="color:var(--ok)">Turnaround</div>
+      <div class="k-desc">Chinese packaging market rebound · Taiwan spin-off planned</div>
+    </div>
+
+  </div>
+
+
+  <h2>I. Executive 10-Line Summary & Key Insights</h2>
+  <div class="lede">
+    <b>1. EU PPWR Enters Final 5-Day Countdown</b>: Starting 2026-08-12, all EU-bound commercial packaging enters mandatory Design for Recycling (DfR) and Digital Product Passport (DPP) compliance.<br>
+    <b>2. Comprehensive Phase-Out of PFAS & BPA Across Packaging Chains</b>: Following the July expiration of BPA exemptions, the EU PFHxA ban (Oct 11) is driving unprecedented demand for fluorine-free aqueous barrier board.<br>
+    <b>3. Top 5 Paper Packaging Mega-Trends Established for 2026</b>: Plastic substitution, DfR lightweighting, aqueous dispersion barriers, DPP traceability, and high-barrier kraft bags.<br>
+    <b>4. North American Containerboard Price Hikes Solidify</b>: PCA (+$140/t), IP (+$80/t), and Smurfit Westrock (+$100/t) Sept 1 adjustments backed by 3.9M MT of Americas mill closures.<br>
+    <b>5. Virgin Wood Pulp Consolidates at Cost Floor</b>: China NBSK at $672/MT (RMB 4,800) and BHKP at $625/MT (RMB 4,480); $47/MT spread maintains bottom price discipline.<br>
+    <b>6. US OCC Export Prices Stable, Raw Material Spread Reaches $720/t</b>: US #11 OCC export FAS held at $130–135/short ton, generating historic gross margins for packaging mills.<br>
+    <b>7. Long Chen Secures H1 Turnaround</b>: Chinese containerboard price recovery (+15% since April) delivered profitable H1 earnings ahead of holding restructuring.<br>
+    <b>8. Cheng Loong Expands Southeast Asian Leadership</b>: Vietnam Binh Duong Phase 3 operates near full capacity, supporting an 18–20% H2 gross margin trajectory.<br>
+    <b>9. Energy & Steam Cost Containment in Asian Mills</b>: >40% solid recovered fuel (SRF) biomass power caps steam energy costs at $22.5–24.2/MT (NT$720–780).<br>
+    <b>10. China GB 4806.10 Food Coating Standard Countdown at 26 Days</b>: Strict migration limits effective Sept 2 accelerate the phase-out of fluorinated food containers.
+  </div>
+
+  <h2>II. Key Indicators Dashboard</h2>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Indicator</th><th>Latest Value (USD)</th><th>Benchmark Date</th><th>Change</th><th>Market Interpretation & Trend</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>China NBSK Spot Nationwide Avg</td><td class="num hot">$672 / MT (RMB 4,800)</td><td>2026-08-07</td><td>Stable</td><td>Softwood cost support firm; buying interest returning</td></tr>
+        <tr><td>China BHKP Spot Nationwide Avg</td><td class="num">$625 / MT (RMB 4,480)</td><td>2026-08-07</td><td>Stable</td><td>Hardwood supply ample; Suzano Cerrado volume flowing smoothly</td></tr>
+        <tr><td>US #11 OCC Export (FAS Avg)</td><td class="num">$132 / short ton</td><td>2026-08-07</td><td>Flat</td><td>Raw Material Spread remains at historic $720/t peak</td></tr>
+        <tr><td>Taiwan Domestic OCC Delivered Mill</td><td class="num">$130 / MT (NT$4,200)</td><td>2026-08-07</td><td>Flat</td><td>Domestic collection balanced; feedstock costs under control</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>III. Top 5 Paper Packaging Mega-Trends for 2026</h2>
+  <div class="note">
+    <b>1. Plastic-to-Paper Acceleration</b>: Replacement of single-use plastics in food and e-commerce packaging.<br>
+    <b>2. Design for Recycling (DfR) Optimization</b>: Minimizing mixed-material laminates to ensure >95% fiber yield in standard repulping systems.<br>
+    <b>3. PFAS-Free Water-Based Dispersion Coatings</b>: High-performance aqueous barrier boards replacing traditional PE extrusion coatings.<br>
+    <b>4. Digital Product Passport (DPP) Integration</b>: Full digital traceability of fiber origin and environmental footprint.<br>
+    <b>5. High-Strength Unbleached Kraft Paper Growth</b>: Surge in retail and food-delivery demand driving premium unbleached packaging papers.
+  </div>
+
+  <div class="forecast-box">
+    <h3 style="margin-top:0">Full-Chain Forward Forecast Matrix (Energy × Pulp × Paper)</h3>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr><th>Commodity</th><th>Base</th><th>1M Outlook</th><th>3M Outlook</th><th>6M Outlook</th><th>Trend</th><th>Primary Drivers</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>Brent Crude</b></td><td>$80.50/bbl</td><td>$78–83</td><td>$75–81</td><td>$72–79</td><td><span class="badge badge-amber">Softening</span></td><td>Macro headwinds & refinery maintenance ease resin/chemical costs</td></tr>
+          <tr><td><b>Taiwan Coal CIF</b></td><td>$142.5/MT</td><td>$136–143</td><td>$130–138</td><td>$126–134</td><td><span class="badge badge-green">Declining</span></td><td>Australian supply ample; mill biomass keeps steam costs at $22.5-24.2/MT</td></tr>
+          <tr><td><b>NBSK Softwood</b></td><td>$672/MT</td><td>$668–685</td><td>$680–720</td><td>$700–745</td><td><span class="badge badge-red">Rebound</span></td><td>Cost support established; seasonal restocking starting in Sept</td></tr>
+          <tr><td><b>BHKP Hardwood</b></td><td>$625/MT</td><td>$605–625</td><td>$590–620</td><td>$600–630</td><td><span class="badge badge-blue">Range-bound</span></td><td>Suzano Cerrado supply absorbs market demand, capping hardwood surges</td></tr>
+          <tr><td><b>Containerboard</b></td><td>+$140 / +10%</td><td>Full Realization</td><td>Firm (+30$)</td><td>Strong</td><td><span class="badge badge-purple">Bullish</span></td><td>Americas mill closures tighten supply; Asian export demand expanding</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2>IV. Global Regulations & 90-Day Milestones</h2>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Days Out</th><th>Regulation / Commercial Milestone</th><th>Impacted Sectors</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2026-08-10</td><td>3 Days</td><td>Smurfit Westrock Folding Boxboard / SBS +4–6% Effective</td><td>Folding cartons, food packaging</td></tr>
+        <tr><td><b>2026-08-12</b></td><td><b>5 Days</b></td><td><b>EU PPWR Mandatory Enforcement Date</b></td><td>All EU export packaging</td></tr>
+        <tr><td>2026-08-20</td><td>13 Days</td><td>Sappi Paperboard Grades +4–6% Effective</td><td>Packaging converters</td></tr>
+        <tr><td><b>2026-09-01</b></td><td><b>25 Days</b></td><td><b>PCA +$140 / IP +$80 / Smurfit +$100 Containerboard Hikes</b></td><td>Industrial packaging</td></tr>
+        <tr><td><b>2026-09-02</b></td><td><b>26 Days</b></td><td><b>China GB 4806.10-2025 Food Contact Coating Mandate</b></td><td>Paper cups, food containers</td></tr>
+        <tr><td><b>2026-10-11</b></td><td><b>65 Days</b></td><td><b>EU PFHxA Total PFAS Ban in Food Packaging</b></td><td>Barrier paperboard</td></tr>
+        <tr><td>2026-12-30</td><td>145 Days</td><td>EU EUDR Deforestation Regulation Enforcement</td><td>Global pulp & paper exporters</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <footer>
+    <div><b>Published</b>: 2026-08-07 · <b>System Engine</b>: Paperluz Engine v12.6 (AI Enhanced Global Edition) · <b>Publisher</b>: Luznet / Paperluz Industry Intelligence</div>
+    <div>All benchmark data is sourced from 59 globally registered authorities, verified through 4-tier AI cross-audits, and preserved in immutable SQLite database version control.</div>
+    <div class="footer-badges">
+      <span class="f-badge">A4 Zero-Gap PDF Compatible</span>
+      <span class="f-badge">SQLite + CSV Parity</span>
+      <span class="f-badge">GitHub Pages Ready</span>
+      <span class="f-badge">Live Market Connected</span>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
