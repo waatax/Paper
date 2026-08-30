@@ -101,3 +101,19 @@ GLOBAL_ICE_BRENT,倫敦布蘭特原油期貨 (Brent Crude),GLOBAL,CRUDE_OIL,futu
 GLOBAL_NYMEX_WTI,紐約輕原油期貨 (WTI Crude),GLOBAL,CRUDE_OIL,futures_close,USD,barrel,D,2026-08-17,2026-08-17,85.31,,,2.89,usd_dod,NYMEX,https://www.cmegroup.com/,high,原油期貨走強推升燃油附加費
 CN_BHKP_SPOT_CNY_FCST,中國闊葉漿現貨半年均價預測,CN,BHKP,forecast,CNY,tonne,H,2026-12-31,2026H2,4378.68,,,-3.86,pct_hoh,卓創資訊/新浪財經,https://finance.sina.com.cn/money/future/2026-07-03/doc-inifnxpe3695350.shtml,low,第三方預測值非實績
 CN_NBSK_SPOT_CNY_FCST,中國針葉漿現貨半年均價預測,CN,NBSK,forecast,CNY,tonne,H,2026-12-31,2026H2,4705.65,,,-8.5,pct_hoh,卓創資訊/新浪財經,https://finance.sina.com.cn/money/future/2026-07-03/doc-inifnxpe3695350.shtml,low,第三方預測值非實績
+CN_NBSK_SPOT_CNY,中國進口針葉漿現貨均價 (NBSK),CN,NBSK,spot,CNY,tonne,W,2026-08-28,2026-W35,4820.0,4780.0,4850.0,37.0,cny_wow,生意社/卓創資訊,https://www.100ppi.com/vane/detail-1053.html,high,金九銀十備貨啟動，針葉漿現貨築底反彈
+CN_BHKP_SPOT_CNY,中國進口闊葉漿現貨均價 (BHKP),CN,BHKP,spot,CNY,tonne,W,2026-08-28,2026-W35,4365.0,4320.0,4400.0,15.0,cny_wow,生意社/卓創資訊,https://www.100ppi.com/vane/detail-1053.html,high,Suzano出貨平穩，下游文化紙開工率回升67%
+SHFE_SP_SETTLE,上期所漂針漿期貨主力結算價,CN,NBSK_FUTURES,futures_settle,CNY,tonne,D,2026-08-28,2026-08-28,4748.0,,,18.0,cny_dod,上期所,https://www.shfe.com.cn/,high,期現基差收斂至+72元，投機空單持續離場
+SPREAD_BSKP_BHKP,長短纖現貨價差(針葉-闊葉),CN,PULP_SPREAD,spread,CNY,tonne,W,2026-08-28,2026-W35,455.0,,,22.0,cny_wow,Paperluz計算,https://paperluz.internal/data,high,價差擴至455元/噸，長纖走強短纖跟進
+SPREAD_LINER_OCC,美國箱板紙與OCC原料價差,US,PAPER_SPREAD,spread,USD,short_ton,M,2026-08-28,2026-08,810.0,,,90.0,usd_mom,Packaging Dive/Fastmarkets,https://www.packagingdive.com/,high,9/1全面調價前夕原料利差突破800美元創歷史新高
+FASTMARKETS_US_OCC,美國 11 號廢紙 (OCC) 出口美西 FAS,US,OCC,EXPORT_FAS,USD,美元/短噸,W,2026-08-28,2026-W35,134.0,132.0,136.0,2.0,usd_wow,Fastmarkets RISI,https://www.fastmarkets.com/,high,亞洲紙廠按需補庫，美廢出口報價溫和走堅
+US_OCC11_EXP_NYNJ,美國11號OCC出口價紐約紐澤西FAS,US,OCC,export_fas,USD,short_ton,W,2026-08-28,2026-08-28,136.0,134.0,138.0,2.5,usd_wow,Fastmarkets,https://www.fastmarkets.com/,high,東岸海運出口平穩
+GLOBAL_ICE_BRENT,倫敦布蘭特原油期貨 (Brent Crude),GLOBAL,CRUDE_OIL,futures_close,USD,barrel,D,2026-08-28,2026-08-28,94.10,,,0.30,usd_dod,ICE,https://www.theice.com/,high,美國全面封鎖伊朗持續支撐油價於94美元高檔
+GLOBAL_NYMEX_WTI,紐約輕原油期貨 (WTI Crude),GLOBAL,CRUDE_OIL,futures_close,USD,barrel,D,2026-08-28,2026-08-28,86.40,,,1.09,usd_dod,NYMEX,https://www.cmegroup.com/,high,北美石化淋膜PE與包裝膠帶原料成本受推升
+SCFI_INDEX,上海出口集裝箱運價指數 (SCFI 綜合),CN,FREIGHT_CONTAINER,index,USD,point,W,2026-08-28,2026-W35,3398.50,,,43.26,pt_wow,上海航運交易所,https://www.sse.net.cn/,high,美西線$6550/FEU、美東線$9350/FEU堅挺高位
+GLOBAL_BALTIC_BDI,波羅的海乾散貨指數 (BDI 綜合),GLOBAL,FREIGHT_BULK,index,USD,point,D,2026-08-28,2026-08-28,1810.0,,,25.0,pt_dod,波羅的海交易所,https://www.balticexchange.com/,high,散裝木片船與大宗紙漿海運費高檔持穩
+TW_OCC_MILL_TWD,台灣廢紙紙廠到廠價,TW,OCC,mill_gate,TWD,tonne,W,2026-08-28,2026-W35,4200.0,,,0.0,twd_wow,造紙公會/廠區詢價,https://paperluz.internal/data,high,台灣廢紙到廠價穩定在NT$4200/噸
+TW_TPC_COAL_COST,台灣造紙汽電共生每噸蒸氣成本,TW,ENERGY_STEAM,estimated_cost,TWD,tonne,M,2026-08-28,2026-08,740.0,710.0,760.0,-10.0,twd_mom,台電/造紙公會,https://www.taipower.com.tw/,high,生質能(SRF)替代率超45%，成本維持優勢
+USDTWD,美元兌新台幣銀行間收盤匯率,TW,FX,fx_close,TWD,USD,D,2026-08-28,2026-08-28,32.180,,,-0.07,twd_升值,中央銀行,https://www.cbc.gov.tw/,high,台幣維持微升走勢有利進口纖維採購
+REG_EU_PPWR,歐盟包裝與包裝廢棄物法規正式實施,EU,REGULATION,countdown,DAY,days,D,2026-08-28,2026-08-28,16.0,,,7.0,days_active,EUR-Lex,https://eur-lex.europa.eu/,high,歐盟PPWR強制實施第16天，PFAS稽核嚴格執行
+REG_EU_EUDR,歐盟EUDR森林砍伐法規生效倒數,EU,REGULATION,countdown,DAY,days,D,2026-08-28,2026-12-30,124.0,,,-7.0,days_left,European Commission,https://ec.europa.eu/,high,EUDR強制執行倒數124天，DDS盡職調查加速

@@ -72,7 +72,9 @@ Paperluz/
     ├── PaperLuz-003_2026-08-14.{html,md,pdf}
     ├── PaperLuz-003_2026-08-14_EN.{html,md,pdf}
     ├── PaperLuz-004_2026-08-21.{html,md,pdf}
-    └── PaperLuz-004_2026-08-21_EN.{html,md,pdf}
+    ├── PaperLuz-004_2026-08-21_EN.{html,md,pdf}
+    ├── PaperLuz-005_2026-08-28.{html,md,pdf}
+    └── PaperLuz-005_2026-08-28_EN.{html,md,pdf}
 ```
 
 ---
@@ -81,6 +83,7 @@ Paperluz/
 
 | 期數 | 出刊日期 | 中文版 (HTML / PDF / MD) | 英文版 (HTML / PDF / MD) | 主題焦點 |
 |:---:|:---:|:---:|:---:|:---|
+| **005** | 2026-08-28 | [HTML](./Reports/PaperLuz-005_2026-08-28.html) · [PDF](./Reports/PaperLuz-005_2026-08-28.pdf) · [MD](./Reports/PaperLuz-005_2026-08-28.md) | [HTML](./Reports/PaperLuz-005_2026-08-28_EN.html) · [PDF](./Reports/PaperLuz-005_2026-08-28_EN.pdf) · [MD](./Reports/PaperLuz-005_2026-08-28_EN.md) | 北美工紙 9/1 調價倒數 3 天 × 原油破 $94 美元與海運 BSS 附加費 × 亞洲木漿備貨啟動 |
 | **004** | 2026-08-21 | [HTML](./Reports/PaperLuz-004_2026-08-21.html) · [PDF](./Reports/PaperLuz-004_2026-08-21.pdf) · [MD](./Reports/PaperLuz-004_2026-08-21.md) | [HTML](./Reports/PaperLuz-004_2026-08-21_EN.html) · [PDF](./Reports/PaperLuz-004_2026-08-21_EN.pdf) · [MD](./Reports/PaperLuz-004_2026-08-21_EN.md) | 榮成分割轉型控股 × 北美工紙 9/1 調價倒數 × 歐盟 PPWR 正式生效與 PFAS 嚴格管制 |
 | **003** | 2026-08-14 | [HTML](./Reports/PaperLuz-003_2026-08-14.html) · [PDF](./Reports/PaperLuz-003_2026-08-14.pdf) · [MD](./Reports/PaperLuz-003_2026-08-14.md) | [HTML](./Reports/PaperLuz-003_2026-08-14_EN.html) · [PDF](./Reports/PaperLuz-003_2026-08-14_EN.pdf) · [MD](./Reports/PaperLuz-003_2026-08-14_EN.md) | 船運費與能源連動評估 × 全鏈預測矩陣 × 歐盟 PPWR 強制生效 |
 | **002** | 2026-08-07 | [HTML](./Reports/PaperLuz-002_2026-08-07.html) · [PDF](./Reports/PaperLuz-002_2026-08-07.pdf) · [MD](./Reports/PaperLuz-002_2026-08-07.md) | [HTML](./Reports/PaperLuz-002_2026-08-07_EN.html) · [PDF](./Reports/PaperLuz-002_2026-08-07_EN.pdf) · [MD](./Reports/PaperLuz-002_2026-08-07_EN.md) | 歐盟 PPWR 倒數五天 × PFAS 全面禁用 × 2026 紙包裝五大趨勢 |
