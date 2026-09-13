@@ -21,6 +21,7 @@
 ```
 Reports/
 ├── README.md                              ← 本檔
+├── SOP_Weekly_News_Aggregation.md         ← 全球與亞洲紙業情報每週自動聚合標準作業程序 (SOP v2.0)
 ├── Paperluz_Newsletter_Template_Spec.md   ← 電子報與週報標準視覺格式規範（v9.2 範本檔）
 ├── PaperLuz-001_2026-07-31.md             ← 第 001 期（純文字版）
 ├── PaperLuz-001_2026-07-31.html           ← 第 001 期（高階視覺版）
@@ -35,6 +36,7 @@ Reports/
 │   ├── report_template.md                 ← 黃金 MD 模板
 │   └── golden_css_hash.txt                ← CSS 指紋
 └── data/
+    ├── news_snapshots/                    ← 每週自動抓取之新聞快照 (JSON / MD)
     ├── price_series.csv                   ← 大宗物資價格資料庫
     ├── price_series_schema.md             ← 資料庫結構定義
     ├── company_monthly_revenue.csv        ← 台灣上市紙廠月營收

@@ -4,7 +4,7 @@
 > 官方即時入口網站：[https://waatax.github.io/Paper/](https://waatax.github.io/Paper/) ｜ [English Edition](https://waatax.github.io/Paper/EN/)
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Online%20Active-brightgreen.svg)](https://waatax.github.io/Paper/)
-[![Weekly Issues](https://img.shields.io/badge/Weekly%20Reports-Issue%20001--004%20Published-blue.svg)](./Reports/)
+[![Weekly Issues](https://img.shields.io/badge/Weekly%20Reports-Issue%20001--006%20Published-blue.svg)](./Reports/)
 [![Formats](https://img.shields.io/badge/Formats-HTML%20%7C%20Markdown%20%7C%20A4%20PDF-orange.svg)](./Reports/)
 [![Bilingual](https://img.shields.io/badge/Language-繁體中文%20%7C%20English-purple.svg)](./EN/)
 [![Zero-Gap PDF](https://img.shields.io/badge/PDF-A4%20Zero--Gap%20Print-success.svg)](./Reports/)
@@ -50,11 +50,12 @@ Paperluz/
 ├── README.md                                ← 專案主說明文件
 ├── paperluz.md                              ← Paperluz 系統架構與業務規格書
 ├── convert_pdf.py                           ← 統一 Markdown / HTML 至 A4 PDF 轉檔引擎
-├── search_paper_news.py                     ← 最新紙業新聞聚合引擎
+├── search_paper_news.py                     ← 全球與亞洲紙業新聞每週自動聚合引擎 (支援 --save / --quiet)
 ├── EN/
 │   └── index.html                           ← 英文官方門戶首頁 (English Edition)
 └── Reports/
     ├── README.md                            ← 報告規範與標準範本規格
+    ├── SOP_Weekly_News_Aggregation.md       ← 全球與亞洲紙業情報每週自動聚合標準作業程序 (SOP v2.0)
     ├── Paperluz_Newsletter_Template_Spec.md ← 視覺排版規格書 (v9.2)
     ├── build_report.py                      ← 週報產製管線主腳本
     ├── build_pdf.py                         ← Edge 無頭列印 PDF 產製器
@@ -74,7 +75,9 @@ Paperluz/
     ├── PaperLuz-004_2026-08-21.{html,md,pdf}
     ├── PaperLuz-004_2026-08-21_EN.{html,md,pdf}
     ├── PaperLuz-005_2026-08-28.{html,md,pdf}
-    └── PaperLuz-005_2026-08-28_EN.{html,md,pdf}
+    ├── PaperLuz-005_2026-08-28_EN.{html,md,pdf}
+    ├── PaperLuz-006_2026-09-04.{html,md,pdf}
+    └── PaperLuz-006_2026-09-04_EN.{html,md,pdf}
 ```
 
 ---
@@ -83,6 +86,7 @@ Paperluz/
 
 | 期數 | 出刊日期 | 中文版 (HTML / PDF / MD) | 英文版 (HTML / PDF / MD) | 主題焦點 |
 |:---:|:---:|:---:|:---:|:---|
+| **006** | 2026-09-04 | [HTML](./Reports/PaperLuz-006_2026-09-04.html) · [PDF](./Reports/PaperLuz-006_2026-09-04.pdf) · [MD](./Reports/PaperLuz-006_2026-09-04.md) | [HTML](./Reports/PaperLuz-006_2026-09-04_EN.html) · [PDF](./Reports/PaperLuz-006_2026-09-04_EN.pdf) · [MD](./Reports/PaperLuz-006_2026-09-04_EN.md) | 北美工紙 9/1 調價全面生效落袋 × Suzano 領銜亞洲漿價調升 $20 × 中國 GB 4806.10 塗層新規施行 × 正隆 H1 獲利暴增 52 倍 |
 | **005** | 2026-08-28 | [HTML](./Reports/PaperLuz-005_2026-08-28.html) · [PDF](./Reports/PaperLuz-005_2026-08-28.pdf) · [MD](./Reports/PaperLuz-005_2026-08-28.md) | [HTML](./Reports/PaperLuz-005_2026-08-28_EN.html) · [PDF](./Reports/PaperLuz-005_2026-08-28_EN.pdf) · [MD](./Reports/PaperLuz-005_2026-08-28_EN.md) | 北美工紙 9/1 調價倒數 3 天 × 原油破 $94 美元與海運 BSS 附加費 × 亞洲木漿備貨啟動 |
 | **004** | 2026-08-21 | [HTML](./Reports/PaperLuz-004_2026-08-21.html) · [PDF](./Reports/PaperLuz-004_2026-08-21.pdf) · [MD](./Reports/PaperLuz-004_2026-08-21.md) | [HTML](./Reports/PaperLuz-004_2026-08-21_EN.html) · [PDF](./Reports/PaperLuz-004_2026-08-21_EN.pdf) · [MD](./Reports/PaperLuz-004_2026-08-21_EN.md) | 榮成分割轉型控股 × 北美工紙 9/1 調價倒數 × 歐盟 PPWR 正式生效與 PFAS 嚴格管制 |
 | **003** | 2026-08-14 | [HTML](./Reports/PaperLuz-003_2026-08-14.html) · [PDF](./Reports/PaperLuz-003_2026-08-14.pdf) · [MD](./Reports/PaperLuz-003_2026-08-14.md) | [HTML](./Reports/PaperLuz-003_2026-08-14_EN.html) · [PDF](./Reports/PaperLuz-003_2026-08-14_EN.pdf) · [MD](./Reports/PaperLuz-003_2026-08-14_EN.md) | 船運費與能源連動評估 × 全鏈預測矩陣 × 歐盟 PPWR 強制生效 |
