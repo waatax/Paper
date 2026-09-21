@@ -22,3 +22,5 @@ $RECYCLE.BIN/
 
 # Ephemeral preview files
 Reports/newsletter_preview_*.html
+Reports/newsletter_welcome_preview_*.html
+
