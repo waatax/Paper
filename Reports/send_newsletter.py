@@ -345,6 +345,9 @@ def build_newsletter_html_en(issue_num, publish_date):
 </body>
 </html>
 """
+    return html
+
+
 def build_welcome_email_zh(issue_num, publish_date):
     """產製繁體中文即時迎新確認信內容"""
     web_url = f"{BASE_URL}/Reports/PaperLuz-{issue_num}_{publish_date}.html"
@@ -521,6 +524,45 @@ def send_email_smtp(to_email, subject, html_content, smtp_config):
     server.quit()
 
 
+def save_subscriber_local(email, lang="zh", company="新訂閱會員", source="cli_onboard"):
+    """將訂閱者寫入 SQLite 資料庫與對應的 CSV 名冊 (去重儲存)"""
+    db_path = os.path.join(DATA_DIR, "paperluz.db")
+    email = email.strip().lower()
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    # 1. 寫入 SQLite
+    if os.path.exists(db_path):
+        try:
+            conn = sqlite3.connect(db_path)
+            c = conn.cursor()
+            c.execute("""
+                INSERT INTO subscribers (email, company, subscribed_at, language, status, source)
+                VALUES (?, ?, ?, ?, 'active', ?)
+                ON CONFLICT(email) DO UPDATE SET
+                    language = excluded.language,
+                    status = 'active',
+                    company = COALESCE(NULLIF(excluded.company, ''), subscribers.company)
+            """, (email, company, now_str, lang, source))
+            conn.commit()
+            conn.close()
+        except Exception as e:
+            pass
+
+    # 2. 寫入 CSV
+    target_csv = SUBSCRIBERS_ZH_CSV if lang in ("zh", "both") else SUBSCRIBERS_EN_CSV
+    if os.path.exists(target_csv):
+        existing = load_subscribers(target_csv)
+        emails = [s["email"].lower() for s in existing]
+        if email not in emails:
+            try:
+                with open(target_csv, "a", encoding="utf-8", newline="") as f:
+                    writer = csv.writer(f)
+                    writer.writerow([email, company, now_str, lang, "active", source])
+                print(f"  ✓ 已同步將 {email} 登記至名冊 ({os.path.basename(target_csv)})")
+            except Exception as e:
+                pass
+
+
 def main():
     parser = argparse.ArgumentParser(description="Paperluz 電子報自動發送管線")
     parser.add_argument("--issue", default=None, help="期數，例如 008 (預設自動抓取最新期數)")
@@ -529,7 +571,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="本地測試模式，不實際發送信件，生成預覽檔案")
     parser.add_argument("--test-email", default=None, help="僅發送測試信至指定單一信箱")
     parser.add_argument("--email", default=None, help="目標信箱 (等同 --test-email)")
-    parser.add_argument("--welcome", action="store_true", help="發送即時迎新確認信 (包含最新期數報告與 PDF 迎新禮包)")
+    parser.add_argument("--welcome", action="store_true", help="發送即時迎新確認信")
+    parser.add_argument("--onboard", action="store_true", help="【即時雙發模式】收到訂閱後立即發出：① 歡迎信 + ② 最新一期完整電子報")
 
     args = parser.parse_args()
     target_email = args.test_email or args.email
@@ -539,25 +582,33 @@ def main():
     issue_num = args.issue or detected_issue or "008"
     publish_date = args.date or detected_date or "2026-09-18"
 
-    mode_title = "即時迎新確認信 (Welcome Briefing)" if args.welcome else f"每週例行週報 (Issue {issue_num} ｜ {publish_date})"
+    if args.onboard:
+        mode_title = "新讀者入會即時雙發 (① 歡迎信 + ② 最新一期週報)"
+    elif args.welcome:
+        mode_title = "即時迎新確認信 (Welcome Briefing)"
+    else:
+        mode_title = f"每週例行週報 (Issue {issue_num} ｜ {publish_date})"
 
     print(f"\n=======================================================")
     print(f"  📑 Paperluz 電子報自動發送管線 — {mode_title}")
     print(f"=======================================================\n")
 
-    html_zh = build_welcome_email_zh(issue_num, publish_date) if args.welcome else build_newsletter_html_zh(issue_num, publish_date)
-    html_en = build_welcome_email_en(issue_num, publish_date) if args.welcome else build_newsletter_html_en(issue_num, publish_date)
+    welcome_zh = build_welcome_email_zh(issue_num, publish_date)
+    welcome_en = build_welcome_email_en(issue_num, publish_date)
+    issue_zh = build_newsletter_html_zh(issue_num, publish_date)
+    issue_en = build_newsletter_html_en(issue_num, publish_date)
 
     # 產製本地預覽檔
-    prefix = "newsletter_welcome_preview" if args.welcome else "newsletter_preview"
-    preview_zh = os.path.join(SCRIPT_DIR, f"{prefix}_zh.html")
-    preview_en = os.path.join(SCRIPT_DIR, f"{prefix}_en.html")
-    with open(preview_zh, "w", encoding="utf-8") as f:
-        f.write(html_zh)
-    with open(preview_en, "w", encoding="utf-8") as f:
-        f.write(html_en)
-    print(f"  ✓ 中文版電子報預覽檔已生成: {os.path.basename(preview_zh)}")
-    print(f"  ✓ 英文版電子報預覽檔已生成: {os.path.basename(preview_en)}")
+    with open(os.path.join(SCRIPT_DIR, "newsletter_welcome_preview_zh.html"), "w", encoding="utf-8") as f:
+        f.write(welcome_zh)
+    with open(os.path.join(SCRIPT_DIR, "newsletter_welcome_preview_en.html"), "w", encoding="utf-8") as f:
+        f.write(welcome_en)
+    with open(os.path.join(SCRIPT_DIR, "newsletter_preview_zh.html"), "w", encoding="utf-8") as f:
+        f.write(issue_zh)
+    with open(os.path.join(SCRIPT_DIR, "newsletter_preview_en.html"), "w", encoding="utf-8") as f:
+        f.write(issue_en)
+    print(f"  ✓ 迎新信預覽檔已生成: newsletter_welcome_preview_zh.html / _en.html")
+    print(f"  ✓ 週報預覽檔已生成: newsletter_preview_zh.html / _en.html")
 
     # 檢查 SMTP 環境變數
     smtp_host = os.environ.get("SMTP_SERVER", "")
@@ -582,8 +633,16 @@ def main():
         print(f"  🚀 [Dry-Run 模式] 模擬派送指標：")
         
         if target_email:
-            print(f"    • 目標測試信箱: {target_email} ({args.lang})")
-            print(f"    • 模擬內容: {'迎新確認信 (Welcome Email)' if args.welcome else '每週出刊週報 (Weekly Issue)'}")
+            target_lang = args.lang if args.lang in ("zh", "en") else "zh"
+            print(f"    • 目標訂閱信箱: {target_email} ({target_lang})")
+            if args.onboard:
+                print(f"    • 模擬任務 1: 即時發出歡迎信 (Welcome Email)")
+                print(f"    • 模擬任務 2: 立刻寄出目前最新第 {issue_num} 期電子報 ({publish_date})")
+                save_subscriber_local(target_email, target_lang, "新訂閱會員")
+            elif args.welcome:
+                print(f"    • 模擬任務: 即時發出迎新確認信 (Welcome Email)")
+            else:
+                print(f"    • 模擬任務: 發送每週出刊週報 (Issue {issue_num})")
         else:
             zh_subs = load_subscribers(SUBSCRIBERS_ZH_CSV)
             en_subs = load_subscribers(SUBSCRIBERS_EN_CSV)
@@ -605,19 +664,59 @@ def main():
     # 正式發送流程
     if target_email:
         test_lang = args.lang if args.lang in ("zh", "en") else "zh"
-        if args.welcome:
+        
+        if args.onboard:
+            # 收到訂閱後立即雙發：① 歡迎信 + ② 最新一期電子報
+            subj_welcome = "🎉 歡迎加入 Paperluz 全球紙業情報網絡（訂閱確認與權益指南）" if test_lang == "zh" else "🎉 Welcome to Paperluz Intelligence Network (Subscription & Member Guide)"
+            body_welcome = welcome_zh if test_lang == "zh" else welcome_en
+
+            subj_issue = f"📑【最新出刊】Paperluz 紙業情報週報 第 {issue_num} 期 ({publish_date})" if test_lang == "zh" else f"📑 [Latest Issue] Paperluz Weekly Industry Intelligence Issue {issue_num} ({publish_date})"
+            body_issue = issue_zh if test_lang == "zh" else issue_en
+
+            print(f"  📤 [1/2] 正在即時發出歡迎信至 {target_email} ({test_lang})...")
+            try:
+                send_email_smtp(target_email, subj_welcome, body_welcome, smtp_config)
+                print(f"    ✓ 歡迎信發送成功！")
+            except Exception as e:
+                print(f"    ✗ 歡迎信發送失敗: {e}")
+                return 1
+
+            time.sleep(1.0)
+            print(f"  📤 [2/2] 正在立刻寄出最新第 {issue_num} 期電子報至 {target_email}...")
+            try:
+                send_email_smtp(target_email, subj_issue, body_issue, smtp_config)
+                print(f"    ✓ 最新電子報發送成功！")
+            except Exception as e:
+                print(f"    ✗ 最新電子報發送失敗: {e}")
+                return 1
+
+            save_subscriber_local(target_email, test_lang, "新訂閱會員")
+            print(f"\n  🎉 新訂閱戶雙發任務圓滿完成！")
+            return 0
+
+        elif args.welcome:
             subject = "🎉 感謝訂閱 Paperluz 全球紙業情報！這是您的迎新專屬資料包" if test_lang == "zh" else "🎉 Welcome to Paperluz Weekly Intelligence! Your Welcome Package"
+            content = welcome_zh if test_lang == "zh" else welcome_en
+            print(f"  📤 正在發送迎新信至 {target_email} ({test_lang})...")
+            try:
+                send_email_smtp(target_email, subject, content, smtp_config)
+                print(f"  ✓ 迎新信發送成功！")
+            except Exception as e:
+                print(f"  ✗ 迎新信發送失敗: {e}")
+                return 1
+            return 0
+
         else:
             subject = f"【測試】Paperluz 週報 第 {issue_num} 期 ({publish_date})" if test_lang == "zh" else f"[Test] Paperluz Weekly Issue {issue_num} ({publish_date})"
-        content = html_zh if test_lang == "zh" else html_en
-        print(f"  📤 正在發送信件至 {target_email} ({test_lang})...")
-        try:
-            send_email_smtp(target_email, subject, content, smtp_config)
-            print(f"  ✓ 信件發送成功！")
-        except Exception as e:
-            print(f"  ✗ 信件發送失敗: {e}")
-            return 1
-        return 0
+            content = issue_zh if test_lang == "zh" else issue_en
+            print(f"  📤 正在發送週報測試信至 {target_email} ({test_lang})...")
+            try:
+                send_email_smtp(target_email, subject, content, smtp_config)
+                print(f"  ✓ 週報測試信發送成功！")
+            except Exception as e:
+                print(f"  ✗ 週報測試信發送失敗: {e}")
+                return 1
+            return 0
 
     # 批次分流發送
     print(f"  🚀 啟動正式批次派送程序...")

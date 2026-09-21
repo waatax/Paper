@@ -24,6 +24,15 @@ on:
         required: true
         default: false
         type: boolean
+      email:
+        description: '單一目標信箱 (留空則派送至名冊)'
+        required: false
+        default: ''
+      onboard:
+        description: '【即時雙發模式】立即發出歡迎信 + 最新一期電子報'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -58,6 +67,12 @@ jobs:
           fi
           if [ "${{ inputs.dry_run }}" = "true" ]; then
             ARGS="$ARGS --dry-run"
+          fi
+          if [ -n "${{ inputs.email }}" ]; then
+            ARGS="$ARGS --email ${{ inputs.email }}"
+          fi
+          if [ "${{ inputs.onboard }}" = "true" ]; then
+            ARGS="$ARGS --onboard"
           fi
           echo "Running: python Reports/send_newsletter.py $ARGS"
           python Reports/send_newsletter.py $ARGS
