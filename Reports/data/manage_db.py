@@ -25,6 +25,8 @@ from datetime import datetime
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_FILE = os.path.join(SCRIPT_DIR, "paperluz.db")
 CSV_FILE = os.path.join(SCRIPT_DIR, "price_series.csv")
+SUBSCRIBERS_ZH_CSV = os.path.join(SCRIPT_DIR, "subscribers_zh.csv")
+SUBSCRIBERS_EN_CSV = os.path.join(SCRIPT_DIR, "subscribers_en.csv")
 
 if sys.platform == "win32":
     try:
@@ -526,9 +528,48 @@ def cmd_init(args=None):
             updated_at=datetime('now', 'localtime')
         """, n)
 
+    # 10. 電子報雙語訂閱者名冊表 (subscribers)
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS subscribers (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        email TEXT NOT NULL,
+        company TEXT,
+        subscribed_at TEXT DEFAULT (datetime('now', 'localtime')),
+        language TEXT NOT NULL CHECK(language IN ('zh', 'en', 'both')),
+        status TEXT NOT NULL DEFAULT 'active' CHECK(status IN ('active', 'unsubscribed', 'bounced')),
+        source TEXT DEFAULT 'portal',
+        updated_at TEXT DEFAULT (datetime('now', 'localtime')),
+        UNIQUE(email, language)
+    );
+    """)
+
+    # 從 subscribers_zh.csv 與 subscribers_en.csv 種子名冊同步
+    for path, def_lang in [(SUBSCRIBERS_ZH_CSV, "zh"), (SUBSCRIBERS_EN_CSV, "en")]:
+        if os.path.exists(path):
+            with open(path, "r", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    email = (row.get("email") or "").strip().lower()
+                    if not email:
+                        continue
+                    company = (row.get("company") or "").strip()
+                    sub_at = (row.get("subscribed_at") or "").strip() or datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    lang = (row.get("language") or def_lang).strip()
+                    status = (row.get("status") or "active").strip()
+                    source = (row.get("source") or "csv").strip()
+                    cursor.execute("""
+                    INSERT INTO subscribers (email, company, subscribed_at, language, status, source)
+                    VALUES (?, ?, ?, ?, ?, ?)
+                    ON CONFLICT(email, language) DO UPDATE SET
+                        company=excluded.company,
+                        status=excluded.status,
+                        source=excluded.source,
+                        updated_at=datetime('now', 'localtime')
+                    """, (email, company, sub_at, lang, status, source))
+
     conn.commit()
     conn.close()
-    print("  ✓ SQLite 資料庫 paperluz.db 初始化與關聯表 Seed 完成 (Schema v11.2 JP Paper Mills & Paper Bag Expansion)")
+    print("  ✓ SQLite 資料庫 paperluz.db 初始化與關聯表 Seed 完成 (包含電子報雙語名冊 subscribers 表)")
     return 0
 
 
@@ -709,7 +750,99 @@ def cmd_validate(args=None):
     else:
         print("  ✓ 所有具體觀測值均具備完整來源 URL 追蹤")
 
+    cursor.execute("SELECT COUNT(*) FROM subscribers WHERE status = 'active'")
+    total_subs = cursor.fetchone()[0]
+    cursor.execute("SELECT language, COUNT(*) FROM subscribers WHERE status = 'active' GROUP BY language")
+    sub_lang_dist = dict(cursor.fetchall())
+    print(f"  • 電子報活躍訂閱戶 (subscribers): {total_subs} 位 (中文={sub_lang_dist.get('zh',0)}, 英文={sub_lang_dist.get('en',0)}, 雙語={sub_lang_dist.get('both',0)})")
+
     conn.close()
+    return 0
+
+
+def cmd_add_subscriber(args):
+    """新增訂閱者並寫入 SQLite 與對應 CSV"""
+    email = args.email.strip().lower()
+    lang = args.lang.strip().lower()
+    company = (args.company or "").strip()
+    status = "active"
+    source = "cli"
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    if lang not in ("zh", "en", "both"):
+        print(f"  ✗ 錯誤的語言選項: {lang} (請選擇 zh, en 或 both)")
+        return 1
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+    INSERT INTO subscribers (email, company, subscribed_at, language, status, source)
+    VALUES (?, ?, ?, ?, ?, ?)
+    ON CONFLICT(email, language) DO UPDATE SET
+        company=excluded.company,
+        status=excluded.status,
+        source=excluded.source,
+        updated_at=datetime('now', 'localtime')
+    """, (email, company, now_str, lang, status, source))
+    conn.commit()
+    conn.close()
+
+    cmd_sync_subscribers(args)
+    print(f"  ✓ 成功登記訂閱者: {email} | 語系: {lang} | 機構: {company or '個人'}")
+    return 0
+
+
+def cmd_list_subscribers(args=None):
+    """列出目前資料庫中所有訂閱者"""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT email, language, company, status, subscribed_at, source FROM subscribers ORDER BY language, subscribed_at DESC")
+    rows = cursor.fetchall()
+    conn.close()
+
+    print("\n  📬 Paperluz 雙語電子報訂閱名冊 (Newsletter Subscribers)")
+    print("  " + "─" * 78)
+    print(f"  {'Email':<34} {'語系':<8} {'狀態':<10} {'機構 / 職稱':<24}")
+    print("  " + "─" * 78)
+    zh_count = 0
+    en_count = 0
+    both_count = 0
+    for r in rows:
+        email, lang, comp, stat = r["email"], r["language"], r["company"] or "-", r["status"]
+        if lang == "zh": zh_count += 1
+        elif lang == "en": en_count += 1
+        else: both_count += 1
+        print(f"  {email:<34} {lang:<8} {stat:<10} {comp:<24}")
+    print("  " + "─" * 78)
+    print(f"  總計: {len(rows)} 位 (中文: {zh_count} 位, 英文: {en_count} 位, 雙語: {both_count} 位)\n")
+    return 0
+
+
+def cmd_sync_subscribers(args=None):
+    """將 SQLite 中的 subscribers 雙向導出至 subscribers_zh.csv 與 subscribers_en.csv"""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # 匯出中文與雙語訂閱名冊
+    cursor.execute("SELECT email, company, subscribed_at, language, status, source FROM subscribers WHERE language IN ('zh', 'both') AND status = 'active' ORDER BY subscribed_at")
+    zh_rows = cursor.fetchall()
+    with open(SUBSCRIBERS_ZH_CSV, "w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["email", "company", "subscribed_at", "language", "status", "source"])
+        for r in zh_rows:
+            writer.writerow([r["email"], r["company"] or "", r["subscribed_at"], r["language"], r["status"], r["source"]])
+
+    # 匯出英文與雙語訂閱名冊
+    cursor.execute("SELECT email, company, subscribed_at, language, status, source FROM subscribers WHERE language IN ('en', 'both') AND status = 'active' ORDER BY subscribed_at")
+    en_rows = cursor.fetchall()
+    with open(SUBSCRIBERS_EN_CSV, "w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["email", "company", "subscribed_at", "language", "status", "source"])
+        for r in en_rows:
+            writer.writerow([r["email"], r["company"] or "", r["subscribed_at"], r["language"], r["status"], r["source"]])
+
+    conn.close()
+    print(f"  ✓ 訂閱名冊已同步導出：中文名單 {len(zh_rows)} 筆 ({os.path.basename(SUBSCRIBERS_ZH_CSV)}) ｜ 英文名單 {len(en_rows)} 筆 ({os.path.basename(SUBSCRIBERS_EN_CSV)})")
     return 0
 
 
@@ -722,6 +855,14 @@ def main():
     subparsers.add_parser("export", help="從 SQLite 導出至 CSV")
     subparsers.add_parser("validate", help="稽核資料庫完整性")
 
+    p_add_sub = subparsers.add_parser("add-subscriber", help="登記新訂閱者")
+    p_add_sub.add_argument("--email", required=True, help="訂閱者電子郵件")
+    p_add_sub.add_argument("--lang", default="zh", choices=["zh", "en", "both"], help="訂閱語系 (zh, en, both)")
+    p_add_sub.add_argument("--company", default="", help="訂閱所屬公司或職稱")
+
+    subparsers.add_parser("list-subscribers", help="列出所有訂閱者名單")
+    subparsers.add_parser("sync-subscribers", help="雙向同步 SQLite 與 subscribers_zh/en.csv")
+
     args = parser.parse_args()
     if args.command == "init":
         return cmd_init(args)
@@ -731,6 +872,12 @@ def main():
         return cmd_export_csv(args)
     elif args.command == "validate":
         return cmd_validate(args)
+    elif args.command == "add-subscriber":
+        return cmd_add_subscriber(args)
+    elif args.command == "list-subscribers":
+        return cmd_list_subscribers(args)
+    elif args.command == "sync-subscribers":
+        return cmd_sync_subscribers(args)
     else:
         cmd_import_csv(args)
         return cmd_validate(args)

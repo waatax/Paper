@@ -1,0 +1,63 @@
+name: Paperluz Weekly Automated Newsletter
+
+on:
+  schedule:
+    # 每週五上午 07:00 (UTC+8 台灣時間) = 每週四 23:00 UTC
+    - cron: '0 23 * * 4'
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: '出刊期數 (如 008，留空則自動偵測最新期數)'
+        required: false
+        default: ''
+      lang:
+        description: '發送語系 (all, zh, en)'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - zh
+          - en
+      dry_run:
+        description: '模擬測試模式 (不實際對外發信，僅驗證排版與名冊)'
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  dispatch_newsletter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Execute Newsletter Dispatch Pipeline
+        env:
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          SENDER_NAME: ${{ secrets.SENDER_NAME }}
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.issue }}" ]; then
+            ARGS="$ARGS --issue ${{ inputs.issue }}"
+          fi
+          if [ -n "${{ inputs.lang }}" ]; then
+            ARGS="$ARGS --lang ${{ inputs.lang }}"
+          fi
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          echo "Running: python Reports/send_newsletter.py $ARGS"
+          python Reports/send_newsletter.py $ARGS

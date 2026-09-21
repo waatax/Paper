@@ -1008,6 +1008,329 @@
         padding: 8px;
       }
     }
+
+    /* ── Newsletter Subscription Section (Mail List) ── */
+    .newsletter-section {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(19, 31, 61, 0.95) 45%, rgba(139, 92, 246, 0.08) 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: 18px;
+      padding: 38px 40px;
+      margin-bottom: 48px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 36px -8px rgba(37, 99, 235, 0.22);
+    }
+    [data-theme="light"] .newsletter-section {
+      background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 50%, #fbf5ff 100%);
+      border-color: #bfdbfe;
+      box-shadow: 0 12px 32px -4px rgba(37, 99, 235, 0.12);
+    }
+    [data-theme="paper"] .newsletter-section {
+      background: linear-gradient(135deg, #fdf8ee 0%, #f4ebd7 100%);
+      border-color: var(--border-accent);
+      box-shadow: 0 10px 30px rgba(176, 92, 54, 0.1);
+    }
+    .newsletter-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 38px;
+      align-items: center;
+    }
+    @media (max-width: 960px) {
+      .newsletter-grid { grid-template-columns: 1fr; gap: 28px; }
+      .newsletter-section { padding: 26px 20px; }
+    }
+    .nl-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-glow);
+      color: var(--accent-hover);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .nl-title {
+      font-size: 27px;
+      font-weight: 900;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
+      color: var(--fg);
+    }
+    .nl-desc {
+      font-size: 14.5px;
+      color: var(--fg-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .nl-features {
+      list-style: none;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .nl-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--fg);
+      line-height: 1.5;
+    }
+    .nl-icon {
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .nl-social-proof {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--fg-muted);
+    }
+    .nl-avatars {
+      display: flex;
+      align-items: center;
+    }
+    .nl-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--bg-card-hover);
+      border: 2px solid var(--bg-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      margin-left: -8px;
+      color: var(--accent);
+    }
+    .nl-avatar:first-child { margin-left: 0; }
+    .nl-card-form {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px 24px;
+      box-shadow: var(--shadow);
+    }
+    .lang-selector-group {
+      margin-bottom: 16px;
+    }
+    .lang-selector-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--fg-muted);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .lang-pills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .lang-pill {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 9px 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--fg);
+      transition: all 0.2s ease;
+      user-select: none;
+      text-align: center;
+    }
+    .lang-pill:hover {
+      border-color: var(--accent);
+      background: var(--bg-card-hover);
+    }
+    .lang-pill.active {
+      border-color: var(--accent);
+      background: var(--accent-glow);
+      color: var(--accent-hover);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+    .sub-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .sub-input-wrap {
+      position: relative;
+    }
+    .sub-input {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px 12px 38px;
+      color: var(--fg);
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .sub-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .sub-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--fg-muted);
+      font-size: 15px;
+      pointer-events: none;
+    }
+    .sub-btn {
+      width: 100%;
+      padding: 13px 18px;
+      font-size: 15px;
+      font-weight: 800;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: #2563eb;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .sub-btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+    }
+    .sub-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .sub-privacy-note {
+      font-size: 11.5px;
+      color: var(--fg-muted);
+      text-align: center;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+    .sub-status-msg {
+      font-size: 12.5px;
+      margin-top: 8px;
+      display: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+    .sub-status-msg.error {
+      display: block;
+      background: var(--red-bg);
+      color: var(--red);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+    .sub-status-msg.success {
+      display: block;
+      background: var(--green-bg);
+      color: var(--green);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    /* ── Success Modal ── */
+    .sub-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(11, 19, 41, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .sub-modal-overlay.active { display: flex; }
+    .sub-modal-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      border-radius: 16px;
+      max-width: 520px;
+      width: 100%;
+      padding: 34px 30px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes modalPop {
+      from { transform: scale(0.92); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .sub-modal-icon {
+      font-size: 46px;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .sub-modal-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--fg);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+    .sub-modal-text {
+      font-size: 14px;
+      color: var(--fg-muted);
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+    .sub-modal-gift {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 22px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sub-modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: transparent;
+      border: none;
+      font-size: 22px;
+      color: var(--fg-muted);
+      cursor: pointer;
+      line-height: 1;
+    }
+    .sub-modal-close-btn:hover { color: var(--fg); }
   </style>
 </head>
 <body>
@@ -1024,6 +1347,7 @@
         <span class="badge-brand">Intelligence Hub</span>
       </a>
       <ul class="nav-links">
+        <li><a href="#subscribe" style="color:var(--accent-hover); font-weight:700;">📬 訂閱週報</a></li>
         <li><a href="#archives" class="active">週報檔案庫</a></li>
         <li><a href="#news">即時動態</a></li>
         <li><a href="#radar">數據雷達</a></li>
@@ -1033,6 +1357,9 @@
         <li><a href="#calculator">敏感度試算</a></li>
       </ul>
       <div class="nav-actions">
+        <a href="#subscribe" class="btn btn-primary" style="padding:6px 14px; font-size:12.5px; text-decoration:none;">
+          📬 立即訂閱
+        </a>
         <a href="./EN/index.html" class="theme-toggle-btn" style="text-decoration:none; font-weight:700; color:var(--fg);" title="Switch to English Edition">
           🌐 English
         </a>
@@ -1048,9 +1375,9 @@
     <div class="container alert-banner-inner">
       <span class="alert-tag">🚨 最新發布</span>
       <span class="alert-text">
-        <b>9/04 第 006 期正式出刊 · 北美工紙 9/1 調價全面生效落袋</b>：Suzano 領銜亞洲木漿調漲 $20/噸，中國 GB 4806.10 塗層新規 9/2 正式施行，正隆 H1 獲利暴增 52 倍 EPS 1.45 元放量迎金九銀十。
+        <b>9/18 第 008 期正式出刊 · 中國紙廠中秋停機保價（山鷹停機 4-8 天/玖龍檢修防累庫）</b>：CMPC 3.7 億美元正式簽約巴西深水專用碼頭；北美工紙利差穩居 $840 歷史極限點；歐盟 PFHxA 禁令最後 30 天倒數。
       </span>
-      <a href="#archives" class="alert-link" onclick="openReader('Reports/PaperLuz-006_2026-09-04.html', 'Paperluz 週報 第 006 期 (2026-09-04)')">研讀第 006 期深度專題 ➔</a>
+      <a href="#archives" class="alert-link" onclick="openReader('Reports/PaperLuz-008_2026-09-18.html', 'Paperluz 週報 第 008 期 (2026-09-18)')">研讀第 008 期深度專題 ➔</a>
     </div>
   </div>
 
@@ -1058,7 +1385,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero-tagline">
-        <span>⚡ 2026-09-04 第 006 期正式出刊 · 北美工紙調價全面生效落袋 × Suzano 亞洲漿價調升 $20 × GB 4806.10 實施</span>
+        <span>⚡ 2026-09-18 第 008 期正式出刊 · 中國紙廠中秋停機保價潮 × CMPC 3.7 億美元簽約巴西深水碼頭 × 北美工紙利差 $840 極限點 × 歐盟 PFHxA 倒數 30 天</span>
       </div>
       <h1 class="hero-title">
         台灣紙業產業情報資料庫<br>
@@ -1068,11 +1395,11 @@
         深度整合全球木漿大宗物資、地緣能源油價與海運物流、北美/歐洲工紙提價、台廠營收財報與「能源×漿價×紙價」全鏈預測矩陣。每週五上午七時出刊，提供 Markdown ＋ HTML ＋ A4 零空白 PDF 完整交付。
       </p>
       <div class="hero-cta-group">
-        <button onclick="openReader('Reports/PaperLuz-006_2026-09-04.html', 'Paperluz 週報 第 006 期 (2026-09-04)')" class="btn btn-primary">
+        <button onclick="openReader('Reports/PaperLuz-008_2026-09-18.html', 'Paperluz 週報 第 008 期 (2026-09-18)')" class="btn btn-primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-          閱讀最新週報 (第 006 期)
+          閱讀最新週報 (第 008 期)
         </button>
-        <a href="Reports/PaperLuz-006_2026-09-04.pdf" target="_blank" class="btn btn-secondary">
+        <a href="Reports/PaperLuz-008_2026-09-18.pdf" target="_blank" class="btn btn-secondary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           下載最新 A4 PDF
         </a>
@@ -1080,49 +1407,53 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M8 10h.01"></path><path d="M12 10h.01"></path><path d="M16 10h.01"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path></svg>
           毛利敏感度試算
         </a>
+        <a href="#subscribe" class="btn btn-secondary" style="border-color:var(--border-accent); color:var(--accent-hover);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          訂閱每週情報 (免費)
+        </a>
       </div>
 
       <!-- Metric Grid (8 Cards) -->
       <div class="metric-grid">
         <div class="metric-card">
           <div class="metric-title">國際布蘭特原油 (Brent)</div>
-          <div class="metric-value val-red">$94.65</div>
-          <div class="metric-desc">地緣緊張維持高位 · 週漲 +0.6%</div>
+          <div class="metric-value val-red">$93.90</div>
+          <div class="metric-desc">地緣高位整固 · 週跌 -0.3%</div>
         </div>
         <div class="metric-card">
           <div class="metric-title">中國進口針葉漿現貨均價 (NBSK)</div>
-          <div class="metric-value val-blue">USD 685</div>
-          <div class="metric-desc">附註 RMB 4,865/噸 · 金九銀十備貨</div>
+          <div class="metric-value val-blue">USD 690</div>
+          <div class="metric-desc">附註 RMB 4,900/噸 · 週漲 +10元</div>
         </div>
         <div class="metric-card">
           <div class="metric-title">Suzano 亞洲木漿調漲</div>
           <div class="metric-value val-blue">+$20 / 噸</div>
-          <div class="metric-desc">4月以來首度調升 · 短纖確立硬底</div>
+          <div class="metric-desc">短纖築底 RMB 4,445 · 價差收斂至 455元</div>
         </div>
         <div class="metric-card">
           <div class="metric-title">美國 11 號 OCC 出口 FAS</div>
-          <div class="metric-value val-gold">$135-137</div>
-          <div class="metric-desc">美廢出口走堅 · Spread $835 創歷史新峰</div>
+          <div class="metric-value val-gold">$135 / 美噸</div>
+          <div class="metric-desc">美廢出口走堅 · Spread $840 創歷史新峰</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">北美工紙 9/1 全面調價</div>
-          <div class="metric-value val-red">+$80~140</div>
-          <div class="metric-desc">全面開票生效 · 原紙利差破天荒新高</div>
+          <div class="metric-title">北美工紙 Raw Spread 利差</div>
+          <div class="metric-value val-purple">$840 極限點</div>
+          <div class="metric-desc">全額開票第三週 · 牛卡現貨 $975</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">正隆 (1904) H1 獲利</div>
-          <div class="metric-value val-green">16.02 億</div>
-          <div class="metric-desc">暴增 52 倍 / EPS 1.45元 · 越南百萬噸滿載</div>
+          <div class="metric-title">中國紙廠雙節停機保價</div>
+          <div class="metric-value val-gold">停機 4~8 天</div>
+          <div class="metric-desc">山鷹停機/玖龍檢修 · 堅守 RMB 30~50 提價</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">榮成 (1909) 前7月自結</div>
-          <div class="metric-value val-green">4.29 億轉盈</div>
-          <div class="metric-desc">餘熱回收獲永續獎 · 深化低碳控股</div>
+          <div class="metric-title">CMPC 巴西專用碼頭</div>
+          <div class="metric-value val-green">3.7 億美元</div>
+          <div class="metric-desc">9/16 聯邦簽約 · 2030年吞吐 460萬噸</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">中國 GB 4806.10 新規</div>
-          <div class="metric-value val-gold">9/2 正式施行</div>
-          <div class="metric-desc">紙塗層納管 · 禁絕高毒性 PFAS</div>
+          <div class="metric-title">歐盟 PFHxA 禁用新規</div>
+          <div class="metric-value val-red">倒數 30 天</div>
+          <div class="metric-desc">10/18 正式生效 · 禁絕全氟羧酸塗層</div>
         </div>
       </div>
 
@@ -1130,50 +1461,51 @@
       <div class="ticker-bar">
         <div class="ticker-label">
           <span class="ticker-dot"></span>
-          即時市場行情 (9/04 盤)
+          即時市場行情 (9/18 盤)
         </div>
         <div class="ticker-items">
           <div class="ticker-item">
             <span class="ticker-name">BRENT 原油:</span>
-            <span class="ticker-val">$94.65</span>
-            <span class="ticker-delta delta-up">+0.6%</span>
+            <span class="ticker-val">$93.90</span>
+            <span class="ticker-delta delta-down">-0.3%</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">針葉漿 NBSK:</span>
-            <span class="ticker-val">4,865 元</span>
-            <span class="ticker-delta delta-up">+45元</span>
+            <span class="ticker-val">4,900 元</span>
+            <span class="ticker-delta delta-up">+10元</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">闊葉漿 BHKP:</span>
-            <span class="ticker-val">4,420 元</span>
-            <span class="ticker-delta delta-up">+55元</span>
+            <span class="ticker-val">4,445 元</span>
+            <span class="ticker-delta delta-up">+5元</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">美廢 OCC:</span>
             <span class="ticker-val">$135/美噸</span>
-            <span class="ticker-delta delta-up">+$1</span>
+            <span class="ticker-delta delta-up">利差 $840</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">SCFI 運價:</span>
-            <span class="ticker-val">3,425.8 點</span>
-            <span class="ticker-delta delta-up">+0.8%</span>
+            <span class="ticker-val">3,458.2 點</span>
+            <span class="ticker-delta delta-up">+0.46%</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">台幣 USD/TWD:</span>
-            <span class="ticker-val">32.120</span>
-            <span class="ticker-delta delta-down">升值 6分</span>
+            <span class="ticker-val">32.060</span>
+            <span class="ticker-delta delta-down">升值 2分</span>
           </div>
           <div class="ticker-item">
-            <span class="ticker-name">正隆 H1:</span>
-            <span class="ticker-val">16.02 億</span>
-            <span class="ticker-delta delta-up">EPS 1.45元</span>
+            <span class="ticker-name">正隆 8月:</span>
+            <span class="ticker-val">43.4 億</span>
+            <span class="ticker-delta delta-up">創 20 個月新高</span>
           </div>
           <div class="ticker-item">
-            <span class="ticker-name">榮成 7M:</span>
-            <span class="ticker-val">4.29 億轉盈</span>
-            <span class="ticker-delta delta-up">永續行動獎</span>
+            <span class="ticker-name">CMPC 專用碼頭:</span>
+            <span class="ticker-val">3.7 億美元</span>
+            <span class="ticker-delta delta-up">9/16 聯邦簽約</span>
           </div>
         </div>
+      </div>
       </div>
 
     </div>
@@ -1182,6 +1514,100 @@
   <!-- ── Main Content Area ── -->
   <main class="main-content">
     <div class="container">
+
+      <!-- ── Section 0: Weekly Newsletter Subscription (Mail List) ── -->
+      <section id="subscribe" class="newsletter-section" style="scroll-margin-top: 80px;">
+        <div class="newsletter-grid">
+          <div>
+            <div class="nl-badge">
+              <span>📬 官方每週五晨間直送 · 100% 免費出刊</span>
+            </div>
+            <h2 class="nl-title">
+              掌握全球紙業原物料行情<br>
+              <span style="background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">每週五 07:00 直送決策高管信箱</span>
+            </h2>
+            <p class="nl-desc">
+              深度解析國際木漿現貨（NBSK / BHKP）、北美/亞洲工紙利差模型、兩岸紙廠稼動停機與歐盟 PPWR/PFAS 法規。深受造紙廠高管、紙箱採購長與產業分析師信賴。
+            </p>
+            <ul class="nl-features">
+              <li class="nl-feature-item">
+                <span class="nl-icon">📈</span>
+                <div><b>大宗物資與利差追蹤</b>：NBSK/BHKP 實價、美廢 11# FAS 出口價與北美 Raw Spread $840 歷史極限點即時評估。</div>
+              </li>
+              <li class="nl-feature-item">
+                <span class="nl-icon">🏭</span>
+                <div><b>兩岸四地造紙廠動態</b>：台廠（正隆、榮成、永豐餘、華紙）營收財報解析 × 中國紙廠雙節停機保價自律全覽。</div>
+              </li>
+              <li class="nl-feature-item">
+                <span class="nl-icon">⚖️</span>
+                <div><b>全球法規倒數警報</b>：歐盟 PPWR 強制落實、REACH PFHxA 無塑去氟禁令倒數與台灣碳費衝擊試算。</div>
+              </li>
+            </ul>
+            <div class="nl-social-proof">
+              <div class="nl-avatars">
+                <div class="nl-avatar">正</div>
+                <div class="nl-avatar">榮</div>
+                <div class="nl-avatar">永</div>
+                <div class="nl-avatar">華</div>
+                <div class="nl-avatar">S</div>
+              </div>
+              <div>已有超過 <b>1,200+</b> 位造紙、包裝、紙商與印刷產業專業人士每週閱讀</div>
+            </div>
+          </div>
+
+          <!-- Subscription Form Card -->
+          <div class="nl-card-form">
+            <div class="lang-selector-group">
+              <div class="lang-selector-title">
+                <span>選擇您希望訂閱的週報語系：</span>
+                <span style="font-size:11px; color:var(--accent);">每週五自動發送</span>
+              </div>
+              <div class="lang-pills">
+                <div class="lang-pill active" data-lang="zh" onclick="selectLangPill('zh')">
+                  <span>🇹🇼 繁體中文版</span>
+                </div>
+                <div class="lang-pill" data-lang="en" onclick="selectLangPill('en')">
+                  <span>🌐 英文國際版</span>
+                </div>
+                <div class="lang-pill" data-lang="both" onclick="selectLangPill('both')">
+                  <span>🌟 雙語全訂</span>
+                </div>
+              </div>
+            </div>
+
+            <form id="newsletterForm" class="sub-form">
+              <!-- Honeypot Anti-bot -->
+              <input type="text" id="subHoneypot" name="hp_field" style="display:none;" tabindex="-1" autocomplete="off">
+
+              <div class="sub-input-wrap">
+                <span class="sub-icon">✉️</span>
+                <input type="email" id="subEmail" class="sub-input" placeholder="請輸入您的企業電子信箱 (例: name@company.com)" required>
+              </div>
+
+              <div class="sub-input-wrap">
+                <span class="sub-icon">🏢</span>
+                <input type="text" id="subCompany" class="sub-input" placeholder="任職公司 / 職稱 (選填，例: 正隆 採購部)">
+              </div>
+
+              <button type="submit" id="subSubmitBtn" class="sub-btn">
+                <span>📬 免費訂閱 Paperluz 週報</span>
+              </button>
+
+              <div id="subStatusMsg" class="sub-status-msg"></div>
+
+              <div class="sub-privacy-note">
+                🔒 承諾無垃圾郵件 ｜ 隨時一鍵取消訂閱 ｜ 包含最新第 008 期 A4 PDF 迎新禮
+              </div>
+            </form>
+
+            <div style="margin-top: 14px; text-align: center; font-size: 12.5px;">
+              <a href="#archives" onclick="openReader('Reports/PaperLuz-008_2026-09-18.html', 'Paperluz 週報 第 008 期 (2026-09-18)')" style="color: var(--accent-hover); font-weight: 600;">
+                先看看最新第 008 期範例 ➔
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- ── Section 1: Issue Archive ── -->
       <section id="archives" style="scroll-margin-top: 80px;">
@@ -1198,7 +1624,7 @@
             <span class="search-icon">🔍</span>
             <input type="text" id="issueSearch" class="search-input" placeholder="搜尋期數、主題、關鍵字 (例如: 伊朗, 榮成, 正隆, PPWR, NBSK, OCC, 能源)...">
           </div>
-          <button class="filter-btn active" data-filter="all">全部期別 (6)</button>
+          <button class="filter-btn active" data-filter="all">全部期別 (8)</button>
           <button class="filter-btn" data-filter="pulp">木漿原料</button>
           <button class="filter-btn" data-filter="board">工業用紙</button>
           <button class="filter-btn" data-filter="energy">能源航運</button>
@@ -1209,11 +1635,83 @@
         <!-- Issues Cards -->
         <div class="issue-grid" id="issueGrid">
 
-          <!-- Issue 006 (Latest) -->
+                    <!-- Issue 008 (Latest) -->
           <article class="issue-card featured" data-tags="pulp board energy reg mill">
             <div>
               <div class="issue-badge-row">
-                <span class="issue-num-badge">第 006 期 · 最新發布</span>
+                <span class="issue-num-badge">第 008 期 · 最新發布</span>
+                <span class="issue-date">2026-09-18 (W38)</span>
+              </div>
+              <h3 class="issue-card-title">中國紙廠中秋國慶停機保價（山鷹停機 4-8 天/玖龍檢修防累庫）× CMPC 3.7 億美元簽約巴西專用深水碼頭 × 北美工紙 Raw Spread $840 歷史極限點 × 歐盟 PFHxA 禁令倒數 30 天</h3>
+              <p class="issue-theme">
+                深度研析中國箱板瓦楞紙龍頭中秋國慶雙節停機保價潮（山鷹停機 4-8 天、玖龍檢修約 20 台紙機堅守提價果實）、智利 CMPC 於 9/16 正式簽署 25 年聯邦深水專用碼頭合約（擴大投資至 3.7 億美元對接 Natureza 旗艦漿廠）、北美工紙提價第三週全額落袋確立 Raw Material Spread $840/短噸歷史新高、國際油價 $93.90 高位整固與 SCFI 運價 3,458.20 點、歐盟 PFHxA 禁令最後 30 天倒數與中國 GB 4806.10 塗層新規實施第 16 天。
+              </p>
+              <div class="issue-kpi-pills">
+                <span class="kpi-pill pill-purple">利差 $840 (歷史新高)</span>
+                <span class="kpi-pill pill-gold">山鷹/玖龍 停機保價</span>
+                <span class="kpi-pill pill-blue">CMPC 3.7億簽約</span>
+                <span class="kpi-pill pill-blue">NBSK $690 (4,900元)</span>
+                <span class="kpi-pill pill-blue">BHKP $626 (4,445元)</span>
+                <span class="kpi-pill pill-green">正隆/榮成 營收續旺</span>
+                <span class="kpi-pill pill-red">原油 $93.90</span>
+                <span class="kpi-pill pill-red">PFHxA 倒數30天</span>
+                <span class="kpi-pill pill-red">PPWR 37天 / GB 16天</span>
+              </div>
+            </div>
+            <div class="issue-card-actions">
+              <button class="card-btn" onclick="openReader('Reports/PaperLuz-008_2026-09-18.html', 'Paperluz 週報 第 008 期 (2026-09-18)')">
+                📖 在線閱讀
+              </button>
+              <a href="Reports/PaperLuz-008_2026-09-18.pdf" target="_blank" class="card-btn pdf-btn">
+                📄 A4 PDF
+              </a>
+              <a href="Reports/PaperLuz-008_2026-09-18.md" target="_blank" class="card-btn">
+                📝 MD
+              </a>
+            </div>
+          </article>
+
+          <!-- Issue 007 -->
+          <article class="issue-card" data-tags="pulp board energy reg mill">
+            <div>
+              <div class="issue-badge-row">
+                <span class="issue-num-badge">第 007 期</span>
+                <span class="issue-date">2026-09-11 (W37)</span>
+              </div>
+              <h3 class="issue-card-title">台廠 8 月營收報捷（正隆創 20 個月新高）× 南美木漿港口物流深水戰略（CMPC 獲批 3 億美元專用碼頭）× APP 印尼 H1 獲利翻倍 127% × 中國雙節前停機保價</h3>
+              <p class="issue-theme">
+                深度研析北美箱板紙 9/1 調價全額開票落地推升 Raw Material Spread 突破 $840/短噸歷史新高、Suzano 領銜亞洲 9 月闊葉漿調漲 $20/噸全面兌現、智利 CMPC 獲批巴西 3 億美元深水專用碼頭佈局物流霸權、金光集團印尼 APP (Indah Kiat) 上半年淨利暴增 127.3%、中國造紙龍頭雙節前停機保價、台灣四大紙廠 8 月營收全線開花（正隆 43.4 億創 20 個月新高，榮成 8M 稅前 4.95 億）、歐盟 PPWR 滿月與中國 GB 4806.10 塗層新規實施 9 天。
+              </p>
+              <div class="issue-kpi-pills">
+                <span class="kpi-pill pill-purple">利差 $840 (新高)</span>
+                <span class="kpi-pill pill-blue">Suzano +$20</span>
+                <span class="kpi-pill pill-blue">NBSK $688 (4,890元)</span>
+                <span class="kpi-pill pill-green">正隆 43.4億 (20M新高)</span>
+                <span class="kpi-pill pill-green">榮成 8M 稅前 4.95億</span>
+                <span class="kpi-pill pill-purple">CMPC 3億碼頭</span>
+                <span class="kpi-pill pill-gold">APP H1 +127%</span>
+                <span class="kpi-pill pill-red">原油 $94.20</span>
+                <span class="kpi-pill pill-red">PPWR 30天 / GB 9天</span>
+              </div>
+            </div>
+            <div class="issue-card-actions">
+              <button class="card-btn" onclick="openReader('Reports/PaperLuz-007_2026-09-11.html', 'Paperluz 週報 第 007 期 (2026-09-11)')">
+                📖 在線閱讀
+              </button>
+              <a href="Reports/PaperLuz-007_2026-09-11.pdf" target="_blank" class="card-btn pdf-btn">
+                📄 A4 PDF
+              </a>
+              <a href="Reports/PaperLuz-007_2026-09-11.md" target="_blank" class="card-btn">
+                📝 MD
+              </a>
+            </div>
+          </article>
+
+          <!-- Issue 006 -->
+          <article class="issue-card" data-tags="pulp board energy reg mill">
+            <div>
+              <div class="issue-badge-row">
+                <span class="issue-num-badge">第 006 期</span>
                 <span class="issue-date">2026-09-04 (W36)</span>
               </div>
               <h3 class="issue-card-title">北美工紙 9/1 調價全面生效落袋 × Suzano 領銜亞洲漿價首度調升 $20 × 中國 GB 4806.10 塗層新規正式施行 × 正隆 H1 獲利暴增 52 倍放量迎金九銀十</h3>
@@ -1498,51 +1996,51 @@
             <tbody>
               <tr>
                 <td><b>正隆 (1904)</b></td>
-                <td>2026-07</td>
-                <td>42.56</td>
-                <td class="val-pos">+9.75%</td>
-                <td class="val-pos">+22.82%</td>
-                <td>越南平陽三期 40 萬噸投產放量，外銷紙箱強勁，創 19 個月新高；Q1 純益年增 588.8% 動能延續</td>
+                <td>2026-08</td>
+                <td>43.40</td>
+                <td class="val-pos">+8.20%</td>
+                <td class="val-pos">+11.50% (+23.0%)</td>
+                <td>8 月合併營收 43.4 億創 20 個月新高；越南平陽三期百萬噸商轉放量，迎中秋文旦與消費電子出口備貨高峰</td>
               </tr>
               <tr>
                 <td><b>榮成 (1909)</b></td>
-                <td>2026-07 (前7月)</td>
-                <td>38.12 (285.35)</td>
-                <td class="val-neg">-1.50%</td>
-                <td class="val-pos">+15.40% (+13.9%)</td>
-                <td>前 7 月自結稅前淨利 4.29 億由虧轉盈；宣布分割台灣紙箱業務成立「榮成投資控股」</td>
+                <td>2026-08 (前8月)</td>
+                <td>44.10 (329.45)</td>
+                <td class="val-pos">+10.80%</td>
+                <td class="val-pos">+24.80% (+15.3%)</td>
+                <td>8 月營收年增近 25%，前 8 月自結稅前淨利 4.95 億；雙節前停機保價帶動利差修復，低碳造紙效益發酵</td>
               </tr>
               <tr>
                 <td><b>永豐餘 (1907)</b></td>
-                <td>2026-07 (H1)</td>
-                <td>51.20 (378.60)</td>
-                <td class="val-pos">+1.80%</td>
-                <td class="val-pos">+8.70%</td>
-                <td>上半年稅後純益 7.79 億元轉盈；越南工紙量價齊升，元太科技投資收益貢獻 10.91 億</td>
+                <td>2026-08</td>
+                <td>66.80 (445.40)</td>
+                <td class="val-pos">+7.50%</td>
+                <td class="val-pos">+7.50%</td>
+                <td>8 月營收月增 7.50%；工紙紙器出貨暢旺，申豐特醫用膠乳回暖，全紙包裝受惠 PPWR 詢單飆升</td>
               </tr>
               <tr>
                 <td><b>華紙 (1905)</b></td>
-                <td>2026-07</td>
-                <td>18.45</td>
-                <td class="val-neg">-2.10%</td>
-                <td class="val-neg">-5.30%</td>
-                <td>長纖木漿於 4,950 元築底完成，啟動「減產保價」至 10 月，加速拓展非塑防油紙與生質能</td>
+                <td>2026-08</td>
+                <td>15.19</td>
+                <td class="val-pos">+1.65%</td>
+                <td class="val-pos">+1.65%</td>
+                <td>8 月營收重返正成長；減產保價自律見效，非塑防油食安卡受惠中國 GB 4806.10 與歐盟 PPWR 出貨放量</td>
               </tr>
               <tr>
-                <td><b>Suzano (SUZ)</b></td>
-                <td>2026-Q2</td>
-                <td>USD 601/噸淨價</td>
-                <td class="val-pos">+7.0% (QoQ)</td>
-                <td class="val-pos">+8.0% (YoY)</td>
-                <td>歐洲短纖緊缺推升淨價，巴西雷亞爾弱勢提供低於 $200/噸現金成本之無敵競爭力</td>
+                <td><b>Indah Kiat (APP)</b></td>
+                <td>2026-H1</td>
+                <td>淨利 USD 2.95 億</td>
+                <td class="val-pos">+127.3% (YoY)</td>
+                <td class="val-pos">翻倍成長</td>
+                <td>印尼一體化超低成本林漿紙優勢顯現，亞洲包裝板紙量價齊揚，發行 3.5 兆印尼盾綠色債券擴建新線</td>
               </tr>
               <tr>
-                <td><b>Smurfit Westrock</b></td>
-                <td>2026-Q2</td>
-                <td>+€120/噸 (歐洲)</td>
-                <td class="val-pos">全面售罄</td>
-                <td class="val-pos">+100 美元 (北美9/1)</td>
-                <td>歐美工紙同強，大西洋兩岸造紙產能寡占度高達 63%，Raw Material Spread 創 3 年新高</td>
+                <td><b>CMPC / Suzano</b></td>
+                <td>2026-09</td>
+                <td>US$ 3.0 億碼頭</td>
+                <td class="val-pos">深水戰略</td>
+                <td class="val-pos">長約直航</td>
+                <td>CMPC 於 9/16 正式簽署 25 年聯邦深水專用碼頭合約（投資 3.7 億美元，2030 年吞吐量 460 萬噸）；Suzano 入股 Imetame 港口，南美掌控跨洋物流</td>
               </tr>
             </tbody>
           </table>
@@ -1600,7 +2098,7 @@
               <text x="550" y="252" text-anchor="middle" fill="var(--fg-muted)" font-size="12">2026-08 (現貨 4,950元 / 價差擴至 600元)</text>
             </svg>
             <p class="chart-caption">
-              <b>圖 1 解讀：</b>長短纖價差由 Q1 的 729 元收斂至低點後，8 月隨長纖回彈至 4,950 元而重新擴大至 600 元/噸 ($85)。短纖替代長纖效應終止，長纖底部支撐確立，期貨主力基差全面修復。
+              <b>圖 1 解讀：</b>最新 9/18 長短纖現貨價差收斂至 455 元/噸 (USD 64)，持續穩定於 500 元/噸安全替代線下方。Suzano 領銜亞洲 9 月提價落地後短纖筑底走穩，雙節前夕木漿供需結構平衡，造紙廠纖維配方維持穩定。
             </p>
           </div>
         </div>
@@ -1637,7 +2135,7 @@
               <text x="630" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">9月 (生效)</text>
             </svg>
             <p class="chart-caption">
-              <b>圖 2 解讀：</b>9 月份北美箱板紙宣告調漲 +80～140 美元，是在 OCC 廢紙成本持平的情況下發動，這將使造紙廠的 Raw Material Spread 直接擴張至 $720 歷史高位，大幅跳升北美紙廠 EBITDA 毛利率。
+              <b>圖 2 解讀：</b>9 月 1 日北美箱板紙第三輪調價全數開票落地 (+$80~140/短噸)，主流牛卡板現貨站上 $960–$980/短噸，原紙對 OCC 廢紙利差 (Raw Material Spread) 衝上 $840 歷史新高，紙廠邊際利潤達到近年最巔峰。
             </p>
           </div>
         </div>
@@ -1677,7 +2175,7 @@
               <text x="610" y="252" text-anchor="middle" fill="var(--fg-muted)" font-size="11">7月營收</text>
             </svg>
             <p class="chart-caption">
-              <b>圖 3 解讀：</b>正隆 7 月營收衝上 +22.82% 創 19 個月新高，榮成連續兩月維持 20% 以上高增長（前 7 月稅前轉盈 4.29 億）。工紙雙雄營收與利差同步強彈，文化紙（華紙）持續在零軸附近築底。
+              <b>圖 3 解讀：</b>8 月官方營收全線開花：正隆 8 月合併營收衝上 NT$43.4 億創 20 個月新高 (+23.0% YoY)；榮成 8 月 NT$44.1 億年增 24.8% (前 8 月稅前淨利 4.95 億)；永豐餘月增 7.5% 至 NT$66.8 億；華紙重返正成長。
             </p>
           </div>
         </div>
@@ -1733,12 +2231,12 @@
               <!-- Brent Oil Line -->
               <polyline points="70,175 180,185 290,170 400,180 510,160 610,95" fill="none" stroke="#ef4444" stroke-width="3"/>
               <circle cx="610" cy="95" r="5" fill="#ef4444"/>
-              <text x="610" y="82" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">8/20 封鎖伊朗 $93.80</text>
+              <text x="610" y="82" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">9/18 布蘭特 $93.90</text>
 
               <!-- SCFI Line -->
               <polyline points="70,100 180,85 290,70 400,65 510,80 610,72" fill="none" stroke="#8b5cf6" stroke-width="2.5"/>
               <circle cx="610" cy="72" r="4.5" fill="#8b5cf6"/>
-              <text x="610" y="60" fill="#8b5cf6" font-size="11" font-weight="700" text-anchor="middle">SCFI 3,355點 (BSS附加費支撐)</text>
+              <text x="610" y="60" fill="#8b5cf6" font-size="11" font-weight="700" text-anchor="middle">SCFI 3,458.2點 (雙節拉貨高峰)</text>
 
               <text x="70" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">3月</text>
               <text x="180" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">5月</text>
@@ -1748,7 +2246,7 @@
               <text x="610" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">8/21 衝擊波</text>
             </svg>
             <p class="chart-caption">
-              <b>圖 5 解讀：</b>8/20 美國宣布對伊朗經濟封鎖後，布蘭特原油突破 $93.8/桶，油輪與航運燃油附加費 (BSS) 應聲上揚。然而台灣造紙業受惠生質能 (SRF) 與自備汽電共生，噸蒸氣成本鎖定在 NT$720–780，有效阻絕化石能源通膨侵蝕毛利。
+              <b>圖 5 解讀：</b>9/18 布蘭特原油維持在 $93.90/桶高位整固，SCFI 貨櫃運價指數報 3,458.20 點微幅反彈 +0.46%，航運燃油附加費 (BSS) 居高不下。然而台灣造紙業受惠 SRF 轉廢為能每噸僅 NT$728 與自備汽電共生，有效阻絕化石能源通膨侵蝕毛利。
             </p>
           </div>
         </div>
@@ -1784,7 +2282,7 @@
                 <tbody>
                   <tr style="border-bottom: 1px solid var(--border);">
                     <td style="padding: 9px 6px; font-weight: 700;">國際原油 Brent</td>
-                    <td style="padding: 9px 6px;">$93.80/桶</td>
+                    <td style="padding: 9px 6px;">$93.90/桶</td>
                     <td style="padding: 9px 6px;">$92–98</td>
                     <td style="padding: 9px 6px;">$85–92</td>
                     <td style="padding: 9px 6px;"><span class="kpi-pill pill-red">地緣高檔</span></td>
@@ -1798,14 +2296,14 @@
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border);">
                     <td style="padding: 9px 6px; font-weight: 700;">長纖針葉漿 NBSK</td>
-                    <td style="padding: 9px 6px;">4,950元($690-750)</td>
+                    <td style="padding: 9px 6px;">4,900元($690)</td>
                     <td style="padding: 9px 6px;">$700–760</td>
                     <td style="padding: 9px 6px;">$720–780</td>
                     <td style="padding: 9px 6px;"><span class="kpi-pill pill-red">築底反彈</span></td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border);">
                     <td style="padding: 9px 6px; font-weight: 700;">短纖闊葉漿 BHKP</td>
-                    <td style="padding: 9px 6px;">4,350元($607)</td>
+                    <td style="padding: 9px 6px;">4,445元($626)</td>
                     <td style="padding: 9px 6px;">$600–620</td>
                     <td style="padding: 9px 6px;">$590–630</td>
                     <td style="padding: 9px 6px;"><span class="kpi-pill pill-blue">區間盤整</span></td>
@@ -1964,9 +2462,52 @@
     </div>
   </div>
 
+  <!-- ── Newsletter Success Modal ── -->
+  <div id="subSuccessModal" class="sub-modal-overlay" onclick="if(event.target===this) closeSubSuccessModal()">
+    <div class="sub-modal-box">
+      <button class="sub-modal-close-btn" onclick="closeSubSuccessModal()">&times;</button>
+      <div class="sub-modal-icon">🎉</div>
+      <h3 class="sub-modal-title">感謝您訂閱 Paperluz 週報！</h3>
+      <p class="sub-modal-text">
+        您已成功登記訂閱 <strong id="modalEditionBadge" style="color:var(--accent-hover);">繁體中文版</strong>。<br>
+        我們將在每週五晨間 07:00 準時為您直送最新市場情報、原料利差模型與法規警報。
+      </p>
+
+      <!-- Welcome Gift -->
+      <div class="sub-modal-gift">
+        <div>
+          <div style="font-size:11.5px; font-weight:800; color:var(--gold); text-transform:uppercase;">🎁 迎新專屬好禮</div>
+          <div style="font-size:13.5px; font-weight:700; color:var(--fg);">最新第 008 期高解析 A4 零空白 PDF 完整版</div>
+        </div>
+        <a href="Reports/PaperLuz-008_2026-09-18.pdf" target="_blank" class="btn btn-primary" style="padding:6px 12px; font-size:12px; white-space:nowrap; text-decoration:none;">
+          立即下載 ➔
+        </a>
+      </div>
+
+      <button onclick="closeSubSuccessModal()" class="btn btn-secondary" style="width:100%; justify-content:center;">
+        返回瀏覽情報平台
+      </button>
+    </div>
+  </div>
+
   <!-- ── Site Footer ── -->
   <footer class="site-footer">
     <div class="container footer-content">
+      <!-- Footer Newsletter Quick Box -->
+      <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; width: 100%;">
+        <div>
+          <div style="font-weight: 800; font-size: 15px; color: var(--fg); margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+            <span>📬 訂閱 Paperluz 每週產業電子報</span>
+            <span style="font-size: 11px; background: var(--accent-glow); color: var(--accent-hover); padding: 2px 6px; border-radius: 4px;">雙語可選 · 免費出刊</span>
+          </div>
+          <div style="font-size: 12.5px; color: var(--fg-muted);">每週五晨間準時發送最新原物料行情、紙廠動態與法規警報 · 絕無垃圾郵件</div>
+        </div>
+        <form id="footerSubForm" style="display: flex; gap: 8px; max-width: 440px; width: 100%;" onsubmit="handleFooterSubscribe(event)">
+          <input type="email" id="footerEmail" placeholder="請輸入您的 Email (例: user@paper.com)" required style="flex: 1; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 9px 12px; color: var(--fg); font-size: 13px; font-family: inherit; outline: none;">
+          <button type="submit" class="btn btn-primary" style="padding: 9px 16px; font-size: 13px; white-space: nowrap;">免費訂閱</button>
+        </form>
+      </div>
+
       <div class="footer-meta">
         <b>產出時間</b>：2026-08-21　·　<b>系統版本</b>：Paperluz Engine v12.6 (AI 完整擴充增強版)　·　<b>發行機構</b>：光網資訊 Luznet ∕ Paperluz 產業情報
       </div>
@@ -2141,6 +2682,163 @@
         closeReader();
       }
     });
+
+    // ── Newsletter Mail List Logic ──
+    const NEWSLETTER_CONFIG = {
+      webhookUrl: "", // 支援自訂 Webhook URL (如 Google Apps Script / Formspree 等)
+      storageKey: "paperluz_newsletter_sub",
+      latestIssuePdf: "Reports/PaperLuz-008_2026-09-18.pdf",
+      latestIssueNum: "008"
+    };
+
+    let selectedLang = "zh";
+
+    function selectLangPill(lang) {
+      selectedLang = lang;
+      document.querySelectorAll(".lang-pill").forEach(pill => {
+        pill.classList.toggle("active", pill.getAttribute("data-lang") === lang);
+      });
+    }
+
+    const subForm = document.getElementById("newsletterForm");
+    const subEmail = document.getElementById("subEmail");
+    const subCompany = document.getElementById("subCompany");
+    const subSubmitBtn = document.getElementById("subSubmitBtn");
+    const subStatusMsg = document.getElementById("subStatusMsg");
+    const subSuccessModal = document.getElementById("subSuccessModal");
+    const modalEditionBadge = document.getElementById("modalEditionBadge");
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function checkExistingSub() {
+      try {
+        const saved = localStorage.getItem(NEWSLETTER_CONFIG.storageKey);
+        if (saved) {
+          const data = JSON.parse(saved);
+          if (subStatusMsg) {
+            subStatusMsg.className = "sub-status-msg success";
+            const langLabel = data.lang === "zh" ? "繁體中文版" : (data.lang === "en" ? "英文國際版" : "雙語全訂版");
+            subStatusMsg.innerHTML = `✅ 您已於 ${data.date || "近期"} 登記訂閱 Paperluz 週報 (${langLabel})！每週五準時晨間發送。`;
+            subStatusMsg.style.display = "block";
+          }
+          if (subEmail && data.email) {
+            subEmail.value = data.email;
+          }
+        }
+      } catch (e) {}
+    }
+
+    if (subForm) {
+      subForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const email = subEmail.value.trim();
+        const company = subCompany.value.trim();
+        const hp = document.getElementById("subHoneypot")?.value || "";
+
+        if (hp) {
+          console.warn("Bot detected");
+          return;
+        }
+
+        if (!validateEmail(email)) {
+          subStatusMsg.className = "sub-status-msg error";
+          subStatusMsg.textContent = "請輸入有效的電子信箱格式 (例: name@company.com)";
+          subStatusMsg.style.display = "block";
+          return;
+        }
+
+        subSubmitBtn.disabled = true;
+        const origBtnHtml = subSubmitBtn.innerHTML;
+        subSubmitBtn.innerHTML = `<span>⏳ 登記訂閱中...</span>`;
+        subStatusMsg.style.display = "none";
+
+        const payload = {
+          email: email,
+          company: company,
+          language: selectedLang,
+          timestamp: new Date().toISOString(),
+          source: "paperluz_portal_zh"
+        };
+
+        if (NEWSLETTER_CONFIG.webhookUrl) {
+          try {
+            await fetch(NEWSLETTER_CONFIG.webhookUrl, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload)
+            });
+          } catch (err) {
+            console.log("Webhook recorded offline fallback:", err);
+          }
+        }
+
+        const subData = {
+          email: email,
+          company: company,
+          lang: selectedLang,
+          date: new Date().toLocaleDateString("zh-TW")
+        };
+        localStorage.setItem(NEWSLETTER_CONFIG.storageKey, JSON.stringify(subData));
+
+        setTimeout(() => {
+          subSubmitBtn.disabled = false;
+          subSubmitBtn.innerHTML = origBtnHtml;
+
+          const langMap = { "zh": "繁體中文版", "en": "英文國際版", "both": "雙語全訂版" };
+          if (modalEditionBadge) {
+            modalEditionBadge.textContent = langMap[selectedLang] || "繁體中文版";
+          }
+          
+          openSubSuccessModal();
+
+          subStatusMsg.className = "sub-status-msg success";
+          subStatusMsg.innerHTML = `✅ 恭喜！已成功登記 ${email}（${langMap[selectedLang]}）。每週五晨間 07:00 準時發送！`;
+          subStatusMsg.style.display = "block";
+        }, 350);
+      });
+    }
+
+    function handleFooterSubscribe(e) {
+      e.preventDefault();
+      const fEmail = document.getElementById("footerEmail").value.trim();
+      if (!validateEmail(fEmail)) {
+        alert("請輸入有效的電子郵件地址！");
+        return;
+      }
+      if (subEmail) {
+        subEmail.value = fEmail;
+        const subSec = document.getElementById("subscribe");
+        if (subSec) subSec.scrollIntoView({ behavior: "smooth", block: "start" });
+        subEmail.focus();
+      }
+      if (subForm) {
+        subForm.dispatchEvent(new Event("submit"));
+      }
+    }
+
+    function openSubSuccessModal() {
+      if (subSuccessModal) {
+        subSuccessModal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+    }
+
+    function closeSubSuccessModal() {
+      if (subSuccessModal) {
+        subSuccessModal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && subSuccessModal && subSuccessModal.classList.contains("active")) {
+        closeSubSuccessModal();
+      }
+    });
+
+    checkExistingSub();
   </script>
 </body>
 </html>

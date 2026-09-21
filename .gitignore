@@ -19,3 +19,6 @@ $RECYCLE.BIN/
 .idea/
 *.swp
 *~
+
+# Ephemeral preview files
+Reports/newsletter_preview_*.html

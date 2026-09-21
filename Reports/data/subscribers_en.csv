@@ -1,0 +1,12 @@
+email,company,subscribed_at,language,status,source
+editor.en@paperluz.org,Luznet / Paperluz Global Intelligence,2026-07-31 08:00:00,en,active,admin
+global.desk@paperluz.org,Paperluz Global Analytics Desk,2026-08-01 09:00:00,en,active,admin
+suzano.global.sales@example.com,Suzano Pulp & Paper Trading,2026-08-14 11:20:00,en,active,portal
+cmpc.logistics@example.com,CMPC Celulose Riograndense,2026-08-22 15:45:00,en,active,portal
+smurfit.westrock.procure@example.com,Smurfit Westrock Containerboard Division,2026-08-29 10:10:00,en,active,portal
+international.paper.fiber@example.com,International Paper Global Sourcing,2026-09-03 14:00:00,en,active,portal
+pca.packaging.exec@example.com,Packaging Corporation of America (PCA),2026-09-08 16:30:00,en,active,portal
+oji.holdings.tokyo@example.com,Oji Holdings Corporation (3861.T),2026-09-12 09:15:00,en,active,portal
+nippon.paper.intl@example.com,Nippon Paper Industries (3863.T),2026-09-15 13:50:00,en,active,portal
+rengo.boxboard@example.com,Rengo Co. Ltd. (3941.T) International,2026-09-17 11:05:00,en,active,portal
+test.officer@papercorp.com,永豐餘 (1907),2026-09-21 11:23:42,both,active,cli

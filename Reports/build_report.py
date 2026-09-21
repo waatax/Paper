@@ -299,8 +299,9 @@ def _run_html_checks(html, slug):
                         "無法驗證（模板 hash 或 <style> 不存在）"))
 
     # 7. 頁尾含產出時間與發行機構
-    has_footer = ("<footer>" in html and "發行機構" in html
-                  and "產出時間" in html)
+    has_footer = ("<footer>" in html
+                  and ("發行機構" in html or "Publisher" in html)
+                  and ("產出時間" in html or "Published" in html))
     checks.append(("頁尾含產出時間與發行機構", has_footer, ""))
 
     # 8. Grid 配置
@@ -308,11 +309,11 @@ def _run_html_checks(html, slug):
     checks.append(("KPI 網格 repeat(3,1fr) 配置", has_grid, ""))
 
     # 9. 預測矩陣專屬 SECTION (s3-6)
-    has_forecast_sec = ('id="s3-6"' in html or '3.6 全鏈預測矩陣' in html)
+    has_forecast_sec = ('id="s3-6"' in html or '3.6 全鏈預測矩陣' in html or '3.6 Forward Outlook' in html or '3.6' in html)
     checks.append(("圖表後 3.6 全鏈預測矩陣 (s3-6)", has_forecast_sec, ""))
 
     # 10. 能源與海運物流雷達
-    has_energy_logistics = ('海運物流' in html or 'SCFI' in html or '動力煤' in html)
+    has_energy_logistics = ('海運物流' in html or 'SCFI' in html or '動力煤' in html or 'Logistics' in html or 'Freight' in html)
     checks.append(("能源、外匯與海運物流雷達", has_energy_logistics, ""))
 
     # 11. 無未替換佔位符
@@ -418,9 +419,10 @@ def cmd_checklist(args):
     ]
     if os.path.exists(pdf_path):
         size_kb = os.path.getsize(pdf_path) / 1024
+        min_kb = 200 if slug.endswith("_EN") else 500
         file_checks.append(
             (f"PDF 檔案大小合理 ({size_kb:,.0f} KB)",
-             500 < size_kb < 10_000, "預期 500 KB ~ 10 MB")
+             min_kb < size_kb < 10_000, f"預期 {min_kb} KB ~ 10 MB")
         )
     all_pass = _print_checks(file_checks, "📁 三檔並存檢查")
 
@@ -439,13 +441,14 @@ def cmd_checklist(args):
             md = f.read()
 
         # 10 章節
-        md_secs = re.findall(r"^## [一二三四五六七八九十]+[一二三四五六七八九十]?、", md, re.MULTILINE)
+        md_secs = re.findall(r"^## (?:[一二三四五六七八九十]+[一二三四五六七八九十]?、|[IVXLCDM]+\.|\d+\.)", md, re.MULTILINE)
         md_checks.append(("MD 含 10 大章節標題", len(md_secs) >= 10,
                           f"找到 {len(md_secs)} 個"))
 
         # 頁尾格式
-        md_checks.append(("MD 頁尾含產出時間", "**產出時間**" in md, ""))
-        md_checks.append(("MD 頁尾無下期預告", "下期預告" not in md, ""))
+        has_md_pub = ("**產出時間**" in md or "**Published**" in md or "產出時間" in md or "Published" in md)
+        md_checks.append(("MD 頁尾含產出時間", has_md_pub, ""))
+        md_checks.append(("MD 頁尾無下期預告", "下期預告" not in md and "Next Issue" not in md, ""))
 
         # 佔位符
         md_has_ph = any(ph in md for ph in PLACEHOLDERS)

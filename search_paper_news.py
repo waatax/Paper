@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Paperluz Intelligence Engine v4.0 (7-Iteration Optimized Edition)
-================================================================
+Paperluz Intelligence Engine v5.0 (Global Enterprise Edition)
+=============================================================
 特點：
-  1. 併發多線程 (ThreadPoolExecutor) 毫秒級抓取全球 25+ 情報源
-  2. 覆蓋美、歐、智利/南美、全球木片、日本三大廠、中國/印尼 APP、東南亞與台灣四大廠
-  3. 多語實體標籤 (NER) 與產品主題自動標記
-  4. 優先級評分系統 (Priority Scoring 1-10) 與 Top Signals 萃取
-  5. 數值與調幅 (Price / Volume Delta) 自動識別
+  1. 併發多線程 (ThreadPoolExecutor) 毫秒級抓取全球 25+ 權威情報源
+  2. 覆蓋美、歐、智利/南美、全球木片、日本三大廠、中國/印尼 APP、亞洲箱板包裝與台灣四大廠
+  3. 多語實體標籤 (NER 30+ 企業) 與產品主題自動標記
+  4. 優先級評分系統 (Priority Scoring 1-10) 與 Top Signals 智慧萃取
+  5. 數值與調幅 (Price / Volume Delta / Tariff) 自動識別
   6. 確定性時效過濾、去重與反噪音閘門
-  7. 雙軌產出 (結構化 JSON + 專家級 Markdown 簡報)，無縫對接週報管線
+  7. 雙軌產出 (結構化 JSON + 專家級 Markdown 簡報)，無縫對接週報產製管線
 """
 
 import sys
@@ -104,6 +104,20 @@ ENTITY_MAP = {
     "金光": "🏢 金光紙業 (APP)",
     "Indah Kiat": "🏢 Indah Kiat (APP)",
     "Riau Andalan": "🏢 APRIL / 廖內漿紙",
+    "玖龍": "🏢 玖龍紙業 (Nine Dragons)",
+    "Nine Dragons": "🏢 玖龍紙業 (Nine Dragons)",
+    "山鷹": "🏢 山鷹國際 (Shanying)",
+    "Shanying": "🏢 山鷹國際 (Shanying)",
+    "太陽紙業": "🏢 太陽紙業 (Sun Paper)",
+    "Sun Paper": "🏢 太陽紙業 (Sun Paper)",
+    "晨鳴": "🏢 晨鳴紙業 (Chenming)",
+    "Chenming": "🏢 晨鳴紙業 (Chenming)",
+    "Sylvamo": "🏢 Sylvamo",
+    "Metsä": "🏢 Metsä Board",
+    "Metsa": "🏢 Metsä Board",
+    "Billerud": "🏢 Billerud",
+    "Pratt": "🏢 Pratt Industries",
+    "DS Smith": "🏢 DS Smith (IP)",
     "正隆": "🏢 正隆 (1904)",
     "榮成": "🏢 榮成 (1909)",
     "永豐餘": "🏢 永豐餘 (1907)",
@@ -111,12 +125,14 @@ ENTITY_MAP = {
 }
 
 TOPIC_KEYWORDS = {
-    "價格與調幅": ["price", "pricing", "hike", "漲價", "調價", "提價", "報價", "牌價", "per ton", "per tonne", "元/噸"],
-    "產能與營運": ["mill", "capacity", "expansion", "closure", "plant", "產能", "擴產", "停機", "歲修", "關廠", "工廠", "投產"],
-    "綠色法規與ESG": ["PPWR", "EUDR", "PFAS", "carbon", "decarbonization", "碳費", "環保", "生質能", "無塑", "可回收", "永續"],
-    "新材料與高階包裝": ["CNF", "nanocellulose", "SHIELDPLUS", "Foopak", "liquid packaging", "液體紙盒", "熱感紙", "阻隔紙", "奈米纖維"],
+    "價格與調幅": ["price", "pricing", "hike", "漲價", "調價", "提價", "報價", "牌價", "per ton", "per tonne", "元/噸", "利差", "spread", "surcharge", "附加費"],
+    "產能與營運": ["mill", "capacity", "expansion", "closure", "plant", "產能", "擴產", "停機", "歲修", "關廠", "工廠", "投產", "開工率", "稼動率"],
+    "綠色法規與ESG": ["PPWR", "EUDR", "PFAS", "PFHxA", "GB 4806", "carbon", "decarbonization", "碳費", "環保", "生質能", "無塑", "可回收", "永續", "DDS", "GPS"],
+    "能源與海運物流": ["brent", "wti", "crude", "coal", "原油", "煤炭", "scfi", "bdi", "freight", "運費", "航運", "港口", "terminal", "logistics", "深水港"],
+    "新材料與高階包裝": ["CNF", "nanocellulose", "SHIELDPLUS", "Foopak", "liquid packaging", "液體紙盒", "熱感紙", "阻隔紙", "奈米纖維", "生質乙醇", "SAF"],
     "大宗木片與原料": ["woodchip", "wood chips", "pulpwood", "木片", "原木", "廢紙", "OCC", "長纖", "短纖", "NBSK", "BHKP"],
-    "財報與併購": ["earnings", "revenue", "EBITDA", "quarter", "results", "acquisition", "merger", "營收", "淨利", "獲利", "財報", "併購"]
+    "財報與併購": ["earnings", "revenue", "EBITDA", "quarter", "results", "acquisition", "merger", "營收", "淨利", "獲利", "財報", "併購", "sukuk", "債券"],
+    "貿易救濟與關稅": ["dumping", "countervailing", "tariff", "trade dispute", "關稅", "反傾銷", "反補貼", "雙反", "救濟"]
 }
 
 def analyze_article(title):
@@ -231,7 +247,7 @@ def run_news_aggregation(save_snapshot=False, quiet=False, top_signals=5):
     top_picks = all_articles[:top_signals]
 
     aggregated_results = {
-        "engine_version": "Paperluz Engine v4.0 (7-Iteration Optimized)",
+        "engine_version": "Paperluz Engine v5.0 (Global Enterprise Edition)",
         "fetch_time": now_str,
         "date": date_str,
         "total_articles": len(all_articles),

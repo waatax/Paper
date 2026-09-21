@@ -1,0 +1,10 @@
+email,company,subscribed_at,language,status,source
+editor@paperluz.org,光網資訊 Luznet / Paperluz 產業情報,2026-07-31 08:00:00,zh,active,admin
+analytics@paperluz.org,Paperluz 智庫決策中心,2026-08-01 09:00:00,zh,active,admin
+cheng.loong.procurement@example.com,正隆紙業 (1904) 採購部,2026-08-15 10:30:00,zh,active,portal
+longchen.strategy@example.com,榮成低碳 (1909) 策略規劃部,2026-08-20 14:15:00,zh,active,portal
+yfy.board@example.com,永豐餘 (1907) 永續與投研處,2026-08-25 11:00:00,zh,active,portal
+chp.fiber@example.com,華紙 (1905) 漿紙材料研發中心,2026-09-01 16:20:00,zh,active,portal
+ndpaper.market@example.com,玖龍紙業 國際商情組,2026-09-05 09:40:00,zh,active,portal
+shanying.supply@example.com,山鷹國際 原料採購中心,2026-09-10 13:10:00,zh,active,portal
+test.officer@papercorp.com,永豐餘 (1907),2026-09-21 11:23:42,both,active,cli

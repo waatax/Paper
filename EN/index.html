@@ -1008,6 +1008,329 @@
         padding: 8px;
       }
     }
+
+    /* ── Newsletter Subscription Section (Mail List) ── */
+    .newsletter-section {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(19, 31, 61, 0.95) 45%, rgba(139, 92, 246, 0.08) 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: 18px;
+      padding: 38px 40px;
+      margin-bottom: 48px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 36px -8px rgba(37, 99, 235, 0.22);
+    }
+    [data-theme="light"] .newsletter-section {
+      background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 50%, #fbf5ff 100%);
+      border-color: #bfdbfe;
+      box-shadow: 0 12px 32px -4px rgba(37, 99, 235, 0.12);
+    }
+    [data-theme="paper"] .newsletter-section {
+      background: linear-gradient(135deg, #fdf8ee 0%, #f4ebd7 100%);
+      border-color: var(--border-accent);
+      box-shadow: 0 10px 30px rgba(176, 92, 54, 0.1);
+    }
+    .newsletter-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 38px;
+      align-items: center;
+    }
+    @media (max-width: 960px) {
+      .newsletter-grid { grid-template-columns: 1fr; gap: 28px; }
+      .newsletter-section { padding: 26px 20px; }
+    }
+    .nl-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-glow);
+      color: var(--accent-hover);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .nl-title {
+      font-size: 27px;
+      font-weight: 900;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
+      color: var(--fg);
+    }
+    .nl-desc {
+      font-size: 14.5px;
+      color: var(--fg-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .nl-features {
+      list-style: none;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .nl-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--fg);
+      line-height: 1.5;
+    }
+    .nl-icon {
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .nl-social-proof {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--fg-muted);
+    }
+    .nl-avatars {
+      display: flex;
+      align-items: center;
+    }
+    .nl-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--bg-card-hover);
+      border: 2px solid var(--bg-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      margin-left: -8px;
+      color: var(--accent);
+    }
+    .nl-avatar:first-child { margin-left: 0; }
+    .nl-card-form {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px 24px;
+      box-shadow: var(--shadow);
+    }
+    .lang-selector-group {
+      margin-bottom: 16px;
+    }
+    .lang-selector-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--fg-muted);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .lang-pills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .lang-pill {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 9px 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--fg);
+      transition: all 0.2s ease;
+      user-select: none;
+      text-align: center;
+    }
+    .lang-pill:hover {
+      border-color: var(--accent);
+      background: var(--bg-card-hover);
+    }
+    .lang-pill.active {
+      border-color: var(--accent);
+      background: var(--accent-glow);
+      color: var(--accent-hover);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+    .sub-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .sub-input-wrap {
+      position: relative;
+    }
+    .sub-input {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px 12px 38px;
+      color: var(--fg);
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .sub-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .sub-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--fg-muted);
+      font-size: 15px;
+      pointer-events: none;
+    }
+    .sub-btn {
+      width: 100%;
+      padding: 13px 18px;
+      font-size: 15px;
+      font-weight: 800;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: #2563eb;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .sub-btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+    }
+    .sub-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .sub-privacy-note {
+      font-size: 11.5px;
+      color: var(--fg-muted);
+      text-align: center;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+    .sub-status-msg {
+      font-size: 12.5px;
+      margin-top: 8px;
+      display: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+    .sub-status-msg.error {
+      display: block;
+      background: var(--red-bg);
+      color: var(--red);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+    .sub-status-msg.success {
+      display: block;
+      background: var(--green-bg);
+      color: var(--green);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    /* ── Success Modal ── */
+    .sub-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(11, 19, 41, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .sub-modal-overlay.active { display: flex; }
+    .sub-modal-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      border-radius: 16px;
+      max-width: 520px;
+      width: 100%;
+      padding: 34px 30px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes modalPop {
+      from { transform: scale(0.92); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .sub-modal-icon {
+      font-size: 46px;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .sub-modal-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--fg);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+    .sub-modal-text {
+      font-size: 14px;
+      color: var(--fg-muted);
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+    .sub-modal-gift {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 22px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sub-modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: transparent;
+      border: none;
+      font-size: 22px;
+      color: var(--fg-muted);
+      cursor: pointer;
+      line-height: 1;
+    }
+    .sub-modal-close-btn:hover { color: var(--fg); }
   </style>
 </head>
 <body>
@@ -1024,6 +1347,7 @@
         <span class="badge-brand">Intelligence Hub</span>
       </a>
       <ul class="nav-links">
+        <li><a href="#subscribe" style="color:var(--accent-hover); font-weight:700;">📬 Subscribe</a></li>
         <li><a href="#archives" class="active">Archives</a></li>
         <li><a href="#news">News Feed</a></li>
         <li><a href="#radar">Data Radar</a></li>
@@ -1033,6 +1357,9 @@
         <li><a href="#calculator">Sensitivity Simulator</a></li>
       </ul>
       <div class="nav-actions">
+        <a href="#subscribe" class="btn btn-primary" style="padding:6px 14px; font-size:12.5px; text-decoration:none;">
+          📬 Subscribe
+        </a>
         <a href="../index.html" class="theme-toggle-btn" style="text-decoration:none; font-weight:700; color:var(--fg);" title="切換為繁體中文版">
           🌐 繁體中文
         </a>
@@ -1046,11 +1373,11 @@
   <!-- ── Geopolitical Energy Alert Bar ── -->
   <div class="alert-banner">
     <div class="container alert-banner-inner">
-      <span class="alert-tag">🚨 Breaking Release</span>
+      <span class="alert-tag">🚨 Latest Release</span>
       <span class="alert-text">
-        <b>Sept 4: Issue 006 Released · North American Containerboard Sept 1 Price Hikes Fully Realized</b>: Suzano leads $20/ton Asian hardwood pulp price hike; China enacts GB 4806.10 coating standard on Sept 2; Cheng Loong reports H1 net profit surging 52x to NT$1.602B.
+        <b>Sept 18: Issue 008 Released · China Mills Pre-Holiday Downtimes (Shanying 4–8 Days / Nine Dragons Overhauls)</b>: CMPC signs $370M 25-yr federal deal for Brazil deep-water port terminal; North American raw material spread holds at $840 peak; EU PFHxA ban enters final 30-day countdown.
       </span>
-      <a href="#archives" class="alert-link" onclick="openReader('../Reports/PaperLuz-006_2026-09-04_EN.html', 'Paperluz Weekly Issue 006 (2026-09-04)')">Read Issue 006 Deep-Dive ➔</a>
+      <a href="#archives" class="alert-link" onclick="openReader('../Reports/PaperLuz-008_2026-09-18_EN.html', 'Paperluz Weekly Issue 008 (2026-09-18)')">Read Issue 008 In-Depth Report ➔</a>
     </div>
   </div>
 
@@ -1058,7 +1385,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero-tagline">
-        <span>⚡ 2026-09-04 Issue 006 Released · North American 9/1 Price Hike Fully Realized × Suzano Asian Pulp +$20 × China GB 4806.10 Enacted</span>
+        <span>⚡ 2026-09-18 Issue 008 Released · China Mills Downtimes Wave × CMPC $370M Brazil Deep-Water Port × North American Raw Spread $840 Peak × EU PFHxA 30-Day Countdown</span>
       </div>
       <h1 class="hero-title">
         Global Pulp & Paper Industry Intelligence Hub<br>
@@ -1068,17 +1395,21 @@
         Deep integration of global virgin wood pulp commodities, geopolitical energy & maritime logistics, North American/European containerboard price hikes, financial performance across Asian mills, and full-chain "Energy × Pulp × Paper" forward forecasting matrices. Published weekly on Fridays at 07:00 AM with Markdown, HTML, and print-ready A4 Zero-Gap PDF deliverables.
       </p>
       <div class="hero-cta-group">
-        <button onclick="openReader('../Reports/PaperLuz-006_2026-09-04_EN.html', 'Paperluz Weekly Issue 006 (2026-09-04)')" class="btn btn-primary">
+        <button onclick="openReader('../Reports/PaperLuz-008_2026-09-18_EN.html', 'Paperluz Weekly Issue 008 (2026-09-18)')" class="btn btn-primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-          Read Latest Weekly (Issue 006)
+          Read Latest Weekly (Issue 008)
         </button>
-        <a href="../Reports/PaperLuz-006_2026-09-04_EN.pdf" target="_blank" class="btn btn-secondary">
+        <a href="../Reports/PaperLuz-008_2026-09-18_EN.pdf" target="_blank" class="btn btn-secondary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-          Download A4 PDF
+          Download Latest A4 PDF
         </a>
         <a href="#calculator" class="btn btn-secondary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M8 10h.01"></path><path d="M12 10h.01"></path><path d="M16 10h.01"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path></svg>
           Margin Simulator
+        </a>
+        <a href="#subscribe" class="btn btn-secondary" style="border-color:var(--border-accent); color:var(--accent-hover);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Subscribe Weekly (Free)
         </a>
       </div>
 
@@ -1086,43 +1417,43 @@
       <div class="metric-grid">
         <div class="metric-card">
           <div class="metric-title">Brent Crude Benchmark</div>
-          <div class="metric-value val-red">$94.65</div>
-          <div class="metric-desc">Geopolitically Elevated · +0.6% WoW</div>
+          <div class="metric-value val-red">$93.90</div>
+          <div class="metric-desc">Geopolitically Elevated · -0.3% WoW</div>
         </div>
         <div class="metric-card">
           <div class="metric-title">China Import NBSK Pulp Spot</div>
-          <div class="metric-value val-blue">USD 685</div>
-          <div class="metric-desc">RMB 4,865/MT · Pre-Holiday Buying</div>
+          <div class="metric-value val-blue">USD 690</div>
+          <div class="metric-desc">RMB 4,900/MT · Pre-Holiday Tightness</div>
         </div>
         <div class="metric-card">
           <div class="metric-title">Suzano Asian Pulp Hike</div>
           <div class="metric-value val-blue">+$20 / MT</div>
-          <div class="metric-desc">First Hike Since April · Hardwood Floor</div>
+          <div class="metric-desc">BHKP RMB 4,445 · Spread Narrows to RMB 455</div>
         </div>
         <div class="metric-card">
           <div class="metric-title">US OCC #11 Export FAS</div>
-          <div class="metric-value val-gold">$135–137</div>
-          <div class="metric-desc">USD/short ton · Spread $835 Record Peak</div>
+          <div class="metric-value val-gold">$135 / short ton</div>
+          <div class="metric-desc">Export Resilient · Raw Spread $840 Record Peak</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">North American Boxboard Hikes</div>
-          <div class="metric-value val-red">+$80~140</div>
-          <div class="metric-desc">Enacted Sept 1 · Full Invoicing Realized</div>
+          <div class="metric-title">North American Raw Spread</div>
+          <div class="metric-value val-purple">$840 Record Peak</div>
+          <div class="metric-desc">Week 3 Fully Invoiced · Liner Spot $975</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">Cheng Loong (1904) H1 Net Profit</div>
-          <div class="metric-value val-green">NT$1.602B</div>
-          <div class="metric-desc">Up 52x YoY · EPS NT$1.45 4-Yr High</div>
+          <div class="metric-title">China Mills Pre-Holiday Downtimes</div>
+          <div class="metric-value val-gold">4–8 Days Halts</div>
+          <div class="metric-desc">Shanying & Nine Dragons · Defending RMB 30–50 Hikes</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">Long Chen (1909) 7M PBT</div>
-          <div class="metric-value val-green">NT$429M PBT</div>
-          <div class="metric-desc">Turnaround · Sustainability Action Award</div>
+          <div class="metric-title">CMPC Brazil Port Deal</div>
+          <div class="metric-value val-green">$370M Signed</div>
+          <div class="metric-desc">25-Yr Federal Lease · 4.6M MT/yr Throughput by 2030</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">China GB 4806.10 Standard</div>
-          <div class="metric-value val-gold">Active Sept 2</div>
-          <div class="metric-desc">Paper Coating Covered · PFAS Ban</div>
+          <div class="metric-title">EU PFHxA PFAS Ban</div>
+          <div class="metric-value val-red">30 Days Countdown</div>
+          <div class="metric-desc">Enforced Oct 18, 2026 · Fluorinated Coatings Prohibited</div>
         </div>
       </div>
 
@@ -1130,50 +1461,51 @@
       <div class="ticker-bar">
         <div class="ticker-label">
           <span class="ticker-dot"></span>
-          Live Market Ticker (Sept 4)
+          Live Market Quotes (Sept 18)
         </div>
         <div class="ticker-items">
           <div class="ticker-item">
             <span class="ticker-name">Brent Crude:</span>
-            <span class="ticker-val">$94.65</span>
-            <span class="ticker-delta delta-up">+0.6%</span>
+            <span class="ticker-val">$93.90</span>
+            <span class="ticker-delta delta-down">-0.3%</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">NBSK Pulp:</span>
-            <span class="ticker-val">4,865 RMB</span>
-            <span class="ticker-delta delta-up">+45 RMB</span>
+            <span class="ticker-val">4,900 RMB</span>
+            <span class="ticker-delta delta-up">+10 RMB</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">BHKP Pulp:</span>
-            <span class="ticker-val">4,420 RMB</span>
-            <span class="ticker-delta delta-up">+55 RMB</span>
+            <span class="ticker-val">4,445 RMB</span>
+            <span class="ticker-delta delta-up">+5 RMB</span>
           </div>
           <div class="ticker-item">
-            <span class="ticker-name">US OCC #11:</span>
-            <span class="ticker-val">$135/ton</span>
-            <span class="ticker-delta delta-up">+$1</span>
+            <span class="ticker-name">US OCC:</span>
+            <span class="ticker-val">$135/short ton</span>
+            <span class="ticker-delta delta-up">Spread $840</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">SCFI Freight:</span>
-            <span class="ticker-val">3,425.8 pts</span>
-            <span class="ticker-delta delta-up">+0.8%</span>
+            <span class="ticker-val">3,458.2 pts</span>
+            <span class="ticker-delta delta-up">+0.46%</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">USD/TWD:</span>
-            <span class="ticker-val">32.120</span>
-            <span class="ticker-delta delta-down">Apprec. 6¢</span>
+            <span class="ticker-val">32.060</span>
+            <span class="ticker-delta delta-down">NTD +0.02</span>
           </div>
           <div class="ticker-item">
-            <span class="ticker-name">Cheng Loong H1:</span>
-            <span class="ticker-val">NT$1.602B</span>
-            <span class="ticker-delta delta-up">EPS 1.45</span>
+            <span class="ticker-name">Cheng Loong Aug:</span>
+            <span class="ticker-val">NT$4.34B</span>
+            <span class="ticker-delta delta-up">20-Month High</span>
           </div>
           <div class="ticker-item">
-            <span class="ticker-name">Long Chen 7M:</span>
-            <span class="ticker-val">NT$429M</span>
-            <span class="ticker-delta delta-up">ESG Award</span>
+            <span class="ticker-name">CMPC Port Deal:</span>
+            <span class="ticker-val">$370M</span>
+            <span class="ticker-delta delta-up">Signed Sept 16</span>
           </div>
         </div>
+      </div>
       </div>
 
     </div>
@@ -1182,6 +1514,100 @@
   <!-- ── Main Content Area ── -->
   <main class="main-content">
     <div class="container">
+
+      <!-- ── Section 0: Weekly Newsletter Subscription (Mail List) ── -->
+      <section id="subscribe" class="newsletter-section" style="scroll-margin-top: 80px;">
+        <div class="newsletter-grid">
+          <div>
+            <div class="nl-badge">
+              <span>📬 Official Friday Morning Briefing · 100% Free</span>
+            </div>
+            <h2 class="nl-title">
+              Gain Strategic Pulp & Paper Edge<br>
+              <span style="background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Delivered to Your Inbox Every Friday 07:00 AM</span>
+            </h2>
+            <p class="nl-desc">
+              Comprehensive global tracking of virgin wood pulp spots (NBSK / BHKP), containerboard raw material spread models, mill downtime schedules, and EU PPWR/PFAS compliance radars. Trusted by pulp & paper executives and packaging procurement heads worldwide.
+            </p>
+            <ul class="nl-features">
+              <li class="nl-feature-item">
+                <span class="nl-icon">📈</span>
+                <div><b>Spot Indices & Spread Models</b>: Real-time tracking of NBSK, BHKP, US OCC #11 FAS, and NA Raw Spread $840/ST apex threshold.</div>
+              </li>
+              <li class="nl-feature-item">
+                <span class="nl-icon">🏭</span>
+                <div><b>Mill Operations & Revenue</b>: Taiwanese mill earnings (Cheng Loong, Longchen, YFY, CHP) × China holiday downtime waves and price defense.</div>
+              </li>
+              <li class="nl-feature-item">
+                <span class="nl-icon">⚖️</span>
+                <div><b>Global Regulatory Radars</b>: EU PPWR mandatory enforcement, REACH PFHxA fluorinated coating bans, and carbon border impact analyses.</div>
+              </li>
+            </ul>
+            <div class="nl-social-proof">
+              <div class="nl-avatars">
+                <div class="nl-avatar">CL</div>
+                <div class="nl-avatar">LC</div>
+                <div class="nl-avatar">YF</div>
+                <div class="nl-avatar">SZ</div>
+                <div class="nl-avatar">IP</div>
+              </div>
+              <div>Join <b>1,200+</b> global pulp, paper, packaging, and trading professionals every week</div>
+            </div>
+          </div>
+
+          <!-- Subscription Form Card -->
+          <div class="nl-card-form">
+            <div class="lang-selector-group">
+              <div class="lang-selector-title">
+                <span>Select your edition preference:</span>
+                <span style="font-size:11px; color:var(--accent);">Delivered Weekly</span>
+              </div>
+              <div class="lang-pills">
+                <div class="lang-pill active" data-lang="en" onclick="selectLangPill('en')">
+                  <span>🌐 English Edition</span>
+                </div>
+                <div class="lang-pill" data-lang="zh" onclick="selectLangPill('zh')">
+                  <span>🇹🇼 Traditional Chinese</span>
+                </div>
+                <div class="lang-pill" data-lang="both" onclick="selectLangPill('both')">
+                  <span>🌟 Both Editions</span>
+                </div>
+              </div>
+            </div>
+
+            <form id="newsletterForm" class="sub-form">
+              <!-- Honeypot Anti-bot -->
+              <input type="text" id="subHoneypot" name="hp_field" style="display:none;" tabindex="-1" autocomplete="off">
+
+              <div class="sub-input-wrap">
+                <span class="sub-icon">✉️</span>
+                <input type="email" id="subEmail" class="sub-input" placeholder="Enter corporate email (e.g., name@papercorp.com)" required>
+              </div>
+
+              <div class="sub-input-wrap">
+                <span class="sub-icon">🏢</span>
+                <input type="text" id="subCompany" class="sub-input" placeholder="Company / Title (Optional, e.g., Suzano Sourcing)">
+              </div>
+
+              <button type="submit" id="subSubmitBtn" class="sub-btn">
+                <span>📬 Free Weekly Subscription</span>
+              </button>
+
+              <div id="subStatusMsg" class="sub-status-msg"></div>
+
+              <div class="sub-privacy-note">
+                🔒 Zero spam pledge · 1-click unsubscribe anytime · Includes Issue 008 A4 PDF gift
+              </div>
+            </form>
+
+            <div style="margin-top: 14px; text-align: center; font-size: 12.5px;">
+              <a href="#archives" onclick="openReader('../Reports/PaperLuz-008_2026-09-18_EN.html', 'Paperluz Weekly Issue 008 (2026-09-18)')" style="color: var(--accent-hover); font-weight: 600;">
+                Preview Latest Issue 008 Sample ➔
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- ── Section 1: Issue Archive ── -->
       <section id="archives" style="scroll-margin-top: 80px;">
@@ -1209,11 +1635,83 @@
         <!-- Issues Cards -->
         <div class="issue-grid" id="issueGrid">
 
-          <!-- Issue 006 (Latest) -->
+                    <!-- Issue 008 (Latest) -->
           <article class="issue-card featured" data-tags="pulp board energy reg mill">
             <div>
               <div class="issue-badge-row">
-                <span class="issue-num-badge">Issue 006 · Latest Edition</span>
+                <span class="issue-num-badge">Issue 008 · Latest Edition</span>
+                <span class="issue-date">2026-09-18 (W38)</span>
+              </div>
+              <h3 class="issue-card-title">China Mills Pre-Holiday Downtimes (Shanying 4–8 Days / Nine Dragons Overhauls) × CMPC Signs $370M Brazil Deep-Water Port Terminal Deal × North American Raw Spread Hits $840 Record Peak × EU PFHxA Ban 30-Day Countdown</h3>
+              <p class="issue-theme">
+                In-depth analysis of China containerboard mills pre-holiday maintenance downtime wave (Shanying 4–8 days across Zhejiang/Anhui, Nine Dragons ~20 machines inspected to defend RMB 30–50/t gains), Chile CMPC signing 25-year federal contract for $370M deep-water port terminal in Rio Grande do Sul (4.6M MT/yr capacity backing Natureza mega-mill), North American boxboard price hikes fully invoiced in week 3 reaching historic record Raw Spread of $840/short ton, Brent crude hovering at $93.90, SCFI container freight at 3,458.20 pts, EU PFHxA PFAS ban entering final 30-day countdown, and China GB 4806.10 coating standard on day 16.
+              </p>
+              <div class="issue-kpi-pills">
+                <span class="kpi-pill pill-purple">Spread $840 (Record Peak)</span>
+                <span class="kpi-pill pill-gold">Shanying/ND Downtimes</span>
+                <span class="kpi-pill pill-blue">CMPC $370M Port Signed</span>
+                <span class="kpi-pill pill-blue">NBSK $690 (RMB 4,900)</span>
+                <span class="kpi-pill pill-blue">BHKP $626 (RMB 4,445)</span>
+                <span class="kpi-pill pill-green">Taiwan Mills Robust</span>
+                <span class="kpi-pill pill-red">Brent $93.90</span>
+                <span class="kpi-pill pill-red">PFHxA 30 Days</span>
+                <span class="kpi-pill pill-red">PPWR Day 37</span>
+              </div>
+            </div>
+            <div class="issue-card-actions">
+              <button class="card-btn" onclick="openReader('../Reports/PaperLuz-008_2026-09-18_EN.html', 'Paperluz Weekly Issue 008 (2026-09-18)')">
+                📖 Online Reader
+              </button>
+              <a href="../Reports/PaperLuz-008_2026-09-18_EN.pdf" target="_blank" class="card-btn pdf-btn">
+                📄 A4 PDF
+              </a>
+              <a href="../Reports/PaperLuz-008_2026-09-18_EN.md" target="_blank" class="card-btn">
+                📝 MD
+              </a>
+            </div>
+          </article>
+
+          <!-- Issue 007 -->
+          <article class="issue-card" data-tags="pulp board energy reg mill">
+            <div>
+              <div class="issue-badge-row">
+                <span class="issue-num-badge">Issue 007</span>
+                <span class="issue-date">2026-09-11 (W37)</span>
+              </div>
+              <h3 class="issue-card-title">Taiwan Mills August Revenue Surge (Cheng Loong Hits 20-Month High) × South American Deep-Water Port Logistics (CMPC Secures $300M Private Terminal) × APP Indonesia H1 Net Profit Jumps 127% × China Pre-Holiday Mill Downtime Maintenance</h3>
+              <p class="issue-theme">
+                In-depth analysis of the Sept 1 North American containerboard price hike full invoicing driving Raw Material Spread to an all-time record $840/short ton; Suzano's $20/ton Asian hardwood pulp hike fully realized; Chile's CMPC securing permits for a $300M private deep-water pulp terminal at Port of Itapoa; Sinar Mas APP's Indah Kiat reporting H1 net profit surging 127.3% to $295M; Chinese containerboard majors initiating pre-holiday downtime maintenance; Taiwan Big 4 posting robust August revenues (Cheng Loong NT$4.34B 20-month peak, Long Chen 8M PBT NT$495M); and EU PPWR day 30 audits alongside China GB 4806.10 enforcement.
+              </p>
+              <div class="issue-kpi-pills">
+                <span class="kpi-pill pill-purple">Spread $840 (Record)</span>
+                <span class="kpi-pill pill-blue">Suzano +$20</span>
+                <span class="kpi-pill pill-blue">NBSK $688 (4,890 RMB)</span>
+                <span class="kpi-pill pill-green">Cheng Loong NT$4.34B (20M High)</span>
+                <span class="kpi-pill pill-green">Long Chen 8M NT$495M PBT</span>
+                <span class="kpi-pill pill-purple">CMPC $300M Port</span>
+                <span class="kpi-pill pill-gold">APP H1 +127%</span>
+                <span class="kpi-pill pill-red">Brent $94.20</span>
+                <span class="kpi-pill pill-red">PPWR Day 30 / GB Day 9</span>
+              </div>
+            </div>
+            <div class="issue-card-actions">
+              <button class="card-btn" onclick="openReader('../Reports/PaperLuz-007_2026-09-11_EN.html', 'Paperluz Weekly Issue 007 (2026-09-11)')">
+                📖 Online Reader
+              </button>
+              <a href="../Reports/PaperLuz-007_2026-09-11_EN.pdf" target="_blank" class="card-btn pdf-btn">
+                📄 A4 PDF
+              </a>
+              <a href="../Reports/PaperLuz-007_2026-09-11_EN.md" target="_blank" class="card-btn">
+                📝 MD
+              </a>
+            </div>
+          </article>
+
+          <!-- Issue 006 -->
+          <article class="issue-card" data-tags="pulp board energy reg mill">
+            <div>
+              <div class="issue-badge-row">
+                <span class="issue-num-badge">Issue 006</span>
                 <span class="issue-date">2026-09-04 (W36)</span>
               </div>
               <h3 class="issue-card-title">North American Containerboard 9/1 Price Hike Fully Realized × Suzano Hikes Asian Pulp Quotes by $20/ton × China GB 4806.10-2025 Coating Standard Enacted × Cheng Loong H1 Net Profit Surges 52x</h3>
@@ -1497,52 +1995,52 @@
             </thead>
             <tbody>
               <tr>
-                <td><b>Cheng Loong (1904.TW)</b></td>
-                <td>2026-07</td>
-                <td>$132.0M USD (NT$4.26B)</td>
-                <td class="val-pos">+9.75%</td>
-                <td class="val-pos">+22.82%</td>
-                <td>Vietnam Binh Duong Phase 3 (400k MT) commercialized with strong carton exports; 19-month revenue peak; Q1 net profit surged +588.8% YoY with sustained momentum.</td>
+                <td><b>Cheng Loong (1904)</b></td>
+                <td>2026-08</td>
+                <td>43.40 (NT$4.34B)</td>
+                <td class="val-pos">+8.20%</td>
+                <td class="val-pos">+11.50% (+23.0%)</td>
+                <td>August consolidated revenue reached NT$4.34B (20-month peak); Vietnam Binh Duong 1M MT capacity running at full speed for electronics and Mid-Autumn export surges</td>
               </tr>
               <tr>
-                <td><b>Long Chen (1909.TW)</b></td>
-                <td>2026-07 (7M)</td>
-                <td>$118.2M USD ($884.8M 7M)</td>
-                <td class="val-neg">-1.50%</td>
-                <td class="val-pos">+15.40% (+13.9%)</td>
-                <td>7-month pre-tax net profit turned positive to $13.3M USD (NT$429M); announced spin-off restructuring into Long Chen Investment Holding.</td>
+                <td><b>Long Chen (1909)</b></td>
+                <td>2026-08 (8M)</td>
+                <td>44.10 (329.45)</td>
+                <td class="val-pos">+10.80%</td>
+                <td class="val-pos">+24.80% (+15.3%)</td>
+                <td>August revenue jumped nearly 25% YoY; 8-month cumulative pre-tax net profit reached NT$495M; pre-holiday mill downtime protects spreads</td>
               </tr>
               <tr>
-                <td><b>YFY (1907.TW)</b></td>
-                <td>2026-07 (H1)</td>
-                <td>$158.8M USD ($1.17B H1)</td>
-                <td class="val-pos">+1.80%</td>
-                <td class="val-pos">+8.70%</td>
-                <td>H1 net profit turned profitable at $24.1M USD (NT$779M); Vietnam containerboard volume and pricing rose in tandem; E-Ink investment contributed $33.8M USD.</td>
+                <td><b>YFY (1907)</b></td>
+                <td>2026-08</td>
+                <td>66.80 (445.40)</td>
+                <td class="val-pos">+7.50%</td>
+                <td class="val-pos">+7.50%</td>
+                <td>August revenue up 7.50% MoM; packaging board volumes brisk, ShenFoong specialty latex rebounds, all-paper packaging inquiries surge under PPWR</td>
               </tr>
               <tr>
-                <td><b>Chung Hwa Pulp (1905.TW)</b></td>
-                <td>2026-07</td>
-                <td>$57.2M USD (NT$1.85B)</td>
-                <td class="val-neg">-2.10%</td>
-                <td class="val-neg">-5.30%</td>
-                <td>NBSK pulp bottoming at RMB 4,950/t ($690-750/t); initiated "production curtailment to defend pricing" through Oct; expanding PFAS-free barrier board and bioenergy.</td>
+                <td><b>Chung Hwa Pulp (1905)</b></td>
+                <td>2026-08</td>
+                <td>15.19</td>
+                <td class="val-pos">+1.65%</td>
+                <td class="val-pos">+1.65%</td>
+                <td>Returns to positive revenue growth; supply discipline takes hold; non-plastic foodboard benefits from China GB 4806.10 and EU PPWR demand</td>
               </tr>
               <tr>
-                <td><b>Suzano (SUZ)</b></td>
-                <td>2026-Q2</td>
-                <td>$601 / MT Net Realized</td>
-                <td class="val-pos">+7.0% (QoQ)</td>
-                <td class="val-pos">+8.0% (YoY)</td>
-                <td>European hardwood supply tightness lifted realized net price; weak Brazilian Real secures unbeatable competitive moat with cash production costs below $200/MT.</td>
+                <td><b>Indah Kiat (APP)</b></td>
+                <td>2026-H1</td>
+                <td>Net Profit $295M</td>
+                <td class="val-pos">+127.3% (YoY)</td>
+                <td class="val-pos">Profit Doubled</td>
+                <td>Low-cost integrated forestry-pulp-paper fortress delivers earnings explosion; packaging and cultural paper prices expand; issues IDR 3.5T green bond</td>
               </tr>
               <tr>
-                <td><b>Smurfit Westrock</b></td>
-                <td>2026-Q2</td>
-                <td>+€120/MT (Europe)</td>
-                <td class="val-pos">Virtually Sold Out</td>
-                <td class="val-pos">+$100/t (NA Sept 1)</td>
-                <td>Transatlantic containerboard strength with 63% North American capacity concentration; Raw Material Spread reached a 3-year record high of $720/short ton.</td>
+                <td><b>CMPC / Suzano</b></td>
+                <td>2026-09</td>
+                <td>US$ 300M Port Terminal</td>
+                <td class="val-pos">Deep-Water Strategy</td>
+                <td class="val-pos">Direct Long-Haul</td>
+                <td>CMPC authorized to build dedicated terminal at Port of Itapoa (>3M MT throughput); Suzano buys Imetame stake, solidifying ocean freight control</td>
               </tr>
             </tbody>
           </table>
@@ -1783,7 +2281,7 @@
                 <tbody>
                   <tr style="border-bottom: 1px solid var(--border);">
                     <td style="padding: 9px 6px; font-weight: 700;">Brent Crude</td>
-                    <td style="padding: 9px 6px;">$93.80/bbl</td>
+                    <td style="padding: 9px 6px;">$93.90/bbl</td>
                     <td style="padding: 9px 6px;">$92–98</td>
                     <td style="padding: 9px 6px;">$85–92</td>
                     <td style="padding: 9px 6px;"><span class="kpi-pill pill-red">Elevated</span></td>
@@ -1963,9 +2461,52 @@
     </div>
   </div>
 
+  <!-- ── Newsletter Success Modal ── -->
+  <div id="subSuccessModal" class="sub-modal-overlay" onclick="if(event.target===this) closeSubSuccessModal()">
+    <div class="sub-modal-box">
+      <button class="sub-modal-close-btn" onclick="closeSubSuccessModal()">&times;</button>
+      <div class="sub-modal-icon">🎉</div>
+      <h3 class="sub-modal-title">Thank You for Subscribing!</h3>
+      <p class="sub-modal-text">
+        You are now subscribed to the <strong id="modalEditionBadge" style="color:var(--accent-hover);">English Edition</strong>.<br>
+        Every Friday at 07:00 AM, our curated intelligence brief, raw material spreads, and mill updates will be delivered to your inbox.
+      </p>
+
+      <!-- Welcome Gift -->
+      <div class="sub-modal-gift">
+        <div>
+          <div style="font-size:11.5px; font-weight:800; color:var(--gold); text-transform:uppercase;">🎁 Welcome Gift</div>
+          <div style="font-size:13.5px; font-weight:700; color:var(--fg);">Issue 008 Full High-Resolution A4 Zero-Gap PDF</div>
+        </div>
+        <a href="../Reports/PaperLuz-008_2026-09-18_EN.pdf" target="_blank" class="btn btn-primary" style="padding:6px 12px; font-size:12px; white-space:nowrap; text-decoration:none;">
+          Download ➔
+        </a>
+      </div>
+
+      <button onclick="closeSubSuccessModal()" class="btn btn-secondary" style="width:100%; justify-content:center;">
+        Return to Portal
+      </button>
+    </div>
+  </div>
+
   <!-- ── Site Footer ── -->
   <footer class="site-footer">
     <div class="container footer-content">
+      <!-- Footer Newsletter Quick Box -->
+      <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; width: 100%;">
+        <div>
+          <div style="font-weight: 800; font-size: 15px; color: var(--fg); margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+            <span>📬 Subscribe to Paperluz Weekly Intelligence</span>
+            <span style="font-size: 11px; background: var(--accent-glow); color: var(--accent-hover); padding: 2px 6px; border-radius: 4px;">Bilingual · 100% Free</span>
+          </div>
+          <div style="font-size: 12.5px; color: var(--fg-muted);">Weekly Friday morning delivery of global pulp prices, mill margins & regulatory alerts · Zero spam</div>
+        </div>
+        <form id="footerSubForm" style="display: flex; gap: 8px; max-width: 440px; width: 100%;" onsubmit="handleFooterSubscribe(event)">
+          <input type="email" id="footerEmail" placeholder="Enter your email (e.g. user@paper.com)" required style="flex: 1; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 9px 12px; color: var(--fg); font-size: 13px; font-family: inherit; outline: none;">
+          <button type="submit" class="btn btn-primary" style="padding: 9px 16px; font-size: 13px; white-space: nowrap;">Subscribe</button>
+        </form>
+      </div>
+
       <div class="footer-meta">
         <b>Published</b>: 2026-08-21　·　<b>System Engine</b>: Paperluz Engine v12.6 (AI Enhanced Global Edition)　·　<b>Publisher</b>: Luznet / Paperluz Industry Intelligence
       </div>
@@ -2140,6 +2681,163 @@
         closeReader();
       }
     });
+
+    // ── Newsletter Mail List Logic ──
+    const NEWSLETTER_CONFIG = {
+      webhookUrl: "", // Optional webhook endpoint (Google Apps Script / Formspree / Custom API)
+      storageKey: "paperluz_newsletter_sub",
+      latestIssuePdf: "../Reports/PaperLuz-008_2026-09-18_EN.pdf",
+      latestIssueNum: "008"
+    };
+
+    let selectedLang = "en";
+
+    function selectLangPill(lang) {
+      selectedLang = lang;
+      document.querySelectorAll(".lang-pill").forEach(pill => {
+        pill.classList.toggle("active", pill.getAttribute("data-lang") === lang);
+      });
+    }
+
+    const subForm = document.getElementById("newsletterForm");
+    const subEmail = document.getElementById("subEmail");
+    const subCompany = document.getElementById("subCompany");
+    const subSubmitBtn = document.getElementById("subSubmitBtn");
+    const subStatusMsg = document.getElementById("subStatusMsg");
+    const subSuccessModal = document.getElementById("subSuccessModal");
+    const modalEditionBadge = document.getElementById("modalEditionBadge");
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function checkExistingSub() {
+      try {
+        const saved = localStorage.getItem(NEWSLETTER_CONFIG.storageKey);
+        if (saved) {
+          const data = JSON.parse(saved);
+          if (subStatusMsg) {
+            subStatusMsg.className = "sub-status-msg success";
+            const langLabel = data.lang === "en" ? "English Edition" : (data.lang === "zh" ? "Traditional Chinese Edition" : "Both Editions");
+            subStatusMsg.innerHTML = `✅ You are subscribed to Paperluz Weekly (${langLabel})! Intelligence briefed every Friday morning.`;
+            subStatusMsg.style.display = "block";
+          }
+          if (subEmail && data.email) {
+            subEmail.value = data.email;
+          }
+        }
+      } catch (e) {}
+    }
+
+    if (subForm) {
+      subForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const email = subEmail.value.trim();
+        const company = subCompany.value.trim();
+        const hp = document.getElementById("subHoneypot")?.value || "";
+
+        if (hp) {
+          console.warn("Bot detected");
+          return;
+        }
+
+        if (!validateEmail(email)) {
+          subStatusMsg.className = "sub-status-msg error";
+          subStatusMsg.textContent = "Please enter a valid email address (e.g., name@company.com)";
+          subStatusMsg.style.display = "block";
+          return;
+        }
+
+        subSubmitBtn.disabled = true;
+        const origBtnHtml = subSubmitBtn.innerHTML;
+        subSubmitBtn.innerHTML = `<span>⏳ Subscribing...</span>`;
+        subStatusMsg.style.display = "none";
+
+        const payload = {
+          email: email,
+          company: company,
+          language: selectedLang,
+          timestamp: new Date().toISOString(),
+          source: "paperluz_portal_en"
+        };
+
+        if (NEWSLETTER_CONFIG.webhookUrl) {
+          try {
+            await fetch(NEWSLETTER_CONFIG.webhookUrl, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload)
+            });
+          } catch (err) {
+            console.log("Webhook recorded offline fallback:", err);
+          }
+        }
+
+        const subData = {
+          email: email,
+          company: company,
+          lang: selectedLang,
+          date: new Date().toLocaleDateString("en-US")
+        };
+        localStorage.setItem(NEWSLETTER_CONFIG.storageKey, JSON.stringify(subData));
+
+        setTimeout(() => {
+          subSubmitBtn.disabled = false;
+          subSubmitBtn.innerHTML = origBtnHtml;
+
+          const langMap = { "en": "English Edition", "zh": "Traditional Chinese Edition", "both": "Both Editions" };
+          if (modalEditionBadge) {
+            modalEditionBadge.textContent = langMap[selectedLang] || "English Edition";
+          }
+          
+          openSubSuccessModal();
+
+          subStatusMsg.className = "sub-status-msg success";
+          subStatusMsg.innerHTML = `✅ Successfully registered ${email} (${langMap[selectedLang]}). Friday 07:00 AM delivery scheduled!`;
+          subStatusMsg.style.display = "block";
+        }, 350);
+      });
+    }
+
+    function handleFooterSubscribe(e) {
+      e.preventDefault();
+      const fEmail = document.getElementById("footerEmail").value.trim();
+      if (!validateEmail(fEmail)) {
+        alert("Please enter a valid email address!");
+        return;
+      }
+      if (subEmail) {
+        subEmail.value = fEmail;
+        const subSec = document.getElementById("subscribe");
+        if (subSec) subSec.scrollIntoView({ behavior: "smooth", block: "start" });
+        subEmail.focus();
+      }
+      if (subForm) {
+        subForm.dispatchEvent(new Event("submit"));
+      }
+    }
+
+    function openSubSuccessModal() {
+      if (subSuccessModal) {
+        subSuccessModal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+    }
+
+    function closeSubSuccessModal() {
+      if (subSuccessModal) {
+        subSuccessModal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && subSuccessModal && subSuccessModal.classList.contains("active")) {
+        closeSubSuccessModal();
+      }
+    });
+
+    checkExistingSub();
   </script>
 </body>
 </html>

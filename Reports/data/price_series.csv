@@ -134,3 +134,41 @@ USDTWD,美元兌新台幣銀行間收盤匯率,TW,FX,fx_close,TWD,USD,D,2026-09-
 REG_EU_PPWR,歐盟包裝與包裝廢棄物法規正式實施,EU,REGULATION,countdown,DAY,days,D,2026-09-04,2026-09-04,23.0,,,7.0,days_active,EUR-Lex,https://eur-lex.europa.eu/,high,歐盟PPWR實施第23天，歐盟海關全面展開PFAS(<50ppm)與DfR稽核
 REG_CN_GB4806,中國食品接觸塗層新規GB 4806.10正式實施,CN,REGULATION,effective,DAY,days,D,2026-09-04,2026-09-02,2.0,,,2.0,days_active,國家衛健委,http://www.nhc.gov.cn/,high,GB 4806.10-2025於9/2正式施行，紙塗層納管並嚴控芳香族伯胺與PFAS
 REG_EU_EUDR,歐盟EUDR森林砍伐法規生效倒數,EU,REGULATION,countdown,DAY,days,D,2026-09-04,2026-12-30,117.0,,,-7.0,days_left,European Commission,https://ec.europa.eu/,high,EUDR強制執行倒數117天，地塊級GPS與DDS盡職調查全速推進
+CN_NBSK_SPOT_CNY,中國進口針葉漿現貨均價 (NBSK),CN,NBSK,spot,CNY,tonne,W,2026-09-11,2026-W37,4890.0,4850.0,4920.0,25.0,cny_wow,生意社/卓創資訊,https://www.100ppi.com/vane/detail-1053.html,high,金九雙節旺季備貨持續，針葉漿現貨攀升至4890元/噸(折合約$688/MT)
+CN_BHKP_SPOT_CNY,中國進口闊葉漿現貨均價 (BHKP),CN,BHKP,spot,CNY,tonne,W,2026-09-11,2026-W37,4440.0,4400.0,4480.0,20.0,cny_wow,生意社/卓創資訊,https://www.100ppi.com/vane/detail-1053.html,high,Suzano 9月提價$20落地支撐，進口闊葉漿均價堅挺於4440元/噸(約$625/MT)
+SHFE_SP_SETTLE,上期所漂針漿期貨主力結算價,CN,NBSK_FUTURES,futures_settle,CNY,tonne,D,2026-09-11,2026-09-11,4810.0,,,24.0,cny_dod,上期所,https://www.shfe.com.cn/,high,期現基差緊扣+80元，市場看好四季度消費旺季
+SPREAD_BSKP_BHKP,長短纖現貨價差(針葉-闊葉),CN,PULP_SPREAD,spread,CNY,tonne,W,2026-09-11,2026-W37,450.0,,,5.0,cny_wow,Paperluz計算,https://paperluz.internal/data,high,價差穩定在450元/噸，持續在500元替代警戒線下方，短纖支撐力道強固
+SPREAD_LINER_OCC,美國箱板紙與OCC原料價差,US,PAPER_SPREAD,spread,USD,short_ton,M,2026-09-11,2026-09,840.0,,,5.0,usd_mom,Packaging Dive/Fastmarkets,https://www.packagingdive.com/,high,北美9/1提價全數落地開票，原料利差推進至840美元歷史極值
+FASTMARKETS_US_OCC,美國 11 號廢紙 (OCC) 出口美西 FAS,US,OCC,EXPORT_FAS,USD,美元/短噸,W,2026-09-11,2026-W37,135.0,133.0,137.0,0.0,usd_wow,Fastmarkets RISI,https://www.fastmarkets.com/,high,美西FAS維持135美元/短噸，亞洲紙廠穩定進口
+US_OCC11_EXP_NYNJ,美國11號OCC出口價紐約紐澤西FAS,US,OCC,export_fas,USD,short_ton,W,2026-09-11,2026-09-11,137.0,135.0,139.0,0.0,usd_wow,Fastmarkets,https://www.fastmarkets.com/,high,美東出口平穩盤整
+GLOBAL_ICE_BRENT,倫敦布蘭特原油期貨 (Brent Crude),GLOBAL,CRUDE_OIL,futures_close,USD,barrel,D,2026-09-11,2026-09-11,94.20,,,-0.45,usd_dod,ICE,https://www.theice.com/,high,原油於94美元高檔整固，造紙化工與BSS燃油附加費高檔不墜
+GLOBAL_NYMEX_WTI,紐約輕原油期貨 (WTI Crude),GLOBAL,CRUDE_OIL,futures_close,USD,barrel,D,2026-09-11,2026-09-11,86.80,,,-0.35,usd_dod,NYMEX,https://www.cmegroup.com/,high,輕原油於86.8美元高檔整理，石化淋膜成本承壓
+SCFI_INDEX,上海出口集裝箱運價指數 (SCFI 綜合),CN,FREIGHT_CONTAINER,index,USD,point,W,2026-09-11,2026-W37,3442.50,,,16.70,pt_wow,上海航運交易所,https://www.sse.net.cn/,high,美西$6600/FEU、美東$9400/FEU，雙節前夕海運出貨暢旺
+GLOBAL_BALTIC_BDI,波羅的海乾散貨指數 (BDI 綜合),GLOBAL,FREIGHT_BULK,index,USD,point,D,2026-09-11,2026-09-11,1848.0,,,13.0,pt_dod,波羅的海交易所,https://www.balticexchange.com/,high,乾散貨指數溫和走堅，國際木片長約船租金平穩
+TW_OCC_MILL_TWD,台灣廢紙紙廠到廠價,TW,OCC,mill_gate,TWD,tonne,W,2026-09-11,2026-W37,4200.0,,,0.0,twd_wow,造紙公會/廠區詢價,https://paperluz.internal/data,high,國內廢紙進廠價維持NT$4200/噸，回收商供貨順暢
+TW_TPC_COAL_COST,台灣造紙汽電共生每噸蒸氣成本,TW,ENERGY_STEAM,estimated_cost,TWD,tonne,M,2026-09-11,2026-09,730.0,710.0,750.0,-5.0,twd_mom,台電/造紙公會,https://www.taipower.com.tw/,high,生質能(SRF)與廢水沼氣替代率突破47%，進一步壓降單噸蒸氣成本至NT$730
+USDTWD,美元兌新台幣銀行間收盤匯率,TW,FX,fx_close,TWD,USD,D,2026-09-11,2026-09-11,32.080,,,-0.04,twd_升值,中央銀行,https://www.cbc.gov.tw/,high,新台幣溫和走升收在32.080，進口紙漿與美廢結匯成本結構受惠
+REG_EU_PPWR,歐盟包裝與包裝廢棄物法規正式實施,EU,REGULATION,countdown,DAY,days,D,2026-09-11,2026-09-11,30.0,,,7.0,days_active,EUR-Lex,https://eur-lex.europa.eu/,high,歐盟PPWR強制實施滿一個月(第30天)，海關落實PFAS與DfR認證審查
+REG_CN_GB4806,中國食品接觸塗層新規GB 4806.10正式實施,CN,REGULATION,effective,DAY,days,D,2026-09-11,2026-09-02,9.0,,,7.0,days_active,國家衛健委,http://www.nhc.gov.cn/,high,GB 4806.10-2025實施第9天，無氟水性阻隔塗層白卡替代加速
+REG_EU_PFHXA,歐盟PFHxA全氟己酸禁令生效倒數,EU,REGULATION,countdown,DAY,days,D,2026-09-11,2026-10-18,37.0,,,-7.0,days_left,ECHA,https://echa.europa.eu/,high,歐盟PFHxA禁用倒數37天，食品包裝防油劑全面汰換
+REG_EU_EUDR,歐盟EUDR森林砍伐法規生效倒數,EU,REGULATION,countdown,DAY,days,D,2026-09-11,2026-12-30,110.0,,,-7.0,days_left,European Commission,https://ec.europa.eu/,high,EUDR法規強制執行倒數110天，跨國漿紙企業加速地塊級GPS盡職調查 (DDS)
+
+
+CN_NBSK_SPOT_CNY,中國進口針葉漿現貨均價 (NBSK),CN,NBSK,spot,CNY,tonne,W,2026-09-18,2026-W38,4900.0,4860.0,4930.0,10.0,cny_wow,生意社/卓創資訊,https://www.100ppi.com/vane/detail-1053.html,high,雙節備貨進入尾聲，進口針葉漿現貨穩於4900元/噸(約$690/MT)
+CN_BHKP_SPOT_CNY,中國進口闊葉漿現貨均價 (BHKP),CN,BHKP,spot,CNY,tonne,W,2026-09-18,2026-W38,4445.0,4410.0,4480.0,5.0,cny_wow,生意社/卓創資訊,https://www.100ppi.com/vane/detail-1053.html,high,Suzano提價落地支撐，進口闊葉漿均價堅挺於4445元/噸(約$626/MT)
+SHFE_SP_SETTLE,上期所漂針漿期貨主力結算價,CN,NBSK_FUTURES,futures_settle,CNY,tonne,D,2026-09-18,2026-09-18,4828.0,,,18.0,cny_dod,上期所,https://www.shfe.com.cn/,high,期現基差緊扣+72元，節前多頭資金部位平穩整固
+SPREAD_BSKP_BHKP,長短纖現貨價差(針葉-闊葉),CN,PULP_SPREAD,spread,CNY,tonne,W,2026-09-18,2026-W38,455.0,,,5.0,cny_wow,Paperluz計算,https://paperluz.internal/data,high,長短纖價差穩定於455元/噸，持續在500元替代警戒線下方，長短纖共振築底
+SPREAD_LINER_OCC,美國箱板紙與OCC原料價差,US,PAPER_SPREAD,spread,USD,short_ton,M,2026-09-18,2026-09,840.0,,,0.0,usd_mom,Packaging Dive/Fastmarkets,https://www.packagingdive.com/,high,北美9/1提價全數開票執行第三週，原料利差穩於840美元歷史極限
+FASTMARKETS_US_OCC,美國 11 號廢紙 (OCC) 出口美西 FAS,US,OCC,EXPORT_FAS,USD,美元/短噸,W,2026-09-18,2026-W38,135.0,133.0,137.0,0.0,usd_wow,Fastmarkets RISI,https://www.fastmarkets.com/,high,美西FAS維持135美元/短噸，亞洲紙廠穩定進口
+US_OCC11_EXP_NYNJ,美國11號OCC出口價紐約紐澤西FAS,US,OCC,export_fas,USD,short_ton,W,2026-09-18,2026-09-18,137.0,135.0,139.0,0.0,usd_wow,Fastmarkets,https://www.fastmarkets.com/,high,美東出口平穩盤整
+GLOBAL_ICE_BRENT,倫敦布蘭特原油期貨 (Brent Crude),GLOBAL,CRUDE_OIL,futures_close,USD,barrel,D,2026-09-18,2026-09-18,93.90,,,-0.30,usd_dod,ICE,https://www.theice.com/,high,油價於93.9美元高位震盪，化學助劑與BSS附加費高檔僵固
+GLOBAL_NYMEX_WTI,紐約輕原油期貨 (WTI Crude),GLOBAL,CRUDE_OIL,futures_close,USD,barrel,D,2026-09-18,2026-09-18,86.50,,,-0.30,usd_dod,NYMEX,https://www.cmegroup.com/,high,輕原油於86.5美元高檔整理，石化淋膜成本承壓
+SCFI_INDEX,上海出口集裝箱運價指數 (SCFI 綜合),CN,FREIGHT_CONTAINER,index,USD,point,W,2026-09-18,2026-W38,3458.20,,,15.70,pt_wow,上海航運交易所,https://www.sse.net.cn/,high,美西$6620/FEU、美東$9420/FEU，雙節前夕海運出口拉貨達到最高峰
+GLOBAL_BALTIC_BDI,波羅的海乾散貨指數 (BDI 綜合),GLOBAL,FREIGHT_BULK,index,USD,point,D,2026-09-18,2026-09-18,1862.0,,,14.0,pt_dod,波羅的海交易所,https://www.balticexchange.com/,high,散裝船運價溫和微升，木片長約船隊運力受控
+TW_OCC_MILL_TWD,台灣廢紙紙廠到廠價,TW,OCC,mill_gate,TWD,tonne,W,2026-09-18,2026-W38,4200.0,,,0.0,twd_wow,造紙公會/廠區詢價,https://paperluz.internal/data,high,國內廢紙到廠價持平於NT$4200/噸，回收商供需平穩
+TW_TPC_COAL_COST,台灣造紙汽電共生每噸蒸氣成本,TW,ENERGY_STEAM,estimated_cost,TWD,tonne,M,2026-09-18,2026-09,728.0,710.0,750.0,-2.0,twd_mom,台電/造紙公會,https://www.taipower.com.tw/,high,生質能(SRF)與餘熱回收替代率升至47.5%，單噸蒸氣成本鎖定NT$728
+USDTWD,美元兌新台幣銀行間收盤匯率,TW,FX,fx_close,TWD,USD,D,2026-09-18,2026-09-18,32.060,,,-0.02,twd_升值,中央銀行,https://www.cbc.gov.tw/,high,新台幣溫和走升收在32.060，原料進口結匯成本續享匯率紅利
+REG_EU_PPWR,歐盟包裝與包裝廢棄物法規正式實施,EU,REGULATION,countdown,DAY,days,D,2026-09-18,2026-09-18,37.0,,,7.0,days_active,EUR-Lex,https://eur-lex.europa.eu/,high,歐盟PPWR強制實施第37天，邊境嚴查總氟含量與DfR可回收性認證
+REG_CN_GB4806,中國食品接觸塗層新規GB 4806.10正式實施,CN,REGULATION,effective,DAY,days,D,2026-09-18,2026-09-02,16.0,,,7.0,days_active,國家衛健委,http://www.nhc.gov.cn/,high,GB 4806.10-2025實施第16天，造紙無氟水性塗層替代訂單加速放量
+REG_EU_PFHXA,歐盟PFHxA全氟己酸禁令生效倒數,EU,REGULATION,countdown,DAY,days,D,2026-09-18,2026-10-18,30.0,,,-7.0,days_left,ECHA,https://echa.europa.eu/,high,歐盟PFHxA禁用倒數進入最後30天(1個月)，食品防油紙無氟替換進入最後衝刺
+REG_EU_EUDR,歐盟EUDR森林砍伐法規生效倒數,EU,REGULATION,countdown,DAY,days,D,2026-09-18,2026-12-30,103.0,,,-7.0,days_left,European Commission,https://ec.europa.eu/,high,EUDR法規強制執行倒數103天，跨國漿紙企業加速地塊級GPS盡職調查(DDS)

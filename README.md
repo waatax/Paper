@@ -4,7 +4,7 @@
 > 官方即時入口網站：[https://waatax.github.io/Paper/](https://waatax.github.io/Paper/) ｜ [English Edition](https://waatax.github.io/Paper/EN/)
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Online%20Active-brightgreen.svg)](https://waatax.github.io/Paper/)
-[![Weekly Issues](https://img.shields.io/badge/Weekly%20Reports-Issue%20001--006%20Published-blue.svg)](./Reports/)
+[![Weekly Issues](https://img.shields.io/badge/Weekly%20Reports-Issue%20001--008%20Published-blue.svg)](./Reports/)
 [![Formats](https://img.shields.io/badge/Formats-HTML%20%7C%20Markdown%20%7C%20A4%20PDF-orange.svg)](./Reports/)
 [![Bilingual](https://img.shields.io/badge/Language-繁體中文%20%7C%20English-purple.svg)](./EN/)
 [![Zero-Gap PDF](https://img.shields.io/badge/PDF-A4%20Zero--Gap%20Print-success.svg)](./Reports/)
@@ -21,18 +21,21 @@
    - 繁體中文版：[`index.html`](https://waatax.github.io/Paper/)
    - 英文國際版：[`EN/index.html`](https://waatax.github.io/Paper/EN/)
    - 支援深色模式 (Dark)、明亮模式 (Light) 與紙質閱讀模式 (Paper Texture)。
-2. **即時大宗行情跑馬燈 (Live Market Ticker)**：
+2. **每週電子報訂閱專區 (Newsletter Mail List)**：
+   - 採用頂級電子報 UX（Substack / Morning Brew 標竿），支援繁體中文、英文國際版及雙語全訂三軌分流。
+   - 整合企業信箱防錯校驗、蜜罐防機器人攻擊、迎新 A4 PDF 交付好禮與頁尾快速訂閱列。
+3. **即時大宗行情跑馬燈 (Live Market Ticker)**：
    - 國際長纖 (NBSK)、短纖 (BHKP)、美廢 (US OCC 11#)、上海期貨、布蘭特原油、SCFI 貨櫃運價、台廠營收等數據。
-3. **週報檔案庫與內建閱讀器 (Issue Archives & Modal Reader)**：
+4. **週報檔案庫與內建閱讀器 (Issue Archives & Modal Reader)**：
    - 支援即時關鍵字搜尋與分類標籤過濾。
    - 內建 In-App Modal Reader，一鍵在線閱讀 HTML 完整報告、下載 A4 Zero-Gap 專業 PDF 或檢視 Markdown 原文。
-4. **互動式價差趨勢動態雷達 (Interactive Data Radar)**：
+5. **互動式價差趨勢動態雷達 (Interactive Data Radar)**：
    - 長短纖木漿價差 (NBSK - BHKP Spread) 結構性變動。
    - 工紙原物料利差 (Linerboard - OCC Spread) 與景氣榮枯臨界線。
    - 台灣上市紙廠（正隆、榮成、永豐餘、華紙）月營收與年增率 (YoY)。
-5. **毛利敏感度動態試算器 (Sensitivity Simulator)**：
+6. **毛利敏感度動態試算器 (Sensitivity Simulator)**：
    - 即時模擬美廢進價、工紙售價與每噸蒸汽能耗成本對毛利率的影響。
-6. **全球法規倒數雷達 (Regulatory Milestones)**：
+7. **全球法規倒數雷達 (Regulatory Milestones)**：
    - 歐盟 PPWR 包裝法規、EUDR 森林砍伐規章、PFAS / PFHxA 無毒化禁令、台灣碳費徵收進程即時倒數。
 
 ---
@@ -43,9 +46,10 @@
 Paperluz/
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml                       ← GitHub Actions Pages 自動部署工作流
+│       ├── deploy.yml                       ← GitHub Actions Pages 自動部署工作流
+│       └── weekly_newsletter.yml            ← 每週五自動派送電子報工作流 (定時/手動)
 ├── .nojekyll                                ← 確保 GitHub Pages 繞過 Jekyll 靜態建置
-├── index.html                               ← 繁體中文官方門戶首頁 (GitHub Pages 進入點)
+├── index.html                               ← 繁體中文官方門戶首頁 (含電子報訂閱專區)
 ├── 404.html                                 ← 自訂 404 頁面 (支援雙語與暗色主題)
 ├── README.md                                ← 專案主說明文件
 ├── paperluz.md                              ← Paperluz 系統架構與業務規格書
@@ -58,6 +62,17 @@ Paperluz/
     ├── SOP_Weekly_News_Aggregation.md       ← 全球與亞洲紙業情報每週自動聚合標準作業程序 (SOP v2.0)
     ├── Paperluz_Newsletter_Template_Spec.md ← 視覺排版規格書 (v9.2)
     ├── build_report.py                      ← 週報產製管線主腳本
+    ├── send_newsletter.py                   ← 雙語電子報自動派送引擎 (支援 SMTP/Dry-run)
+    ├── build_pdf.py                         ← Edge 無頭列印 PDF 產製器
+    ├── templates/
+    │   ├── report_template.html             ← 黃金 HTML 模板
+    │   └── report_template.md               ← 黃金 MD 模板
+    ├── data/
+    │   ├── price_series.csv                 ← 大宗價格時序資料庫
+    │   ├── company_monthly_revenue.csv      ← 台灣紙廠月營收資料庫
+    │   ├── subscribers_zh.csv               ← 中文電子報訂閱名冊
+    │   ├── subscribers_en.csv               ← 英文電子報訂閱名冊
+    │   └── paperluz.db                      ← SQLite 產業關聯資料庫
     ├── build_pdf.py                         ← Edge 無頭列印 PDF 產製器
     ├── templates/
     │   ├── report_template.html             ← 黃金 HTML 模板
@@ -77,7 +92,9 @@ Paperluz/
     ├── PaperLuz-005_2026-08-28.{html,md,pdf}
     ├── PaperLuz-005_2026-08-28_EN.{html,md,pdf}
     ├── PaperLuz-006_2026-09-04.{html,md,pdf}
-    └── PaperLuz-006_2026-09-04_EN.{html,md,pdf}
+    ├── PaperLuz-006_2026-09-04_EN.{html,md,pdf}
+    ├── PaperLuz-007_2026-09-11.{html,md,pdf}
+    └── PaperLuz-007_2026-09-11_EN.{html,md,pdf}
 ```
 
 ---
@@ -86,6 +103,8 @@ Paperluz/
 
 | 期數 | 出刊日期 | 中文版 (HTML / PDF / MD) | 英文版 (HTML / PDF / MD) | 主題焦點 |
 |:---:|:---:|:---:|:---:|:---|
+| **008** | 2026-09-18 | [HTML](./Reports/PaperLuz-008_2026-09-18.html) · [PDF](./Reports/PaperLuz-008_2026-09-18.pdf) · [MD](./Reports/PaperLuz-008_2026-09-18.md) | [HTML](./Reports/PaperLuz-008_2026-09-18_EN.html) · [PDF](./Reports/PaperLuz-008_2026-09-18_EN.pdf) · [MD](./Reports/PaperLuz-008_2026-09-18_EN.md) | 中國紙廠中秋國慶停機保價（山鷹停機 4-8 天/玖龍檢修防累庫）× CMPC 3.7 億美元簽約巴西專用深水碼頭 × 北美工紙 Raw Spread $840 歷史極限點 × 歐盟 PFHxA 禁令倒數 30 天 |
+| **007** | 2026-09-11 | [HTML](./Reports/PaperLuz-007_2026-09-11.html) · [PDF](./Reports/PaperLuz-007_2026-09-11.pdf) · [MD](./Reports/PaperLuz-007_2026-09-11.md) | [HTML](./Reports/PaperLuz-007_2026-09-11_EN.html) · [PDF](./Reports/PaperLuz-007_2026-09-11_EN.pdf) · [MD](./Reports/PaperLuz-007_2026-09-11_EN.md) | 台廠 8 月營收報捷（正隆創 20 個月新高）× 南美木漿港口物流深水戰略（CMPC 獲批 3 億美元專用碼頭）× APP 印尼 H1 獲利翻倍 127% × 中國雙節前停機保價 |
 | **006** | 2026-09-04 | [HTML](./Reports/PaperLuz-006_2026-09-04.html) · [PDF](./Reports/PaperLuz-006_2026-09-04.pdf) · [MD](./Reports/PaperLuz-006_2026-09-04.md) | [HTML](./Reports/PaperLuz-006_2026-09-04_EN.html) · [PDF](./Reports/PaperLuz-006_2026-09-04_EN.pdf) · [MD](./Reports/PaperLuz-006_2026-09-04_EN.md) | 北美工紙 9/1 調價全面生效落袋 × Suzano 領銜亞洲漿價調升 $20 × 中國 GB 4806.10 塗層新規施行 × 正隆 H1 獲利暴增 52 倍 |
 | **005** | 2026-08-28 | [HTML](./Reports/PaperLuz-005_2026-08-28.html) · [PDF](./Reports/PaperLuz-005_2026-08-28.pdf) · [MD](./Reports/PaperLuz-005_2026-08-28.md) | [HTML](./Reports/PaperLuz-005_2026-08-28_EN.html) · [PDF](./Reports/PaperLuz-005_2026-08-28_EN.pdf) · [MD](./Reports/PaperLuz-005_2026-08-28_EN.md) | 北美工紙 9/1 調價倒數 3 天 × 原油破 $94 美元與海運 BSS 附加費 × 亞洲木漿備貨啟動 |
 | **004** | 2026-08-21 | [HTML](./Reports/PaperLuz-004_2026-08-21.html) · [PDF](./Reports/PaperLuz-004_2026-08-21.pdf) · [MD](./Reports/PaperLuz-004_2026-08-21.md) | [HTML](./Reports/PaperLuz-004_2026-08-21_EN.html) · [PDF](./Reports/PaperLuz-004_2026-08-21_EN.pdf) · [MD](./Reports/PaperLuz-004_2026-08-21_EN.md) | 榮成分割轉型控股 × 北美工紙 9/1 調價倒數 × 歐盟 PPWR 正式生效與 PFAS 嚴格管制 |
@@ -117,6 +136,27 @@ python convert_pdf.py --all
 # 或轉換指定期數
 python convert_pdf.py Reports/PaperLuz-004_2026-08-21.html
 ```
+
+### 📬 每週雙語電子報自動派送 (Automated Weekly Newsletter)
+
+Paperluz 支援將最新發布之產業情報自動寄送至訂閱者信箱（分流中文與英文雙名冊）：
+
+```bash
+# 本地 Dry-Run 模擬生成 HTML 預覽與檢查派送名冊 (不發送郵件)
+python Reports/send_newsletter.py --issue 008 --dry-run
+
+# 單一信箱測試寄送
+python Reports/send_newsletter.py --issue 008 --test-email user@example.com --lang zh
+
+# 檢視目前資料庫訂閱者名冊
+python Reports/data/manage_db.py list-subscribers
+
+# 登記新訂閱者
+python Reports/data/manage_db.py add-subscriber --email user@example.com --lang zh --company "正隆"
+```
+
+- **定時自動出刊**：已內建 [`.github/workflows/weekly_newsletter.yml`](./.github/workflows/weekly_newsletter.yml)，每週五上午 07:00 (UTC+8) 自動執行出刊發信管線。
+- **發信服務憑證**：於 GitHub 倉庫 `Settings -> Secrets -> Actions` 配置 `SMTP_SERVER`、`SMTP_PORT`、`SMTP_USERNAME`、`SMTP_PASSWORD` 與 `SENDER_EMAIL` 即可無縫啟用。
 
 ---
 
