@@ -266,9 +266,9 @@ def _run_html_checks(html, slug):
     checks.append(("6 大 KPI 卡片 (3×2 Grid)", kpi_count == 6,
                     f"找到 {kpi_count} 個"))
 
-    # 2. 10 大章節 (s1-s10)
-    found_secs = [i for i in range(1, 11) if f'id="s{i}"' in html]
-    checks.append(("10 大章節 (s1-s10) 齊全", len(found_secs) == 10,
+    # 2. 10~12 大章節 (s1-s10+)
+    found_secs = [i for i in range(1, 15) if f'id="s{i}"' in html]
+    checks.append(("核心章節 (s1-s10+) 齊全", len(found_secs) >= 10,
                     f"找到 {len(found_secs)} 個：s{',s'.join(str(x) for x in found_secs)}"))
 
     # 3. 頁尾無下期預告
@@ -316,7 +316,11 @@ def _run_html_checks(html, slug):
     has_energy_logistics = ('海運物流' in html or 'SCFI' in html or '動力煤' in html or 'Logistics' in html or 'Freight' in html)
     checks.append(("能源、外匯與海運物流雷達", has_energy_logistics, ""))
 
-    # 11. 無未替換佔位符
+    # 11. 食品包裝與紙袋/紙模塑專欄
+    has_pkg = ('食品包裝' in html or '紙模塑' in html or 'Food Packaging' in html or 'Molded Fiber' in html)
+    checks.append(("食品包裝與紙袋/紙模塑專欄", has_pkg, ""))
+
+    # 12. 無未替換佔位符
     has_placeholder = any(ph in html for ph in PLACEHOLDERS)
     checks.append(("無未替換的 {{}} 佔位符", not has_placeholder, ""))
 
@@ -453,6 +457,10 @@ def cmd_checklist(args):
         # 佔位符
         md_has_ph = any(ph in md for ph in PLACEHOLDERS)
         md_checks.append(("MD 無未替換 {{}} 佔位符", not md_has_ph, ""))
+
+        # 食品包裝專欄
+        has_md_pkg = ("食品包裝" in md or "紙模塑" in md or "Food Packaging" in md or "Molded Fiber" in md)
+        md_checks.append(("MD 含食品包裝與紙模塑專欄", has_md_pkg, ""))
 
         if not _print_checks(md_checks, "📄 MD 結構檢查"):
             all_pass = False

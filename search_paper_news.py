@@ -46,6 +46,10 @@ REGIONAL_FEEDS = {
         "Yahoo Finance (Smurfit Westrock - SW)": "https://finance.yahoo.com/rss/headline?s=SW",
         "Yahoo Finance (Packaging Corp of America - PKG)": "https://finance.yahoo.com/rss/headline?s=PKG",
     },
+    "🇺🇸 北美食品包裝與速食連鎖紙袋容器 (US Food Packaging: Paper Bags / Cups / Molded Fiber)": {
+        "Google News (US Food Packaging & Paper Bags)": "https://news.google.com/rss/search?q=%22paper+bag%22+OR+%22paper+cup%22+OR+%22molded+fiber%22+food+packaging+when:14d&hl=en-US&gl=US&ceid=US:en",
+        "Google News (US Packaging Giants: Graphic Packaging / Novolex / Huhtamaki)": "https://news.google.com/rss/search?q=%22Graphic+Packaging%22+OR+%22Novolex%22+OR+%22Huhtamaki%22+when:14d&hl=en-US&gl=US&ceid=US:en",
+    },
     "🇪🇺 歐洲紙業與生物材料龍頭 (Europe Leaders: UPM / Stora Enso / Mondi)": {
         "Google News (Europe Pulp & Biochemicals: UPM / Stora Enso)": "https://news.google.com/rss/search?q=UPM-Kymmene+OR+%22Stora+Enso%22+OR+%22Mondi+Group%22+pulp+when:14d&hl=en-US&gl=US&ceid=US:en",
         "Yahoo Finance (UPM-Kymmene - UPMKY / UPM.HE)": "https://finance.yahoo.com/rss/headline?s=UPMKY",
@@ -68,16 +72,34 @@ REGIONAL_FEEDS = {
         "Yahoo Finance JP (大王製紙 - 3880.T)": "https://finance.yahoo.com/rss/headline?s=3880.T",
         "Yahoo Finance JP (日本製紙 - 3863.T)": "https://finance.yahoo.com/rss/headline?s=3863.T",
     },
+    "🇯🇵 日本高階紙袋與脫塑食品容器 (Japan Sustainable Food Packaging & Paper Bags)": {
+        "Google News (日本脫塑食品容器與紙袋)": "https://news.google.com/rss/search?q=%E7%B4%99%E8%A2%8B+OR+%E7%B4%99%E3%82%B3%E3%83%83%E3%83%97+OR+%E3%83%91%E3%83%AB%E3%83%97%E3%83%A2%E3%83%BC%E3%83%AB%E3%83%89+%E8%84%B1%E3%83%97%E3%83%A9%E3%82%B9%E3%83%81%E3%83%83%E3%82%AF+when:14d&hl=ja&gl=JP&ceid=JP:ja",
+        "Google News (日本包裝袋企業: ザ・パック シモジマ SHIELDPLUS)": "https://news.google.com/rss/search?q=%E3%82%B6%E3%83%BB%E3%83%91%E3%83%83%E3%82%AF+OR+%E3%82%B7%E3%83%A2%E3%82%B8%E3%83%9E+OR+SHIELDPLUS+when:14d&hl=ja&gl=JP&ceid=JP:ja",
+    },
     "🇨🇳 中國 APP 金光紙業 ∕ 博匯紙業 & 大宗白卡": {
         "Google News (中國紙業: 金光紙業 博匯紙業 白卡紙)": "https://news.google.com/rss/search?q=%E9%87%91%E5%85%89%E7%B4%99%E6%A5%AD+OR+%E5%8D%9A%E6%BB%99%E7%B4%99%E6%A5%AD+OR+%E7%99%BD%E5%8D%A1%E7%B4%99+when:14d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
         "Yahoo Finance CN (博匯紙業 - 600966.SS)": "https://finance.yahoo.com/rss/headline?s=600966.SS",
     },
-    "🇮🇩/🇸🇬 東南亞主要漿廠 (Southeast Asia Pulp & Fiber: APP / APRIL / Indah Kiat)": {
+    "🇨🇳 中國餐飲包裝與紙模塑出海 (China Food Contact & Molded Fiber: 白卡/紙杯/外賣紙袋)": {
+        "Google News (中國紙模塑與植纖餐盒)": "https://news.google.com/rss/search?q=%E7%BA%B8%E6%A8%A1%E5%A1%91+OR+%E6%A4%8D%E7%BA%A4%E9%A4%90%E7%9B%92+OR+%E7%94%98%E8%94%97%E6%B8%A3%E9%A4%90%E7%9B%92+%E7%A6%81%E5%A1%91+when:14d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+        "Google News (中國外賣紙袋與餐飲紙器)": "https://news.google.com/rss/search?q=%E5%A4%96%E5%8D%96%E7%BA%B8%E8%A2%8B+OR+%E7%BA%B8%E6%9D%AF+OR+%E9%A3%9F%E5%93%81%E5%8C%85%E8%A3%85%E7%BA%B8+when:14d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+    },
+    "🇦🇺/🇳🇿 澳洲與紐西蘭包裝轉型與植纖紙袋 (ANZ Packaging: APCO / Plastic Bans / Molded Pulp)": {
+        "Google News (ANZ Packaging: Paper Bags & Molded Pulp)": "https://news.google.com/rss/search?q=(Australia+OR+%22New+Zealand%22)+(%22paper+bag%22+OR+%22molded+fiber%22+OR+%22moulded+pulp%22+OR+%22paper+cup%22)+when:14d&hl=en-AU&gl=AU&ceid=AU:en",
+        "Google News (ANZ Sustainable Packaging Regulations: APCO)": "https://news.google.com/rss/search?q=(APCO+OR+%22single-use+plastic%22)+(packaging+OR+%22paper+packaging%22)+when:14d&hl=en-NZ&gl=NZ&ceid=NZ:en",
+    },
+    "🇮🇩/🇸🇬/🌏 東南亞主要漿廠與食品容器 (Southeast Asia Pulp & Food Packaging: APP / SCG Packaging)": {
         "Google News (Southeast Asia Pulp: APP / APRIL / Indah Kiat)": "https://news.google.com/rss/search?q=%22Asia+Pulp+Paper%22+OR+%22Indah+Kiat%22+OR+%22Riau+Andalan%22+pulp+when:14d&hl=en-US&gl=US&ceid=US:en",
+        "Google News (Southeast Asia Food Packaging & Converting: SCG Packaging / Foopak)": "https://news.google.com/rss/search?q=(%22SCG+Packaging%22+OR+Foopak+OR+%22food+packaging%22)+(Vietnam+OR+Indonesia+OR+Thailand)+paper+when:14d&hl=en-US&gl=US&ceid=US:en",
         "Yahoo Finance ID (PT Indah Kiat Pulp & Paper - INKP.JK)": "https://finance.yahoo.com/rss/headline?s=INKP.JK",
     },
     "🇹🇼 台灣造紙四大廠 (Taiwan Paper: 正隆 榮成 永豐餘 華紙)": {
         "Google News (台灣紙業: 正隆 榮成 永豐餘 華紙)": "https://news.google.com/rss/search?q=%E6%AD%A3%E9%9A%86+OR+%E6%A6%AE%E6%88%90+OR+%E6%B0%B8%E8%B1%90%E9%A4%98+OR+%E8%8F%AF%E7%B4%99+%E9%80%A0%E7%B4%99+when:14d&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+    },
+    "🇹🇼 台灣食品包裝與容器 (Taiwan Food Packaging: 紙袋/紙杯/紙模塑/紙盒/非塑容器)": {
+        "Google News (台灣紙容器 紙餐盒 紙杯 減塑)": "https://news.google.com/rss/search?q=(%E7%B4%99%E5%AE%B9%E5%99%A8+OR+%E7%B4%99%E9%A4%90%E7%9B%92+OR+%E7%B4%99%E6%9D%AF+OR+%E6%A4%8D%E7%BA%96)+%E6%B8%9B%E5%A1%91+when:14d&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "Google News (台灣紙袋 烘焙 外帶包裝 食品級)": "https://news.google.com/rss/search?q=(%E7%B4%99%E8%A2%8B+OR+%E7%89%9B%E7%9A%AE%E7%B4%99%E8%A2%8B+OR+%E9%98%B2%E6%B2%B9%E7%B4%99)+%E9%A3%9F%E5%93%81+when:14d&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
+        "Google News (華紙 益利疊 非塑食安 正隆 食品包裝)": "https://news.google.com/rss/search?q=(%E7%9B%8A%E5%88%A9%E7%96%8A+OR+%E9%9D%9E%E5%A1%91%E9%A3%9F%E5%AE%89+OR+%E6%B0%B4%E6%80%A7%E5%A1%97%E5%B1%A4+OR+%E7%B4%99%E5%99%A8%E5%BB%A0)+when:14d&hl=zh-TW&gl=TW&ceid=TW:zh-Hant",
     }
 }
 
@@ -89,6 +111,13 @@ ENTITY_MAP = {
     "International Paper": "🏢 International Paper",
     "Smurfit Westrock": "🏢 Smurfit Westrock",
     "Packaging Corp": "🏢 PCA",
+    "Graphic Packaging": "🏢 Graphic Packaging",
+    "Novolex": "🏢 Novolex (包裝紙袋巨頭)",
+    "Huhtamaki": "🏢 Huhtamaki (普樂包裝)",
+    "Dart Container": "🏢 Dart Container",
+    "Detmold": "🏢 Detmold Group (澳洲包裝)",
+    "SCG Packaging": "🏢 SCG Packaging (泰國)",
+    "SCGP": "🏢 SCG Packaging (泰國)",
     "UPM": "🏢 UPM-Kymmene",
     "Stora Enso": "🏢 Stora Enso",
     "Mondi": "🏢 Mondi Group",
@@ -100,8 +129,15 @@ ENTITY_MAP = {
     "大王": "🏢 大王製紙 (Daio)",
     "日本製紙": "🏢 日本製紙 (NPI)",
     "Nippon Paper": "🏢 日本製紙 (NPI)",
+    "ザ・パック": "🏢 The Pack (日本紙袋龍頭)",
+    "The Pack": "🏢 The Pack (日本紙袋龍頭)",
+    "シモジマ": "🏢 Shimojima (下島包裝)",
+    "Shimojima": "🏢 Shimojima (下島包裝)",
+    "スーパーバッグ": "🏢 Super Bag (日本包裝袋)",
+    "Super Bag": "🏢 Super Bag (日本包裝袋)",
     "博匯": "🏢 博匯紙業 (APP)",
     "金光": "🏢 金光紙業 (APP)",
+    "Foopak": "🏢 APP Foopak (無塑包裝)",
     "Indah Kiat": "🏢 Indah Kiat (APP)",
     "Riau Andalan": "🏢 APRIL / 廖內漿紙",
     "玖龍": "🏢 玖龍紙業 (Nine Dragons)",
@@ -112,6 +148,11 @@ ENTITY_MAP = {
     "Sun Paper": "🏢 太陽紙業 (Sun Paper)",
     "晨鳴": "🏢 晨鳴紙業 (Chenming)",
     "Chenming": "🏢 晨鳴紙業 (Chenming)",
+    "眾鑫": "🏢 眾鑫股份 (紙模塑龍頭)",
+    "韶能": "🏢 韶能股份 (植纖模塑)",
+    "裕同": "🏢 裕同科技",
+    "美盈森": "🏢 美盈森",
+    "家聯": "🏢 家聯科技",
     "Sylvamo": "🏢 Sylvamo",
     "Metsä": "🏢 Metsä Board",
     "Metsa": "🏢 Metsä Board",
@@ -122,12 +163,24 @@ ENTITY_MAP = {
     "榮成": "🏢 榮成 (1909)",
     "永豐餘": "🏢 永豐餘 (1907)",
     "華紙": "🏢 華紙 (1905)",
+    "益利疊": "🏢 華紙 益利疊 (CircuWell)",
+    "捷比達": "🏢 捷比達 (GPPC)",
+    "富利康": "🏢 富利康",
+    "永純": "🏢 永純紙業",
+    "廣源": "🏢 廣源造紙",
 }
 
 TOPIC_KEYWORDS = {
     "價格與調幅": ["price", "pricing", "hike", "漲價", "調價", "提價", "報價", "牌價", "per ton", "per tonne", "元/噸", "利差", "spread", "surcharge", "附加費"],
     "產能與營運": ["mill", "capacity", "expansion", "closure", "plant", "產能", "擴產", "停機", "歲修", "關廠", "工廠", "投產", "開工率", "稼動率"],
     "綠色法規與ESG": ["PPWR", "EUDR", "PFAS", "PFHxA", "GB 4806", "carbon", "decarbonization", "碳費", "環保", "生質能", "無塑", "可回收", "永續", "DDS", "GPS"],
+    "食品包裝與容器": ["food packaging", "paper packaging", "food container", "tableware", "食品包裝", "食品容器", "餐飲包裝", "外帶包材", "紙容器", "食品級"],
+    "紙袋與手提包裝": ["paper bag", "kraft bag", "shopping bag", "bakery bag", "SOS bag", "紙袋", "手提袋", "牛皮紙袋", "防油紙袋", "手挽袋", "麵包袋"],
+    "紙杯與飲品容器": ["paper cup", "hot cup", "cold cup", "beverage cup", "cup sleeve", "aqueous cup", "紙杯", "杯套", "冷熱飲杯", "無塑紙杯", "水性塗層紙杯", "淋膜紙杯"],
+    "紙模塑與植纖餐具": ["molded pulp", "molded fiber", "bagasse", "plant fiber", "clamshell", "egg carton", "紙模塑", "植纖", "甘蔗渣", "模塑", "漿模", "植纖餐盒", "模塑托盤"],
+    "食品紙盒與折疊盒": ["folding carton", "food box", "takeaway container", "meal box", "burger box", "pizza box", "紙盒", "餐盒", "折疊盒", "便當盒", "漢堡盒", "披薩盒", "彩盒"],
+    "無塑無氟與阻隔塗層": ["PFAS-free", "aqueous barrier", "fluorine-free", "bio-barrier", "greaseproof", "water-based coating", "水性阻隔", "無氟", "防油紙", "去塑", "無塑淋膜", "可堆肥", "可降解", "生物基塗層"],
+    "包裝禁塑法規與認證": ["single-use plastic", "APCO", "SB 54", "AB 1200", "BPI", "DIN CERTCO", "FSC", "一次性餐具", "禁塑令", "減塑", "資源循環", "包裝協議", "食品接觸安全"],
     "能源與海運物流": ["brent", "wti", "crude", "coal", "原油", "煤炭", "scfi", "bdi", "freight", "運費", "航運", "港口", "terminal", "logistics", "深水港"],
     "新材料與高階包裝": ["CNF", "nanocellulose", "SHIELDPLUS", "Foopak", "liquid packaging", "液體紙盒", "熱感紙", "阻隔紙", "奈米纖維", "生質乙醇", "SAF"],
     "大宗木片與原料": ["woodchip", "wood chips", "pulpwood", "木片", "原木", "廢紙", "OCC", "長纖", "短纖", "NBSK", "BHKP"],
@@ -153,10 +206,10 @@ def analyze_article(title):
             if kw.lower() in title.lower():
                 if topic not in topics:
                     topics.append(topic)
-                    if topic in ["價格與調幅", "產能與營運"]:
+                    if topic in ["價格與調幅", "產能與營運", "紙袋與手提包裝", "紙模塑與植纖餐具", "紙杯與飲品容器"]:
                         score += 2.0
-                    elif topic in ["綠色法規與ESG", "財報與併購"]:
-                        score += 1.5
+                    elif topic in ["綠色法規與ESG", "食品包裝與容器", "食品紙盒與折疊盒", "無塑無氟與阻隔塗層", "財報與併購"]:
+                        score += 1.8
                     else:
                         score += 1.0
                 break

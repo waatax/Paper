@@ -1,4 +1,4 @@
-﻿# Paperluz · 全球與亞洲紙業情報每週自動聚合標準作業程序 (SOP)
+# Paperluz · 全球與亞洲紙業情報每週自動聚合標準作業程序 (SOP)
 > **Standard Operating Procedure: Weekly Pulp & Paper Intelligence Gathering & Aggregation Pipeline**  
 > **版本**：v3.0（全面涵蓋美國 IP/Westrock、歐洲 UPM、智利 Arauco/CMPC、全球木片鏈、日本三大廠、中國/印尼 APP 與台灣造紙鏈）  
 > **發行機構**：光網資訊 Luznet ∕ Paperluz 產業情報  
@@ -36,8 +36,16 @@
 7. **🇮🇩/🇸🇬 東南亞主要漿廠 (Southeast Asia Pulp & Fiber)**：
    - **APP 印尼 (Indah Kiat INKP.JK / OKI)**：西爪哇 Karawang 綠地包裝基地（日產 2,000 噸 OCC 回收漿新線）、Foopak 無塑淋膜紙盒、EUDR 全林區 GPS 溯源。
    - **APRIL (RGE 金鷹集團 / 廖內漿紙 Riau Andalan)**：蘇門答臘巨型 BHKP 產能與黏膠短纖垂直整合。
-8. **🇹🇼 台灣造紙四大廠 (Taiwan Paper Big 4)**：
-   - 正隆 (1904)、榮成 (1909)、永豐餘 (1907)、華紙 (1905) 營收、資本重整、汽電共生生質能替代率與高附加價值特種紙。
+8. **🇹🇼 台灣造紙四大廠與紙容器加工群 (Taiwan Paper Big 4 & Food Packaging Converters)**：
+   - 正隆 (1904)、榮成 (1909)、永豐餘 (1907)、華紙 (1905 益利疊/非塑食安卡紙)。
+   - 台灣在地紙器與食品容器龍頭：捷比達 (GPPC)、富利康、永純、廣源、銘傳，以及連鎖餐飲/手搖飲/烘焙外帶紙袋紙杯採購標案。
+9. **🥡 全球與區域食品包裝、紙袋與模塑纖維板塊 (Global Food Packaging & Molded Fiber)**：
+   - **🇹🇼 台灣市場**：環境部 (MOENV) 一次性餐具減塑政策、外帶紙杯回收與自備優惠推動、水性無氟 (PFAS-free) 阻隔塗層替換進展。
+   - **🇨🇳 中國市場**：外賣紙袋、白卡紙杯紙（APP/博匯/太陽）、甘蔗渣/竹漿紙模塑出海（眾鑫股份、韶能股份、裕同科技）、GB 4806.10 食品塗層新規。
+   - **🇯🇵 日本市場**：超商（7-11/Lawson/FamilyMart）脫塑紙容器、王子食品包裝、日本製紙 SHIELDPLUS 高阻隔紙、The Pack (ザ・パック) 與 Shimojima 高級紙袋。
+   - **🇺🇸 美國市場**：速食巨頭 (McDonald's/Starbucks) QSR 紙袋與模塑轉型、FDA 全氟化學物 (PFAS) 禁用、Graphic Packaging、Novolex、Huhtamaki。
+   - **🇦🇺/🇳🇿 紐澳市場**：紐西蘭 Waste Minimisation 禁用難回收塑膠餐具、澳洲 APCO 2025/2026 包裝協議目標、Detmold Group、無氟植纖餐盒需求。
+   - **🌏 東南亞市場**：SCG Packaging 綠色包裝併購擴產、印尼 APP Foopak BioContainer 出口、越南外銷包裝代工聚落。
 
 ---
 

@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       issue:
-        description: '出刊期數 (如 008，留空則自動偵測最新期數)'
+        description: '出刊期數 (如 009，留空則自動偵測最新期數)'
         required: false
         default: ''
       lang:
@@ -52,7 +52,7 @@ jobs:
       - name: Execute Newsletter Dispatch Pipeline
         env:
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT || '587' }}
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}

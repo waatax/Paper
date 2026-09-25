@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paperluz 紙業產業情報週報 第 009 期（2026-09-25）</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #0f172a;
+    --muted: #475569;
+    --line: #cbd5e1;
+    --soft: #f8fafc;
+    --card-bg: #ffffff;
+    --accent: #1e40af;
+    --accent-light: #dbeafe;
+    --warn: #b45309;
+    --warn-light: #fef3c7;
+    --danger: #b91c1c;
+    --danger-light: #fee2e2;
+    --ok: #047857;
+    --ok-light: #d1fae5;
+    --c1: #2563eb;
+    --c2: #d97706;
+    --c3: #059669;
+    --c4: #7c3aed;
+    --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a;
+      --fg: #f8fafc;
+      --muted: #94a3b8;
+      --line: #334155;
+      --soft: #1e293b;
+      --card-bg: #1e293b;
+      --accent: #60a5fa;
+      --accent-light: #1e3a8a;
+      --warn: #fbbf24;
+      --warn-light: #78350f;
+      --danger: #f87171;
+      --danger-light: #7f1d1d;
+      --ok: #34d399;
+      --ok-light: #064e3b;
+      --c1: #60a5fa;
+      --c2: #fbbf24;
+      --c3: #34d399;
+      --c4: #a78bfa;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 28px 20px;
+    font-size: 14.5px;
+  }
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  header {
+    border-bottom: 2px solid var(--fg);
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+  .brand {
+    font-size: 12.5px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 8px 0 10px;
+    color: var(--fg);
+    letter-spacing: -.02em;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+  .meta {
+    font-size: 13.5px;
+    color: var(--muted);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .theme-box {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    padding: 12px 16px;
+    margin-top: 14px;
+    font-size: 14.5px;
+    font-weight: 600;
+    border-radius: 0 8px 8px 0;
+    color: var(--fg);
+  }
+
+  /* 3x2 KPI Grid (Balanced Top Cards) */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 22px 0 26px;
+  }
+  @media (max-width: 768px) {
+    .kpi-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+  }
+  .kpi-card {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  }
+  .kpi-card .k-title {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .kpi-card .k-val {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 4px 0 6px;
+    letter-spacing: -.03em;
+    font-variant-numeric: tabular-nums;
+  }
+  .kpi-card .k-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+
+  h2 {
+    font-size: 19px;
+    border-bottom: 2px solid var(--fg);
+    padding-bottom: 6px;
+    margin: 36px 0 16px;
+    color: var(--fg);
+    font-weight: 800;
+    letter-spacing: -.01em;
+  }
+  h3 {
+    font-size: 15.5px;
+    margin: 24px 0 12px;
+    color: var(--fg);
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+    font-weight: 700;
+  }
+
+  /* Tables */
+  .scroll { overflow-x: auto; margin: 14px 0 20px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    text-align: left;
+  }
+  th, td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  th {
+    background: var(--soft);
+    font-weight: 700;
+    color: var(--fg);
+    white-space: nowrap;
+  }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr:hover td { background: rgba(241,245,249,.6); }
+  td.hot { font-weight: 800; color: var(--danger); }
+
+  /* Badges & Alerts */
+  /* Badges & Alerts */
+  .badge {
+    display: inline-block;
+    padding: 2.5px 8px;
+    border-radius: 5px;
+    font-size: 11.5px;
+    font-weight: 700;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .badge-red { background: var(--danger-light); color: var(--danger); }
+  .badge-amber { background: var(--warn-light); color: var(--warn); }
+  .badge-green { background: var(--ok-light); color: var(--ok); }
+  .badge-blue { background: var(--accent-light); color: var(--accent); }
+  .badge-purple { background: #ede9fe; color: var(--c4); }
+
+  .lede {
+    background: var(--soft);
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .note {
+    border-left: 4px solid var(--warn);
+    background: var(--soft);
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 13.5px;
+    border-radius: 0 8px 8px 0;
+  }
+  .gap {
+    border-left: 4px solid var(--danger);
+    background: var(--soft);
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 13.5px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* Forecast Section Components */
+  .forecast-box {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 18px 0;
+    background: var(--soft);
+    box-shadow: var(--shadow);
+  }
+  .forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 14px 0;
+  }
+  @media (max-width: 768px) {
+    .forecast-grid { grid-template-columns: 1fr; }
+  }
+  .forecast-card {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px 14px;
+    box-shadow: var(--shadow);
+  }
+  .forecast-card .f-hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .forecast-card .f-tag { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; }
+  .forecast-card .f-val { font-size: 17px; font-weight: 800; color: var(--fg); font-variant-numeric: tabular-nums; }
+  .forecast-card .f-sub { font-size: 11.5px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+  ol.sum { padding-left: 22px; margin: 14px 0; }
+  ol.sum li { margin: 10px 0; line-height: 1.65; }
+
+  /* Chart Container */
+  .chart {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px;
+    margin: 22px 0;
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+  }
+  .chart figcaption {
+    font-size: 13px;
+    color: var(--fg);
+    padding-top: 10px;
+    line-height: 1.6;
+    border-top: 1px solid var(--line);
+    margin-top: 8px;
+  }
+  .chart svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0 0 10px;
+    font-size: 12.5px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .sw {
+    width: 14px;
+    height: 4px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  .grid-line { stroke: var(--line); stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.7; }
+  .axis-line { stroke: var(--muted); stroke-width: 1.2; }
+  .lbl { fill: var(--muted); font-size: 11px; font-family: inherit; }
+  .vlbl { fill: var(--fg); font-size: 11px; font-family: inherit; font-variant-numeric: tabular-nums; font-weight: 700; }
+
+  /* TOC */
+  .toc {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 22px 0;
+    background: var(--soft);
+    box-shadow: var(--shadow);
+  }
+  .toc h4 {
+    margin: 0 0 12px;
+    font-size: 12.5px;
+    letter-spacing: .2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 36px;
+  }
+  .toc li { margin: 0 0 8px; font-size: 14px; break-inside: avoid; }
+  .toc a { text-decoration: none; color: var(--fg); font-weight: 600; transition: color 0.15s ease; }
+  .toc a:hover { color: var(--accent); }
+  .toc .n { display: inline-block; min-width: 2.2em; color: var(--accent); font-weight: 800; }
+
+  /* Timeline Flow Box */
+  .flow-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 18px 0;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .flow-step {
+    flex: 1;
+    min-width: 160px;
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .flow-step .f-title { font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; }
+  .flow-step .f-name { font-size: 13.5px; font-weight: 700; margin: 3px 0; color: var(--fg); }
+  .flow-step .f-lag { font-size: 11.5px; color: var(--accent); font-weight: 700; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12.5px;
+    text-align: center;
+  }
+  a { color: var(--accent); }
+
+  /* ── A4 Print & PDF Styles (Strict No-Blank-Gap Optimization) ── */
+  @media print {
+    body {
+      background: #fff !important;
+      color: #000 !important;
+      padding: 0 !important;
+      font-size: 9pt;
+      line-height: 1.52;
+    }
+    .wrap { max-width: 100% !important; margin: 0 !important; }
+    header { margin-bottom: 10pt; padding-bottom: 8pt; border-bottom-width: 1.2pt; }
+    h1 { font-size: 18pt; margin: 4pt 0 6pt; }
+    .brand { font-size: 8pt; }
+    .meta { font-size: 8pt; gap: 10pt; }
+    .theme-box { font-size: 9pt; padding: 6pt 10pt; margin-top: 6pt; }
+    
+    .kpi-grid { gap: 6pt; margin: 10pt 0 12pt; }
+    .kpi-card { padding: 7pt 9pt; border-radius: 4pt; box-shadow: none !important; }
+    .kpi-card .k-val { font-size: 14.5pt; margin: 1pt 0; }
+    .kpi-card .k-title { font-size: 7.5pt; }
+    .kpi-card .k-desc { font-size: 7.5pt; line-height: 1.35; }
+
+    h2 {
+      font-size: 11.5pt;
+      margin: 12pt 0 5pt;
+      padding-bottom: 3pt;
+      border-bottom: 1.4pt solid #0f172a;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 9.5pt;
+      margin: 8pt 0 3pt;
+      padding-left: 5pt;
+      border-left: 2.2pt solid var(--accent);
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    table { font-size: 8pt; margin: 6pt 0; break-inside: avoid; page-break-inside: avoid; }
+    th, td { padding: 3.8pt 5pt; }
+    th { background: #f1f5f9 !important; color: #0f172a !important; font-weight: 700; }
+    
+    /* Avoid Component Slice, but Allow Continuous Flow (No Forced Page-Break Whitespace) */
+    .chart, .toc, .lede, .note, .gap, .flow-box, .forecast-box, .forecast-card, .forecast-grid {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none !important;
+    }
+    .chart { padding: 8pt; margin: 8pt 0; }
+    .chart svg { max-height: 80mm; }
+    .legend { padding-bottom: 4pt; font-size: 7.5pt; }
+    .forecast-box { padding: 6pt 8pt; margin: 6pt 0; }
+    .forecast-grid { gap: 5pt; margin: 5pt 0; }
+    .forecast-card { padding: 5pt 7pt; }
+    
+    footer { margin-top: 10pt; padding-top: 6pt; border-top: 1pt solid #0f172a; font-size: 7.5pt; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">Paperluz Intelligence · 產業情報週報</div>
+  <h1>Paperluz 紙業產業情報週報　第 009 期</h1>
+  <div class="meta">
+    <span><b>情報週期</b>：2026-09-19 ～ 2026-09-25（2026年 第 39 週 每週五 出刊）</span>
+    <span><b>發布日期</b>：2026-09-25</span>
+    <span><b>發行機構</b>：光網資訊 Luznet ∕ Paperluz 產業情報</span>
+  </div>
+  <div class="theme-box">
+    <b>本期主軸</b>　玖龍年度淨利狂飆 102% 重登 35.8 億元 × 白卡紙巨頭集體提漲 200 元/噸 × 台灣造紙綠色採購破百億（正隆74.8億/永豐餘63億）× 華紙台東廠火警無損產線 × 歐盟 PFHxA 禁令倒數 23 天 × 美國進口披薩盒不公平貿易調查
+  </div>
+</header>
+
+<!-- 6 KPI Grid (Balanced Top Cards) -->
+<div class="kpi-grid">
+  <div class="kpi-card">
+    <div class="k-title">玖龍年度盈利狂飆 102%</div>
+    <div class="k-val" style="color:var(--c4)">RMB 35.81 億</div>
+    <div class="k-desc">走出週期谷底 · 股東應佔盈利翻倍，稼動率重回 90% 以上，自備電廠與木纖維自給率提升，毛利大幅修復</div>
+  </div>
+  <div class="kpi-card">
+    <div class="k-title">白卡紙巨頭集體提價</div>
+    <div class="k-val" style="color:var(--accent)">+RMB 200 / 噸</div>
+    <div class="k-desc">9/20-25 全面開票 · 玖龍/APP/博匯/聯盛提價落地，FBB 食品白卡站回 4,450 元，終止前期過度折價</div>
+  </div>
+  <div class="kpi-card">
+    <div class="k-title">台灣造紙綠色採購破百億</div>
+    <div class="k-val" style="color:var(--c3)">正隆 74.8億 / 永豐餘 63億</div>
+    <div class="k-desc">環境部表揚綠色績優 · 榮成深化碳管理，擴大循環生質能與低碳工紙，推升產業綠色供應鏈競爭力</div>
+  </div>
+  <div class="kpi-card">
+    <div class="k-title">北美箱板紙 Raw Spread</div>
+    <div class="k-val" style="color:var(--c1)">$840 / 短噸</div>
+    <div class="k-desc">北美調價第四週全額落袋 · 牛卡板現貨站穩 $975/短噸，Smurfit Westrock 與 Pratt 啟動進口披薩盒反傾銷調查</div>
+  </div>
+  <div class="kpi-card">
+    <div class="k-title">中國進口針葉木漿 (NBSK)</div>
+    <div class="k-val" style="color:var(--c1)">USD 692 / 噸 (RMB 4,915)</div>
+    <div class="k-desc">雙節前庫存連 11 週淨流出至 208.6 萬噸，期現基差收斂在 +RMB 70/噸健康區間</div>
+  </div>
+  <div class="kpi-card">
+    <div class="k-title">歐盟 PFHxA 全氟己酸禁令</div>
+    <div class="k-val" style="color:var(--danger)">倒數 23 天 (衝刺清庫)</div>
+    <div class="k-desc">10/18 禁令正式生效 · 輸歐食品接觸紙包裝禁絕全氟塗層，水性生物基無氟防油紙剛需衝刺</div>
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<h2 id="s1">一、本期十行摘要與關鍵洞察</h2>
+<ol style="margin-left:20px; line-height:1.75; font-size:14.5px;">
+  <li><span class="badge badge-purple">獲利反轉</span> <b>玖龍紙業（02689.HK）全年度盈利狂飆 102.62% 達 35.81 億元，強勢走出週期底部</b>：亞洲造紙龍頭公布最新年度業績，股東應佔利潤自去年 17.67 億翻倍攀升至 35.81 億元人民幣。受惠原料結構優化、自備木漿及木纖維項目投產放量，原紙稼動率重回 91.5% 高檔，單噸綜合毛利增加約 135 元人民幣，彰顯逆週期防禦實力。</li>
+  <li><span class="badge badge-blue">白卡突圍</span> <b>白卡紙四大巨頭聯合提價 200 元/噸全數開票落地，終止非理性價格內卷</b>：玖龍紙業、APP 金光紙業、博匯紙業與聯盛紙業於 9/20–9/25 陸續開票執行每噸 200 元人民幣調價函。食品級白卡紙（FBB）出廠價回升至 4,350–4,550 元/噸，中秋禮盒與雙十一包裝備料需求釋放，白卡紙全行業虧損局面迎來結構性扭轉。</li>
+  <li><span class="badge badge-green">綠色採購</span> <b>台灣造紙業綠色採購破百億大關，正隆 74.8 億、永豐餘逾 63 億獲環境部表揚</b>：環境部表揚綠色採購績優企業，正隆去年綠色採購達 74.8 億元、永豐餘逾 63 億元，榮成亦深化碳管理榮獲綠色採購績優；造紙業藉由大量回收廢紙、廢棄物生質能汽電共生，構築堅實之全循環產業生態系。</li>
+  <li><span class="badge badge-amber">工安韌性</span> <b>華紙（1905）台東紙廠露天廢紙堆 9/20 火警，損失約 1,200 萬元且核心紙機毫髮無損</b>：華紙台東廠室外露天原料堆置區起火燃燒近千噸廢紙，所幸廠方與消防隊迅速控制，核心紙機主體設備、製漿產線及廠房零受損，工廠維持正常生產運轉，不影響訂單交付與產品出貨。</li>
+  <li><span class="badge badge-red">貿易壁壘</span> <b>北美工紙 Raw Spread 鞏固於 $840 歷史峰頂，龍頭向 USITC 提出進口披薩盒反傾銷申訴</b>：北美三大紙業巨頭 PCA、Smurfit Westrock 與 IP 第三輪調價進入開票第四週，牛卡板現貨站穩 $975/短噸，原紙對美廢價差維持在 $840/短噸。與此同時，Smurfit Westrock 與 Pratt Industries 聯名向美國國際貿易委員會（USITC）申請針對進口瓦楞披薩盒展開反傾銷與不公平貿易調查，強化本土市場防禦。</li>
+  <li><span class="badge badge-blue">木漿盤勢</span> <b>中國進口漂針木漿 (NBSK) 微升至 USD 692/噸 (RMB 4,915)，港口庫存連十一週淨流出</b>：青島港與常熟港主流庫存降至 208.6 萬噸，雙節前紙廠開工率維持在 70.2% 旺季高點，上期所主力期貨結算價收於 4,845 元/噸，期現基差收斂在 +RMB 70/噸 (+USD 10)。</li>
+  <li><span class="badge badge-purple">價差模型</span> <b>Suzano 亞洲提漲 $20 鞏固短纖底部，長短纖價差健康運作於 460 元/噸 ($65)</b>：全球短纖現貨堅挺於 $625–$630/噸 (RMB 4,455)，長短纖價差穩定於 500 元安全臨界線下方，排除了下游造紙廠更改纖維配方的系統性風險。</li>
+  <li><span class="badge badge-red">法規衝刺</span> <b>歐盟 PFHxA 禁令倒數 23 天衝刺，水性生物基無氟塗層卡紙與紙袋剛需暴增</b>：歐盟 REACH PFHxA 禁用條款將於 2026-10-18 正式適用，外銷歐洲食品接觸紙包裝全面加速去氟認證，華紙「益利疊」無塑無氟食安卡紙受惠歐美日訂單持續擴散。</li>
+  <li><span class="badge badge-green">紐澳契機</span> <b>澳洲 APCO 啟動次階段包裝改革，紐澳加速淘汰 EPS 帶動植纖模塑大單</b>：澳洲包裝契約組織 (APCO) 發布次階段法規指引，加速淘汰單次塑膠與發泡聚苯乙烯 (EPS) 容器；紐西蘭超市全數換裝 FSC 牛皮紙袋與蔗渣模塑盤，Detmold Group 與中台模塑廠擴大長約採購。</li>
+  <li><span class="badge badge-green">循環能源</span> <b>台灣四大紙廠迎旺季出貨頂峰，汽電共生生質能替代率提升至 47.8% 鎖定成本</b>：正隆平陽百萬噸產能全產全銷，榮成受惠中國紙價築底獲利回溫；台廠持續擴大廠內固體再生燃料 (SRF) 與餘熱發電，單噸蒸氣成本維持在 NT$725 受控水準。</li>
+</ol>
+
+<!-- SECTION 2 -->
+<h2 id="s2">二、關鍵指標儀表板</h2>
+
+<h3>2.1 原料端（木漿市場）</h3>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>指標</th><th>最新值 (USD為主/在地貨幣附註)</th><th>取價日</th><th>變動</th><th>產業解讀與趨勢</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>中國進口針葉漿現貨均價 (NBSK)</td><td class="num hot">USD 692／噸 (RMB 4,915)</td><td>2026-09-25</td><td class="num" style="color:var(--danger);">+USD 2.0 (RMB +15)</td><td>節前最後備貨拉抬，港口庫存連11週去化，現貨小幅盤堅</td></tr>
+    <tr><td>中國進口闊葉漿現貨均價 (BHKP)</td><td class="num">USD 627／噸 (RMB 4,455)</td><td>2026-09-25</td><td class="num" style="color:var(--danger);">+USD 1.0 (RMB +10)</td><td>Suzano 提價完全落地，文化與生活紙廠剛需穩健，短纖底部厚實</td></tr>
+    <tr><td>上期所漂針漿期貨主力結算 (SP)</td><td class="num">USD 682／噸 (RMB 4,845)</td><td>2026-09-25</td><td class="num" style="color:var(--danger);">+USD 2.0 (RMB +17)</td><td>基差收斂至 +USD 10 (RMB +70)，多頭持倉平穩換月</td></tr>
+    <tr><td>中國主流港口紙漿庫存</td><td class="num">208.6 萬噸</td><td>2026-09-25</td><td class="num" style="color:var(--ok);">-1.6 萬噸</td><td>連續十一週淨流出，常熟與青島港疏港速度維持高檔</td></tr>
+    <tr><td>長短纖現貨價差 (BSKP-BHKP)</td><td class="num">USD 65／噸 (RMB 460)</td><td>2026-09-25</td><td class="num" style="color:var(--danger);">+USD 1.0 (RMB +5)</td><td>處於 500 元安全替代線下方，長短纖健康共振築底</td></tr>
+    <tr><td>歐洲進口針葉漿現貨 (NBSK CIF)</td><td class="num">USD 1,245–1,310／噸</td><td>2026-09-25</td><td class="num" style="color:var(--danger);">+USD 5</td><td>北歐漿廠供給紀律嚴格，歐洲現貨維持高溢價格局</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2.2 回收纖維端（廢紙市場）</h3>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>指標</th><th>最新值 (USD為主/在地貨幣附註)</th><th>取價日</th><th>變動</th><th>產業解讀</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>美國 11 號 OCC 出口價（美西 FAS）</td><td class="num">USD 135–137／美噸 (約 RMB 955–970)</td><td>2026-09-25</td><td class="num">持平</td><td>亞洲紙廠維持穩定採購節奏，美廢西岸報價高位堅挺</td></tr>
+    <tr><td>美國 11 號 OCC 出口價（美東 FAS）</td><td class="num">USD 137–139／美噸 (約 RMB 970–985)</td><td>2026-09-25</td><td class="num">持平</td><td>東岸貨櫃海運艙位平衡，歐洲與印度買盤維持平穩</td></tr>
+    <tr><td>美國國內 OCC 年初至今累計認列調幅</td><td class="num hot">+USD 100／美噸</td><td>2026-09</td><td class="num">累計認列</td><td>北美箱板紙廠稼動率維持 92% 高位，廢紙內需強韌</td></tr>
+    <tr><td>中國國內廢紙到廠基準價 (A級)</td><td class="num">USD 285／噸 (RMB 2,020)</td><td>2026-09-25</td><td class="num" style="color:var(--danger);">+RMB 5</td><td>雙節前打包站出貨受限，紙廠微幅調漲收購價以鎖定原料庫存</td></tr>
+    <tr><td>台灣廢紙紙廠到廠價</td><td class="num">USD 131.0／噸 (NT$ 4,200)</td><td>2026-09-25</td><td class="num">持平</td><td>國內回收量平穩，工紙廠到廠牌價維持在 NT$4,200/噸安全區間</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2.3 紙板與紙價動作</h3>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>市場</th><th>品項</th><th>動作／漲幅 (USD為主)</th><th>生效日期</th><th>影響範疇</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>中國</td><td>塗佈白卡紙 (含食品卡 FBB)</td><td class="hot">玖龍、APP、博匯、聯盛 +200 元／噸</td><td>2026-09-20 起開票</td><td>全面調價落地，食品卡紙、月餅禮盒、藥品與化妝品彩盒</td></tr>
+    <tr><td>中國</td><td>玖龍紙業年度業績</td><td class="hot">全年度盈利 35.81 億元 (年增 102.62%)</td><td>2026-09-23 揭露</td><td>走出週期谷底，產能利用率回升，單噸毛利大幅修復</td></tr>
+    <tr><td>美國</td><td>工業箱板紙與披薩盒</td><td class="hot">SW / Pratt 提出進口披薩盒反傾銷申訴</td><td>2026-09-20 提請</td><td>USITC 展開調查，防堵海外低價瓦楞紙盒傾銷，築牢定價權</td></tr>
+    <tr><td>美國</td><td>原紙利差 (Raw Spread)</td><td class="hot">USD 840／短噸 (NT$ 26,910)</td><td>2026-09-25</td><td>穩居 840 美元歷史新高，北美紙廠邊際毛利維持頂峰</td></tr>
+    <tr><td>台灣</td><td>綠色採購破百億</td><td class="hot">正隆 74.8 億、永豐餘逾 63 億</td><td>2026-09-23 表揚</td><td>環境部表揚績優，推動產業生質能與綠色循環經濟鏈</td></tr>
+    <tr><td>台灣</td><td>華紙台東紙廠火警</td><td>初估損失 1,200 萬元，紙機無損</td><td>2026-09-20 事件</td><td>露天廢紙堆起火已滅，核心紙機設備無損正常運作</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2.4 關鍵能源、外匯與海運物流雷達</h3>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>範疇</th><th>指標點位</th><th>最新報價 (USD為主)</th><th>趨勢變動</th><th>對造紙與包裝產業鏈之關鍵財務／營運意涵</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><b>地緣能源</b></td><td>國際布蘭特原油 (Brent)</td><td class="num hot">$92.40 / 桶</td><td class="num" style="color:var(--ok);">-1.6% WoW</td><td>油價微幅回調但維持 92 美元高位整固，化學塗劑與航運燃油成本僵固</td></tr>
+    <tr><td><b>外匯</b></td><td>美元／新台幣 (USD/TWD)</td><td class="num">32.040</td><td class="num" style="color:var(--ok);">升值 2分</td><td>台幣小幅走升，略微減輕進口原料木漿與美廢結匯成本</td></tr>
+    <tr><td><b>外匯</b></td><td>歐元／美元 (EUR/USD)</td><td class="num">1.0965</td><td class="num">歐元堅挺</td><td>歐元匯率強勢削弱歐洲紙廠出口優勢，利於亞洲紙器廠承接東南亞訂單</td></tr>
+    <tr><td><b>外匯</b></td><td>美元／巴西雷亞爾 (USD/BRL)</td><td class="num">5.0850</td><td class="num">雷亞爾平穩</td><td>巴西漿廠外銷美元淨價收益受控，維持美元報價防禦心態堅定</td></tr>
+    <tr><td><b>海運</b></td><td>上海出口集裝箱運價 (SCFI)</td><td class="num">3,425.60 點 (USD)</td><td class="num" style="color:var(--ok);">-0.9%</td><td>節前最後出貨高峰微幅收斂，美西線報 $6,580/FEU、美東線 $9,380/FEU</td></tr>
+    <tr><td><b>海運</b></td><td>波羅的海乾散貨指數 (BDI)</td><td class="num">1,885 點</td><td class="num" style="color:var(--danger);">+1.2%</td><td>木片散裝船與大宗原木海運費小幅墊高，運力供需處於緊平衡</td></tr>
+    <tr><td><b>能源</b></td><td>台灣進口動力煤 (Taipower CIF)</td><td class="num">$128.80 / 噸</td><td class="num" style="color:var(--ok);">-0.5% MoM</td><td>煤價走軟配合 SRF 生質能替代率升至 47.8%，單噸蒸氣成本降至 NT$725</td></tr>
+    <tr><td><b>能源</b></td><td>中國動力煤 (秦皇島 5500大卡)</td><td class="num">USD 115.5 / 噸 (RMB 820)</td><td class="num">平穩微跌</td><td>迎峰度夏後電廠庫存處於高位，自備電廠單噸紙耗電煤成本穩定受控</td></tr>
+    <tr><td><b>能源</b></td><td>日本進口動力煤 (Japan CIF)</td><td class="num">$136.50 / 噸</td><td class="num">平穩盤整</td><td>日本造紙巨頭維持高階包裝紙外銷牌價，轉嫁高能源支出</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2.5 食品級原紙、阻隔塗層與紙模塑原料雷達 (Food Grade & Molded Fiber)</h3>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>品類項目</th><th>規格與應用場景</th><th>最新報價 (USD為主/在地貨幣)</th><th>趨勢動態</th><th>產業意涵與下游供需</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><b>食品級塗佈白卡 (FBB)</b></td><td>230–350g 高抗水防油紙杯/紙盒紙</td><td class="num hot">USD 635 / 噸 (RMB 4,450)</td><td class="num" style="color:var(--danger);">+RMB 200/噸</td><td>9/20 玖龍/APP/博匯/聯盛提價全面開票，終結非理性虧損</td></tr>
+    <tr><td><b>無氟耐油防油原紙</b></td><td>40–60g KIT 8–9級 (漢堡紙/炸物袋)</td><td class="num hot">USD 1,220–1,270 / 噸 (NT$ 39,000)</td><td class="num" style="color:var(--danger);">+USD 10/噸</td><td>歐盟 PFHxA 禁令倒數 23 天，外銷歐美與連鎖餐飲無氟紙袋出貨緊湊</td></tr>
+    <tr><td><b>伸展牛皮紙袋紙</b></td><td>70–90g 高破裂 (手提購物袋/外帶SOS袋)</td><td class="num">USD 840–870 / 噸 (NT$ 27,000)</td><td class="num">走勢堅挺</td><td>全球禁塑推升連鎖零售與外賣全紙手提袋需求，正隆/日本紙袋廠滿載</td></tr>
+    <tr><td><b>水性生物基阻隔塗劑</b></td><td>Aqueous Dispersion Coating (替代PE淋膜)</td><td class="num">USD 2,820–3,200 / 噸</td><td class="num">平穩微降</td><td>規模化擴產帶動塗劑降本，華紙益利疊與在地加工廠批量應用</td></tr>
+    <tr><td><b>漂白甘蔗渣/竹漿板</b></td><td>紙模塑餐盒與托盤核心原料纖維</td><td class="num">USD 548–572 / 噸 (RMB 3,870–4,040)</td><td class="num">平穩微升</td><td>新榨季前原料庫存健康，眾鑫/韶能等紙模塑大廠稼動率維持 89% 高位</td></tr>
+    <tr><td><b>成品植纖模塑餐盒</b></td><td>850ml 無氟耐溫可降解外帶餐盒 (FOB)</td><td class="num">USD 0.058–0.065 / 個</td><td class="num">持平</td><td>澳洲 APCO 與紐西蘭禁塑採購合約支撐，海外快餐模塑訂單飽和</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- SECTION 3 -->
+<h2 id="s3">三、價格波動與趨勢圖表 (5 大專業 SVG)</h2>
+
+<!-- Chart 1 -->
+<figure class="chart">
+  <figcaption>圖 1 ｜ 中國進口針葉漿 (NBSK) 與闊葉漿 (BHKP) 現貨均價及長短纖價差走勢 (2026-06 ～ 2026-09-25)</figcaption>
+  <svg viewBox="0 0 800 240" width="100%" height="240" style="background:var(--soft);border-radius:6px;">
+    <line x1="60" y1="30" x2="760" y2="30" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="80" x2="760" y2="80" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="130" x2="760" y2="130" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="180" x2="760" y2="180" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="210" x2="760" y2="210" stroke="var(--fg)"/>
+    
+    <text x="50" y="35" font-size="11" text-anchor="end" fill="var(--muted)">5200</text>
+    <text x="50" y="85" font-size="11" text-anchor="end" fill="var(--muted)">4900</text>
+    <text x="50" y="135" font-size="11" text-anchor="end" fill="var(--muted)">4600</text>
+    <text x="50" y="185" font-size="11" text-anchor="end" fill="var(--muted)">4300</text>
+    
+    <!-- NBSK Line (Blue) -->
+    <polyline fill="none" stroke="#2563eb" stroke-width="3" points="80,60 160,75 240,100 320,95 400,98 480,94 560,90 630,84 690,80 750,76"/>
+    <!-- BHKP Line (Orange) -->
+    <polyline fill="none" stroke="#d97706" stroke-width="3" points="80,140 160,150 240,165 320,166 400,168 480,167 560,164 630,156 690,152 750,150"/>
+    <!-- Spread Bars -->
+    <rect x="740" y="76" width="20" height="74" fill="rgba(124,58,237,0.25)" rx="2"/>
+    
+    <circle cx="750" cy="76" r="5" fill="#2563eb"/>
+    <text x="750" y="64" font-size="11" font-weight="700" text-anchor="middle" fill="#2563eb">USD 692 (RMB 4,915)</text>
+    <circle cx="750" cy="150" r="5" fill="#d97706"/>
+    <text x="750" y="172" font-size="11" font-weight="700" text-anchor="middle" fill="#d97706">USD 627 (RMB 4,455)</text>
+    <text x="750" y="118" font-size="11" font-weight="800" text-anchor="middle" fill="#7c3aed">Spread USD 65 (RMB 460)</text>
+    
+    <text x="80" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">6月</text>
+    <text x="160" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">6月底</text>
+    <text x="240" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">7月中</text>
+    <text x="320" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">7/31 (W31)</text>
+    <text x="400" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">8/07 (W32)</text>
+    <text x="480" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">8/21 (W34)</text>
+    <text x="560" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">8/28 (W35)</text>
+    <text x="630" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">9/04 (W36)</text>
+    <text x="690" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">9/11 (W37)</text>
+    <text x="750" y="228" font-size="11" font-weight="700" text-anchor="middle" fill="var(--fg)">9/25 (W39)</text>
+  </svg>
+</figure>
+
+<!-- Chart 2 -->
+<figure class="chart">
+  <figcaption>圖 2 ｜ 北美箱板紙調價全額開票 vs. 美廢 OCC 原料利差 (Raw Spread 穩居 $840 歷史峰頂)</figcaption>
+  <svg viewBox="0 0 800 240" width="100%" height="240" style="background:var(--soft);border-radius:6px;">
+    <line x1="60" y1="30" x2="760" y2="30" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="90" x2="760" y2="90" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="150" x2="760" y2="150" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="210" x2="760" y2="210" stroke="var(--fg)"/>
+    
+    <text x="50" y="35" font-size="11" text-anchor="end" fill="var(--muted)">$1000</text>
+    <text x="50" y="95" font-size="11" text-anchor="end" fill="var(--muted)">$700</text>
+    <text x="50" y="155" font-size="11" text-anchor="end" fill="var(--muted)">$350</text>
+    
+    <polygon points="90,110 200,95 310,75 420,60 520,48 600,42 660,36 710,34 750,34 750,185 710,185 660,185 600,185 520,185 420,185 310,185 200,185 90,185" fill="rgba(37,99,235,0.12)"/>
+    
+    <polyline fill="none" stroke="#2563eb" stroke-width="3.5" points="90,110 200,95 310,75 420,60 520,48 600,42 660,36 710,34 750,34"/>
+    <polyline fill="none" stroke="#059669" stroke-width="3" points="90,188 200,186 310,186 420,186 520,186 600,184 660,183 710,183 750,183"/>
+    
+    <circle cx="750" cy="34" r="5" fill="#2563eb"/>
+    <text x="750" y="22" font-size="12" font-weight="800" text-anchor="middle" fill="#2563eb">Linerboard $975 (第4週全額開票)</text>
+    <circle cx="750" cy="183" r="5" fill="#059669"/>
+    <text x="750" y="202" font-size="11" font-weight="700" text-anchor="middle" fill="#059669">美廢 OCC $135</text>
+    <text x="610" y="98" font-size="13" font-weight="800" fill="#7c3aed">Raw Spread $840/短噸 (歷史新高)</text>
+    
+    <text x="90" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">2026-Q1</text>
+    <text x="200" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">2026-04</text>
+    <text x="310" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">2026-06</text>
+    <text x="420" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">2026-07</text>
+    <text x="520" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">2026-08</text>
+    <text x="600" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">8/28 (W35)</text>
+    <text x="660" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">9/04 (W36)</text>
+    <text x="710" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">9/18 (W38)</text>
+    <text x="750" y="228" font-size="11" font-weight="700" text-anchor="middle" fill="var(--fg)">9/25 (W39)</text>
+  </svg>
+</figure>
+
+<!-- Chart 3 -->
+<figure class="chart">
+  <figcaption>圖 3 ｜ 台灣四大紙廠綠色採購破百億與營收反轉走勢 (2026-09-25)</figcaption>
+  <svg viewBox="0 0 800 240" width="100%" height="240" style="background:var(--soft);border-radius:6px;">
+    <line x1="60" y1="120" x2="760" y2="120" stroke="var(--fg)" stroke-width="1.5"/>
+    <line x1="60" y1="40" x2="760" y2="40" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="200" x2="760" y2="200" stroke="var(--line)" stroke-dasharray="3,3"/>
+    
+    <text x="50" y="45" font-size="11" text-anchor="end" fill="var(--muted)">+40%</text>
+    <text x="50" y="125" font-size="11" text-anchor="end" fill="var(--muted)">0%</text>
+    <text x="50" y="205" font-size="11" text-anchor="end" fill="var(--muted)">-40%</text>
+    
+    <!-- Cheng Loong (Blue) -->
+    <polyline fill="none" stroke="#2563eb" stroke-width="3" points="100,82 180,170 260,100 340,88 420,94 500,124 580,74 660,68 745,52"/>
+    <!-- Long Chen (Green) -->
+    <polyline fill="none" stroke="#059669" stroke-width="3" points="100,41 180,166 260,116 340,106 420,95 500,32 580,80 660,76 745,50"/>
+    <!-- YFY (Purple) -->
+    <polyline fill="none" stroke="#7c3aed" stroke-width="2.5" points="100,96 180,161 260,110 340,103 420,105 500,95 580,107 660,102 745,92"/>
+    <!-- CHP (Orange) -->
+    <polyline fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="4,3" points="100,114 180,191 260,111 340,131 420,114 500,121 580,142 660,135 745,115"/>
+    
+    <circle cx="745" cy="52" r="5" fill="#2563eb"/>
+    <text x="745" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#2563eb">正隆綠色採購 74.8 億 (平陽百萬噸滿載)</text>
+    <circle cx="745" cy="50" r="5" fill="#059669"/>
+    <text x="745" y="68" font-size="11" font-weight="700" text-anchor="middle" fill="#059669">永豐餘綠色採購逾 63 億 (生質能循環)</text>
+    
+    <text x="100" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">1月</text>
+    <text x="180" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">2月</text>
+    <text x="260" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">3月</text>
+    <text x="340" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">4月</text>
+    <text x="420" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">5月</text>
+    <text x="500" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">6月</text>
+    <text x="580" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">7月</text>
+    <text x="660" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">8月實績</text>
+    <text x="745" y="228" font-size="11" font-weight="700" text-anchor="middle" fill="var(--fg)">9/25 綠色採購表揚</text>
+  </svg>
+</figure>
+
+<!-- Chart 4 -->
+<figure class="chart">
+  <figcaption>圖 4 ｜ 白卡紙與工紙集體提價落地開票進程 (2026-09-25)</figcaption>
+  <svg viewBox="0 0 800 240" width="100%" height="240" style="background:var(--soft);border-radius:6px;">
+    <line x1="60" y1="40" x2="760" y2="40" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="120" x2="760" y2="120" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="200" x2="760" y2="200" stroke="var(--fg)"/>
+    
+    <polyline fill="none" stroke="#2563eb" stroke-width="3" points="80,180 190,160 300,130 420,130 540,90 640,70 710,60 750,56"/>
+    <polyline fill="none" stroke="#7c3aed" stroke-width="3" points="80,190 190,180 300,160 420,150 540,140 640,130 710,100 750,75"/>
+    
+    <text x="740" y="44" font-size="11" font-weight="800" text-anchor="middle" fill="#2563eb">北美工紙第4週全額開票 (+$80~140 / 利差 $840)</text>
+    <text x="740" y="94" font-size="11" font-weight="800" text-anchor="middle" fill="#7c3aed">白卡紙巨頭 9/20-25 全面開票提價 +200 元/噸</text>
+    
+    <text x="80" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-Q1</text>
+    <text x="190" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-03</text>
+    <text x="300" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-06</text>
+    <text x="420" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-07</text>
+    <text x="540" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-08</text>
+    <text x="640" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">9/04</text>
+    <text x="710" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">9/18</text>
+    <text x="750" y="220" font-size="11" font-weight="700" text-anchor="middle" fill="var(--fg)">9/25 (全額開票)</text>
+  </svg>
+</figure>
+
+<!-- Chart 5 -->
+<figure class="chart">
+  <figcaption>圖 5 ｜ 地緣能源、海運 SCFI 與台廠汽電共生蒸氣成本監測 (2026-09-25)</figcaption>
+  <svg viewBox="0 0 800 240" width="100%" height="240" style="background:var(--soft);border-radius:6px;">
+    <line x1="60" y1="40" x2="760" y2="40" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="120" x2="760" y2="120" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="200" x2="760" y2="200" stroke="var(--fg)"/>
+    
+    <polyline fill="none" stroke="#b91c1c" stroke-width="3" points="80,150 170,155 260,165 350,120 440,65 530,60 610,58 670,60 720,62 750,68"/>
+    <polyline fill="none" stroke="#7c3aed" stroke-width="2.5" points="80,120 170,110 260,95 350,90 440,82 530,78 610,75 670,73 720,70 750,72"/>
+    <polyline fill="none" stroke="#059669" stroke-width="3" points="80,80 170,95 260,110 350,125 440,135 530,140 610,142 670,144 720,146 750,148"/>
+    
+    <text x="740" y="54" font-size="11" font-weight="800" text-anchor="middle" fill="#b91c1c">Brent $92.40 (-1.6% WoW)</text>
+    <text x="740" y="92" font-size="11" font-weight="700" text-anchor="middle" fill="#7c3aed">SCFI 3,425.6 點 (艙位平穩)</text>
+    <text x="740" y="166" font-size="11" font-weight="700" text-anchor="middle" fill="#059669">Taipower 煤 $128.8/t (SRF 47.8% 鎖定 NT$725)</text>
+    
+    <text x="80" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-06</text>
+    <text x="170" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-07</text>
+    <text x="260" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">8/01</text>
+    <text x="350" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">8/14</text>
+    <text x="440" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">8/20</text>
+    <text x="530" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">8/28 (W35)</text>
+    <text x="610" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">9/04 (W36)</text>
+    <text x="670" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">9/11 (W37)</text>
+    <text x="720" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">9/18 (W38)</text>
+    <text x="750" y="220" font-size="11" font-weight="700" text-anchor="middle" fill="var(--fg)">9/25 (W39)</text>
+  </svg>
+</figure>
+
+<!-- 3.6 全鏈預測矩陣 -->
+<h3 id="s3-6">3.6 全鏈預測矩陣 Forward Outlook (能源 × 木漿 × 紙價)</h3>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>追蹤標的</th><th>領域類別</th><th>當前基準點 (USD為主)</th><th>1 個月目標</th><th>3 個月目標</th><th>6 個月目標</th><th>趨勢方向</th><th>關鍵驅動因素與風險邊界</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><b>布蘭特原油 (Brent)</b></td><td>能源成本</td><td class="num hot">$92.40 / 桶</td><td class="num">$90–96</td><td class="num">$86–94</td><td class="num">$80–88</td><td>高位震盪</td><td>地緣常態化監管；船運燃油附加費 (BSS) 與造紙化學膠乳居高不下</td></tr>
+    <tr><td><b>中國進口針葉木漿 (NBSK)</b></td><td>造紙原料</td><td class="num hot">USD 692 / 噸 (RMB 4,915)</td><td class="num">$695–715</td><td class="num">$700–730</td><td class="num">$660–700</td><td>溫和挺進</td><td>港口庫存連十一週下降至 208.6 萬噸；雙節文化印務與秋季包裝備貨剛需托底</td></tr>
+    <tr><td><b>中國進口闊葉木漿 (BHKP)</b></td><td>造紙原料</td><td class="num">USD 627 / 噸 (RMB 4,455)</td><td class="num">$630–645</td><td class="num">$635–655</td><td class="num">$610–635</td><td>築底反彈</td><td>Suzano 提價完全落地；Cerrado 產能被剛需消化；亞洲買家庫存偏低補庫</td></tr>
+    <tr><td><b>美國 11# 廢紙 (OCC)</b></td><td>回收纖維</td><td class="num">USD 135–137 / 短噸</td><td class="num">$135–140</td><td class="num">$138–145</td><td class="num">$125–135</td><td>高檔平穩</td><td>北美箱板紙 92% 高稼動率維持廢紙內需，出口貨櫃供應平穩</td></tr>
+    <tr><td><b>美國箱板紙 (Linerboard)</b></td><td>包裝原紙</td><td class="num hot">$975 / 短噸</td><td class="num">$970–990</td><td class="num">$970–1000</td><td class="num">$940–970</td><td>全額落袋</td><td>第三輪調價開票全數落地；Raw Material Spread 穩居 $840 歷史峰頂</td></tr>
+    <tr><td><b>食品級白卡 (FBB)</b></td><td>食品包裝</td><td class="num hot">USD 635 / 噸 (RMB 4,450)</td><td class="num">$640–660</td><td class="num">$650–680</td><td class="num">$620–650</td><td>全面提價</td><td>四大龍頭聯合提價 200 元全面落袋，終止前期過度折價，迎第四季包裝旺季</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- SECTION 4 -->
+<h2 id="s4">四、造紙原料動態：木漿與廢紙</h2>
+<p>木漿市場方面，Suzano 9 月闊葉木漿提漲 $20/噸落地效應持續鞏固，北歐與北美針葉漿廠亦跟進嚴格發貨紀律，推動進口漂針木漿 NBSK 現貨穩步挺進至 USD 692/噸 (RMB 4,915/噸)。青島與常熟主流港口庫存連續十一週呈現淨流出，降至 208.6 萬噸，下游印務、文化紙與白卡紙開工率維持在 70.2% 旺季高點。長短纖現貨價差維持在 460 元/噸 (USD 65/噸)，健康運作於 500 元/噸之安全替代線下方。</p>
+<p>廢紙方面，美國國內紙箱回收流動平穩，出口報價美西 FAS 報 USD 135–137/短噸、美東 FAS 報 USD 137–139/短噸高位震盪。中國國內廢紙 A 級收購價持穩微升至 RMB 2,020/噸，雙節前打包站出貨平緩；台灣廢紙紙廠進廠價維持在 NT$4,200/噸受控區間。</p>
+
+<!-- SECTION 5 -->
+<h2 id="s5">五、成品紙市場動態：工紙、文化紙與特種紙</h2>
+<p>工業用紙領域，北美三大巨頭 PCA、Smurfit Westrock 與 IP 的第三輪調價進入開票執行的第四週，全額落袋確立了北美紙廠極其豐厚的原料利差（$840/短噸）。與此同時，Smurfit Westrock 與 Pratt Industries 正式向美國國際貿易委員會（USITC）提出反傾銷申訴，指控海外進口瓦楞披薩盒涉及不公平低價競爭，藉此鞏固北美下游二級紙箱加工市場的定價話語權。</p>
+<p>在白卡紙與特種紙市場，玖龍、APP、博匯、聯盛等白卡紙巨頭於 9/20–9/25 正式開票落實 200 元/噸漲幅，食品級白卡（FBB）出廠價重返 4,350–4,550 元/噸區間，終結前期非理性折價內卷。受歐盟 PFHxA 禁用最後 23 天衝刺與中國 GB 4806.10 施行帶動，無氟防油紙、水性生物基阻隔塗佈卡紙訂單呈現爆發式增長，華紙與永豐餘高階食品卡紙出貨暢旺。</p>
+
+<!-- SECTION 6: 食品包裝與紙袋/紙模塑/紙盒專欄 -->
+<h2 id="s6">六、【特別專欄】全球與台灣食品包裝產業洞察（紙袋 · 紙杯 · 紙模塑 · 折疊盒）</h2>
+<div class="lede">
+  <b>專欄導言</b>：隨著歐盟 PFHxA 禁令倒數 23 天與各國「脫塑」政策加速落地，傳統塑膠與含氟淋膜食品包裝正迎來全球性的系統替代。本專欄立足<b>台灣市場縱深</b>，同步掃描<b>中國、日本、美國、紐西蘭、澳洲及東南亞</b>，全面解析紙袋（手提/外帶/烘焙）、紙杯、植纖紙模塑與折疊食品盒之產業鏈重組、技術換代與跨國商機。
+</div>
+
+<h3>6.1 🇹🇼 台灣市場縱深焦點：外帶餐飲減塑換代、在地紙器廠產能與無氟塗層替代</h3>
+<p><b>年耗 80 億個紙容器的減碳轉型</b>：據公視與環保主管機關最新專題調查，台灣每年消耗高達 80 億個紙容器（紙杯、便當盒、湯碗）。環境部（MOENV）持續推行自備飲料杯享 5 元折扣，並針對連鎖便利商店與速食店循環杯覆蓋率實施季度查核，推動手搖飲與外帶連鎖全面將常規 PE 淋膜紙杯升級為水性生物基阻隔塗層（全紙可回收）。</p>
+<p><b>中華紙漿（1905）</b>：核心產品「益利疊 (CircuWell)」非塑食安卡紙取得德國 PTS 可直接依一般廢紙回收標章（回收率 &gt;95%）及 DIN CERTCO 生物可降解認證，並通過美德食品無毒檢測。第三季已擴大供應台灣連鎖手搖飲、早餐店與烘焙連鎖，並開始批量試銷澳洲與日本市場。</p>
+<p><b>正隆（1904）</b>：旗下紙器事業部針對全聯、家樂福與統一超商量產全紙質高承重牛皮手提紙袋（耐重達 20–25 kgf），並為生鮮蔬果供應全抗潮保鮮紙盒，第三季包裝紙器稼動率達 92% 高檔。</p>
+<p><b>在地專業加工廠群（捷比達、富利康、永純、廣源）</b>：台灣中部紙器加工聚落正加速更換高速水性塗佈製杯機與全自動糊底紙袋機。面對 10/18 歐盟 PFHxA 禁令，外銷代工廠已 100% 停止使用含氟防油劑，轉向 KIT 8–9 級水性生物基無氟防油塗層。</p>
+<p><b>烘焙與早餐紙袋生態</b>：一之軒、聖瑪莉等烘焙連鎖與全台早餐店外帶防油紙袋，全面告別傳統石蠟或塑膠複合袋，全面換裝無氟牛皮耐油防油袋（40–50g），原紙以華紙與日本進口原生防油紙為主。</p>
+
+<h3>6.2 🇨🇳 中國市場掃描：外賣紙器、白卡紙杯紙提漲 200 元與甘蔗渣紙模塑出海潮</h3>
+<p><b>白卡紙集體落實提漲 200 元/噸</b>：9 月下旬，玖龍、APP 金光紙業、博匯紙業、聯盛紙業相繼發布白卡紙調價函，宣告自 9/20 起白卡紙統一上調 200 元/噸，食品級白卡（FBB）現貨含稅報價提振至 4,350–4,550 元/噸，紙企藉由雙節前縮量與節後備貨堅決修復毛利。</p>
+<p><b>紙模塑出海爆發</b>：浙江眾鑫股份（全球蔗渣模塑餐具龍頭，年產能逾 10 萬噸，外銷歐美超 80%）、韶能股份與裕同科技，受惠歐盟 PPWR 與美加禁塑令，模塑外帶餐盒、漢堡盒與咖啡杯蓋外銷維持 25% 以上高速增長。原料端，廣西與雲南甘蔗渣漿板報價持穩於 RMB 3,870–4,040/噸。</p>
+<p><b>GB 4806.10 塗層新規實施</b>：中國《食品安全國家標準 食品接觸用塗料及塗層》自 9/2 正式實施第 23 天，未列入正面清單的含氟化合物與有害單體嚴禁使用，加速推動外賣餐盒與紙杯水性阻隔塗層替換率突破 53%。</p>
+
+<h3>6.3 🇯🇵 日本市場掃描：便利商店全紙化、高阻隔食品盒與精品紙袋會社</h3>
+<p><b>超商脫塑典範</b>：日本三大超商（7-Eleven、Lawson、FamilyMart）全面推進外帶食品無塑化。熱食炸雞與可樂餅全面採用無氟防油牛皮紙袋；Lawson 與 7-Eleven 擴大測試無塑紙杯蓋與全紙質咖啡杯，生鮮托盤逐步換裝紙模塑。</p>
+<p><b>材料龍頭創新</b>：日本製紙 (Nippon Paper) 旗下高阻隔紙 <code>SHIELDPLUS®</code> 成功切入乾果、糖果與冷凍食品盒包裝，具備優異的氧氣與水氣阻隔性，完全替代傳統鋁箔及塑膠薄膜；王子控股 (Oji) 於越南投資 1.04 億美元的液體紙盒廠積極佈局東南亞冷鏈鮮乳包裝。</p>
+<p><b>包裝紙袋會社</b>：日本手提紙袋龍頭 The Pack (ザ・パック 3950.T) 與下島包裝 (Shimojima 7482.T) 受惠觀光零售爆發與百貨精品換代，高承重平底牛皮紙袋與全紙繩手挽袋銷售年增 14.5%，全紙質設計成為亞洲零售包裝標竿。</p>
+
+<h3>6.4 🇺🇸 美國市場掃描：速食巨頭 QSR 包裝革命、FDA PFAS 禁用與巨頭整合</h3>
+<p><b>QSR 速食巨頭全面去氟</b>：McDonald's、Starbucks、Wendy's 配合加州 AB 1200 / SB 54 及 FDA 承諾，已全額落實在全美門市淘汰含 PFAS 之防油紙袋、漢堡包裝紙與外帶紙盒，轉換為水性生物基分散塗層紙與經 BPI 認證之可堆肥植纖容器。</p>
+<p><b>巨頭產能擴張與貿易申訴</b>：Graphic Packaging 與 Novolex (Duro Bag) 擴大連鎖外送專用牛皮紙袋（SOS 袋）及多格折疊餐盒產能，Q3 產線稼動率維持在 93% 高位；Smurfit Westrock 與 Pratt Industries 針對進口瓦楞披薩盒發起貿易申訴。</p>
+
+<h3>6.5 🇳🇿/🇦🇺 紐澳市場掃描：紐西蘭禁塑條例、澳洲 APCO 協議與植纖模塑需求</h3>
+<p><b>紐西蘭法規衝刺</b>：紐西蘭《廢棄物減量法案 (Plastic and Related Products Regulations)》全面禁止難以分解之單次塑膠餐盒、餐具與肉品生鮮托盤，迫使各大超市 (Countdown / New World) 100% 換裝 FSC 認證原生牛皮紙袋與甘蔗渣模塑生鮮托盤。</p>
+<p><b>澳洲 APCO 2025/2026 目標</b>：澳洲包裝契約組織 (APCO) 發布新一輪改革綱領，要求各州（新南威爾斯、昆士蘭、維多利亞）加速淘汰發泡聚苯乙烯 (EPS) 容器。澳洲本土包裝龍頭 Detmold Group 大規模投產「RecycleMe」可回收紙杯，並向中台採購大量無氟植纖模塑餐盒以填補缺口。</p>
+
+<h3>6.6 🌏 東南亞市場掃描：SCG Packaging 擴產、APP Foopak 出口與越南外銷代工基地</h3>
+<p><b>跨國併購與產能佈局</b>：泰國包裝巨頭 SCG Packaging (SCGP) 於 9 月中旬斥資 6,800 萬泰銖完成對合資紙器廠之併購，持續深耕東南亞食品包裝與彩盒市場；印尼 APP 旗下 Foopak BioContainer 與 BioCup（水性無塑塗層）對台、日及澳洲出口訂單年增 35%。</p>
+<p><b>越南外銷加工聚落</b>：越南平陽、同奈等地成為全球外銷紙袋、折疊彩盒與食品容器之重要製造重鎮，正隆平陽百萬噸工紙與包裝基地的全產全銷，直接帶動東南亞外銷加工供應鏈之競爭力。</p>
+
+<!-- SECTION 7 -->
+<h2 id="s7">七、企業動態與跨國布局</h2>
+<p><b>玖龍紙業（02689.HK）</b>：公布 2025/2026 全年度業績，股東應佔盈利達 35.81 億元人民幣，較上一年度之 17.67 億元大幅攀升 102.62%，宣告正式走出週期底部。稼動率回升至 91.5%，自備電廠與木纖維自給率提升，單噸綜合毛利增加約 135 元人民幣，展現出造紙龍頭在週期底部的強勁反彈力道。</p>
+<p><b>智利 CMPC 與印尼 APP</b>：智利 CMPC 於 9/16 正式簽訂 25 年巴西 Rio Grande 專用深水碼頭合約（投資 3.7 億美元，年吞吐量 460 萬噸），直通 Natureza 旗艦漿廠；印尼 APP 旗下 Indah Kiat 在上半年淨利大增 127.3% 至 2.95 億美元後，全力推進 Karawang 回收纖維新線。</p>
+<p><b>台灣造紙業四大廠</b>：環境部公布綠色採購表揚名單，正隆以 74.8 億元名列前茅，永豐餘亦突破 63 億元，榮成深化碳管理與低碳工紙同獲肯定。華紙台東紙廠 9/20 室外廢紙堆起火，損失初估 1,200 萬元，但核心紙機主體設備與產線零受損，工廠維持正常開工。</p>
+
+<!-- SECTION 8 -->
+<h2 id="s8">八、高階採購與戰略決策矩陣</h2>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>品類領域</th><th>市場訊號與情報來源</th><th>核心研判</th><th>高階採購戰略建議</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><b>工業用紙（箱板原紙）</b></td><td>北美 Raw Spread $840；龍頭申訴披薩盒反傾銷；玖龍盈利翻倍</td><td>原紙利差維持歷史高檔，北美防堵低價進口盒，供給端自律良好</td><td><b>鎖定 Q4 長約份額</b>：防範電商雙十一與感恩節旺季進一步調漲，維持 45–60 天庫存。</td></tr>
+    <tr><td><b>食品級白卡 (FBB)</b></td><td>玖龍/APP/博匯/聯盛 9/20 集體提價 +200 元；GB 4806.10 塗層新規實施</td><td>非理性折價結束，節慶食品盒與無塑紙杯需求集中放量</td><td><b>立即完成鎖價合約</b>：提前與主流廠簽訂鎖量合約，防範第四季二次提價。</td></tr>
+    <tr><td><b>牛皮紙袋 (Kraft Bag)</b></td><td>日本 The Pack 出貨年增 14.5%；北美 Novolex 滿載；台灣烘焙換裝</td><td>各國零售與外賣禁塑推升全紙質購物袋與防油袋剛需</td><td><b>加速產線自動化改裝</b>：二級紙器廠應評估擴充自動化全紙手把製袋機。</td></tr>
+    <tr><td><b>紙模塑 (Molded Fiber)</b></td><td>紐西蘭/澳洲 APCO 淘汰 EPS；眾鑫/韶能甘蔗渣外帶餐盒訂單飽和</td><td>植纖模塑成為歐美紐澳外帶餐盒不可逆之替代主力</td><td><b>佈局原料保障協議</b>：鎖定甘蔗渣與竹漿板供應，確保無氟檢驗合規。</td></tr>
+    <tr><td><b>外銷歐美食品包裝</b></td><td>歐盟 PFHxA 禁令倒數 23 天；FDA PFAS 禁用；PPWR 邊境嚴查</td><td>法規進入強制執行期，含氟庫存若未出清將面臨退運風險</td><td><b>全面切換水性阻隔塗層</b>：取得 PFAS-free 與 DfR 可回收認證，排查油墨安全。</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- SECTION 9 -->
+<h2 id="s9">九、全球法規與永續發展</h2>
+<ul>
+  <li><b>歐盟 PFHxA 全氟己酸禁令 (倒數 23 天)</b>：自 2026-10-18 起，全氟己酸及其鹽類在歐盟食品接觸包裝中全面禁止使用。外銷歐盟之紙質食品容器、防油紙袋全面進入最後清庫與無氟驗證階段。</li>
+  <li><b>歐盟 PPWR 正式生效第 44 天</b>：歐洲各港口海關嚴格落實食品包裝總氟含量 (&lt;50 ppm) 邊境抽檢，可回收性設計 (DfR) 與數位產品護照 (DPP) 成為出口歐盟必備文件。</li>
+  <li><b>中國 GB 4806.10-2025 施行第 23 天</b>：紙用塗層正式列入國家食品安全管理，水性生物基阻隔塗佈紙市佔率快速攀升突破 53%。</li>
+  <li><b>歐盟 EUDR 森林砍伐規章 (倒數 96 天)</b>：進口木漿、原紙與紙箱必須提供地塊級 GPS 衛星定位盡職調查聲明 (DDS)。</li>
+  <li><b>台灣 2026 碳費申報 (倒數 98 天)</b>：造紙業擴大汽電共生生質能替代率至 47.8%，鎖定每噸蒸氣成本於 NT$725，爭取最高優惠費率。</li>
+</ul>
+
+<!-- SECTION 10 -->
+<h2 id="s10">十、對台灣產業的策略意涵</h2>
+<ol style="margin-left:20px; line-height:1.7; font-size:14.5px;">
+  <li><b>原料進口採購</b>：新台幣小幅升值至 32.040，原料進口結匯成本受控。建議把握 NBSK 於 $692/噸、美廢 OCC 於 $135/短噸區間，提前鎖定第四季至明年初安全庫存。</li>
+  <li><b>工紙與包裝出口</b>：北美工紙 Raw Spread $840 歷史高位提供全球比價支撐，正隆與榮成應乘勝追擊，在東南亞與台灣內需旺季擴大高附加價值抗潮重包裝出貨。</li>
+  <li><b>食品包裝與紙袋紙模塑升級</b>：面對歐盟 PFHxA 禁令與紐澳禁塑，華紙應加速擴大「益利疊」無氟防油卡紙之出口認證，在地紙器加工廠（捷比達、富利康、永純等）應全速完成無氟水性塗層更換，搶佔國際品牌換代訂單。</li>
+  <li><b>二級紙器廠價格防護</b>：上游白卡與工紙提價落地，紙器加工廠應落實將成本轉嫁至終端加工報價，維持 5–10% 毛利防護墊。</li>
+  <li><b>終端外銷製造業</b>：全面盤點出口包裝之無氟檢驗報告與 EUDR 溯源文件，提前佈局合規包材，防止海外港口滯關風險。</li>
+</ol>
+
+<!-- SECTION 11 -->
+<h2 id="s11">十一、傳導鏈觀察</h2>
+<div class="note">
+  <ul>
+    <li><b>漿價傳導</b>：Suzano 亞洲提價 $20 效應鞏固 ➔ 進口漂針木漿 NBSK 走升至 $692/噸 ➔ 文化紙與白卡紙提價 200 元/噸 ➔ 下游書籍印刷與包裝彩盒調價（時滯約 3–5 週）。</li>
+    <li><b>工紙傳導</b>：北美工紙 +$80~140/短噸全額開票 ＋ 中國紙廠雙節控產提價 ➔ 亞洲進口牛皮卡紙穩於高檔 ➔ 台灣及東南亞外銷紙箱報價調升 +5~10%（時滯約 2–4 週）。</li>
+    <li><b>食品包裝替代傳導</b>：歐盟 PFHxA 倒數 23 天 ＋ 中國 GB 4806.10 實施 ➔ 傳統含氟防油紙與 PE 淋膜加速退出市場 ➔ 水性阻隔生物基塗佈紙與植纖模塑市佔率突破 53%。</li>
+  </ul>
+</div>
+
+<!-- SECTION 12 -->
+<h2 id="s12">十二、重要行程日曆 Key Milestones</h2>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>日期</th><th>事件與法規里程碑</th><th>影響範疇與因應對策</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><b>2026-08-12</b></td><td><b>歐盟 PPWR 包裝法規正式生效</b></td><td>已實施 44 天，外銷歐洲全面落實 DfR 可回收性設計與 PFAS 邊境抽檢</td></tr>
+    <tr><td><b>2026-09-01</b></td><td><b>北美工紙三雄調價全面生效落袋</b></td><td>全額開票執行進入第 4 週，Raw Spread 穩於 $840 歷史峰頂</td></tr>
+    <tr><td><b>2026-09-02</b></td><td><b>中國 GB 4806.10 食品塗層新規正式實施</b></td><td>紙塗料納管第 23 天，嚴控芳香族伯胺與 PFAS，水性無氟塗層全面替代</td></tr>
+    <tr><td><b>2026-09-20</b></td><td><b>中國白卡龍頭聯合提漲 +200 元/噸</b></td><td>玖龍/APP/博匯/聯盛全面提振食品白卡現貨，修復造紙利差</td></tr>
+    <tr><td><b>2026-09-23</b></td><td><b>玖龍公布年度盈利狂飆 102.6%</b></td><td>盈利重返 35.81 億元，稼動率超 90%，確認走出週期谷底</td></tr>
+    <tr><td><b>2026-10-18</b></td><td><b>歐盟 PFHxA 全氟己酸禁令生效 (倒數 23 天)</b></td><td>食品接觸包裝含氟防油劑全面退出歐盟市場，進入最後清庫衝刺</td></tr>
+    <tr><td><b>2026-12-30</b></td><td><b>歐盟 EUDR 森林砍伐法規強制執行 (倒數 96 天)</b></td><td>進口木漿、原紙與紙箱必須具備地塊級 GPS 衛星定位 DDS 聲明</td></tr>
+    <tr><td><b>2027-01-01</b></td><td><b>台灣 2026 碳費申報與正式開徵</b></td><td>造紙業列入首波徵收大戶，SRF 生質能替代達 47.8% 爭取高額優惠費率</td></tr>
+  </tbody>
+</table>
+</div>
+
+<footer>
+  <b>產出時間</b>：2026-09-25　·　<b>系統版本</b>：Paperluz Engine v14.0 (玖龍業績翻倍與綠色包裝特輯)　·　<b>發行機構</b>：光網資訊 Luznet ∕ Paperluz 產業情報
+</footer>
+
+</div>
+</body>
+</html>

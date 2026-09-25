@@ -64,7 +64,7 @@ def find_latest_issue(lang="zh"):
     m = re.search(r"PaperLuz-(\d{3})_([0-9-]+)", os.path.basename(latest_file))
     if m:
         return m.group(1), m.group(2)
-    return "008", datetime.now().strftime("%Y-%m-%d")
+    return "009", "2026-09-25"
 
 
 def load_subscribers(csv_path):
@@ -124,7 +124,7 @@ def build_newsletter_html_zh(issue_num, publish_date):
       <div style="background:rgba(239, 68, 68, 0.12); border-left:4px solid #ef4444; padding:12px 16px; border-radius:4px; margin-bottom:24px;">
         <div style="color:#ef4444; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;">🚨 本週核心戰略焦點</div>
         <div style="color:#f8fafc; font-size:14px; font-weight:600; line-height:1.5;">
-          中國紙廠中秋國慶停機保價（山鷹停機 4-8 天/玖龍檢修防累庫）× CMPC 3.7 億美元簽約巴西專用深水碼頭 × 北美工紙 Raw Spread $840 歷史極限點 × 歐盟 PFHxA 禁令倒數 30 天
+          玖龍年度淨利翻倍 102% 重登 35.8 億元 × 白卡紙巨頭集體提漲 200 元/噸 × 台灣造紙綠色採購破百億 × 華紙台東紙廠火警無損產線 × 歐盟 PFHxA 禁令倒數 23 天 × 美國進口披薩盒不公平貿易調查
         </div>
       </div>
 
@@ -143,48 +143,56 @@ def build_newsletter_html_zh(issue_num, publish_date):
         <tbody>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">布蘭特原油 (Brent)</td>
-            <td style="padding:10px 12px; color:#ef4444; font-weight:800;">$93.90 / 桶</td>
-            <td style="padding:10px 12px; color:#94a3b8;">地緣高位整固 · 週跌 -0.3%</td>
+            <td style="padding:10px 12px; color:#ef4444; font-weight:800;">$92.40 / 桶</td>
+            <td style="padding:10px 12px; color:#94a3b8;">高位震盪整固 · 週跌 -1.6%</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">中國進口針葉漿 (NBSK)</td>
-            <td style="padding:10px 12px; color:#60a5fa; font-weight:800;">USD 690 / 噸</td>
-            <td style="padding:10px 12px; color:#94a3b8;">附註 RMB 4,900 · 週漲 +10元</td>
+            <td style="padding:10px 12px; color:#60a5fa; font-weight:800;">USD 692 / 噸</td>
+            <td style="padding:10px 12px; color:#94a3b8;">附註 RMB 4,915 · 港口庫存連11週淨流出</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">美國 11# OCC 廢紙</td>
             <td style="padding:10px 12px; color:#f59e0b; font-weight:800;">$135 / 美噸</td>
-            <td style="padding:10px 12px; color:#94a3b8;">出口走堅 · 亞洲到港 CIF 穩定</td>
+            <td style="padding:10px 12px; color:#94a3b8;">出口走堅 · 亞洲進口 CIF 平穩</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
-            <td style="padding:10px 12px; font-weight:700;">北美工紙 Raw Spread</td>
-            <td style="padding:10px 12px; color:#a78bfa; font-weight:800;">$840 極限點</td>
-            <td style="padding:10px 12px; color:#94a3b8;">第三輪調價開票全數落地</td>
+            <td style="padding:10px 12px; font-weight:700;">玖龍年度歸母淨利</td>
+            <td style="padding:10px 12px; color:#a78bfa; font-weight:800;">RMB 35.81 億</td>
+            <td style="padding:10px 12px; color:#94a3b8;">同比狂飆 +102.62% · 利潤翻倍走出谷底</td>
+          </tr>
+          <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
+            <td style="padding:10px 12px; font-weight:700;">食品級塗佈白卡 (FBB)</td>
+            <td style="padding:10px 12px; color:#38bdf8; font-weight:800;">USD 635 / 噸</td>
+            <td style="padding:10px 12px; color:#94a3b8;">附註 RMB 4,450 · 玖龍/APP/博匯提價 200元落地</td>
           </tr>
           <tr style="color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">歐盟 PFHxA 禁用條款</td>
-            <td style="padding:10px 12px; color:#ef4444; font-weight:800;">倒數 30 天</td>
-            <td style="padding:10px 12px; color:#94a3b8;">10/18 生效 · 禁絕全氟塗層</td>
+            <td style="padding:10px 12px; color:#ef4444; font-weight:800;">倒數 23 天</td>
+            <td style="padding:10px 12px; color:#94a3b8;">10/18 正式生效 · 銷歐無氟防油紙剛需衝刺</td>
           </tr>
         </tbody>
       </table>
 
-      <!-- 4 Takeaways -->
+      <!-- 5 Takeaways -->
       <h3 style="color:#ffffff; font-size:15px; font-weight:700; border-bottom:1px solid #24355a; padding-bottom:8px; margin-bottom:14px;">
-        💡 本週 4 大決策洞察 (Executive Briefs)
+        💡 本週 5 大決策洞察 (Executive Briefs)
       </h3>
       <ul style="color:#cbd5e1; font-size:13.5px; line-height:1.7; padding-left:18px; margin-bottom:28px;">
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">中國造紙停機保價自律</strong>：山鷹國際宣告中秋國慶停機 4-8 天減產約 5 萬噸，玖龍啟動東莞等多基地例行檢修，有效壓制下游庫存累積，力保每噸 RMB 30~50 提價成果。
+          <strong style="color:#ffffff;">玖龍紙業年度淨利翻倍狂飆 102.6%</strong>：02689.HK 揭露全年度股東應佔盈利達 35.81 億元人民幣，走出週期底部。稼動率回升至 90% 以上，自備電廠與木纖維自給率提升，驗證龍頭在低谷週期修復毛利之防禦韌性。
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">南美木漿跨洋物流主權</strong>：智利 CMPC 於 9/16 正式簽訂 25 年巴西 Rio Grande 深水碼頭專用合約（投資 3.7 億美元，2030 年吞吐量達 460 萬噸），與 Suzano 入股 Imetame 港口形成雙雄跨洋直航護城河。
+          <strong style="color:#ffffff;">白卡紙龍頭集體提漲 200 元/噸全數開票</strong>：玖龍、APP、博匯、聯盛等白卡紙巨頭於 9/20–9/25 落地提價 200 元/噸，扭轉前期過度折價窘境，中秋與雙十一食品禮盒、彩盒訂單帶動白卡產能稼動率攀升。
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">北美工紙利差衝上歷史極限</strong>：北美三大龍頭第三輪提價全部到位，牛卡板現貨站上 $975/短噸，原紙對廢紙利差達 $840/噸，下游獨立紙箱廠轉嫁壓力達近年峰值。
+          <strong style="color:#ffffff;">台灣造紙綠色採購破百億 × 華紙台東廠迅速復工</strong>：環境部表揚績優企業，正隆綠色採購達 74.8 億、永豐餘逾 63 億、榮成獲頒綠色採購績優；華紙台東紙廠廢紙露天堆置區 9/20 火警，損失初估 1,200 萬元但核心紙機產線無損，迅速恢復生產。
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">法規海嘯合規倒數</strong>：歐盟 REACH PFHxA 限制條款將於 10/18 正式適用（過渡期僅剩 30 天），銷歐食品接觸紙包裝禁絕任何全氟羧酸塗層，無塑防油卡紙進入剛需出貨潮。
+          <strong style="color:#ffffff;">北美工紙利差維持高位，龍頭啟動披薩盒不公平貿易調查</strong>：北美第三輪提價開票第四週，牛卡板現貨站穩 $975/短噸，原紙對廢紙利差達 $840；北美龍頭 Smurfit Westrock 與 Pratt 向美國國際貿易委員會（USITC）提交申訴，指控進口瓦楞披薩盒低價不公平貿易，築起貿易壁壘。
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong style="color:#ffffff;">食品包裝與紙袋紙模塑全球專欄</strong>：台灣年耗 80 億個紙容器加速推動水性阻隔塗層，華紙益利疊與在地加工廠（捷比達、富利康）放量；澳洲 APCO 啟動次階段包裝改革，紐澳加速淘汰單次塑膠與 EPS，帶動植纖模塑與 FSC 牛皮紙袋進口需求。
         </li>
       </ul>
 
@@ -255,7 +263,7 @@ def build_newsletter_html_en(issue_num, publish_date):
       <div style="background:rgba(239, 68, 68, 0.12); border-left:4px solid #ef4444; padding:12px 16px; border-radius:4px; margin-bottom:24px;">
         <div style="color:#ef4444; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;">🚨 Strategic Executive Alert</div>
         <div style="color:#f8fafc; font-size:14px; font-weight:600; line-height:1.5;">
-          China Mills Pre-Holiday Downtimes Wave (Shanying 4–8 Days / Nine Dragons Overhauls) × CMPC Inks $370M Federal Deal for Brazil Deep-Water Terminal × NA Containerboard Raw Spread Hits Historic $840 Peak × EU PFHxA Ban Enters Final 30-Day Countdown
+          Nine Dragons FY Profit Surges 102.6% to RMB 3.58B × Ivory Board Majors Enact +RMB 200/MT Price Hike × Taiwan Paper Mills Break NT$10B in Green Procurement × Chung Hwa Pulp Mill Fire Leaves Lines Intact × EU PFHxA Ban Final 23-Day Sprint × US Pizza Box Anti-Dumping Petition
         </div>
       </div>
 
@@ -274,48 +282,56 @@ def build_newsletter_html_en(issue_num, publish_date):
         <tbody>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">Brent Crude Oil</td>
-            <td style="padding:10px 12px; color:#ef4444; font-weight:800;">$93.90 / bbl</td>
-            <td style="padding:10px 12px; color:#94a3b8;">Elevated range · -0.3% WoW</td>
+            <td style="padding:10px 12px; color:#ef4444; font-weight:800;">$92.40 / bbl</td>
+            <td style="padding:10px 12px; color:#94a3b8;">High range · -1.6% WoW consolidation</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">China NBSK Import Spot</td>
-            <td style="padding:10px 12px; color:#60a5fa; font-weight:800;">USD 690 / MT</td>
-            <td style="padding:10px 12px; color:#94a3b8;">RMB 4,900 · Pre-holiday tight</td>
+            <td style="padding:10px 12px; color:#60a5fa; font-weight:800;">USD 692 / MT</td>
+            <td style="padding:10px 12px; color:#94a3b8;">RMB 4,915 · Port stocks draw down for 11th week</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">US OCC #11 Export FAS</td>
             <td style="padding:10px 12px; color:#f59e0b; font-weight:800;">$135 / ST</td>
-            <td style="padding:10px 12px; color:#94a3b8;">Firm export floor · Steady Asia CIF</td>
+            <td style="padding:10px 12px; color:#94a3b8;">Resilient export pricing · Steady Asia CIF</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
-            <td style="padding:10px 12px; font-weight:700;">NA Containerboard Spread</td>
-            <td style="padding:10px 12px; color:#a78bfa; font-weight:800;">$840 Peak</td>
-            <td style="padding:10px 12px; color:#94a3b8;">Full invoicing of 3rd hike wave</td>
+            <td style="padding:10px 12px; font-weight:700;">Nine Dragons FY Net Profit</td>
+            <td style="padding:10px 12px; color:#a78bfa; font-weight:800;">RMB 3.581 Billion</td>
+            <td style="padding:10px 12px; color:#94a3b8;">+102.62% YoY · Profit doubles out of cycle trough</td>
+          </tr>
+          <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
+            <td style="padding:10px 12px; font-weight:700;">Food-Grade Ivory Board (FBB)</td>
+            <td style="padding:10px 12px; color:#38bdf8; font-weight:800;">USD 635 / MT</td>
+            <td style="padding:10px 12px; color:#94a3b8;">RMB 4,450 · Nine Dragons/APP +RMB 200 hike invoiced</td>
           </tr>
           <tr style="color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">EU PFHxA Ban Compliance</td>
-            <td style="padding:10px 12px; color:#ef4444; font-weight:800;">30 Days Left</td>
-            <td style="padding:10px 12px; color:#94a3b8;">Enforceable Oct 18 · PFAS-free</td>
+            <td style="padding:10px 12px; color:#ef4444; font-weight:800;">23 Days Left</td>
+            <td style="padding:10px 12px; color:#94a3b8;">Enforceable Oct 18 · PFAS-free mandatory sprint</td>
           </tr>
         </tbody>
       </table>
 
-      <!-- 4 Takeaways -->
+      <!-- 5 Takeaways -->
       <h3 style="color:#ffffff; font-size:15px; font-weight:700; border-bottom:1px solid #24355a; padding-bottom:8px; margin-bottom:14px;">
-        💡 Executive Briefings & Market Intelligence
+        💡 Executive Briefings & Market Intelligence (5 Key Insights)
       </h3>
       <ul style="color:#cbd5e1; font-size:13.5px; line-height:1.7; padding-left:18px; margin-bottom:28px;">
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">China Mill Downtime Discipline</strong>: Shanying International announced 4–8 days of coordinated maintenance across major bases (removing ~50,000 MT capacity), alongside Nine Dragons overhauls, defending the recent RMB 30–50/MT price gains against inventory accumulation.
+          <strong style="color:#ffffff;">Nine Dragons Annual Profit Surges 102.6% to RMB 3.58B</strong>: 02689.HK reported full-year shareholder profits of RMB 3.581B, breaking cleanly out of the multi-year cycle trough with operating rates back above 90% and higher fiber self-sufficiency.
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">South American Trans-Oceanic Port Logistics</strong>: CMPC executed a 25-year federal concession for a dedicated deep-water port terminal at Rio Grande ($370M capex, 4.6M MT/yr throughput by 2030), complementing Suzano's Imetame stake to establish trans-Pacific cost moats.
+          <strong style="color:#ffffff;">Ivory Board Majors Fully Enact +RMB 200/MT Price Hike</strong>: Nine Dragons, APP, Bo Hui, and Liansheng enforced +RMB 200/MT price increases effective Sep 20–25, ending irrational discounts and lifting spot quotes to RMB 4,350–4,550/MT amid holiday food packaging runs.
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">North American Raw Spread Apex</strong>: Third-round containerboard price increases took full invoicing effect with linerboard spot reaching $975/ST, lifting virgin-to-recovered paper raw material spreads to a historic $840/ST extreme.
+          <strong style="color:#ffffff;">Taiwan Paper Mills Break NT$10B in Green Procurement</strong>: MOENV honored circular leaders—Cheng Loong's green procurement reached NT$7.48B and YFY exceeded NT$6.3B, while Long Chen advanced carbon governance. Meanwhile, a Sep 20 outdoor waste paper fire at Chung Hwa Pulp's Taitung mill caused ~NT$12M in fiber loss but left core paper machines untouched, ensuring prompt resumption.
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">EU Regulatory Milestone</strong>: REACH restriction on PFHxA and related substances enters full enforcement on October 18, 2026. Zero PFAS water-based barrier coatings and non-fluorinated food contact boards are now in mandatory surge demand.
+          <strong style="color:#ffffff;">US Containerboard Spread Solid at $840; Majors File Pizza Box Trade Petition</strong>: North American 3rd-round price hikes hold in their 4th week of billing with linerboard at $975/ST and raw spreads at $840. Smurfit Westrock and Pratt Industries petitioned the USITC and DOC against unfairly traded imported corrugated pizza boxes.
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong style="color:#ffffff;">Food Packaging & Molded Fiber Feature</strong>: Taiwan accelerates replacement of 8-billion paper food containers with water-based dispersion barriers (Chung Hwa Pulp's CircuWell expanding with GPCP and Fortunate); Australia's APCO advances next-phase packaging covenant while ANZ accelerates single-use plastic and EPS bans, lifting demand for bagasse molded fiber and FSC paper bags.
         </li>
       </ul>
 
@@ -579,8 +595,8 @@ def main():
 
     # 自動識別期數與日期
     detected_issue, detected_date = find_latest_issue("zh")
-    issue_num = args.issue or detected_issue or "008"
-    publish_date = args.date or detected_date or "2026-09-18"
+    issue_num = args.issue or detected_issue or "009"
+    publish_date = args.date or detected_date or "2026-09-25"
 
     if args.onboard:
         mode_title = "新讀者入會即時雙發 (① 歡迎信 + ② 最新一期週報)"
@@ -611,12 +627,13 @@ def main():
     print(f"  ✓ 週報預覽檔已生成: newsletter_preview_zh.html / _en.html")
 
     # 檢查 SMTP 環境變數
-    smtp_host = os.environ.get("SMTP_SERVER", "")
-    smtp_port = int(os.environ.get("SMTP_PORT", "587"))
-    smtp_user = os.environ.get("SMTP_USERNAME", "")
-    smtp_pass = os.environ.get("SMTP_PASSWORD", "")
-    sender_email = os.environ.get("SENDER_EMAIL", "newsletter@paperluz.org")
-    sender_name = os.environ.get("SENDER_NAME", "Paperluz Intelligence")
+    smtp_host = os.environ.get("SMTP_SERVER", "").strip()
+    smtp_port_raw = os.environ.get("SMTP_PORT", "").strip()
+    smtp_port = int(smtp_port_raw) if smtp_port_raw.isdigit() else 587
+    smtp_user = os.environ.get("SMTP_USERNAME", "").strip()
+    smtp_pass = os.environ.get("SMTP_PASSWORD", "").strip()
+    sender_email = os.environ.get("SENDER_EMAIL", "").strip() or "newsletter@paperluz.org"
+    sender_name = os.environ.get("SENDER_NAME", "").strip() or "Paperluz Intelligence"
 
     smtp_config = {
         "host": smtp_host,
@@ -729,7 +746,7 @@ def main():
         print(f"  • 開始派送中文版名冊 ({len(zh_subs)} 位)...")
         for s in zh_subs:
             try:
-                send_email_smtp(s["email"], zh_subject, html_zh, smtp_config)
+                send_email_smtp(s["email"], zh_subject, issue_zh, smtp_config)
                 sent_count += 1
                 print(f"    ✓ 已送達: {s['email']}")
                 time.sleep(0.3)
@@ -743,7 +760,7 @@ def main():
         print(f"  • 開始派送英文版名冊 ({len(en_subs)} 位)...")
         for s in en_subs:
             try:
-                send_email_smtp(s["email"], en_subject, html_en, smtp_config)
+                send_email_smtp(s["email"], en_subject, issue_en, smtp_config)
                 sent_count += 1
                 print(f"    ✓ 已送達: {s['email']}")
                 time.sleep(0.3)

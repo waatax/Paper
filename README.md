@@ -4,7 +4,7 @@
 > 官方即時入口網站：[https://waatax.github.io/Paper/](https://waatax.github.io/Paper/) ｜ [English Edition](https://waatax.github.io/Paper/EN/)
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Online%20Active-brightgreen.svg)](https://waatax.github.io/Paper/)
-[![Weekly Issues](https://img.shields.io/badge/Weekly%20Reports-Issue%20001--008%20Published-blue.svg)](./Reports/)
+[![Weekly Issues](https://img.shields.io/badge/Weekly%20Reports-Issue%20001--009%20Published-blue.svg)](./Reports/)
 [![Formats](https://img.shields.io/badge/Formats-HTML%20%7C%20Markdown%20%7C%20A4%20PDF-orange.svg)](./Reports/)
 [![Bilingual](https://img.shields.io/badge/Language-繁體中文%20%7C%20English-purple.svg)](./EN/)
 [![Zero-Gap PDF](https://img.shields.io/badge/PDF-A4%20Zero--Gap%20Print-success.svg)](./Reports/)
@@ -13,7 +13,7 @@
 
 ## 📌 平台核心定位 (Overview)
 
-**Paperluz** 是專為造紙、包裝、紙商與印刷產業打造的現代化產業情報資料庫與自動化播報平台。涵蓋國際木漿、美廢、工紙調價、地緣能源油價、台廠營收財報與歐盟 PPWR / EUDR 法規全鏈分析。
+**Paperluz** 是專為造紙、包裝、紙商與印刷產業打造的現代化產業情報資料庫與自動化播報平台。涵蓋國際木漿、美廢、工紙調價、食品包裝（紙袋/紙杯/紙模塑/折疊盒）、地緣能源油價、台廠營收財報與歐盟 PPWR / EUDR 法規全鏈分析。
 
 ### 🌟 核心特色 (Key Features)
 
@@ -37,6 +37,9 @@
    - 即時模擬美廢進價、工紙售價與每噸蒸汽能耗成本對毛利率的影響。
 7. **全球法規倒數雷達 (Regulatory Milestones)**：
    - 歐盟 PPWR 包裝法規、EUDR 森林砍伐規章、PFAS / PFHxA 無毒化禁令、台灣碳費徵收進程即時倒數。
+8. **食品包裝與紙袋/紙模塑專屬專欄 (Food Packaging & Molded Fiber Column)**：
+   - 深度聚焦台灣在地紙容器（年耗 80 億個）全紙水性阻隔塗層替塑減碳轉型進程（華紙益利疊、正隆、捷比達、富利康）。
+   - 全球多國連動掃描：中國白卡漲價潮與外賣包裝、日本超商脫塑與 The Pack 原紙採購、美國 QSR 龍頭 FSC 紙袋替塑、紐澳 APCO 國家標準與東南亞 SCGP 永續塗層板塊。
 
 ---
 
@@ -60,7 +63,7 @@ Paperluz/
 └── Reports/
     ├── README.md                            ← 報告規範與標準範本規格
     ├── SOP_Weekly_News_Aggregation.md       ← 全球與亞洲紙業情報每週自動聚合標準作業程序 (SOP v2.0)
-    ├── Paperluz_Newsletter_Template_Spec.md ← 視覺排版規格書 (v9.2)
+    ├── Paperluz_Newsletter_Template_Spec.md ← 視覺排版規格書 (v14.0，登錄食品包裝專欄與 12 大章節標準架構)
     ├── build_report.py                      ← 週報產製管線主腳本
     ├── send_newsletter.py                   ← 雙語電子報自動派送引擎 (支援 SMTP/Dry-run)
     ├── build_pdf.py                         ← Edge 無頭列印 PDF 產製器
@@ -72,14 +75,6 @@ Paperluz/
     │   ├── company_monthly_revenue.csv      ← 台灣紙廠月營收資料庫
     │   ├── subscribers_zh.csv               ← 中文電子報訂閱名冊
     │   ├── subscribers_en.csv               ← 英文電子報訂閱名冊
-    │   └── paperluz.db                      ← SQLite 產業關聯資料庫
-    ├── build_pdf.py                         ← Edge 無頭列印 PDF 產製器
-    ├── templates/
-    │   ├── report_template.html             ← 黃金 HTML 模板
-    │   └── report_template.md               ← 黃金 MD 模板
-    ├── data/
-    │   ├── price_series.csv                 ← 大宗價格時序資料庫
-    │   ├── company_monthly_revenue.csv      ← 台灣紙廠月營收資料庫
     │   └── paperluz.db                      ← SQLite 產業關聯資料庫
     ├── PaperLuz-001_2026-07-31.{html,md,pdf}
     ├── PaperLuz-001_2026-07-31_EN.{html,md,pdf}
@@ -94,7 +89,11 @@ Paperluz/
     ├── PaperLuz-006_2026-09-04.{html,md,pdf}
     ├── PaperLuz-006_2026-09-04_EN.{html,md,pdf}
     ├── PaperLuz-007_2026-09-11.{html,md,pdf}
-    └── PaperLuz-007_2026-09-11_EN.{html,md,pdf}
+    ├── PaperLuz-007_2026-09-11_EN.{html,md,pdf}
+    ├── PaperLuz-008_2026-09-18.{html,md,pdf}
+    ├── PaperLuz-008_2026-09-18_EN.{html,md,pdf}
+    ├── PaperLuz-009_2026-09-25.{html,md,pdf}
+    └── PaperLuz-009_2026-09-25_EN.{html,md,pdf}
 ```
 
 ---
@@ -103,7 +102,8 @@ Paperluz/
 
 | 期數 | 出刊日期 | 中文版 (HTML / PDF / MD) | 英文版 (HTML / PDF / MD) | 主題焦點 |
 |:---:|:---:|:---:|:---:|:---|
-| **008** | 2026-09-18 | [HTML](./Reports/PaperLuz-008_2026-09-18.html) · [PDF](./Reports/PaperLuz-008_2026-09-18.pdf) · [MD](./Reports/PaperLuz-008_2026-09-18.md) | [HTML](./Reports/PaperLuz-008_2026-09-18_EN.html) · [PDF](./Reports/PaperLuz-008_2026-09-18_EN.pdf) · [MD](./Reports/PaperLuz-008_2026-09-18_EN.md) | 中國紙廠中秋國慶停機保價（山鷹停機 4-8 天/玖龍檢修防累庫）× CMPC 3.7 億美元簽約巴西專用深水碼頭 × 北美工紙 Raw Spread $840 歷史極限點 × 歐盟 PFHxA 禁令倒數 30 天 |
+| **009** | 2026-09-25 | [HTML](./Reports/PaperLuz-009_2026-09-25.html) · [PDF](./Reports/PaperLuz-009_2026-09-25.pdf) · [MD](./Reports/PaperLuz-009_2026-09-25.md) | [HTML](./Reports/PaperLuz-009_2026-09-25_EN.html) · [PDF](./Reports/PaperLuz-009_2026-09-25_EN.pdf) · [MD](./Reports/PaperLuz-009_2026-09-25_EN.md) | 玖龍紙業 FY2026 淨利翻倍至 35.8 億元 × 中國白卡三巨頭全額落實每噸提漲 200 元 × 台廠造紙四雄綠色採購破百億 × 華紙台東廠火警無損產線 × 歐盟 PFHxA 禁令倒數 23 天 |
+| **008** | 2026-09-18 | [HTML](./Reports/PaperLuz-008_2026-09-18.html) · [PDF](./Reports/PaperLuz-008_2026-09-18.pdf) · [MD](./Reports/PaperLuz-008_2026-09-18.md) | [HTML](./Reports/PaperLuz-008_2026-09-18_EN.html) · [PDF](./Reports/PaperLuz-008_2026-09-18_EN.pdf) · [MD](./Reports/PaperLuz-008_2026-09-18_EN.md) | 【特別專欄】全球與台灣食品包裝產業洞察（紙袋 · 紙杯 · 紙模塑 · 折疊盒）× 中國紙廠雙節停機保價 × CMPC 3.7 億美元簽約巴西專用深水碼頭 × 北美工紙 Raw Spread $840 歷史極限點 × 歐盟 PFHxA 禁令倒數 30 天 |
 | **007** | 2026-09-11 | [HTML](./Reports/PaperLuz-007_2026-09-11.html) · [PDF](./Reports/PaperLuz-007_2026-09-11.pdf) · [MD](./Reports/PaperLuz-007_2026-09-11.md) | [HTML](./Reports/PaperLuz-007_2026-09-11_EN.html) · [PDF](./Reports/PaperLuz-007_2026-09-11_EN.pdf) · [MD](./Reports/PaperLuz-007_2026-09-11_EN.md) | 台廠 8 月營收報捷（正隆創 20 個月新高）× 南美木漿港口物流深水戰略（CMPC 獲批 3 億美元專用碼頭）× APP 印尼 H1 獲利翻倍 127% × 中國雙節前停機保價 |
 | **006** | 2026-09-04 | [HTML](./Reports/PaperLuz-006_2026-09-04.html) · [PDF](./Reports/PaperLuz-006_2026-09-04.pdf) · [MD](./Reports/PaperLuz-006_2026-09-04.md) | [HTML](./Reports/PaperLuz-006_2026-09-04_EN.html) · [PDF](./Reports/PaperLuz-006_2026-09-04_EN.pdf) · [MD](./Reports/PaperLuz-006_2026-09-04_EN.md) | 北美工紙 9/1 調價全面生效落袋 × Suzano 領銜亞洲漿價調升 $20 × 中國 GB 4806.10 塗層新規施行 × 正隆 H1 獲利暴增 52 倍 |
 | **005** | 2026-08-28 | [HTML](./Reports/PaperLuz-005_2026-08-28.html) · [PDF](./Reports/PaperLuz-005_2026-08-28.pdf) · [MD](./Reports/PaperLuz-005_2026-08-28.md) | [HTML](./Reports/PaperLuz-005_2026-08-28_EN.html) · [PDF](./Reports/PaperLuz-005_2026-08-28_EN.pdf) · [MD](./Reports/PaperLuz-005_2026-08-28_EN.md) | 北美工紙 9/1 調價倒數 3 天 × 原油破 $94 美元與海運 BSS 附加費 × 亞洲木漿備貨啟動 |
@@ -143,10 +143,10 @@ Paperluz 支援將最新發布之產業情報自動寄送至訂閱者信箱（�
 
 ```bash
 # 本地 Dry-Run 模擬生成 HTML 預覽與檢查派送名冊 (不發送郵件)
-python Reports/send_newsletter.py --issue 008 --dry-run
+python Reports/send_newsletter.py --issue 009 --dry-run
 
 # 單一信箱測試寄送
-python Reports/send_newsletter.py --issue 008 --test-email user@example.com --lang zh
+python Reports/send_newsletter.py --issue 009 --test-email user@example.com --lang zh
 
 # 檢視目前資料庫訂閱者名冊
 python Reports/data/manage_db.py list-subscribers
