@@ -4,7 +4,7 @@
 > 官方即時入口網站：[https://waatax.github.io/Paper/](https://waatax.github.io/Paper/) ｜ [English Edition](https://waatax.github.io/Paper/EN/)
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Online%20Active-brightgreen.svg)](https://waatax.github.io/Paper/)
-[![Weekly Issues](https://img.shields.io/badge/Weekly%20Reports-Issue%20001--009%20Published-blue.svg)](./Reports/)
+[![Weekly Issues](https://img.shields.io/badge/Weekly%20Reports-Issue%20001--010%20Published-blue.svg)](./Reports/)
 [![Formats](https://img.shields.io/badge/Formats-HTML%20%7C%20Markdown%20%7C%20A4%20PDF-orange.svg)](./Reports/)
 [![Bilingual](https://img.shields.io/badge/Language-繁體中文%20%7C%20English-purple.svg)](./EN/)
 [![Zero-Gap PDF](https://img.shields.io/badge/PDF-A4%20Zero--Gap%20Print-success.svg)](./Reports/)
@@ -93,7 +93,9 @@ Paperluz/
     ├── PaperLuz-008_2026-09-18.{html,md,pdf}
     ├── PaperLuz-008_2026-09-18_EN.{html,md,pdf}
     ├── PaperLuz-009_2026-09-25.{html,md,pdf}
-    └── PaperLuz-009_2026-09-25_EN.{html,md,pdf}
+    ├── PaperLuz-009_2026-09-25_EN.{html,md,pdf}
+    ├── PaperLuz-010_2026-10-02.{html,md,pdf}
+    └── PaperLuz-010_2026-10-02_EN.{html,md,pdf}
 ```
 
 ---
@@ -102,6 +104,7 @@ Paperluz/
 
 | 期數 | 出刊日期 | 中文版 (HTML / PDF / MD) | 英文版 (HTML / PDF / MD) | 主題焦點 |
 |:---:|:---:|:---:|:---:|:---|
+| **010** | 2026-10-02 | [HTML](./Reports/PaperLuz-010_2026-10-02.html) · [PDF](./Reports/PaperLuz-010_2026-10-02.pdf) · [MD](./Reports/PaperLuz-010_2026-10-02.md) | [HTML](./Reports/PaperLuz-010_2026-10-02_EN.html) · [PDF](./Reports/PaperLuz-010_2026-10-02_EN.pdf) · [MD](./Reports/PaperLuz-010_2026-10-02_EN.md) | Smurfit Westrock 4.2 億美元收購智利 CMPC 紙箱事業 × 台灣永豐餘與正隆衛生紙無漲價規劃 × 歐盟 PFHxA 禁令倒數 16 天 × Suzano 10月闊葉漿提漲新波瀾 × 北美 PCA 關閉俄亥俄紙器廠深化整併 × 中國白卡紙提價全面入帳 |
 | **009** | 2026-09-25 | [HTML](./Reports/PaperLuz-009_2026-09-25.html) · [PDF](./Reports/PaperLuz-009_2026-09-25.pdf) · [MD](./Reports/PaperLuz-009_2026-09-25.md) | [HTML](./Reports/PaperLuz-009_2026-09-25_EN.html) · [PDF](./Reports/PaperLuz-009_2026-09-25_EN.pdf) · [MD](./Reports/PaperLuz-009_2026-09-25_EN.md) | 玖龍紙業 FY2026 淨利翻倍至 35.8 億元 × 中國白卡三巨頭全額落實每噸提漲 200 元 × 台廠造紙四雄綠色採購破百億 × 華紙台東廠火警無損產線 × 歐盟 PFHxA 禁令倒數 23 天 |
 | **008** | 2026-09-18 | [HTML](./Reports/PaperLuz-008_2026-09-18.html) · [PDF](./Reports/PaperLuz-008_2026-09-18.pdf) · [MD](./Reports/PaperLuz-008_2026-09-18.md) | [HTML](./Reports/PaperLuz-008_2026-09-18_EN.html) · [PDF](./Reports/PaperLuz-008_2026-09-18_EN.pdf) · [MD](./Reports/PaperLuz-008_2026-09-18_EN.md) | 【特別專欄】全球與台灣食品包裝產業洞察（紙袋 · 紙杯 · 紙模塑 · 折疊盒）× 中國紙廠雙節停機保價 × CMPC 3.7 億美元簽約巴西專用深水碼頭 × 北美工紙 Raw Spread $840 歷史極限點 × 歐盟 PFHxA 禁令倒數 30 天 |
 | **007** | 2026-09-11 | [HTML](./Reports/PaperLuz-007_2026-09-11.html) · [PDF](./Reports/PaperLuz-007_2026-09-11.pdf) · [MD](./Reports/PaperLuz-007_2026-09-11.md) | [HTML](./Reports/PaperLuz-007_2026-09-11_EN.html) · [PDF](./Reports/PaperLuz-007_2026-09-11_EN.pdf) · [MD](./Reports/PaperLuz-007_2026-09-11_EN.md) | 台廠 8 月營收報捷（正隆創 20 個月新高）× 南美木漿港口物流深水戰略（CMPC 獲批 3 億美元專用碼頭）× APP 印尼 H1 獲利翻倍 127% × 中國雙節前停機保價 |

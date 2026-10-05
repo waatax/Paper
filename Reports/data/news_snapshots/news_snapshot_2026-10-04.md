@@ -1,0 +1,399 @@
+# Paperluz 全球與亞洲紙業情報週報快照（2026-10-04）
+
+> **產出時間**：2026-10-04 15:06:15 ｜ **系統版本**：Paperluz Engine v4.0 ｜ **有效情報**：124 則
+
+---
+
+## 🌟 本週 Top 5 特急重大情報焦點 (Priority Signals)
+
+### 1. Global Micro and Nanocellulose Market Report 2026–2036: Evaluating MFC, CNF, CNC, and BNC Adoption Across Strategies of Nippon Paper, Oji Holdings, Stora Enso, and Borregaard
+- **重要度評分**：`8.5 / 10.0`
+- **標籤**：`🏢 Stora Enso` `🏢 王子控股 (Oji)` `🏢 日本製紙 (NPI)` `#新材料與高階包裝`
+- **發布時間**：`Mon, 17 Aug 2026 10:55:00 +0000` ｜ **情報源**：Yahoo Finance JP (王子ホールディングス - 3861.T)
+- **原文鏈接**：[閱讀原文](https://finance.yahoo.com/markets/commodities/articles/global-micro-nanocellulose-market-report-105500860.html?.tsrc=rss)
+
+### 2. Smurfit Westrock to Acquire CMPC's Chilean Containerboard and Corrugated Business for $420 Million - paperage.com
+- **重要度評分**：`8.0 / 10.0`
+- **標籤**：`🏢 Smurfit Westrock` `🏢 CMPC` `#產能與營運`
+- **發布時間**：`Thu, 24 Sep 2026 14:07:30 GMT` ｜ **情報源**：Google News (US Containerboard & Packaging)
+- **原文鏈接**：[閱讀原文](https://news.google.com/rss/articles/CBMi3gFBVV95cUxOaXlXcVFNRkx2MUdiNjJfTWtyWnhsUGRlU1VTSGJVV0c3bGVzb0RPNXFkbW5odUpLNHZTeUN4WWpTYjNKRFNFb18wbm1xTm9yQ09YRG9yUFFVX3JCNmRCWlF1WDlQS3NyZlRPMDVWVmpvakRiVDlFZGt3VmFQaURtMTMxcTdraTFNM2JOWmR4VzRORktVMUEzS3Y2TDIwWWxlUVdfdUNwemZMRXRVVkdqbVRqR2NEYmpHN0ZoVDlSd2Y4SjdRSUxrYXNJektPazUySVRoQm9EcTFMbExOblE?oc=5)
+
+### 3. Smurfit Westrock acquires CMPC’s Chilean packaging business in multi-million dollar deal - Packaging Insights
+- **重要度評分**：`8.0 / 10.0`
+- **標籤**：`🏢 Smurfit Westrock` `🏢 CMPC` `#產能與營運`
+- **發布時間**：`Mon, 28 Sep 2026 09:39:38 GMT` ｜ **情報源**：Google News (US Containerboard & Packaging)
+- **原文鏈接**：[閱讀原文](https://news.google.com/rss/articles/CBMiiwFBVV95cUxOalVNZUlJYW1HbmlfUkQzeUM3amF5XzRBa1JKR1BsTWQ5R2lYanpHMEtWTGcyVXEzb1paWXgxYkNyQXdheU9SbHJ2M3ZBbEdWWHNJdy1vMm13WHg0Um84Z003ODFjYThNVVk4MVdsMVlVTnNlMFNUVGdSendzV29CUjUtOXllOFBuSUJ3?oc=5)
+
+### 4. 永豐餘、正隆：衛生紙無漲價規劃 - 自由時報
+- **重要度評分**：`8.0 / 10.0`
+- **標籤**：`🏢 正隆 (1904)` `🏢 永豐餘 (1907)` `#價格與調幅`
+- **發布時間**：`Thu, 01 Oct 2026 09:06:09 GMT` ｜ **情報源**：Google News (台灣紙業: 正隆 榮成 永豐餘 華紙)
+- **原文鏈接**：[閱讀原文](https://news.google.com/rss/articles/CBMiWEFVX3lxTFBCUG9ZOFFCNnZvVFRTelZET1RUTWZ5eUN3SnljOTJ2cnR1SFdsVlZnS3pZcnhSVkhCSVdrRXE1X0lqQndJSmlMQWc5YkFNQ0NJMEtiTjVnb2k?oc=5)
+
+### 5. Smurfit Westrock, Pratt seek investigation into ‘unfairly traded’ pizza box imports
+- **重要度評分**：`7.8 / 10.0`
+- **標籤**：`🏢 Smurfit Westrock` `🏢 Pratt Industries` `#食品紙盒與折疊盒`
+- **發布時間**：`Thu, 10 Sep 2026 14:13:00 +0000` ｜ **情報源**：Yahoo Finance (Smurfit Westrock - SW)
+- **原文鏈接**：[閱讀原文](https://www.packagingdive.com/news/usitc-commerce-pizza-boxes-unfair-trade-duties-smurfit-westrock-pratt-industries/829983/?.tsrc=rss)
+
+---
+
+## 🌐 分區情報彙總 (Regional Intelligence Breakdown)
+
+### 📁 🇺🇸 北美造紙與包裝巨頭 (US Paper & Packaging: IP / Smurfit Westrock / PCA)
+
+#### 📌 Google News (US Containerboard & Packaging)
+
+- **International Paper Company (IP) Stock Price, News, Quote & History - Yahoo! Finance Canada**
+  - 評分: `6.5` ｜ 時間: `Thu, 01 Oct 2026 10:07:07 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9QVllhR3d2b3NlTlhiN0xqbFA0YUlOeEVCMF85ODg4T216dmh3RVB0X1RTMWVZVV9TX1U1ZHd1U3hlTG1jY3htZXczbUpwTU0?oc=5)
+- **International Paper CEO to Speak at Baird 2026 Global Industrial Conference - PR Newswire**
+  - 評分: `4.5` ｜ 時間: `Fri, 25 Sep 2026 23:10:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiywFBVV95cUxNTGNWbklBS1J3ZHZaQWV1STgxRjF6LWxBTkp6a0hFcERTSm5leWVZdnEycndlSnZIaHNZc0d3RktvcVozcmtNeTdtWk1PMWRSMGZNQ1JpRTQ4SzkyZW1FT1NET0RwQ2FESE5qMjNva1ZFcEdycmZ6cHVoNWZGT0hsTnhIcW5GMnVBN1NfYlYtT1hZSHJtNWVBdTlUQjM2ZVJ2MDA4NVBzM25UUEJndDVpdE1JSk83aE50ang0ZzVkMlUyZWlSVkNFUTVxdw?oc=5)
+- **Smurfit Westrock to Acquire CMPC's Chilean Containerboard and Corrugated Business for $420 Million - paperage.com**
+  - 評分: `8.0` ｜ 時間: `Thu, 24 Sep 2026 14:07:30 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMi3gFBVV95cUxOaXlXcVFNRkx2MUdiNjJfTWtyWnhsUGRlU1VTSGJVV0c3bGVzb0RPNXFkbW5odUpLNHZTeUN4WWpTYjNKRFNFb18wbm1xTm9yQ09YRG9yUFFVX3JCNmRCWlF1WDlQS3NyZlRPMDVWVmpvakRiVDlFZGt3VmFQaURtMTMxcTdraTFNM2JOWmR4VzRORktVMUEzS3Y2TDIwWWxlUVdfdUNwemZMRXRVVkdqbVRqR2NEYmpHN0ZoVDlSd2Y4SjdRSUxrYXNJektPazUySVRoQm9EcTFMbExOblE?oc=5)
+- **Smurfit Westrock remains committed to metro Atlanta as it seeks growth through sustainability - The Business Journals**
+  - 評分: `4.5` ｜ 時間: `Wed, 23 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMingFBVV95cUxNM0hXRTN6TGZ5NkM4MmR0TTdrM0dfSlNuSDE5alJldHFsUHhmZlF3WnJsdFVoWnZ4QkI3ZEJjZ29Tc1p2N2wxTV9fR3o1d2U5NzMxcHh3WGxSUmdxSEVEYXJTbGdTTWVDQ3hWLVAtOGl4dW1NNklPa21XS05BVVBWN3FBQVBKXy13bjFZZktpdnRoV0NxQmdqWUQwV1JBdw?oc=5)
+- **Smurfit Westrock: Compelling Even As Management Racks Up More Debt On Another Acquisition - Seeking Alpha**
+  - 評分: `6.3` ｜ 時間: `Thu, 24 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiwgFBVV95cUxONWdBNFZlOFBXaTEzNE5WYVM4R1l3M1gzNGNFU2RwN0pROFdVMll4MFljYmZ3RXFoZHFmMDY1V2F1anRtZHRRV1Nfc09CeVdLanhYVDhkQjdkOTVUcUlYSENqaHctRWF5enNOWnh5QmJpRE9wS0ZDUlAzR2Jfd01FU0xIRFVpS240ZVFDLWRpenpJWThzUG9qNjFoaWEzckxJQnlHNXNFang5NEhSQkZNSEhJU254aVhOcWg2Mms4ZTJ0QQ?oc=5)
+- **Smurfit Westrock acquires CMPC’s Chilean packaging business in multi-million dollar deal - Packaging Insights**
+  - 評分: `8.0` ｜ 時間: `Mon, 28 Sep 2026 09:39:38 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiiwFBVV95cUxOalVNZUlJYW1HbmlfUkQzeUM3amF5XzRBa1JKR1BsTWQ5R2lYanpHMEtWTGcyVXEzb1paWXgxYkNyQXdheU9SbHJ2M3ZBbEdWWHNJdy1vMm13WHg0Um84Z003ODFjYThNVVk4MVdsMVlVTnNlMFNUVGdSendzV29CUjUtOXllOFBuSUJ3?oc=5)
+
+#### 📌 Yahoo Finance (Smurfit Westrock - SW)
+
+- **Smurfit Westrock (SW) Stock Looks Above Fair Value On Its $420 Million Chile Deal**
+  - 評分: `6.5` ｜ 時間: `Tue, 29 Sep 2026 19:06:27 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/smurfit-westrock-sw-stock-looks-190627032.html?.tsrc=rss)
+- **How Is Smurfit Westrock’s Stock Performance Compared to Other Consumer Discretionary Stocks**
+  - 評分: `4.5` ｜ 時間: `Mon, 28 Sep 2026 09:08:38 +0000` ｜ [連結](https://www.barchart.com/story/news/4827503/how-is-smurfit-westrocks-stock-performance-compared-to-other-consumer-discretionary-stocks?.tsrc=rss)
+- **Smurfit Westrock to acquire CMPC’s Chilean packaging assets**
+  - 評分: `6.0` ｜ 時間: `Fri, 25 Sep 2026 09:07:24 +0000` ｜ [連結](https://www.packaging-gateway.com/news/smurfit-westrock-acquire-cmpc-chile/?.tsrc=rss)
+- **Is Smurfit Westrock Set to Gain From Its Recent Portfolio Actions?**
+  - 評分: `4.5` ｜ 時間: `Thu, 24 Sep 2026 12:22:00 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/smurfit-westrock-set-gain-recent-122200773.html?.tsrc=rss)
+- **Smurfit Westrock Announces Agreement to Acquire CMPC’s Chilean Containerboard and Corrugated Business**
+  - 評分: `6.0` ｜ 時間: `Wed, 23 Sep 2026 20:28:00 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/smurfit-westrock-announces-agreement-acquire-202800687.html?.tsrc=rss)
+- **Smurfit Westrock, Pratt seek investigation into ‘unfairly traded’ pizza box imports**
+  - 評分: `7.8` ｜ 時間: `Thu, 10 Sep 2026 14:13:00 +0000` ｜ [連結](https://www.packagingdive.com/news/usitc-commerce-pizza-boxes-unfair-trade-duties-smurfit-westrock-pratt-industries/829983/?.tsrc=rss)
+
+#### 📌 Yahoo Finance (International Paper - IP)
+
+- **Relay Raises $36 Million in New Funding from Industry Leaders to Drive Frontline Safety, Productivity, and Operational Intelligence**
+  - 評分: `6.0` ｜ 時間: `Wed, 30 Sep 2026 13:00:00 +0000` ｜ [連結](https://finance.yahoo.com/technology/ai/articles/relay-raises-36-million-funding-130000601.html?.tsrc=rss)
+- **/C O R R E C T I O N -- International Paper/**
+  - 評分: `4.5` ｜ 時間: `Fri, 25 Sep 2026 23:10:00 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/international-paper-ceo-speak-baird-200500293.html?.tsrc=rss)
+- **Is International Paper’s Scale Now Limiting Capital Allocation Effectiveness And Profitability Potential (IP)?**
+  - 評分: `4.5` ｜ 時間: `Fri, 25 Sep 2026 05:10:45 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/international-paper-scale-now-limiting-051045651.html?.tsrc=rss)
+- **Is International Paper Stock Underperforming the Dow?**
+  - 評分: `4.5` ｜ 時間: `Tue, 22 Sep 2026 13:50:35 +0000` ｜ [連結](https://www.barchart.com/story/news/4734078/is-international-paper-stock-underperforming-the-dow?.tsrc=rss)
+- **3 Reasons to Avoid IP and 1 Stock to Buy Instead**
+  - 評分: `3` ｜ 時間: `Thu, 17 Sep 2026 19:06:17 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-ip-1-190617013.html?.tsrc=rss)
+- **International Paper (IP) Could Be 8% Undervalued On Its Margin Recovery Narrative** `(數據: 8%)`
+  - 評分: `4.5` ｜ 時間: `Tue, 18 Aug 2026 13:12:27 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/international-paper-ip-could-8-131227912.html?.tsrc=rss)
+
+#### 📌 Yahoo Finance (Packaging Corp of America - PKG)
+
+- **3 Overlooked Packaging Stocks With Businesses and Dividends That Never Really Stop**
+  - 評分: `3` ｜ 時間: `Sat, 03 Oct 2026 13:45:02 +0000` ｜ [連結](https://247wallst.com/investing/2026/10/03/3-overlooked-packaging-stocks-with-businesses-and-dividends-that-never-really-stop/?.tsrc=rss)
+- **PCA to close full-line plant in Ohio**
+  - 評分: `5.0` ｜ 時間: `Fri, 02 Oct 2026 19:39:00 +0000` ｜ [連結](https://www.packagingdive.com/news/packaging-corporation-america-closure-middletown-ohio-corrugated-converting-plant/832042/?.tsrc=rss)
+- **What You Need to Know Ahead of Packaging Corporation’s Earnings Release**
+  - 評分: `6.3` ｜ 時間: `Thu, 01 Oct 2026 11:23:48 +0000` ｜ [連結](https://www.barchart.com/story/news/4901220/what-you-need-to-know-ahead-of-packaging-corporations-earnings-release?.tsrc=rss)
+- **2 Unpopular Stocks That Should Get More Attention and 1 We Avoid**
+  - 評分: `3` ｜ 時間: `Mon, 28 Sep 2026 09:10:36 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/2-unpopular-stocks-more-attention-091036799.html?.tsrc=rss)
+- **Is Packaging Corporation Underperforming the Nasdaq?**
+  - 評分: `4.5` ｜ 時間: `Mon, 21 Sep 2026 11:42:39 +0000` ｜ [連結](https://www.barchart.com/story/news/4708666/is-packaging-corporation-underperforming-the-nasdaq?.tsrc=rss)
+- **Packaging Corporation Of America (PKG), What Is Drawing Fresh Attention Now?**
+  - 評分: `4.5` ｜ 時間: `Fri, 18 Sep 2026 18:12:57 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/packaging-corporation-america-pkg-drawing-181257962.html?.tsrc=rss)
+
+### 📁 🇺🇸 北美食品包裝與速食連鎖紙袋容器 (US Food Packaging: Paper Bags / Cups / Molded Fiber)
+
+#### 📌 Google News (US Food Packaging & Paper Bags)
+
+- **Sabert sells to private equity - Packaging Dive**
+  - 評分: `3` ｜ 時間: `Tue, 22 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMilAFBVV95cUxQZVhRZ3JsRzZONGVOazBnVnFsdnFicEtuRU44dC00eE9idjl5VkEtVHlDNEo3aEl0bWFtb0Rwd1dmWHVpWVQzd296a25EVWFlYU9xcXFleWdTTWtLVTNyUlZsWWVUenV5WEJDNklncnlNUnI3QkxaWnQzQXJYLXV3dVl5T3V3Q1VYZk5MRWRTV2pXQlBl?oc=5)
+- **Moisture-Barrier Molded Fiber Market Size, Share & Forecast 2036 - Fact.MR**
+  - 評分: `5.0` ｜ 時間: `Mon, 21 Sep 2026 10:06:12 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMidEFVX3lxTE95TXdIc0RlbnVER2twZWFOYmxYRExaWXFJal9BU3VWcU5GRU4tUDFHQzdQdUFiTHplNWVWVE43ZUpzZGJyaWJYVE4yaDJVZTJMREVNdE5tUzJFcE1XRG5tY0Z2ZlltZ2d3LUlEcHp4TXFZaVB5?oc=5)
+- **Compost – what goes in the bin - City of Portland, Oregon (.gov)**
+  - 評分: `3` ｜ 時間: `Mon, 28 Sep 2026 23:40:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiZEFVX3lxTE91RThkeURDRnJyTUstVWdWdmZsdGZLM250ZVV2WFVWck82UHZ3SGE2cEtyNGRUV3FuLXdKTW9PbUc2RS1KVjhJQnA2bEpHYnlqWUVpWmdjbjFhNmdFclBuajhtaTc?oc=5)
+- **Never Store Flour in the Paper Bag—Do This So It Lasts Longer - Simply Recipes**
+  - 評分: `5.0` ｜ 時間: `Mon, 28 Sep 2026 20:35:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMidEFVX3lxTFBIYjVPRUFCdUxxZzFOOXBncGlZdExZcjdFakozbU05eF9OX0gxVUxIOTdEUjBXR2VXckNSQm9mcU1kNUVranoyYmdmMzg5Mlh4ZGkwdVd0NWl0WjNKQ0dkOUZFdk9waUM5ZHR0dEpYOEZCV1JM?oc=5)
+- **Butterfly Equity To Acquire Sabert, Expanding Its Global Food Packaging Portfolio - Pulse 2.0**
+  - 評分: `4.8` ｜ 時間: `Thu, 24 Sep 2026 14:23:48 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiogFBVV95cUxOMEFzYlMtMnEzVjZBWGI0ME5JQ09LNFBuZjZXa3E3VjdFYUtDanRvcTk1Z0VReXNVN2VlRVJNT1hqUWFSQ1AxZmUzLUdWamV4MUFFb0ZMU0JXVkFZcWlSeUp5S2pWTTdFQlRDQk5fWUxlR3JrSk1RYWNDV19WSWpuOXF2OFQyTWl2YUZ2ZFR0NmlNNG9MSWFRWDlVZUtuWVI1b0HSAacBQVVfeXFMTllPVzVBd2FQNGlkbXdrUnFqcUhYWUpXOFNlbmRSRUxGbU1jdTJTQW5BclYzWTFMYTMwQ0NMZzhxUHRuOV9UcjRwUTRETUlob010ZjVQOHBNenlyYzE2cXZNSzZtdjVKX3pCbU1JZzVsNjNEMmhwT3YzYXFRbWJvWDkxQ2VMMERhNG5BRGtJLXoxUFpGbERkQzREcElKdUJWaDgwSkt4R3M?oc=5)
+- **Butterfly Orders Takeout - Private Equity Professional**
+  - 評分: `3` ｜ 時間: `Fri, 25 Sep 2026 02:16:28 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMibEFVX3lxTE84di0xTG5QRFVYaUFvWS1IMHFQclA3bVZHSV9Nd1dwMURrcnFkY0J0ek1PTlpKYklLWEU1U3ZueG9xUnI1T3BKbUxFeElxNG9sT3JkUU1fbXdkZW95ZThXUGZFM196Wm1GVUNnQg?oc=5)
+
+#### 📌 Google News (US Packaging Giants: Graphic Packaging / Novolex / Huhtamaki)
+
+- **Graphic Packaging Holding Company Appoints Aditya Gandhi as Chief Accounting Officer - PR Newswire**
+  - 評分: `4.5` ｜ 時間: `Mon, 28 Sep 2026 10:30:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMi1wFBVV95cUxNajdKRGRyM3UwYjJEcTMyY3ZyXzN1RmwzOWo0SnZNVWNJYmVra2YyaFNUcUowTTdsdHVxTHdqWXg5cERJVG9FNDFqMWNkRXRULWFCMGhGUDhnZnl1ckFXVGtBNFhVTXd6Zk15aGI5ajg3NmIzVTdPeHJrZDV6dnQwc0RHX2VOSFhYX0NuT2J1YmZuQzlWbHRnWWdISXptQ0xUUW1sNlpfQ0ZmZjB4VEM0cTFoLWhsU3YtRWliNURtNm0zd3BnTGZOby12UHJXOGRSOUtQY3BEMA?oc=5)
+- **Graphic Packaging Holding (GPK) Stock May Trade At A Discount To Its Earnings - Yahoo Finance**
+  - 評分: `6.3` ｜ 時間: `Tue, 22 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiogFBVV95cUxNMy14TFdqZXZja3ZlQXNDb0FmemQ4czVPUW5TMTNVbmc3UVM4bjRIZUtUaDlFdGF5ZVV3TGFtT1V5bk5YcmZNWC1DZldxMEg5S3RpQUhNcm5FSlNpT2dqYnhSSUNBWnhwX09oNG54cHdta2xRNFZlYmM2Y3hZemZQSlo5RlRhRW1VNG1jeHpXN3Q4NE5zRkluaWRMUUJHV1VuS0E?oc=5)
+- **Graphic Packaging Holding Co. appoints vice president, chief accounting officer - Recycling Today**
+  - 評分: `4.5` ｜ 時間: `Wed, 30 Sep 2026 17:30:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiuwFBVV95cUxQeGFxSE41V1lOWFhqRWhfTUZKZm0xdXBia3V4VjdpSS14bWNnNFZ5ZHhDRlNCaUl3SEFQWlJydHpyQ3ctTnFqTWNtQkIzT0luS0lmbzZWbEhJSjEzZ3RTalNyclYzWmw2WkZmVkhxeFZKdm9XSmduODVvZHNRMjROeFVwQ2VaU3RPMzhJNTg0U2FTbzdBai1DWUppZ0VpcHBjSVJzb2lhcl95MGJpZlR4aGhjTzRIcE1YOXYw?oc=5)
+- **Graphic Packaging Holding Company to Host Third-Quarter 2026 Earnings Conference Call on November 3 - morningstar.com**
+  - 評分: `6.3` ｜ 時間: `Thu, 01 Oct 2026 20:15:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMi8gFBVV95cUxNTkFPaHUzcks4bkRQRGNUaXFOZzhGRUdoZk1qTUNxQlVRQ1pjdVpvOUpIRXBEbkFRc1ozOV9TaHdzWmJ3MU5iNG1sZjFnNG1CUEY4d09senlGR2llYWJNREJTdThrY2pUT0RWSnlfelBRbS11RWNnVWczMy1pZ2ZMRmRQY0dhTHhzUTFjdFhFMC1BMjh4VElyWlN5Q1dZaUNwU3Ffa281UnZQZ0p5amdfdGN2Tm9Ebm1GSENfeG1MTzk0WEp3dTBLVTBfdmRKbjUzR19HdEtMN0hqSnVkMkVSMkFDdEVQWndFdWFNZHZzYU5WQQ?oc=5)
+- **Graphic Packaging Appoints Aditya Gandhi as Chief Accounting Officer - paperage.com**
+  - 評分: `4.5` ｜ 時間: `Mon, 28 Sep 2026 13:39:44 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdTRwaDhOWHl6TThWT3FDVTAtTEVmVmxqbnNWT3pqbjE5ejdSTHdpSC1WS0ZDa0ZZaXFRbHB4MGVPZmpaMld2eHpERHF6Ymtac044bEFKaUFScVk5UW9pLWFfUGRtWlhYa05CTG9uS2U0YTVTTEZxNU9QNlJldTFMYnF0WlF0WTZ2aVE5a2xvTnRESmdEYUJ4dkg0UHpuajZZbXExT25xaGFqRDNfdEhSamxNTHJVLTRn?oc=5)
+- **Graphic Packaging Earns Top-Five Ranking Among Best Corporate Citizens - inkworldmagazine.com**
+  - 評分: `4.5` ｜ 時間: `Thu, 01 Oct 2026 12:35:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiugFBVV95cUxONjc0QUF6dzZ4blVRWWo2VUJkYlNrSUVDTklSVGhPaWwzZFRlM3VCd1k4b1lkdlFZaVRSWmZjcVB1QVJxTjBJUHZselZCZDlreHJIX3NyT2NkX2FyaFBQaGVQWkJ3MDY5clYzdVhXdXZRanphZUplcUxMOEZXMG9UVmVQUnhIcXVsNUg0d01TRTI2RXFqV3BncEtoeG9MYk02ZE1qMnE3ZW84VnVxUTF4Qy02aWhKbjlqenc?oc=5)
+
+### 📁 🇪🇺 歐洲紙業與生物材料龍頭 (Europe Leaders: UPM / Stora Enso / Mondi)
+
+#### 📌 Google News (Europe Pulp & Biochemicals: UPM / Stora Enso)
+
+- **Cash flow from operating activities of UPM-Kymmene Oyj – HAN:RPL - TradingView**
+  - 評分: `4.5` ｜ 時間: `Tue, 29 Sep 2026 17:08:47 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMimAFBVV95cUxNTmo3ZS1Vd2hUWVhXMkNpUGJlekprcDR5eE16d1dneW12TVNUdnVBVS1WcDJIcUVELTFDRzFQMlA3V0lVdW42UUt3UGFTamxoMGhmMHQ5QnpRN3ppOUZ1b2NHX0paRDR5NkdpVnBMRHBlUnBJNGVfUUZHb1RlOG85TGtPd0hmMU5DYlR0ckZwYkYtbHVEd1paMA?oc=5)
+- **ETFs Investing in UPM-Kymmene Oyj Stocks - TradingView**
+  - 評分: `4.5` ｜ 時間: `Tue, 29 Sep 2026 16:58:55 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiXkFVX3lxTE9wTkhfY3F3bERmYmh3QURRbGRYblVCdWc5UlhsMEozeGdJY0pxYVduSXAwMGo0ZnNZcVRfQkNBWkktdkQtckZUTzVlbEdzRERla0pmOTVmUjdzV0ZfS0E?oc=5)
+- **UPM-Kymmene stock rises as Jefferies lifts its price target - AD HOC NEWS**
+  - 評分: `6.5` ｜ 時間: `Wed, 23 Sep 2026 13:27:42 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMivwFBVV95cUxQc0xTYl91MDE0Y1AxR05sbGhubktGb1ZhMXFZWWFUVU5MN1YyeWE1bS02STV6UmFwSTYtT19HdEVzaEV0bkhBVHcwYVBTbHdvZUwxcy1vN1diZzBRRmpLN05HdmFLQnppSUFWU2VvazVBX0JTRnFlN3NFWFQwLU9KbW5CWlBTRVBmLTRsZGc4RHhzeE5LV1RuX3VvOGc2Vy13OXJLcVZ0TnZfRGlqeUQtTkpsbHpDdW92NVIyVmlJbw?oc=5)
+- **Machine Glazed Paper Market Is Going to Boom |• Stora Enso • Sappi • Mondi Group - openPR.com**
+  - 評分: `6.0` ｜ 時間: `Thu, 01 Oct 2026 03:38:19 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMilgFBVV95cUxQMVc4S0dEaGtfZm4ybXFIdWhMUXBiR3Q2bVFlZzFTOWxpY3ZrTDhrWWJkTGxENUlRWkVzX3FuRnIwaGo2cG9VblM3eG9Ba2sybUtyMkdrUS1XSDhNYWdhTmNLSEdKMGVvdXl3UzhMOWk0bWMyVGVta0VQcTdCYmEzams1V1Z5OEpLSS0wUVFKU0JBeDdna3c?oc=5)
+
+#### 📌 Yahoo Finance (Stora Enso - SEOAY)
+
+- **Stora Enso Half-year Report 2026: Optimising our portfolio and driving results through our own actions**
+  - 評分: `6.3` ｜ 時間: `Thu, 23 Jul 2026 06:29:00 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/stora-enso-half-report-2026-062900238.html?.tsrc=rss)
+- **2 Paper and Related Products Stocks Set to Weather Industry Challenges**
+  - 評分: `3` ｜ 時間: `Wed, 10 Jun 2026 17:00:00 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/2-paper-related-products-stocks-170000002.html?.tsrc=rss)
+- **Stora Enso Interim Report January-March 2026: Focus on our own actions drives results**
+  - 評分: `6.3` ｜ 時間: `Thu, 07 May 2026 06:31:00 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/stora-enso-interim-report-january-063100971.html?.tsrc=rss)
+- **Stora Enso successfully issues hybrid bonds of EUR 1 billion**
+  - 評分: `4.5` ｜ 時間: `Fri, 10 Apr 2026 16:27:00 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/stora-enso-successfully-issues-hybrid-162700512.html?.tsrc=rss)
+- **What Does Stora Enso Oyj (HLSE:STERV) Naming Its CFO Deputy CEO Mean?**
+  - 評分: `4.5` ｜ 時間: `Sun, 27 Sep 2026 04:13:42 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/does-stora-enso-oyj-hlse-041342779.html?.tsrc=rss)
+- **Stora Enso Oyj's Dividend Analysis**
+  - 評分: `4.5` ｜ 時間: `Fri, 25 Sep 2026 11:01:56 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/stora-enso-oyjs-dividend-analysis-110156555.html?.tsrc=rss)
+
+### 📁 🇨🇱/🇧🇷 南美主要漿廠 (South America Pulp Giants: Arauco Chile / CMPC / Suzano)
+
+#### 📌 Google News (Arauco Chile & CMPC Pulp)
+
+- **Suzano: Global pulp leader drives growth through competitiveness, sustainability, and strategic integration - TradingView**
+  - 評分: `4.5` ｜ 時間: `Tue, 29 Sep 2026 19:36:50 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMilgJBVV95cUxQR1c1T0d2czlzVHhTdjNXMThHNXgxVXd0UVdLRzg1TXBLN1VMMU1KQ3FkbFV3Smd0M1VGS20yMUYtVHg5cnU2UlI3dXI2Tmd3MXloZFlHdy1ZVUlaY2xaY0Y0VmJXN3FGcm9HQUFERGdmci0wcmFQVGk1UHZrbkgxVGVIRDFpcnQyWjRuMEQ3WWc1ZjU5aHA0cUZWczZ1Ykcwc09kdTRhVXFZMUhGeHJ1bWFKWHdKWGttN2E0T0xRSl9VZ0lrR2JYSGJQNHhONm1sT3NkczZjS1dGUVpPV01lQ0czMHRFNzdFc1k3aG50VEVKQWw1MVBkVWZaN3B2MHQwb1kxRmY0dk9YaF9yQUd2U3VPc1JhUQ?oc=5)
+- **Suzano announces new pulp price increases for October - Tissue Online North America**
+  - 評分: `6.5` ｜ 時間: `Thu, 24 Sep 2026 11:48:44 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMilgFBVV95cUxPeUVDMFlDNUNiMGtEQjBhY2pGRzR1VHZoS29Teks0cGgyN2F4dHFTenZNckFhelJETnJ4UWltcE9Hek05c3FzTUFJLUhONzlZRVQ0cjdPczFaeEtwRzBHR2pQTmVaR1dsbDVvd3NCV2xFSk40WWRJQ0h3QlVqa1dxTnVIT1NiUHpRUVROeFM5TGFlM01LTnc?oc=5)
+- **Suzano (NYSE:SUZ) Shares Down 1.3% - What's Next? - MarketBeat** `(數據: 1.3%)`
+  - 評分: `4.5` ｜ 時間: `Tue, 29 Sep 2026 04:24:12 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiowFBVV95cUxObkZwXzUwcWx0aXhsdDZkb1BsMmZJUjJzVi1ZeW9YM0RsalhYeDVjRlllUkYtWFVXazg2dlVkUVlGNDRCUTFrTE9Ka2p6RV85Yk02WE5ya2RGUnN6d3hfNWpQaWRQdnp1SEM0TmhOekkxODR5dmJPalNOa0FJVHpsMnFBNDFScExRWjlONFNlWkd0ekx0NFMzcnpRUS1HTnV0R2gw?oc=5)
+- **Hardwood Pulp Paper Market Forecast to Expand by 2035, Driven by Sustainable Packaging Demand - IndexBox**
+  - 評分: `3` ｜ 時間: `Sat, 26 Sep 2026 15:31:05 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMivwFBVV95cUxOMjJRSXZyNGQ1eHdNV2ZoZTBDaGR5MGJBX3BKalk1aXZhTkRJZkxhYWZVLUllRVh5RXJfV1huOWRsVXlod3JaU3FNVmJYRnRqOVFhNmFCaTJITE9pakpKblVZZGR6UWtoY1hQbFpOUmZNb0haZDl4WmFSY1gyV3pNM0VuUFFnSlBVRFZQempvdHhuQWgtSlZ5b2twVmctR1BKR2d2VnV4cE9UN0tXVmYyUVgtU3R2LVVhR2pwU001cw?oc=5)
+- **Suzano stock rises after a new pulp price increase - AD HOC NEWS**
+  - 評分: `6.5` ｜ 時間: `Wed, 23 Sep 2026 19:37:23 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMirgFBVV95cUxPeDJjUUI3WTRQTnZONFdCVEFnS2w0RVpLdFJnR2xYSjlHd1Y5Y0ZnYy1uT0hOUEMwbE5PLVBqazVqRUFVdUNqTkMwekQwTF91RHdtSDdKS2xvYjViaFdhOVZKN09MTXdVS0thaU5KZUQ1R3R0YjZwX1Zwb0RaOHJMS1ZzRnVONUQ5ZlJBTWtrRldNLXJFZ1VWQlFvQW5ieXJiYmpZQkpEVHU2bDZFSEE?oc=5)
+- **As forest loss accelerates, can the world meet the rising demand for wood? - Reuters**
+  - 評分: `3` ｜ 時間: `Tue, 22 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPSjBRX3RhdzlBM1I0Z09wNktCQ2tlU0RWTUEtazQyM3RCX3A2N2VQVTV6NmU3SjdpelpvUFFWeGlyMHdncXdQYU5PdTBESERqaUh1WjlwODBVcVlPX2hOVkdQbDhQUmd0UXpuRnRFOEZKbldBamRkUUtQVFBrQV93eHk3Sm42RERHeFV4RE1NNGpFWlFycUVZUC02TC1kc1BfSERWWEI1bzF6eG9IbXloVHI0VU9KZTVSZWxIWWRELURlWDY4eThrbTdVYmotS0R2WnZz?oc=5)
+
+#### 📌 Yahoo Finance (Suzano - SUZ)
+
+- **Suzano Q2 Earnings Call Highlights**
+  - 評分: `6.3` ｜ 時間: `Fri, 14 Aug 2026 07:04:17 +0000` ｜ [連結](https://www.marketbeat.com/instant-alerts/suzano-q2-earnings-call-highlights-2026-08-14/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss)
+- **Suzano Reports Adjusted EBITDA of R$4.7 Billion in the Second Quarter of 2026**
+  - 評分: `6.3` ｜ 時間: `Wed, 12 Aug 2026 23:27:00 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/suzano-reports-adjusted-ebitda-r-232700332.html?.tsrc=rss)
+- **Can Kimberly-Clark's Arbex JV Strengthen Global Personal Care Focus?**
+  - 評分: `3` ｜ 時間: `Wed, 30 Sep 2026 17:07:00 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/kimberly-clarks-arbex-jv-strengthen-170700537.html?.tsrc=rss)
+- **Barrick Mining (B) Beats Q2 Earnings and Revenue Estimates**
+  - 評分: `4.8` ｜ 時間: `Mon, 10 Aug 2026 11:15:02 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/barrick-mining-b-beats-q2-111502238.html?.tsrc=rss)
+- **Antipodes Exited Suzano (SUZ) as Pulp Oversupply Threatened Returns**
+  - 評分: `4.5` ｜ 時間: `Fri, 07 Aug 2026 14:38:20 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/antipodes-exited-suzano-suz-pulp-143820055.html?.tsrc=rss)
+- **Sylvamo Corporation (SLVM) Tops Q2 Earnings and Revenue Estimates**
+  - 評分: `6.3` ｜ 時間: `Fri, 07 Aug 2026 12:10:02 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/sylvamo-corporation-slvm-tops-q2-121002248.html?.tsrc=rss)
+
+#### 📌 Yahoo Finance (Empresas CMPC - CMPC.SN)
+
+- **Empresas CMPC SA (XSGO:CMPC) Q4 2025 Earnings Call Highlights: Navigating Growth Amidst Market ...**
+  - 評分: `6.3` ｜ 時間: `Fri, 30 Jan 2026 19:01:31 +0000` ｜ [連結](https://finance.yahoo.com/news/empresas-cmpc-sa-xsgo-cmpc-190131662.html?.tsrc=rss)
+
+#### 📌 Yahoo Finance (Empresas Copec / Arauco - COPEC.SN)
+
+- **Empresas COPEC SA (XSGO:COPEC) (Q2 2026) Earnings Call Highlights: Record EBITDA and Strategic ...**
+  - 評分: `4.8` ｜ 時間: `Wed, 19 Aug 2026 23:01:14 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/empresas-copec-sa-xsgo-copec-230114006.html?.tsrc=rss)
+- **Empresas COPEC SA (XSGO:COPEC) Q1 2026 Earnings Call Highlights: Strong Energy Division ...**
+  - 評分: `4.8` ｜ 時間: `Tue, 12 May 2026 09:00:13 +0000` ｜ [連結](https://finance.yahoo.com/sectors/energy/articles/empresas-copec-sa-xsgo-copec-090013420.html?.tsrc=rss)
+- **Empresas COPEC SA (XSGO:COPEC) Q4 2025 Earnings Call Highlights: Strategic Gains Amidst Sector ...**
+  - 評分: `4.8` ｜ 時間: `Tue, 10 Mar 2026 01:01:42 +0000` ｜ [連結](https://finance.yahoo.com/news/empresas-copec-sa-xsgo-copec-010142182.html?.tsrc=rss)
+
+### 📁 🪵 全球木片與林業原料鏈 (Woodchips & Global Fiber: 越南 / 澳洲 / 智利 / 北美)
+
+#### 📌 Google News (Woodchip Export: Vietnam / Australia / Chile)
+
+- **Where is WA's 'ecologically thinned' timber going? - ABC News & Headlines – Australian Broadcasting Corporation**
+  - 評分: `3` ｜ 時間: `Mon, 21 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSDd0YWNELWpkRXJXemQ2ODA4UDg3aHFkQnpPbzY4ekFWU28yeHVjMk8xWjl1MzVXVndUY1d6RVR5RjRQY2ZWTFNfQ3ZDSlQwelRYNk9GNklBZHg4blY1SXh6WUZ3ZDZVOXo3Nk9SZ01CMTI5dFktNkhFdkZnVU9vUEVVQ0N0aTdmSlV0TVh2VWs2cDNWbUpCSURiZnlrdm5ReFp3WTlCTGo?oc=5)
+
+### 📁 🇯🇵 日本市場三大龍頭 (Japan Big 3: Oji / Daio / Nippon Paper)
+
+#### 📌 Yahoo Finance JP (日本製紙 - 3863.T)
+
+- **LINTEC (TSE:7966) Shares Climbed, What Is Behind The Fresh Attention?**
+  - 評分: `3` ｜ 時間: `Wed, 16 Sep 2026 13:12:29 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/lintec-tse-7966-shares-climbed-131229858.html?.tsrc=rss)
+- **Assessing Nippon Paper Industries (TSE:3863) Valuation After Recent Share Price Volatility**
+  - 評分: `6.5` ｜ 時間: `Mon, 27 Apr 2026 14:03:58 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/assessing-nippon-paper-industries-tse-140358903.html?.tsrc=rss)
+- **International Paper to acquire North Pacific Paper Co. for $360M**
+  - 評分: `4.5` ｜ 時間: `Fri, 17 Apr 2026 11:34:00 +0000` ｜ [連結](https://www.packagingdive.com/news/international-paper-acquire-north-pacific-paper-containerboard/817755/?.tsrc=rss)
+
+#### 📌 Google News (日本紙業: 王子 大王 日本製紙)
+
+- **日本製紙(株)【3863】：株価・株式情報（夜間PTS含む） - Yahoo!ファイナンス**
+  - 評分: `4.5` ｜ 時間: `Sat, 03 Oct 2026 09:46:44 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiUkFVX3lxTE1HNHJzREg5NUxINXRzOHJtczJnVmZUTGl5MHFZM0RDS2lpWWtTY3oyclBCZWtxM0V6TWlsNTRSQkFXR1dva0dhVkgyRktmQUdoRmc?oc=5)
+- **国内最大級の農業展示会「農業WEEK2026」に初出展 - nipponpapergroup.com**
+  - 評分: `3` ｜ 時間: `Wed, 30 Sep 2026 11:03:58 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMickFVX3lxTE4tRmZjQ05aYTI3ZXJpSERmWUZmZUNUZjZqWGhxam8zWHF6eWFHcGJmZGwtZE8zaEJKQWJmZnJRU0FMZGpXZ3gyVXk5NnlrOEI1TzdrV1BuU0NwdDNTUUhMNjhCVDFfVC1nRjR3RGdVcGlBdw?oc=5)
+- **ヤクルト本社、日本製紙クレシアと共同輸送を開始 - 日本食糧新聞・電子版**
+  - 評分: `4.5` ｜ 時間: `Sun, 27 Sep 2026 15:13:24 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiZkFVX3lxTE5HWm5uVDNUaUlqYjRlTG9STUdsOWZSMTdzOVZWTTRucmZrRHFoNHZ0Y1B4aW1EWmV6aGFGemxBZUlCOVp5TG01eGV5SUJMZnlWU0duNEZOVlRhQ2xwM1ozSDRxN0NCQQ?oc=5)
+- **日本製紙の折れた煙突が象徴、G7で最も老朽化した日本の製造基盤 - 日経クロステック（xTECH）**
+  - 評分: `4.5` ｜ 時間: `Tue, 29 Sep 2026 20:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiaEFVX3lxTE82OGVBLW8xc2lDcmlCTFZCbDRFYTZfOEpISjhxNjNZQkd4MV9MbU5qaG44alMxdk1RZFZGdHR5bXhUa1ZEdEphaWVqVjl3Vy16c2RKV0xrTlpDTlMtSk5BeXZScTQ3elBm?oc=5)
+- **国内女子プロゴルフツアー公認競技最終戦 第45回記念大王製紙エリエールレディスオープン開催 - PR TIMES**
+  - 評分: `4.5` ｜ 時間: `Thu, 24 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiakFVX3lxTFB2OFN3Snc5dDlFc1p4dmp1N2FNTmhVdnNlS3BNZmttS21WcGM4eDFBRjVZNGwzWVFOSXAxTmhCQUR3SUp3WUkzR1lheE5DTWdyRXVNejRNTG5HVHRoU3d5c1I0alVBUjByeUE?oc=5)
+- **業界2位の日本製紙の時価総額が3位のレンゴーと4位の大王より下となった製紙の構造要因…｢脱製紙｣での生き残りの成否 - 東洋経済オンライン**
+  - 評分: `6.0` ｜ 時間: `Thu, 24 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiW0FVX3lxTE1pR1Yyb09ncmJTXzNZdzRKZmpXaUFPa3ROVW5remlkdThVVzdoSEpjNE5sZU92UjFXMF9DaktqREZ3S3JOSHQ4RUczeHM4TEp6Tjh0Q3lKXzdPRnc?oc=5)
+
+#### 📌 Yahoo Finance JP (王子ホールディングス - 3861.T)
+
+- **Oji Holdings (TSE:3861), What Is Behind The Fresh Attention?**
+  - 評分: `4.5` ｜ 時間: `Sun, 20 Sep 2026 13:10:11 +0000` ｜ [連結](https://finance.yahoo.com/markets/stocks/articles/oji-holdings-tse-3861-behind-131011370.html?.tsrc=rss)
+- **Global Micro and Nanocellulose Market Report 2026–2036: Evaluating MFC, CNF, CNC, and BNC Adoption Across Strategies of Nippon Paper, Oji Holdings, Stora Enso, and Borregaard**
+  - 評分: `8.5` ｜ 時間: `Mon, 17 Aug 2026 10:55:00 +0000` ｜ [連結](https://finance.yahoo.com/markets/commodities/articles/global-micro-nanocellulose-market-report-105500860.html?.tsrc=rss)
+- **Oji to build liquid packaging carton plant in Vietnam**
+  - 評分: `7.5` ｜ 時間: `Mon, 10 Nov 2025 09:19:34 +0000` ｜ [連結](https://www.packaging-gateway.com/news/oji-build-liquid-packaging-carton/?.tsrc=rss)
+
+### 📁 🇯🇵 日本高階紙袋與脫塑食品容器 (Japan Sustainable Food Packaging & Paper Bags)
+
+#### 📌 Google News (日本包裝袋企業: ザ・パック シモジマ SHIELDPLUS)
+
+- **『Shadowverse EVOLVE』よりブースターパック「Over the Calamity/オーバー・ザ・カラミティ」が10月2日(金)発売！ - PR TIMES**
+  - 評分: `3` ｜ 時間: `Thu, 01 Oct 2026 02:00:02 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiakFVX3lxTFBDdW0wNGVKYlR4MjdUV01hVTNoazVoMWxBYkNHQ3BoZmdmWkVFeEhzU1h3bTYtenlpSkx6MEdiUjVYX1BzQ2xTdEhTTUZiZTg5N3cycFNkbExxRFNLQkFydUt3LXVXTHlSNGc?oc=5)
+- **シャドバエボルヴ(リアルTCG)ブースターパック「オーバー・ザ・カラミティ」の収録カードを先行公開！ - GameWith**
+  - 評分: `3` ｜ 時間: `Sat, 26 Sep 2026 08:00:15 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiU0FVX3lxTE1RakE0TDJsM0pJWVJrSUVhc25Sa1hkQ3hac0MtR3lMTUc1QUl6cGJfckFxamh0bFJENU5DVXhRaHl4TUtDaUFYd21vbXBXYnY1V2l3?oc=5)
+- **【女性が選ぶ】リュック・バックパックが欲しい「アウトドアブランド」ランキング！ 2位は「ザ・ノース・フェイス」、1位は？（ねとらぼ） - Yahoo!ニュース**
+  - 評分: `3` ｜ 時間: `Sun, 04 Oct 2026 02:30:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMif0FVX3lxTE1yWnc2dWxic2FVVnlqWE5jbUYyY0JxOVJFM0toMjlPYURxZ3JnTzFJTzk4NlBROFR6SW1WYTJHb01rSjRCVHF0RjdySTRKYnc2N2VWN1podDltbjRiZG1iLUdYY2xHOUlzejBnLVBLeFljaXZrU0tJeDNJTkRsUkk?oc=5)
+- **Switch 2版『レゴ®バットマン™：レガシー・オブ・ザ・ダークナイト』が発売中！ - ASCII.jp**
+  - 評分: `3` ｜ 時間: `Mon, 28 Sep 2026 09:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiVEFVX3lxTE5vWjVJWnJHbmJoQmxCRzhfQU1hVmp2TEJQdWhYdGRPc0l2WEM5SkRuMEVLRlpQV2FheFZuMFV1QTR1X2Q2ZFhwemV3V0ppbjZpQVFKNg?oc=5)
+- **【MTG】ホビットのBundle製品収録内容まとめ【Gift Bundleとの違いは？】 - CUBEの部屋**
+  - 評分: `3` ｜ 時間: `Mon, 28 Sep 2026 06:01:51 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMia0FVX3lxTE1SVWJHaU5Rai1POGJrbXBCVVFXc0NERURQbnJXUlVXT0pNMS1JcDRfQ2MtaHZubjlCYUFZY2NJTE12dHBGTF9tYUE3TDlSZHpmd1ZBRXRmLUN5UmVfZ0R6MV9RMDZiTzhEYXFB?oc=5)
+- **『リアリティ・フラクチャー』プレリリース・ガイド - mtg-jp.com**
+  - 評分: `3` ｜ 時間: `Thu, 24 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiWkFVX3lxTFB6TWpHbXFVTkF5bUhBeHNqS2YxSVU0SF9iT3hPUGdSSDcwUm0yZEVma1M5NlU0MzZMT0dGTG1zb2tzdF9xazJvUnJSU0JuQ1RabnZaMHd1dXFwUQ?oc=5)
+
+### 📁 🇨🇳 中國 APP 金光紙業 ∕ 博匯紙業 & 大宗白卡
+
+#### 📌 Google News (中國紙業: 金光紙業 博匯紙業 白卡紙)
+
+- **纸业龙头，密集涨价 - 搜狐网**
+  - 評分: `3` ｜ 時間: `Sat, 03 Oct 2026 12:25:57 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMijAFBVV95cUxNLU5ybWpLZzQxYUxhbFdyQXZybHBNZ1pCUEI4QVNfYnR3RlVZRC05Vk9taW44UXBkMXVjM2lPZkFwTEwxcmZRdk9QVGNrR0t2c3hVWU5YVEp5MlJ0ZEtBQjI3SXpueS1Bd3FPbjV3NFJzTktLd0JBRUc0cTZFWVJORjdCQlQ4SVlXcDNjdw?oc=5)
+- **一图看懂| 瓦楞纸VS白卡纸：同是涨价，含金量差在哪？_数据解盘 - stock.stockstar.com**
+  - 評分: `3` ｜ 時間: `Tue, 29 Sep 2026 10:32:20 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiYkFVX3lxTE8zS3VOT0RTSmdlOUJCbUxlSTlhdzhfVlVhOFJVN1N0WlVXMlo1N3o3Wl9XV1JsQjNBQTE5WkZVVWVqRFlIZEpGUDdTSnJ6Y3d5N1F6R0FhTmo0bV9FcUFvUVdR?oc=5)
+- **昨晚，这些公司宣布大手笔回购！龙头纸企，再度涨价（附股） - 同花顺**
+  - 評分: `3` ｜ 時間: `Tue, 29 Sep 2026 01:37:35 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiXkFVX3lxTE03THRJMXF3SEVNUU0yQTNBOEE3bnRuNllucGZpWG42NVRTVE9rbkozZ2w2Z3ZJY2J1UDJveXVmNE45cVp0WXRlNWpFcnlsenJVNHhncENJQjRKYXJTcnc?oc=5)
+- **十届同行，纸见未来-APP工业用纸& 文化用品邀您共赴第十届中国国际全印展 - 纸业网**
+  - 評分: `3` ｜ 時間: `Wed, 30 Sep 2026 02:09:10 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMickFVX3lxTE9wY2NsekZFRm83ZFZ0ckZZS1dVT1U5d3hoNFNJOGZtdENQTEFEaUJNWWJJa1dvaDdXRkRfNFo0TUtlVkdnNU8yNmpnN3habDJnMmpub1dEeXIybVNzMEJ6Z3hVdzNuSDVFTHdlOF9UT0J5UQ?oc=5)
+- **爱马仕橙色凭什么成为品牌标志色？一场战争意外与83年长期主义的胜利+FAQ - 手机新浪网**
+  - 評分: `3` ｜ 時間: `Thu, 01 Oct 2026 03:22:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiakFVX3lxTFBoOUZyRGVuV3lNYVF2ZVVPNkVtUkRnaDVOUGpWdVQzSjk5My1xcjhnbXc1Si1GSU1oRmR4WEExaVdrYk52bzN2SnE0by1SRWszS1RrVVdVaXZjY3Jpb3BvM1J3azN1VS03Q1E?oc=5)
+- **股票行情快报：博汇纸业（600966）9月30日主力资金净卖出30.63万元 - 搜狐网**
+  - 評分: `3` ｜ 時間: `Wed, 30 Sep 2026 12:33:05 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMijAFBVV95cUxQTXQxX05LbllDYXgyaUJSZHJzaDBIY2VSdVMzMnk3MFZGNWZhZ2RuUnlxWWRsV1VQQzBYaEg4TVd3Z1ZkTUE5THdkX0VDT0NDME5VZWlFY3pWZXJ5M1VSVm9Ba3A0WjB4Qkx5VmlLaldaMGltbDh2UWFkbmx2bW80RHBTWDlpUXpJT190Sw?oc=5)
+
+### 📁 🇨🇳 中國餐飲包裝與紙模塑出海 (China Food Contact & Molded Fiber: 白卡/紙杯/外賣紙袋)
+
+#### 📌 Google News (中國外賣紙袋與餐飲紙器)
+
+- **上万人参加衡水湖马拉松，赛道遍地纸杯引争议，组委会回应：有志愿者清理 - hb.dzwww.com**
+  - 評分: `3` ｜ 時間: `Sun, 27 Sep 2026 09:18:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiUEFVX3lxTE1aVUNBY0o5NW1waHZuTEpmam5JX1ZxRG1UN0xwazdCTDd6YTRFOG9BY3k2VTFlMHJyTW5GbWMzRmQ4ZWdobjdWd2RtWm9sRW12?oc=5)
+- **“胖改”超市胖东来品牌商品减少？记者实地探访：没有缩减，但超市自有品牌明显增多 - 四川新闻**
+  - 評分: `3` ｜ 時間: `Mon, 21 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiY0FVX3lxTE4yVUt1d0dlYjBfWHNyWmQ5R1ZtYUxPZUMwRjlzZXZqX01ZU0VOOGp0Q0hPV1pHZ1hBUHlfamdwVi1QNHRzdDc5bUE5MkhORE56WjJOQ01uQ0E2YUFWRVB6a0xDdw?oc=5)
+- **南王科技纸杯定制实力厂家，以品质与环保合规为品牌降本增效 - 搜狐网**
+  - 評分: `3` ｜ 時間: `Wed, 30 Sep 2026 02:31:45 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVFlQQnRXWnFSQjNOM2hDellaZHYzU1dkUXBWRXJJUUlwamZmMnIyVVN4NXh2aHowUnpvemxrMUpXZVR3bVpCeG5uVUttNGpLeU5KalVlOFRsaFY3aUVCU3B4TVA0QlJFM0lJVTZNNnM1SVVhUy1lWl9oeVdKUXNYOHdoRk1FbUFw?oc=5)
+- **茂名晚报 - mm111.net**
+  - 評分: `3` ｜ 時間: `Sat, 26 Sep 2026 01:51:08 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMibEFVX3lxTE9qV2RrRjFnVElKN3h3bUF3dHdpVllnSGNUblRVS21ZNVBSaUlMeUxLVVNjaFpMM09lcThyY29JdVlDUVZQRXVzRXNNemxkdmNyWklnaTA2SmFXTFJCdjZQdTZfM1lxT1lXd0gtbw?oc=5)
+- **给机器人打工一天，日薪200，我用体力教机器人替代我自己 - QQ News**
+  - 評分: `3` ｜ 時間: `Thu, 24 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9SYmFEZ2dCdTQxalEtN0VkMkx5YWhrLW5za2ZNdFgtQmdTRWxrUlEzak5UY2Y5RENUX2ZjbVpPdVcyNmRnWWxHb0lFc0t1MHU3UGR5cGlR?oc=5)
+- **“茶饮小样”火了，喜茶、煲珠公都在送，网友急了：求单卖 - 36 Kr**
+  - 評分: `3` ｜ 時間: `Wed, 23 Sep 2026 09:58:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiU0FVX3lxTE4yenZyRVVpZDFucmxIRndybjV6UW9idjFLUGwtRFVYbDBGLU53SkZtN0RnNHlhX1JLeHBMV1lsUTJTSFAzdV9TamtOTzRnUElZbGhR?oc=5)
+
+### 📁 🇦🇺/🇳🇿 澳洲與紐西蘭包裝轉型與植纖紙袋 (ANZ Packaging: APCO / Plastic Bans / Molded Pulp)
+
+#### 📌 Google News (ANZ Packaging: Paper Bags & Molded Pulp)
+
+- **Bringing iced coffee in a job interview? The debate is more than TikTok froth - SmartCompany**
+  - 評分: `3` ｜ 時間: `Thu, 24 Sep 2026 02:01:51 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMivAFBVV95cUxPYnR5eXpkZ3VOb0Z2SWpIMFFRMEdSQXhNbTFmaTBKTlJPTEtpLUFvY0ZHajMtOExGbkJpQW1TZ0d5VVF3V3hmdGxTUUdxMHVwYldabnd0eDRjS2hkR0taY1liUEp6T1dQSElMa0lkT3ZXUEwzU3M3VDJtRUU4d2lLLTJmQ3RtTWRyNjhYQzdXQUw2X2ZpcmViaGF0WUdKY010bG80OHlKTUhjQmJJLUU0VWtxQ0ZNTTFpZDExbg?oc=5)
+- **Millions of plastic particles leach into hot drinks from paper cups, study finds - mbiz.heraldcorp.com**
+  - 評分: `7.0` ｜ 時間: `Tue, 22 Sep 2026 10:40:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiV0FVX3lxTE9aenhjZFFoYTNUbVBzc0pDVVNSeU9mdnBWUUgwejdPVVBRSHdOZTFwRXhIRnl3RTBzS2l5bkxxNGdRS19KeF9FMi1ESGRfMXdMTFE1enl2SQ?oc=5)
+
+#### 📌 Google News (ANZ Sustainable Packaging Regulations: APCO)
+
+- **Italy permits compostable plastics for fresh produce, condiments and more - packagingeurope.com**
+  - 評分: `3` ｜ 時間: `Thu, 24 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSE5QcTE0QmVzcUhlWE1Tak16U0c1OGJOSF9KX0pyWEEyUWxDUFNoNEtrVXVHeGtTMWpwVkY5TVd0OWsyUjJiaC1JZy1pZzhfYmt6WnlVcmFITV9vLWZDZXoyRE5JOVZTS011RXlKQlVVWndvLVV6Z2lOTUF0LU9VMExjalRwNGtFYUVQV3Z0bDVTaDZVWkpidS0zTHBreUFWTWYteGkyczQ?oc=5)
+- **The EU’s new packaging rules are a bureaucratic bungle - economist.com**
+  - 評分: `3` ｜ 時間: `Thu, 24 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMingFBVV95cUxQckc4cS13Mk44S0t4aFNFS3Bzb3d3YVhweHJRWkxzU0xvOF9ISFRERzM0TVlyUlRUMFk3LWJTR3R5dGFRWm90TWJ0S0FTelY4bWJBbE03R0pWbXNaWm5mRTY1Q3JQQ0VSSUNxWllpdkRPNV9BM2FMdnFjR3FCVzF0cEF6TTF2YmhmQUJxMGI4NGtPLVItVGJnMHV4al9kUQ?oc=5)
+- **Design new plastic products to boost recycling, report urges - recyclinginternational.com**
+  - 評分: `3` ｜ 時間: `Tue, 29 Sep 2026 17:56:47 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMizAFBVV95cUxOclMzcG1iTUxNSWJrdEt2Z1VxVjZLQmNPZmg1WDhXR0lwV1VFZFJUM01YQy13NWdzb25QN2dmcXNOUnVLZ21RY2hROFpuR1QxVVBmRjA5Y04wdnJkM2JNbGNwVm1vbmxsWGJEUGJJeEJZekpVb1VEZHEtRDhoZ2JRRVByWXpGMG54TWNqZ0dnNlAwbnNkdXdURlZfTnBvYmdBMTh0VVU3S2s2UEgtdkhBOThydXBZNk14bmctUGlBODlieUlidUF1bTlySWI?oc=5)
+- **PBAT Resins/Compounds Market To 2035: Single-Use Plastic Bans Drive Growth - News and Statistics - IndexBox**
+  - 評分: `4.0` ｜ 時間: `Thu, 01 Oct 2026 00:31:04 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMivgFBVV95cUxObGZiSjhzYWtQaEtBR3lZU0JYcVFnVHlxa3pnSFlFQnhyZ1Z3eXFMaTRlN0dxbWlCa2pRSGhKaWE5NHpxRUl6b0hsdE1KY2FMVngzY1JrZWpza1ljWUYyMWp1SDBOWk05Z1FrYUI0TGI4YS0wWFRJdm9fa1FxZFZCSUF2NTh6Y1dtd0NrZlFCZXFNTnhiM0FyX2ZqR3NwMmRPU2cxZmRqVHgtT3VnS0todmFQZG5MZ3dFcFlzTlFR?oc=5)
+- **Environment: Guinea Bans Single-Use Plastic - powersofafrica.com**
+  - 評分: `4.0` ｜ 時間: `Tue, 22 Sep 2026 19:23:39 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiigFBVV95cUxPVTB1SmZRZEQ4MFJya2hoamwzRWNpaHRUa04yaXpXN294eU5fY3JQd3NzbmtLMVRxVjd6VmJZb1EteWhfTHBXNVpwdlJOcmZVdGlnUTExS3NLVTdOYmQ1Y0RFU2hkVV9wRnh4RFNZVVlvX1ZpV2d1TXJWdGVPY1UwUFlFbG1ma1VKYlE?oc=5)
+- **TUI builds on progress already achieved, reducing single-use plastic by an estimated additional 13 per cent per guest night and strengthens efforts to tackle plastic pollution - tuigroup.com**
+  - 評分: `4.0` ｜ 時間: `Wed, 23 Sep 2026 08:14:59 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMivAJBVV95cUxPYWFPYlpBY1V1cUJIWDZaQWNZYm5UajlNOWpaM0tKZ3cwZGlQRFIyQnN6RTB2YlMzQ1pfSVhjeElNaDVlaGRxY1JWSUw4UVo5UGpBX01oZDJ0M0NYR0JlVVl1RUY1NmgtYXAwWHlfdnc3TzNpWjltVlBmRVhpc1k2QjBpSVBFWlZvcHlQekVJMXk5ZjMyZkRGaWwteG5kTU5sZXhCbUJJSmRMMXd6LWdDSnBsQ0E1SEtNQ21WMHhrQUhwUHpDMjd4QUpzUGZDTHJKa3BGa2xEbURvaWdrVlNRWE10YW9GdnFkVUYxUHV0MWc0MFM5NWZjRkVZTG5qQTl0c3ljVkZLa1JNVDV5Vm4tc0FkV2JYaUtXbG5OWWZ5WDNZaFByRFVtNDQzV2U4V184VHZCRjhHWEJEU2V3?oc=5)
+
+### 📁 🇮🇩/🇸🇬/🌏 東南亞主要漿廠與食品容器 (Southeast Asia Pulp & Food Packaging: APP / SCG Packaging)
+
+#### 📌 Google News (Southeast Asia Pulp: APP / APRIL / Indah Kiat)
+
+- **Indah Kiat Pulp & Paper stock falls 2.96 percent - AD HOC NEWS**
+  - 評分: `4.5` ｜ 時間: `Thu, 24 Sep 2026 08:00:17 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMirgFBVV95cUxQVDl5dktMd0h0V2xWdkxlUW9hQUFULW1SbnhJVjZkaE04c3VlTFhfZmtYcTVVWmFUd2RtLUdQTFh3WG1lWHZkV2VkTkFiUXF2aFh1Rzc4T3J2M3c1Ny1BcTRrWGpXdzE2aEw4cEFPQXU2a01zM2kwRTdWYzdlengtMXpvajhudm9qX0tCMXhtS2huUEctS1lWZ3ZFUHEtdTFVbGx5TmV5aDd0ZDFURlE?oc=5)
+- **Indonesia's AMMN, BUMI Slide Over 4% as LQ45 Losses Widen; MBMA Bucks the Trend - KONTAN** `(數據: 4%)`
+  - 評分: `3` ｜ 時間: `Mon, 21 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMirgFBVV95cUxOTlpfN1pkZWxkWDFmRTZOSW5wWnhEVUxuczV5R0Q5WS1xakJZSk9pajhheWFBNE54ZmZHMzJCY1E2ZWE3TGFsazhscksyeFlKQ3NVV2I3RHlvOE1NS1pOM3dYQll0N0s0azNNWkFXbTQtMzFmNEZmanl1VllaVkdQbC1QYlpRbGsxMDBsX0xKM0NsN1VGQllwMVViWENxcm1nNnhRRGhfclhWSGd3ZHfSAagBQVVfeXFMT1l5aFZnVG1pRFRvNGd2QTQ5UUJRNXJDVWNrY0wySTcwczZzcWFOYURJWDhrY3N2VFU2Y2NfbzZGTHlHRWRXb1phdXMxOVp5WnRmT0RNMXlVU2dLUHhnUEVvMFRwYnMwTU9iR21RVWdDdTY5REtIclVEUGVjYkRlTTVFWlFmdnQwOGZDdGxROUd4ZVZ1aE5USmx0S29nSndlbzhNakExTk1h?oc=5)
+
+#### 📌 Google News (Southeast Asia Food Packaging & Converting: SCG Packaging / Foopak)
+
+- **Indonesia’s New Food Packaging Regulation: ﻿Key Compliance Changes - The National Law Review**
+  - 評分: `4.8` ｜ 時間: `Thu, 01 Oct 2026 13:56:07 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMinAFBVV95cUxPbEs2a0tlTklBTE5OQnBwSU1odmJSMkRDQWRJQzJCd3NkUHp6Z3k3NTBleGVJblcxUFJXVjRKM1NSMUl3RnJKdXJIcDJNUm1WQUtELTBubXB5WWVLejAxMW1TUlhPYjY0ZXEtVWlGakU3bFhOMnpmTUtBX2pZRU1RWW1kbnByTy0xN1QxTzRucDc1X1JsTW4zdHNrZmzSAaIBQVVfeXFMTmRteFVrX3RXTXFwWEZTNi1GZWJGTEpXVzRLMm1rWkdlUHB3d1FNRXltZW5JalpROXBvR0ZjZ0UyODBJakVVNEwzOC1uTkJDaDhqaVhMTE1QblhSS0s0V1JuT0d2MHQ4Z1hEUGpwalBmMHFua0k1WVp4SUpveC1TN1dyTTd3SldxcDRPeDE2c05jV1RGZ05NRnA0TUk1a01PLVR3?oc=5)
+
+### 📁 🇹🇼 台灣造紙四大廠 (Taiwan Paper: 正隆 榮成 永豐餘 華紙)
+
+#### 📌 Google News (台灣紙業: 正隆 榮成 永豐餘 華紙)
+
+- **造紙業擴大綠色採購 正隆去年達74.8億、永豐餘逾63億 - cna.com.tw** `(數據: 74.8億, 63億)`
+  - 評分: `6.0` ｜ 時間: `Wed, 23 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiXkFVX3lxTFBRR1hlYlNrUE9RdEZKdWxfUExiZXJHMmd6eXVBVHNwZE9LalhQeW5rZnpQQW5VR0NrTDRxelRwTTVXaEpIM2FkWnVxM3BTeWNJSkcxQU85a09xUnVsV3c?oc=5)
+- **減碳供應鏈發威！造紙業最新綠色採購破百億，帶動正隆等大廠轉型-財經焦點情報站 - CMoney投資網誌**
+  - 評分: `4.5` ｜ 時間: `Wed, 23 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiggFBVV95cUxPX18xdm50MWcxMUxCLUp2NGZzQU9YbDRWYk5TMlBDXzBPVldNQVROMTRWVzRHcGd1NTlEQ1pJamt1YzU0bG96N2ZJeFlyMXNUSFltcDhHVEtPWndiOVl3dTh1ODRiSUVlZ3dnR2xwT3N0TUNLU1dZd2FOdHFHek5MWWxB?oc=5)
+- **永豐餘、正隆：衛生紙無漲價規劃 - 自由時報**
+  - 評分: `8.0` ｜ 時間: `Thu, 01 Oct 2026 09:06:09 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiWEFVX3lxTFBCUG9ZOFFCNnZvVFRTelZET1RUTWZ5eUN3SnljOTJ2cnR1SFdsVlZnS3pZcnhSVkhCSVdrRXE1X0lqQndJSmlMQWc5YkFNQ0NJMEtiTjVnb2k?oc=5)
+- **《造紙股》榮成轉型投控 布局國際資本 - 富聯網**
+  - 評分: `4.5` ｜ 時間: `Fri, 02 Oct 2026 00:11:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcFBOTmRKRHNKbHFWUHhkYUs3TE56TGpReVFMazR4S1RNY0k1UFF5d2pyZGlKeUQyeUJwendUNkdfcTB0NEVLSUlkLXBJSTcwaFdnWW9pRTFUSHFyUUFXTEpZb0lOWnhZN3Q2UkswQzlzOFpzRHpPU1lXSlVVazVuMXNRR3N0Zmlp?oc=5)
+- **討論牆 | 正隆越南造紙年產能達百萬噸、紙器南北越皆擴產 - LINE TODAY**
+  - 評分: `6.5` ｜ 時間: `Wed, 30 Sep 2026 00:38:11 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiZEFVX3lxTE01N0J6NzlqZ1NyT3RNQ05EeWd3cW5xQzFBdjMtZ2t2LVpUOWw0U0hPbDVSMjNwMi1hOEo5XzZrRU9kTnAzeEgzb2pmTjJtbng1WHFUWjJSOUFleGgtUXFpVkw1dVM?oc=5)
+- **熱門股》售價走揚 華紙逆勢強漲 - 自由時報**
+  - 評分: `4.5` ｜ 時間: `Fri, 25 Sep 2026 07:26:31 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiWEFVX3lxTE9ZS0pvdmtvVVhYUEZzclVXNEZjRHhRUFJSZ3JOTmFzYlVKQ0NWUUZuZDZhNjFicjVNYXZoZVpKQmNQMlo1OThpX0tPSHYyZkhEOVZVZmRCSWM?oc=5)
+
+### 📁 🇹🇼 台灣食品包裝與容器 (Taiwan Food Packaging: 紙袋/紙杯/紙模塑/紙盒/非塑容器)
+
+#### 📌 Google News (台灣紙袋 烘焙 外帶包裝 食品級)
+
+- **中秋禮袋不閒置 「袋袋箱傳」讓好袋再循環 - 環境部新聞專區**
+  - 評分: `3` ｜ 時間: `Thu, 24 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiZEFVX3lxTE1fWTJIT3BPMTdCc1pMQTJiZDgwYUlVV1AtSERkQlpZTnQyMTA4bVYzdmlOZHFnbk16RXE5QnVLY3Z3RUpxazBGUjlvX09JWmtVTTJCbm9tUnBwUEZBSVV5UVVWOUw?oc=5)
+- **防油脂與防油阻隔塗層市場展望2035年：永續包裝與PFAS轉型推動成長 - 新聞與統計 - IndexBox**
+  - 評分: `4.8` ｜ 時間: `Sat, 26 Sep 2026 19:31:04 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMi6wFBVV95cUxObVVZeGlOMHQ2VlhZd1JPcFQzRU9wLXNNT2dzeHYydlU4WWhEQjdFa1NCcmpXLTAwcXV1YWs0SFRSU0xZSDh5WEZ2THliWHlxVEVuRnRYd1RLQUtLWjJTaUtIRkx4MjhTZjJYTkdhMk9nYXE0c2o5bGVkY3h2RW1VSEJOZ2lWSmtoSWpyWG5jcjFYLVZtYW1LSURuMmh5eVZUM181ZGpXV05MQmJSLVViQ0FBQ3FJVHJvdTRFZURxVW1NeVVaMURocXEwVmhWWVUzQTVsc2gzZmo2bS0yZjhZVjRZWHNrdFc1a1pF?oc=5)
+- **摩斯漢堡驚傳個資外洩！　母公司發重訊證實：責成委外廠商改善 | 生活 | CTWANT - CTWANT**
+  - 評分: `3` ｜ 時間: `Fri, 02 Oct 2026 06:24:36 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1KRWg4ZXFmd0p5MnFpazdRVUtzbDlkbnFmVFJtbGFZNGc4OEdycXN6bXVaUXQxRl9RT3VOTDBmYVp2akxYaFNvM0JscE55TGvSAVRBVV95cUxOMUI5UVF3Unk5TXZBemphV09OdGc0bXJFb0VVUGtLS3luNWR6YnFhOHJjUkc3clNGWFIwR0RVdkFuWk5TWUdVeTBnN29sRmNuUkZaYjk?oc=5)
+- **永豐餘綠色採購逾63億獲表揚 華紙、永豐實推循環經濟帶動綠色消費 - n.yam.com** `(數據: 63億)`
+  - 評分: `6.0` ｜ 時間: `Wed, 23 Sep 2026 07:38:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiUkFVX3lxTE9IdUpqS3ZLdWdZMGJVcVh1NmFhekZGVVRLd0dlZHVadkRJWEJGaUZCeVdhcHFtbGxQOE11djJYUzB2U1pPeTFDR2ZvY1Z1eUVYRVE?oc=5)
+- **日本人赴台旅遊不再買鳳梨酥作手信？ 爆買一堆奇怪生活用品讓網民「越來越看不懂」 - 堅料網**
+  - 評分: `3` ｜ 時間: `Fri, 25 Sep 2026 03:50:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMivARBVV95cUxNaVZBTGZfM3lSclJtaTVZNTk5eTYtc1I5N1hmaFphUktCekJxYTNpZnhIWHZhQjBhSXJKZ0FtQ0puNWtVSHkzRzZTS2xpUkdpR2ZLeUtNRllCWndJT3BFUHkwVm5lbWJIWUVqWE1PUWI0RUtMZWF0VnpaUXhqT3dTTnlKY1Rjc1R1N0s2RmlUYXctZDI1U2dnZy1SVGMzV19ZcUI0REtlNHllVEFIRDd4OW9Bd05qRjRhamp1UjV5ODU0NktrVXAzVmhuVDRibV9CakdpdTVUUzJIWlJRNjVVdUJ3aWR6QS1WaWU2NVZLNUNaUkFXV2JXUkNBM196ZEhQTzRIUFphUzgzbWYtMVVQS1kwZTBnaXZaSjRlSktmNVlHLVZNaVFlZ1BCbUdZN1lBSGRDRXN3VUdHLVdJZFd2ZTUxeGx2TGdwaFQxb1ZiTkYzNkZ1R3NyVS1PQ3IweEJVWUdueWp1Z2J4QWJZb09yYjUyQ1BuWmZMcmR3UTFWV05QZ0NZVkZKUHBhbzExMEtuYl9oczBKelF4ZGhHUjdFNzZXa0VaNTZYNXV1ZTVYWXBaZFJpbThnaDZyTllwbnIwZW9hcS1oRVdHSkRfUnBKT1JOY0lXZEg3ZWctdWkxYS0tVVV0aENDVFY4d04tOWpmUzdOVjNzdFYxYUZScXZIdU1CVVVJcVkyMjlucEVYMXd0Qzg2WUYxM0haOHZic3ZKOGF4OFBGdXhJVktuVDNBak9ObVRXSGZCMHpWdg?oc=5)
+- **60歲男患雙重癌症！體內化學毒素超標 醫生：元兇竟是家中常見物（6招排毒自救） - UHK 港生活**
+  - 評分: `3` ｜ 時間: `Tue, 22 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMihARBVV95cUxQcmRCeFZrU3dueHJBNnRQR0JyTzhTZVRZdGRZY3FuVk1NT2JMMzVEcWpvcDdpSHVXc1dBNTRfa0FRMVdNN1IzZWV5VDk1NWJ4OEVtWGUwWFRtZEtiRmlDeVRIYkVUUk1lNG1CQ2dJOV9XZVJDTkt4ZkxXa29OUm8xWHZ4OURWb0N6bjRDalRTOU0yd0ozc29NMURPVVVkQ3NHU3RKUjYwQW1JWS01ZGMtX25OUXZPTEJSYlB5Q3VHVnY1cmVFQTZoYmY2LVNVM3p5SV82MDVRSUpRa0ZkRm9HS1RnZGxvallGTHhqY1pmSFBQVW16NmFuVUtKdXIxV2JoQkFTU3VZQTFDbkRIb2dDU3Fza01BWDFhcUYyMUUtdFEydzNVWWNPRjZqUXFlV3RsSUJjNFM5WkphM2t6VFRxcGRtVEYtNDVqQk94VDF0VlJMNDJZb05nWHlGX3BhOTJUZ0tYbnZiSksxa0lHVlZsVGFOTWpOd0RaTTNyZHUweEVJUVNVc1dLZ2ZkQlQ3eElhQ1ZzWi1DS0t2T3lzNmtYTTA1LTBVQ29NSk50bWRuWXpiRW0yYjBabkxfR3Q5THExVnpfa0d1dndGaGhXdi1rSU5wTEc5OElqOVFkZC1sdVEyNFNBd18yQjZQdDhIQ0F6b1FWRzhteXFBRGNheVkyVGtJX00?oc=5)
+
+#### 📌 Google News (華紙 益利疊 非塑食安 正隆 食品包裝)
+
+- **台東紙廠火警！＂水源耗盡＂ 急申請空勤灑水支援 - 民視新聞網**
+  - 評分: `3` ｜ 時間: `Sun, 20 Sep 2026 14:02:30 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiYEFVX3lxTE5wMzRXOUFJZG5vN2o5N3F4c09xbUVXSUl5RUo3THpFdzFwek5iTHBoMVRWOUl2OS1UZVR3NFhCbHBaUHZCWlBUWkVjcmZtTFF1TWxjWlZxa01ZSVZjQUFzbA?oc=5)
+- **地下水靜置又臭又黑！居民上街抗議榮成紙廠污染| 生活 - 三立新聞**
+  - 評分: `4.5` ｜ 時間: `Wed, 30 Sep 2026 05:28:54 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiRkFVX3lxTFBOakR6eVozYTJOMDlHYnNsSElSQU1oUWV4M1JOWVlrUDdONkNJWGJ6eGNRTWxKWjVjaGZDNjVzbGp6TTlhVWc?oc=5)
+- **大火狂燒!上千噸廢紙受損 工地竄火"黑煙沖天"│中視新聞 20260921 - ctv.com.tw**
+  - 評分: `4.0` ｜ 時間: `Mon, 21 Sep 2026 01:04:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMi6wJBVV95cUxONnZwWXVqRExxeDZ3Q1U0QlloU0RKMElVNFpHRG1rMW5VWGNhd1hBSElwT0dVODh3SUxaZlZ3M3NfV0RRUmtEbXRSVWJ6QmhYWXphcDFnQ01UMThHWmpzUmVxWGxuMllHQjNHWnN0OW5oUFVvREhfSjdHc0ZCZnp3T1o3aE15TDZuTjVuNlg2bG5KaGFwMnlvQk9PQXk4OXd5OEJGSlhCOVRYcU9wNWFwa1lJeG9TR2dPTDFicjBmSnZnUWxOcGw4ZlltdHJ1R1hYWjBnRUJGWGFvVm9jdF9HZ2xRTWlPU0wwWHdYRHFyNU1IMllyUTBiQkhMQ19oUmNIZkpyVlZYaU1pLUwyNEtXOUZLNTV2MnE5V0RNbXhaZllWTzJrRzVfdmpLTWcxNl93bHJPWmV0anpoSHJ5S1hJS29pQlppN0NkV0loY3NwMFJpS0Uyb08xeGtXNlhhSWpfZGJyaXdpVTZmXzg?oc=5)
+- **紙業龍頭密集升價 升價源於“成本倒掛” - TradingView**
+  - 評分: `3` ｜ 時間: `Sat, 03 Oct 2026 23:36:32 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiakFVX3lxTE9BbmlvSkM1SnJXdjhLWVFZbkxMdnpkZTllRndQdV9UaTJPVnlzcnhXV2pxUU9CRlAtUko1dXVfVEp0VXREMkhpa1IwYlFCU29OcnJsYXUxMjF4cUhyYUo5SHhzSWgwa2lpQXc?oc=5)
+- **「減少水性塗料失敗 清水式 模型筆塗方法 GUIDE to SIM'S STYLE」今日發售！ - hk.gundam-official.com**
+  - 評分: `3` ｜ 時間: `Thu, 24 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMibEFVX3lxTFA1LWlxbGFYZHdqX2gtRnRVTkt4R2xfeVctUkRmNjZUNDRIWEtCclFJU3hUd0VHb19hOW9ibDNDczEtQUttSV9rLTNsUTkya3NxdllVOVVsU1dCRmhYRjFXNmZlYWpsT1RMdWtwRQ?oc=5)
+- **危機就是轉機！啓碁科技、興中環保用AI拆解無塑包裝課題 - cna.com.tw**
+  - 評分: `4.8` ｜ 時間: `Mon, 21 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9HZzlTQVBaM09iY25jZ1BqeG9sTlFCT3h1NGxjNlJYSVAwcHlFMGhGV21aY3U0dVRTNWJ1aXNlcy1fbmM5cmF5R2VRcTFRTU9BSVltbU5R?oc=5)
+
+#### 📌 Google News (台灣紙容器 紙餐盒 紙杯 減塑)
+
+- **「自備食器easy購」百店響應現折超有感，減廢吃美食還能抽大獎！ - 嘉義市政府環境保護局**
+  - 評分: `3` ｜ 時間: `Tue, 29 Sep 2026 16:28:42 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMia0FVX3lxTFBVbWJIRzQzU1dsbHUxbXVYeWJmVU5Nc0NCRkIyc0ZrUU1veFZMLThnY2lUSGxfbC1RMlVZa09iREVvWkota3hUNVlucHUtWDhmSTVrajRFRkJsLVBhUnRiWVBnbXdQT2N1RnFR?oc=5)
+- **比手機還輕巧！韓國爆紅「超輕量口袋保溫杯」迷你但超多功，掛包包秒變質感鑰匙圈 - WalkerLand 窩客島**
+  - 評分: `3` ｜ 時間: `Thu, 24 Sep 2026 07:00:00 GMT` ｜ [連結](https://news.google.com/rss/articles/CBMiXkFVX3lxTE05eHVLQ3BJRUJqZWc1c2t4NzBPYTdwTmJpWWR6MzVRZXZxNi1WdmhkVm1UZFJJVGowNkJBRzhfNEZENHJBUVhjY0NfamotZUpCZmdHVTV0ZmgzMmphU2c?oc=5)
+
+---
+*© 2026 光網資訊 Luznet ∕ Paperluz 產業情報. All rights reserved.*
