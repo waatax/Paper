@@ -210,3 +210,22 @@ REG_EU_PPWR,歐盟包裝與包裝廢棄物法規正式實施,EU,REGULATION,count
 REG_CN_GB4806,中國食品接觸塗層新規GB 4806.10正式實施,CN,REGULATION,effective,DAY,days,D,2026-10-02,2026-09-02,30.0,,,7.0,days_active,國家衛健委,http://www.nhc.gov.cn/,high,GB 4806.10-2025實施滿30天(滿月)，造紙無氟水性塗層替代率突破55%
 REG_EU_PFHXA,歐盟PFHxA全氟己酸禁令生效倒數,EU,REGULATION,countdown,DAY,days,D,2026-10-02,2026-10-18,16.0,,,-7.0,days_left,ECHA,https://echa.europa.eu/,high,歐盟PFHxA禁用倒數進入最後16天，食品防油紙無氟替換進入最後通牒清庫週
 REG_EU_EUDR,歐盟EUDR森林砍伐法規生效倒數,EU,REGULATION,countdown,DAY,days,D,2026-10-02,2026-12-30,89.0,,,-7.0,days_left,European Commission,https://ec.europa.eu/,high,EUDR法規強制執行倒數89天(破90天大關)，跨國漿紙企業加速地塊級GPS盡職調查(DDS)
+
+CN_NBSK_SPOT_CNY,中國進口針葉漿現貨均價 (NBSK),CN,NBSK,spot,CNY,tonne,W,2026-10-09,2026-W41,4930.0,4895.0,4965.0,5.0,cny_wow,生意社/卓創資訊,https://www.100ppi.com/vane/detail-1053.html,high,十月長假後開盤持穩微升，港口庫存連13週去化至206.5萬噸，現貨堅挺於4930元/噸(約$693/MT)
+CN_BHKP_SPOT_CNY,中國進口闊葉漿現貨均價 (BHKP),CN,BHKP,spot,CNY,tonne,W,2026-10-09,2026-W41,4465.0,4430.0,4500.0,5.0,cny_wow,生意社/卓創資訊,https://www.100ppi.com/vane/detail-1053.html,high,Suzano 10月提價函支撐但受新產能壓制(Barclays下調UPM評級)，文化與生活紙廠剛需穩健，現貨於4465元/噸(約$627/MT)
+SHFE_SP_SETTLE,上期所漂針漿期貨主力結算價,CN,NBSK_FUTURES,futures_settle,CNY,tonne,D,2026-10-09,2026-10-09,4865.0,,,5.0,cny_dod,上期所,https://www.shfe.com.cn/,high,基差收斂至+65元(+USD 9)，多頭部位於十月長假後平穩整固收於4865元/噸
+SPREAD_BSKP_BHKP,長短纖現貨價差(針葉-闊葉),CN,PULP_SPREAD,spread,CNY,tonne,W,2026-10-09,2026-W41,465.0,,,0.0,cny_wow,Paperluz計算,https://paperluz.internal/data,high,長短纖價差465元/噸($66/MT)，持續低於500元安全替代線，長短纖共振築底健康
+SPREAD_LINER_OCC,美國箱板紙與OCC原料價差,US,PAPER_SPREAD,spread,USD,short_ton,M,2026-10-09,2026-10,840.0,,,0.0,usd_mom,Packaging Dive/Fastmarkets,https://www.packagingdive.com/,high,北美9/1提價全額開票落地，原料利差穩於840美元歷史極值；日本巨頭1.1億美元投資越南同奈紙箱廠
+FASTMARKETS_US_OCC,美國 11 號廢紙 (OCC) 出口美西 FAS,US,OCC,EXPORT_FAS,USD,美元/短噸,W,2026-10-09,2026-W41,136.0,135.0,137.0,0.0,usd_wow,Fastmarkets RISI,https://www.fastmarkets.com/,high,美西FAS維持135-137美元/短噸，亞洲紙廠維持穩定採購節奏
+US_OCC11_EXP_NYNJ,美國11號OCC出口價紐約紐澤西FAS,US,OCC,export_fas,USD,short_ton,W,2026-10-09,2026-10-09,138.0,137.0,139.0,0.0,usd_wow,Fastmarkets,https://www.fastmarkets.com/,high,美東出口平穩盤整於137-139美元/短噸
+GLOBAL_ICE_BRENT,倫敦布蘭特原油期貨 (Brent Crude),GLOBAL,CRUDE_OIL,futures_close,USD,barrel,D,2026-10-09,2026-10-09,79.20,,,-12.60,usd_dod,ICE,https://www.theice.com/,high,原油大幅回調至79.20美元整固，造紙化學膠乳與航運燃油附加費成本壓力大幅緩解
+GLOBAL_NYMEX_WTI,紐約輕原油期貨 (WTI Crude),GLOBAL,CRUDE_OIL,futures_close,USD,barrel,D,2026-10-09,2026-10-09,75.50,,,-9.30,usd_dod,NYMEX,https://www.cmegroup.com/,high,輕原油降至75.5美元整理，石化淋膜成本降壓
+SCFI_INDEX,上海出口集裝箱運價指數 (SCFI 綜合),CN,FREIGHT_CONTAINER,index,USD,point,W,2026-10-09,2026-W41,3380.50,,,-29.70,pt_wow,上海航運交易所,https://www.sse.net.cn/,high,節後艙位平穩微調至3380.50點，美西$6510/FEU、美東$9310/FEU
+GLOBAL_BALTIC_BDI,波羅的海乾散貨指數 (BDI 綜合),GLOBAL,FREIGHT_BULK,index,USD,point,D,2026-10-09,2026-10-09,1870.0,,,-25.0,pt_dod,波羅的海交易所,https://www.balticexchange.com/,high,乾散貨指數微調至1870點，國際木片散裝船租金平穩
+TW_OCC_MILL_TWD,台灣廢紙紙廠到廠價,TW,OCC,mill_gate,TWD,tonne,W,2026-10-09,2026-W41,4200.0,,,0.0,twd_wow,造紙公會/廠區詢價,https://paperluz.internal/data,high,國內廢紙到廠價持平於NT$4200/噸，正隆9月營收41.8億元年增17%拉貨暢旺
+TW_TPC_COAL_COST,台灣造紙汽電共生每噸蒸氣成本,TW,ENERGY_STEAM,estimated_cost,TWD,tonne,M,2026-10-09,2026-10,720.0,705.0,740.0,-2.0,twd_mom,台電/造紙公會,https://www.taipower.com.tw/,high,生質能(SRF)替代率微升至48.5%，單噸蒸氣成本壓降至NT$720
+USDTWD,美元兌新台幣銀行間收盤匯率,TW,FX,fx_close,TWD,USD,D,2026-10-09,2026-10-09,32.050,,,0.03,twd_貶值,中央銀行,https://www.cbc.gov.tw/,high,新台幣收在32.050，進口原料木漿與美廢結匯成本維持優勢區間
+REG_EU_PPWR,歐盟包裝與包裝廢棄物法規正式實施,EU,REGULATION,countdown,DAY,days,D,2026-10-09,2026-10-09,58.0,,,7.0,days_active,EUR-Lex,https://eur-lex.europa.eu/,high,歐盟PPWR強制實施第58天，邊境嚴查總氟含量(<50ppm)與DfR可回收性認證
+REG_CN_GB4806,中國食品接觸塗層新規GB 4806.10正式實施,CN,REGULATION,effective,DAY,days,D,2026-10-09,2026-09-02,37.0,,,7.0,days_active,國家衛健委,http://www.nhc.gov.cn/,high,GB 4806.10-2025實施第37天，造紙無氟水性塗層替代率突破56%
+REG_EU_PFHXA,歐盟PFHxA全氟己酸禁令生效倒數,EU,REGULATION,countdown,DAY,days,D,2026-10-09,2026-10-18,9.0,,,-7.0,days_left,ECHA,https://echa.europa.eu/,high,歐盟PFHxA禁用倒數進入最後9天(個位數最後通牒)，食品防油紙無氟替換進入最後生死線
+REG_EU_EUDR,歐盟EUDR森林砍伐法規生效倒數,EU,REGULATION,countdown,DAY,days,D,2026-10-09,2026-12-30,82.0,,,-7.0,days_left,European Commission,https://ec.europa.eu/,high,EUDR法規強制執行倒數82天，跨國漿紙企業加速地塊級GPS盡職調查(DDS)
