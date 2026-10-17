@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paperluz Industry Intelligence Weekly Issue 012 | 2026-10-16</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #0f172a;
+    --muted: #475569;
+    --line: #cbd5e1;
+    --soft: #f8fafc;
+    --card-bg: #ffffff;
+    --accent: #1e40af;
+    --accent-light: #dbeafe;
+    --warn: #b45309;
+    --warn-light: #fef3c7;
+    --danger: #b91c1c;
+    --danger-light: #fee2e2;
+    --ok: #047857;
+    --ok-light: #d1fae5;
+    --c1: #2563eb;
+    --c2: #d97706;
+    --c3: #059669;
+    --c4: #7c3aed;
+    --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a;
+      --fg: #f8fafc;
+      --muted: #94a3b8;
+      --line: #334155;
+      --soft: #1e293b;
+      --card-bg: #1e293b;
+      --accent: #60a5fa;
+      --accent-light: #1e3a8a;
+      --warn: #fbbf24;
+      --warn-light: #78350f;
+      --danger: #f87171;
+      --danger-light: #7f1d1d;
+      --ok: #34d399;
+      --ok-light: #064e3b;
+      --c1: #60a5fa;
+      --c2: #fbbf24;
+      --c3: #34d399;
+      --c4: #a78bfa;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 28px 20px;
+    font-size: 14.5px;
+  }
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  header {
+    border-bottom: 2px solid var(--fg);
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+  .brand {
+    font-size: 12.5px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 8px 0 10px;
+    color: var(--fg);
+    letter-spacing: -.02em;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+  .meta {
+    font-size: 13.5px;
+    color: var(--muted);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .theme-box {
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    padding: 12px 16px;
+    margin-top: 14px;
+    font-size: 14.5px;
+    font-weight: 600;
+    border-radius: 0 8px 8px 0;
+    color: var(--fg);
+  }
+
+  /* 3x2 KPI Grid (Balanced Top Cards) */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 22px 0 26px;
+  }
+  @media (max-width: 768px) {
+    .kpi-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+  }
+  .kpi-card {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  }
+  .kpi-card .k-title {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .kpi-card .k-val {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 4px 0 6px;
+    letter-spacing: -.03em;
+    font-variant-numeric: tabular-nums;
+  }
+  .kpi-card .k-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+
+  h2 {
+    font-size: 19px;
+    border-bottom: 2px solid var(--fg);
+    padding-bottom: 6px;
+    margin: 36px 0 16px;
+    color: var(--fg);
+    font-weight: 800;
+    letter-spacing: -.01em;
+  }
+  h3 {
+    font-size: 15.5px;
+    margin: 24px 0 12px;
+    color: var(--fg);
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+    font-weight: 700;
+  }
+
+  /* Tables */
+  .scroll { overflow-x: auto; margin: 14px 0 20px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    text-align: left;
+  }
+  th, td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  th {
+    background: var(--soft);
+    font-weight: 700;
+    color: var(--fg);
+    white-space: nowrap;
+  }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr:hover td { background: rgba(241,245,249,.6); }
+  td.hot { font-weight: 800; color: var(--danger); }
+
+  /* Badges & Alerts */
+  /* Badges & Alerts */
+  .badge {
+    display: inline-block;
+    padding: 2.5px 8px;
+    border-radius: 5px;
+    font-size: 11.5px;
+    font-weight: 700;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .badge-red { background: var(--danger-light); color: var(--danger); }
+  .badge-amber { background: var(--warn-light); color: var(--warn); }
+  .badge-green { background: var(--ok-light); color: var(--ok); }
+  .badge-blue { background: var(--accent-light); color: var(--accent); }
+  .badge-purple { background: #ede9fe; color: var(--c4); }
+
+  .lede {
+    background: var(--soft);
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .note {
+    border-left: 4px solid var(--warn);
+    background: var(--soft);
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 13.5px;
+    border-radius: 0 8px 8px 0;
+  }
+  .gap {
+    border-left: 4px solid var(--danger);
+    background: var(--soft);
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 13.5px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* Forecast Section Components */
+  .forecast-box {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 18px 0;
+    background: var(--soft);
+    box-shadow: var(--shadow);
+  }
+  .forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 14px 0;
+  }
+  @media (max-width: 768px) {
+    .forecast-grid { grid-template-columns: 1fr; }
+  }
+  .forecast-card {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px 14px;
+    box-shadow: var(--shadow);
+  }
+  .forecast-card .f-hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .forecast-card .f-tag { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; }
+  .forecast-card .f-val { font-size: 17px; font-weight: 800; color: var(--fg); font-variant-numeric: tabular-nums; }
+  .forecast-card .f-sub { font-size: 11.5px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+  ol.sum { padding-left: 22px; margin: 14px 0; }
+  ol.sum li { margin: 10px 0; line-height: 1.65; }
+
+  /* Chart Container */
+  .chart {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px;
+    margin: 22px 0;
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+  }
+  .chart figcaption {
+    font-size: 13px;
+    color: var(--fg);
+    padding-top: 10px;
+    line-height: 1.6;
+    border-top: 1px solid var(--line);
+    margin-top: 8px;
+  }
+  .chart svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0 0 10px;
+    font-size: 12.5px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .sw {
+    width: 14px;
+    height: 4px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  .grid-line { stroke: var(--line); stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.7; }
+  .axis-line { stroke: var(--muted); stroke-width: 1.2; }
+  .lbl { fill: var(--muted); font-size: 11px; font-family: inherit; }
+  .vlbl { fill: var(--fg); font-size: 11px; font-family: inherit; font-variant-numeric: tabular-nums; font-weight: 700; }
+
+  /* TOC */
+  .toc {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 22px 0;
+    background: var(--soft);
+    box-shadow: var(--shadow);
+  }
+  .toc h4 {
+    margin: 0 0 12px;
+    font-size: 12.5px;
+    letter-spacing: .2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 36px;
+  }
+  .toc li { margin: 0 0 8px; font-size: 14px; break-inside: avoid; }
+  .toc a { text-decoration: none; color: var(--fg); font-weight: 600; transition: color 0.15s ease; }
+  .toc a:hover { color: var(--accent); }
+  .toc .n { display: inline-block; min-width: 2.2em; color: var(--accent); font-weight: 800; }
+
+  /* Timeline Flow Box */
+  .flow-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 18px 0;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .flow-step {
+    flex: 1;
+    min-width: 160px;
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .flow-step .f-title { font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; }
+  .flow-step .f-name { font-size: 13.5px; font-weight: 700; margin: 3px 0; color: var(--fg); }
+  .flow-step .f-lag { font-size: 11.5px; color: var(--accent); font-weight: 700; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12.5px;
+    text-align: center;
+  }
+  a { color: var(--accent); }
+
+  /* ── A4 Print & PDF Styles (Strict No-Blank-Gap Optimization) ── */
+  @media print {
+    body {
+      background: #fff !important;
+      color: #000 !important;
+      padding: 0 !important;
+      font-size: 9pt;
+      line-height: 1.52;
+    }
+    .wrap { max-width: 100% !important; margin: 0 !important; }
+    header { margin-bottom: 10pt; padding-bottom: 8pt; border-bottom-width: 1.2pt; }
+    h1 { font-size: 18pt; margin: 4pt 0 6pt; }
+    .brand { font-size: 8pt; }
+    .meta { font-size: 8pt; gap: 10pt; }
+    .theme-box { font-size: 9pt; padding: 6pt 10pt; margin-top: 6pt; }
+    
+    .kpi-grid { gap: 6pt; margin: 10pt 0 12pt; }
+    .kpi-card { padding: 7pt 9pt; border-radius: 4pt; box-shadow: none !important; }
+    .kpi-card .k-val { font-size: 14.5pt; margin: 1pt 0; }
+    .kpi-card .k-title { font-size: 7.5pt; }
+    .kpi-card .k-desc { font-size: 7.5pt; line-height: 1.35; }
+
+    h2 {
+      font-size: 11.5pt;
+      margin: 12pt 0 5pt;
+      padding-bottom: 3pt;
+      border-bottom: 1.4pt solid #0f172a;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 9.5pt;
+      margin: 8pt 0 3pt;
+      padding-left: 5pt;
+      border-left: 2.2pt solid var(--accent);
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    table { font-size: 8pt; margin: 6pt 0; break-inside: avoid; page-break-inside: avoid; }
+    th, td { padding: 3.8pt 5pt; }
+    th { background: #f1f5f9 !important; color: #0f172a !important; font-weight: 700; }
+    
+    /* Avoid Component Slice, but Allow Continuous Flow (No Forced Page-Break Whitespace) */
+    .chart, .toc, .lede, .note, .gap, .flow-box, .forecast-box, .forecast-card, .forecast-grid {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none !important;
+    }
+    .chart { padding: 8pt; margin: 8pt 0; }
+    .chart svg { max-height: 80mm; }
+    .legend { padding-bottom: 4pt; font-size: 7.5pt; }
+    .forecast-box { padding: 6pt 8pt; margin: 6pt 0; }
+    .forecast-grid { gap: 5pt; margin: 5pt 0; }
+    .forecast-card { padding: 5pt 7pt; }
+    
+    footer { margin-top: 10pt; padding-top: 6pt; border-top: 1pt solid #0f172a; font-size: 7.5pt; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">Paperluz Intelligence · Global Weekly Industry Report</div>
+  <h1>Paperluz Industry Intelligence Weekly | Issue 012</h1>
+  <div class="meta">
+    <span><b>Intelligence Period</b>: 2026-10-10 ～ 2026-10-16 (Week 42, Published every Friday)</span>
+    <span><b>Release Date</b>: 2026-10-16</span>
+    <span><b>Publisher</b>: Luznet / Paperluz Industry Intelligence (光網資訊 Luznet ∕ Paperluz 產業情報)</span>
+  </div>
+  <div class="theme-box">
+    <b>Key Highlights</b>: Taiwan Big 4 Paper Mills Complete September Revenue Releases (YFY NT$6.65B, Long Chen 9M Pre-Tax EPS NT$0.46) × EU PFHxA Ban Enters Final 48-Hour Countdown × Maine Utility Sues Huhtamaki &amp; Sappi Over PFAS Contamination × China Containerboard Majors Initiate Mid-October +RMB 50/MT Hike with Taiwan Mills Following × International Paper Evaluates $6B PE Bids Alongside EMEA Spin-Off × Arauco's 3.5M MT Sucuriú Pulp Project Reaches 81% Completion
+  </div>
+</header>
+
+<!-- 6 KPI Grid -->
+<div class="kpi-grid">
+  <div class="kpi-card">
+    <div class="k-title">Taiwan Big 4 Sep Revenues Complete</div>
+    <div class="k-val" style="color:var(--c3)">YFY NT$ 6.65B (+3.95% YoY)</div>
+    <div class="k-desc">Cheng Loong NT$4.18B (+17.1%), Long Chen NT$4.79B (+25.3% / 9M EPS NT$0.46), CHP NT$1.52B · Entering Q4 peak season</div>
+  </div>
+  <div class="kpi-card">
+    <div class="k-title">EU PFHxA Ban × US Federal Lawsuit</div>
+    <div class="k-val" style="color:var(--danger)">Final 2 Days Left (48 Hours)</div>
+    <div class="k-desc">Oct 18 EU enforcement · Maine water utility files federal PFAS lawsuit against Huhtamaki &amp; Sappi; PFAS-free coatings take over</div>
+  </div>
+  <div class="kpi-card">
+    <div class="k-title">China Containerboard 2nd Oct Hike</div>
+    <div class="k-val" style="color:var(--c2)">+RMB 50 / MT (Restocking Wave)</div>
+    <div class="k-desc">Nine Dragons &amp; majors launch mid-Oct hikes · Taiwan's Long Chen &amp; YFY follow suit to capture Singles' Day restocking</div>
+  </div>
+  <div class="kpi-card">
+    <div class="k-title">IP Dual-Track EMEA Packaging Review</div>
+    <div class="k-val" style="color:var(--c4)">~$6.0B PE Buyout Interest</div>
+    <div class="k-desc">Advancing London spin-off of DS Smith unit while evaluating bids from Lone Star &amp; Atlas · US Raw Spread solid at $840/ST</div>
+  </div>
+  <div class="kpi-card">
+    <div class="k-title">Global Pulp Supply Realignment</div>
+    <div class="k-val" style="color:var(--c1)">USD 694 / MT (RMB 4,935)</div>
+    <div class="k-desc">Arauco 3.5M MT Sucuriú mill 81% complete · UPM curtails Pietarsaari mill in Oct; Suzano hikes EU/US list by +$50/MT</div>
+  </div>
+  <div class="kpi-card">
+    <div class="k-title">Brent Oil Drops × Mill Steam Relief</div>
+    <div class="k-val" style="color:var(--c3)">$74.45 / bbl (-6.0% WoW)</div>
+    <div class="k-desc">Crude falls for second week on easing risk premium &amp; IEA forecast · Taiwan mills reach 48.8% SRF co-firing, locking steam at NT$718/t</div>
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<h2 id="s1">1. Executive Summary &amp; Key Strategic Insights</h2>
+<ol style="margin-left:20px; line-height:1.75; font-size:14.5px;">
+  <li><span class="badge badge-green">Taiwan Revenue</span> <b>Taiwan Big 4 Paper Mills Complete September Revenue Releases: YFY Hits NT$6.65B and CHP Posts NT$1.52B Ahead of Peak Q4</b>: YFY Inc. (1907) reported September revenue of NT$6.653B (+3.95% YoY, +3.10% MoM), bringing 1–9M cumulative revenue to NT$57.415B (+4.87% YoY) with containerboard growth across Taiwan, Vietnam, and China. Chung Hwa Pulp (1905) posted September revenue of NT$1.520B (+0.07% MoM), noting that September's +$20/MT hardwood pulp hike typically transmits to paper prices within two months, while high European energy costs give CHP an export edge. Alongside Cheng Loong (NT$4.178B, +17.08% YoY) and Long Chen (NT$4.790B, +25.29% YoY; 9M pre-tax profit NT$599M, EPS NT$0.46), all four mills are poised for Q4 seasonal strength.</li>
+  <li><span class="badge badge-red">Regulatory Deadline</span> <b>EU PFHxA Prohibition Enters Final 48-Hour Countdown (Effective October 18); Non-Fluorinated Barrier Coatings Take Full Command</b>: Regulation (EU) 2024/2462 under REACH Annex XVII prohibiting perfluorohexanoic acid (PFHxA) and related substances in food contact paper packaging becomes mandatory on October 18, 2026. European customs and supermarket chains have completed final inventory clearance, driving full-capacity shipments of PFAS-free aqueous barrier boards from CHP (CircuWell) and Taiwanese converters.</li>
+  <li><span class="badge badge-red">PFAS Litigation</span> <b>Maine Water Utility Files Federal Lawsuit Against Huhtamaki, Sappi, and Kimberly-Clark Over PFAS Contamination</b>: The Greater Augusta Utility District in Maine filed a federal lawsuit in mid-October alleging that decades of wastewater and sludge discharges from Huhtamaki, Sappi North America, and Kimberly-Clark along the Kennebec River contaminated local wells with PFAS (23.3 ppt vs. Maine's 20 ppt limit), forcing a $2M ion-exchange treatment upgrade. This escalates PFAS risk from product bans to historic environmental liability litigation.</li>
+  <li><span class="badge badge-amber">Cross-Strait Hikes</span> <b>China Containerboard Majors Launch Mid-October Price Hikes (+RMB 50/MT); Long Chen &amp; YFY Follow Suit for Singles' Day Restocking</b>: Following early-October adjustments, Chinese containerboard leaders led by Nine Dragons initiated a second wave of +RMB 50/MT price increases in mid-October. Taiwanese mills operating in China, including Long Chen and YFY, followed suit to stimulate downstream box plant restocking ahead of the Double 11 e-commerce festival.</li>
+  <li><span class="badge badge-purple">Strategic M&amp;A</span> <b>International Paper (IP) Pursues Dual-Track for EMEA Packaging Business: London Listing Alongside ~$6 Billion PE Buyout Talks</b>: IP confirmed on October 15 that while progressing with the planned spin-off of its EMEA Packaging business (combining DS Smith operations) ahead of a November 3 Capital Markets Day, it is actively evaluating unsolicited buyout inquiries from private equity firms Lone Star and Atlas Holdings valued near $6 billion, sending IP shares up over 7%.</li>
+  <li><span class="badge badge-blue">Mega Pulp Mills</span> <b>South American Megaproject Divergence: Arauco's 3.5M MT Sucuriú Mill Reaches 81% Completion While CMPC's $4.6B Project Faces Rating Scrutiny</b>: Chile's Arauco reported that its $4.6B Sucuriú project in Brazil—the world's largest single-line hardwood pulp mill (3.5M MT/yr)—has reached 81% completion ahead of schedule for a Q4 2027 startup. Conversely, CMPC's $4.6B Natureza project in Brazil faces credit-rating pressure over leverage concerns.</li>
+  <li><span class="badge badge-purple">Nordic Curtailment</span> <b>UPM Implements October Curtailments at Pietarsaari Mill and Inaugurates Pioneering Leuna Biorefinery in Germany</b>: To balance high Nordic wood costs, UPM planned temporary October production curtailments at its Pietarsaari pulp mill in Finland, supporting Suzano's +$50/MT October hike in Europe/Americas (reference price ~$1,360/MT). Simultaneously, UPM officially inaugurated its commercial wood-based biochemicals biorefinery in Leuna, Germany.</li>
+  <li><span class="badge badge-green">Carton Innovation</span> <b>Nippon Paper Debuts "Non-Aluminum Fuji-Pak" with Internal Printing Technology in Partnership with Ito En</b>: On October 14, Nippon Paper unveiled its eco-friendly "Non-Aluminum Fuji-Pak" liquid carton using a transparent barrier film instead of aluminum foil, enabling ambient shelf life and standard milk-carton recycling. Removing silver foil enabled an industry-first "Internal Printing Technology," commercialized with Ito En's vegetable juice to display fortune-telling ("Vege-Mikuji") graphics inside flattened cartons to incentivize consumer recycling.</li>
+  <li><span class="badge badge-amber">Retail Paper Bags</span> <b>Australian Supermarket Giant Coles Hikes Paper Shopping Bag Prices by 20% to 30 Cents Amid Cost Pressures</b>: Major Australian grocer Coles quietly raised checkout paper bag prices from 25 cents to 30 cents (+20%, above Woolworths and Aldi at 25c), citing rising raw material and transport costs—demonstrating strong retail cost pass-through for high-tensile sack kraft bags under plastic bans.</li>
+  <li><span class="badge badge-green">Energy Relief</span> <b>Brent Crude Drops 6.0% to $74.45/bbl; Taiwan Mills Reach 48.8% Biomass SRF Substitution to Cut Steam Cost to NT$718/Ton</b>: Easing Middle East risk premiums and softer IEA demand forecasts pushed Brent crude down to $74.45/bbl (-19% over two weeks), relieving latex, AKD sizing, and bunker surcharge pressures. Meanwhile, YFY and Cheng Loong reaffirmed on Oct 15 that domestic consumer tissue prices will remain frozen.</li>
+</ol>
+
+<!-- SECTION 2 -->
+<h2 id="s2">2. Key Indicators Dashboard</h2>
+
+<h3>2.1 Raw Materials (Pulp Market)</h3>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Indicator</th><th>Latest Quote (USD-First / Local Currency)</th><th>Date</th><th>Change</th><th>Market Dynamics &amp; Structural Trends</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>China Imported NBSK Spot Price</td><td class="num hot">USD 694 / ton (RMB 4,935)</td><td>2026-10-16</td><td class="num" style="color:var(--danger);">+RMB 5</td><td>Singles' Day restocking advances; port stocks fall for 14th week to 2.052M MT</td></tr>
+    <tr><td>China Imported BHKP Spot Price</td><td class="num">USD 628 / ton (RMB 4,470)</td><td>2026-10-16</td><td class="num" style="color:var(--danger);">+RMB 5</td><td>Supported by Suzano Oct +$20 hike and UPM Pietarsaari October curtailments</td></tr>
+    <tr><td>SHFE NBSK Futures Settlement (SP)</td><td class="num">USD 685 / ton (RMB 4,872)</td><td>2026-10-16</td><td class="num" style="color:var(--danger);">+RMB 7</td><td>Cash-futures basis disciplined at +USD 9 (RMB +63); Q4 restocking supports futures</td></tr>
+    <tr><td>China Mainstream Port Pulp Inventory</td><td class="num">2.052M tonnes</td><td>2026-10-16</td><td class="num" style="color:var(--ok);">-13k tonnes</td><td>14th consecutive weekly net outflow; steady offtake at Qingdao and Changshu ports</td></tr>
+    <tr><td>NBSK - BHKP Spot Spread</td><td class="num">USD 66 / ton (RMB 465)</td><td>2026-10-16</td><td class="num">Flat</td><td>Firmly beneath 500 RMB substitution threshold; balanced virgin fiber furnish</td></tr>
+    <tr><td>Europe BHKP Producer List (CIF)</td><td class="num hot">USD 1,360 / ton</td><td>2026-10-16</td><td class="num" style="color:var(--danger);">+USD 50</td><td>Suzano implements +$50/MT Oct hike in EU/Americas; Stora Enso closes Skutskär softwood line</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2.2 Recovered Fiber (OCC Market)</h3>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Indicator</th><th>Latest Quote (USD-First / Local Currency)</th><th>Date</th><th>Change</th><th>Market Dynamics</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>US 11# OCC Export FAS (West Coast)</td><td class="num">USD 135–137 / short ton (RMB 955–970)</td><td>2026-10-16</td><td class="num">Flat</td><td>Steady Q4 restocking by Taiwanese and Southeast Asian containerboard mills</td></tr>
+    <tr><td>US 11# OCC Export FAS (East Coast)</td><td class="num">USD 137–139 / short ton (RMB 970–985)</td><td>2026-10-16</td><td class="num">Flat</td><td>Transatlantic container availability balanced; steady European and Indian intake</td></tr>
+    <tr><td>US Domestic OCC YTD Hike</td><td class="num hot">+USD 100 / short ton</td><td>2026-10</td><td class="num">Realized</td><td>Strong US mill operating rates (~92%); PCA reports Q3 earnings on October 21</td></tr>
+    <tr><td>China Domestic OCC Benchmark (Grade A)</td><td class="num">USD 287 / ton (RMB 2,035)</td><td>2026-10-16</td><td class="num" style="color:var(--danger);">+RMB 10</td><td>Mid-October +RMB 50/MT containerboard hike letters lift domestic OCC collection quotes</td></tr>
+    <tr><td>Taiwan Domestic OCC Mill Gate Price</td><td class="num">USD 130.9 / ton (NT$ 4,200)</td><td>2026-10-16</td><td class="num">Flat</td><td>Big 4 mills complete Sep revenue disclosures and maintain steady Q4 wastepaper intake</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2.3 Paperboard &amp; Finished Products</h3>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Market</th><th>Product Category</th><th>Action / Hike (USD-First)</th><th>Effective Date</th><th>Value Chain Impact Scope</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Taiwan</td><td>Big 4 Paper Mills Sep Revenue</td><td class="hot">YFY NT$6.65B, Long Chen NT$4.79B, Cheng Loong NT$4.18B, CHP NT$1.52B</td><td>2026-10-12 Complete</td><td>Long Chen 9M pre-tax EPS hits NT$0.46; CHP expects Sep pulp hike to lift Q4 paper prices</td></tr>
+    <tr><td>China / Taiwan</td><td>Corrugated &amp; Containerboard</td><td class="hot">China Majors Hike +RMB 50/MT Again; Long Chen &amp; YFY Follow</td><td>2026-10-15~20</td><td>Nine Dragons leads mid-Oct hike wave; Taiwanese mills follow to capture Double 11 restocking</td></tr>
+    <tr><td>US / Europe</td><td>EMEA Packaging Spin-Off / Sale</td><td class="hot">IP Evaluates ~$6B PE Bids Alongside London Spin-Off Track</td><td>2026-10-15 Announced</td><td>Lone Star &amp; Atlas explore bids for DS Smith unit; Capital Markets Day set for Nov 3</td></tr>
+    <tr><td>South America / EU</td><td>Hardwood Pulp &amp; Biochemicals</td><td class="hot">Arauco 3.5M MT Mill 81% Done × UPM Pietarsaari Curtailment</td><td>2026-10-13~15</td><td>Sucuriú on track for 2027Q4; UPM curtails Finnish pulp &amp; opens Leuna biorefinery</td></tr>
+    <tr><td>Japan</td><td>Aluminum-Free Liquid Cartons</td><td class="hot">Nippon Paper Debuts "Non-Aluminum Fuji-Pak" Internal Printing</td><td>2026-10-14 Launched</td><td>Transparent barrier replaces foil for milk-stream recycling &amp; inside-carton promotions</td></tr>
+    <tr><td>Australia</td><td>Retail Grocery Paper Bags</td><td class="hot">Supermarket Giant Coles Hikes Paper Bag Price +20% (to 30c)</td><td>2026-10-12 Effective</td><td>Driven by material and freight inflation; highest among Australian grocers</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2.4 Key Energy, Foreign Exchange &amp; Maritime Logistics Radar</h3>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Domain</th><th>Indicator Benchmark</th><th>Latest Quote (USD-First)</th><th>Trend &amp; WoW</th><th>Value Chain Operational &amp; Financial Significance</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><b>Geopolitics</b></td><td>Brent Crude Oil Futures</td><td class="num hot">$74.45 / bbl</td><td class="num" style="color:var(--ok);">-6.0% WoW</td><td>Crude drops for 2nd week on easing risk premium &amp; IEA outlook; latex and bunker costs fall</td></tr>
+    <tr><td><b>Forex</b></td><td>USD / TWD Exchange Rate</td><td class="num">32.080</td><td class="num">NTD 32.080</td><td>Stable NTD preserves predictable settlement costs for imported wood pulp and US OCC</td></tr>
+    <tr><td><b>Forex</b></td><td>EUR / USD Exchange Rate</td><td class="num">1.0910</td><td class="num">Euro Soft</td><td>High European energy costs plus stable FX give Taiwan specialty paper an export edge in EU</td></tr>
+    <tr><td><b>Forex</b></td><td>USD / BRL Exchange Rate</td><td class="num">5.1280</td><td class="num">Real Soft</td><td>Favorable USD export conversion supports Suzano and Arauco capital expenditure programs</td></tr>
+    <tr><td><b>Freight</b></td><td>Shanghai Container Freight (SCFI)</td><td class="num">3,345.80 pts (USD)</td><td class="num" style="color:var(--ok);">-1.0%</td><td>Mid-October freight rates ease mildly; US West Coast $6,450/FEU, East Coast $9,250/FEU</td></tr>
+    <tr><td><b>Freight</b></td><td>Baltic Dry Index (BDI)</td><td class="num">1,855 pts</td><td class="num" style="color:var(--ok);">-0.8%</td><td>Bulk woodchip carriers and pulp vessel charter rates operate smoothly in equilibrium</td></tr>
+    <tr><td><b>Energy</b></td><td>Taiwan Thermal Coal (Taipower CIF)</td><td class="num">$127.20 / ton</td><td class="num" style="color:var(--ok);">-0.5% WoW</td><td>Softer coal plus 48.8% biomass SRF co-firing cuts Taiwan mill steam cost to NT$718/ton</td></tr>
+    <tr><td><b>Energy</b></td><td>China Thermal Coal (QHD 5500)</td><td class="num">USD 113.8 / ton (RMB 810)</td><td class="num">Controlled</td><td>Ample power plant coal stocks keep captive generation costs steady for Chinese mills</td></tr>
+    <tr><td><b>Energy</b></td><td>Japan Imported Coal (CIF)</td><td class="num">$134.80 / ton</td><td class="num">Range-bound</td><td>Daio Paper prices 3-year bond 12 bps tighter; Japanese mills optimize financing &amp; energy</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2.5 Food Grade Paperboard, Barrier Coatings &amp; Molded Fiber Radar</h3>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Product Category</th><th>Specification &amp; Applications</th><th>Latest Quote (USD-First / Local)</th><th>Trend Dynamics</th><th>Industry Implications &amp; Downstream Supply</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><b>Food-Grade Ivory Board (FBB)</b></td><td>230–350g High barrier cups and confectionery boxes</td><td class="num hot">USD 638 / ton (RMB 4,480)</td><td class="num">Firmly Billed</td><td>Bohui Paper sets single-shift flat sheet warehousing record; strong Q4 festive orders</td></tr>
+    <tr><td><b>Non-Fluorinated Grease-Resistant Paper</b></td><td>40–60g KIT 8–9 (Burger wraps / food bags)</td><td class="num hot">USD 1,240–1,290 / ton (NT$ 39,800)</td><td class="num" style="color:var(--danger);">+USD 5/ton</td><td>EU PFHxA ban 48 hours away + Maine PFAS lawsuit against mills boost PFAS-free premiums</td></tr>
+    <tr><td><b>Extensible Sack Kraft Paper</b></td><td>70–90g High tensile (SOS shopping and takeout bags)</td><td class="num">USD 850–880 / ton (NT$ 27,350)</td><td class="num" style="color:var(--danger);">+USD 5/ton</td><td>Australia Coles hikes paper bag prices 20%, proving retail cost pass-through under plastic bans</td></tr>
+    <tr><td><b>Aqueous Dispersion Barrier Coatings</b></td><td>Aqueous Dispersion Coating (replacing PE / Alu foil)</td><td class="num">USD 2,760–3,120 / ton</td><td class="num">Scale Efficiency</td><td>Nippon Paper Non-Alu Fuji-Pak &amp; CHP CircuWell scale up water-based &amp; transparent barriers</td></tr>
+    <tr><td><b>Bleached Bagasse / Bamboo Pulp Board</b></td><td>Feedstock for molded fiber food containers</td><td class="num">USD 550–575 / ton (RMB 3,880–4,050)</td><td class="num">Strong Demand</td><td>Holiday catering prep lifts molded fiber mill utilization rates to 90%</td></tr>
+    <tr><td><b>Finished Molded Fiber Clamshells</b></td><td>850ml PFAS-free compostable takeaway containers (FOB)</td><td class="num">USD 0.058–0.065 / pc</td><td class="num">Steady</td><td>US Dart Container expands Lancaster PA plant; robust North American sustainable foodservice demand</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- SECTION 3 -->
+<h2 id="s3">3. Price Trends &amp; Full-Chain Forward Matrix (5 Standard SVGs)</h2>
+
+<!-- Chart 1 -->
+<figure class="chart">
+  <figcaption>Chart 1 | China Imported NBSK vs. BHKP Spot Pulp Spread Dynamics (2026-06 ~ 2026-10-16)</figcaption>
+  <svg viewBox="0 0 800 240" width="100%" height="240" style="background:var(--soft);border-radius:6px;">
+    <line x1="60" y1="30" x2="760" y2="30" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="80" x2="760" y2="80" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="130" x2="760" y2="130" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="180" x2="760" y2="180" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="210" x2="760" y2="210" stroke="var(--fg)"/>
+    
+    <text x="50" y="35" font-size="11" text-anchor="end" fill="var(--muted)">5200</text>
+    <text x="50" y="85" font-size="11" text-anchor="end" fill="var(--muted)">4900</text>
+    <text x="50" y="135" font-size="11" text-anchor="end" fill="var(--muted)">4600</text>
+    <text x="50" y="185" font-size="11" text-anchor="end" fill="var(--muted)">4300</text>
+    
+    <!-- NBSK Line (Blue) -->
+    <polyline fill="none" stroke="#2563eb" stroke-width="3" points="80,60 160,75 240,100 320,95 400,98 480,94 560,90 625,84 685,74 745,72"/>
+    <!-- BHKP Line (Orange) -->
+    <polyline fill="none" stroke="#d97706" stroke-width="3" points="80,140 160,150 240,165 320,166 400,168 480,167 560,164 625,156 685,149 745,147"/>
+    <!-- Spread Bars -->
+    <rect x="735" y="72" width="18" height="75" fill="rgba(124,58,237,0.25)" rx="2"/>
+    
+    <circle cx="745" cy="72" r="5" fill="#2563eb"/>
+    <text x="745" y="60" font-size="11" font-weight="700" text-anchor="end" fill="#2563eb">USD 694 (RMB 4,935)</text>
+    <circle cx="745" cy="147" r="5" fill="#d97706"/>
+    <text x="745" y="169" font-size="11" font-weight="700" text-anchor="end" fill="#d97706">USD 628 (RMB 4,470)</text>
+    <text x="745" y="114" font-size="11" font-weight="800" text-anchor="end" fill="#7c3aed">Spread USD 66 (RMB 465)</text>
+    
+    <text x="80" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">Jun</text>
+    <text x="160" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">Late Jun</text>
+    <text x="240" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">Mid Jul</text>
+    <text x="320" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">7/31 (W31)</text>
+    <text x="400" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">8/07 (W32)</text>
+    <text x="480" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">8/21 (W34)</text>
+    <text x="560" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">8/28 (W35)</text>
+    <text x="630" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">9/04 (W36)</text>
+    <text x="685" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">10/09</text>
+    <text x="745" y="228" font-size="11" font-weight="700" text-anchor="middle" fill="var(--fg)">10/16 (W42)</text>
+  </svg>
+</figure>
+
+<!-- Chart 2 -->
+<figure class="chart">
+  <figcaption>Chart 2 | North American Containerboard Spread ($840/ST Peak) &amp; IP EMEA Dual-Track Evaluation</figcaption>
+  <svg viewBox="0 0 800 240" width="100%" height="240" style="background:var(--soft);border-radius:6px;">
+    <line x1="60" y1="30" x2="760" y2="30" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="90" x2="760" y2="90" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="150" x2="760" y2="150" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="210" x2="760" y2="210" stroke="var(--fg)"/>
+    
+    <text x="50" y="35" font-size="11" text-anchor="end" fill="var(--muted)">$1000</text>
+    <text x="50" y="95" font-size="11" text-anchor="end" fill="var(--muted)">$700</text>
+    <text x="50" y="155" font-size="11" text-anchor="end" fill="var(--muted)">$350</text>
+    
+    <polygon points="90,110 190,95 290,75 390,60 490,48 570,42 650,36 745,34 745,183 650,183 570,184 490,186 390,186 290,186 190,186 90,188" fill="rgba(37,99,235,0.12)"/>
+    
+    <polyline fill="none" stroke="#2563eb" stroke-width="3.5" points="90,110 190,95 290,75 390,60 490,48 570,42 650,36 745,34"/>
+    <polyline fill="none" stroke="#059669" stroke-width="3" points="90,188 190,186 290,186 390,186 490,186 570,184 650,183 745,183"/>
+    
+    <circle cx="745" cy="34" r="5" fill="#2563eb"/>
+    <text x="745" y="22" font-size="12" font-weight="800" text-anchor="end" fill="#2563eb">Linerboard $975 (IP Evaluates ~$6B EMEA Bids)</text>
+    <circle cx="745" cy="183" r="5" fill="#059669"/>
+    <text x="745" y="202" font-size="11" font-weight="700" text-anchor="end" fill="#059669">US OCC $135/ST</text>
+    <text x="540" y="100" font-size="13" font-weight="800" fill="#7c3aed">Raw Spread $840/ST (PCA Q3 on 10/21)</text>
+    
+    <text x="90" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">2026-Q1</text>
+    <text x="190" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">2026-04</text>
+    <text x="290" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">2026-06</text>
+    <text x="390" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">2026-07</text>
+    <text x="490" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">2026-08</text>
+    <text x="570" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">8/28 (W35)</text>
+    <text x="650" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">10/09 (W41)</text>
+    <text x="745" y="228" font-size="11" font-weight="700" text-anchor="middle" fill="var(--fg)">10/16 (W42)</text>
+  </svg>
+</figure>
+
+<!-- Chart 3 -->
+<figure class="chart">
+  <figcaption>Chart 3 | Taiwan Big 4 Paper Mills Complete September Revenue &amp; Q4 Momentum (2026-10-16)</figcaption>
+  <svg viewBox="0 0 800 240" width="100%" height="240" style="background:var(--soft);border-radius:6px;">
+    <line x1="60" y1="120" x2="760" y2="120" stroke="var(--fg)" stroke-width="1.5"/>
+    <line x1="60" y1="40" x2="760" y2="40" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="200" x2="760" y2="200" stroke="var(--line)" stroke-dasharray="3,3"/>
+    
+    <text x="50" y="45" font-size="11" text-anchor="end" fill="var(--muted)">+40%</text>
+    <text x="50" y="125" font-size="11" text-anchor="end" fill="var(--muted)">0%</text>
+    <text x="50" y="205" font-size="11" text-anchor="end" fill="var(--muted)">-40%</text>
+    
+    <!-- Cheng Loong (Blue) -->
+    <polyline fill="none" stroke="#2563eb" stroke-width="3" points="100,82 180,170 260,100 340,88 420,94 500,124 580,74 650,68 745,84"/>
+    <!-- Long Chen (Green) -->
+    <polyline fill="none" stroke="#059669" stroke-width="3" points="100,41 180,166 260,116 340,106 420,95 500,32 580,80 650,76 745,67"/>
+    <!-- YFY (Purple) -->
+    <polyline fill="none" stroke="#7c3aed" stroke-width="2.5" points="100,96 180,161 260,110 340,103 420,105 500,95 580,107 650,102 745,110"/>
+    <!-- CHP (Orange) -->
+    <polyline fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="4,3" points="100,114 180,191 260,111 340,131 420,114 500,121 580,142 650,135 745,118"/>
+    
+    <circle cx="745" cy="67" r="5" fill="#059669"/>
+    <text x="745" y="54" font-size="11" font-weight="700" text-anchor="end" fill="#059669">Long Chen Sep NT$4.79B (+25.3%) / Cheng Loong NT$4.18B (+17.1%)</text>
+    <circle cx="745" cy="110" r="5" fill="#7c3aed"/>
+    <text x="745" y="102" font-size="11" font-weight="700" text-anchor="end" fill="#7c3aed">YFY Sep NT$6.65B (+3.95%) / CHP NT$1.52B Sees Q4 Hike Lag</text>
+    
+    <text x="100" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">Jan</text>
+    <text x="180" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">Feb</text>
+    <text x="260" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">Mar</text>
+    <text x="340" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">Apr</text>
+    <text x="420" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">May</text>
+    <text x="500" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">Jun</text>
+    <text x="580" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">Jul</text>
+    <text x="650" y="228" font-size="11" text-anchor="middle" fill="var(--muted)">Aug</text>
+    <text x="745" y="228" font-size="11" font-weight="700" text-anchor="middle" fill="var(--fg)">Sep Full / Q4 Run</text>
+  </svg>
+</figure>
+
+<!-- Chart 4 -->
+<figure class="chart">
+  <figcaption>Chart 4 | China Containerboard Mid-Oct +RMB 50 Hike &amp; Packaging Innovation Waves (2026-10-16)</figcaption>
+  <svg viewBox="0 0 800 240" width="100%" height="240" style="background:var(--soft);border-radius:6px;">
+    <line x1="60" y1="40" x2="760" y2="40" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="120" x2="760" y2="120" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="200" x2="760" y2="200" stroke="var(--fg)"/>
+    
+    <polyline fill="none" stroke="#2563eb" stroke-width="3" points="80,180 180,160 280,130 380,130 480,90 570,70 650,52 745,46"/>
+    <polyline fill="none" stroke="#7c3aed" stroke-width="3" points="80,190 180,180 280,160 380,150 480,140 570,130 650,70 745,62"/>
+    
+    <circle cx="745" cy="46" r="5" fill="#2563eb"/>
+    <text x="745" y="34" font-size="11" font-weight="800" text-anchor="end" fill="#2563eb">China Containerboard +RMB 50 Hike / Long Chen &amp; YFY Follow</text>
+    <circle cx="745" cy="62" r="5" fill="#7c3aed"/>
+    <text x="745" y="80" font-size="11" font-weight="800" text-anchor="end" fill="#7c3aed">Bohui Finishing Record / Nippon Paper Non-Alu Fuji-Pak</text>
+    
+    <text x="80" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-Q1</text>
+    <text x="180" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-03</text>
+    <text x="280" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-06</text>
+    <text x="380" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-07</text>
+    <text x="480" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-08</text>
+    <text x="570" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">9/04</text>
+    <text x="650" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">10/09</text>
+    <text x="745" y="220" font-size="11" font-weight="700" text-anchor="middle" fill="var(--fg)">10/16 (W42)</text>
+  </svg>
+</figure>
+
+<!-- Chart 5 -->
+<figure class="chart">
+  <figcaption>Chart 5 | Brent Crude Retracement to $74.45, Maritime SCFI &amp; Taiwan Mill Steam Costs (2026-10-16)</figcaption>
+  <svg viewBox="0 0 800 240" width="100%" height="240" style="background:var(--soft);border-radius:6px;">
+    <line x1="60" y1="40" x2="760" y2="40" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="120" x2="760" y2="120" stroke="var(--line)" stroke-dasharray="3,3"/>
+    <line x1="60" y1="200" x2="760" y2="200" stroke="var(--fg)"/>
+    
+    <polyline fill="none" stroke="#b91c1c" stroke-width="3" points="80,150 170,155 260,165 350,120 440,65 530,60 620,115 745,132"/>
+    <polyline fill="none" stroke="#7c3aed" stroke-width="2.5" points="80,120 170,110 260,95 350,90 440,82 530,78 620,78 745,82"/>
+    <polyline fill="none" stroke="#059669" stroke-width="3" points="80,80 170,95 260,110 350,125 440,135 530,140 620,152 745,155"/>
+    
+    <circle cx="745" cy="132" r="5" fill="#b91c1c"/>
+    <text x="745" y="120" font-size="11" font-weight="800" text-anchor="end" fill="#b91c1c">Brent $74.45 (-6.0% WoW Relief)</text>
+    <circle cx="745" cy="82" r="5" fill="#7c3aed"/>
+    <text x="745" y="70" font-size="11" font-weight="700" text-anchor="end" fill="#7c3aed">SCFI 3,345.8 pts (-1.0% Mild Ease)</text>
+    <circle cx="745" cy="155" r="5" fill="#059669"/>
+    <text x="745" y="173" font-size="11" font-weight="700" text-anchor="end" fill="#059669">Taipower Coal $127.2/t (SRF 48.8% Locks NT$718)</text>
+    
+    <text x="80" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-06</text>
+    <text x="170" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">2026-07</text>
+    <text x="260" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">8/01</text>
+    <text x="350" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">8/14</text>
+    <text x="440" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">8/20</text>
+    <text x="530" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">8/28 (W35)</text>
+    <text x="620" y="220" font-size="11" text-anchor="middle" fill="var(--muted)">10/09 (W41)</text>
+    <text x="745" y="220" font-size="11" font-weight="700" text-anchor="middle" fill="var(--fg)">10/16 (W42)</text>
+  </svg>
+</figure>
+
+<!-- 3.6 Full-Chain Forward Matrix -->
+<h3 id="s3-6">3.6 Full-Chain Forward Outlook &amp; Prediction Matrix (Energy × Pulp × Paper)</h3>
+<div class="scroll" style="overflow: visible;">
+<table style="table-layout: fixed; width: 100%;">
+  <thead>
+    <tr><th>Benchmark</th><th>Category</th><th>Current Base</th><th>1M</th><th>3M</th><th>6M</th><th>Direction</th><th>Drivers &amp; Risk Boundaries</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><b>Brent Crude Oil</b></td><td>Energy Cost</td><td class="num hot">$74.45 / bbl</td><td class="num">$72–78</td><td class="num">$70–80</td><td class="num">$70–78</td><td>Soft Consolidation</td><td>Easing geopolitical premium &amp; IEA demand downgrade; latex, AKD, and bunker surcharges ease</td></tr>
+    <tr><td><b>China Imported NBSK Pulp</b></td><td>Virgin Fiber</td><td class="num hot">USD 694 / ton (RMB 4,935)</td><td class="num">$695–715</td><td class="num">$700–725</td><td class="num">$665–700</td><td>Firm Advance</td><td>Port stocks draw down for 14th week to 2.052M MT; Stora Enso Skutskär softwood closure tightens supply</td></tr>
+    <tr><td><b>China Imported BHKP Pulp</b></td><td>Virgin Fiber</td><td class="num">USD 628 / ton (RMB 4,470)</td><td class="num">$625–645</td><td class="num">$630–650</td><td class="num">$605–630</td><td>Solidified Floor</td><td>Suzano +$50 EU/US &amp; +$20 Asia hikes + UPM Finnish curtailment; Arauco 3.5M MT mill due 2027Q4</td></tr>
+    <tr><td><b>US 11# Recovered Paper (OCC)</b></td><td>Secondary Fiber</td><td class="num">USD 135–137 / short ton</td><td class="num">$135–140</td><td class="num">$138–145</td><td class="num">$125–135</td><td>High &amp; Steady</td><td>US containerboard ~92% operating rates sustain domestic demand; steady Q4 Asian restocking</td></tr>
+    <tr><td><b>US Containerboard (Linerboard)</b></td><td>Packaging Board</td><td class="num hot">$975 / short ton</td><td class="num">$970–990</td><td class="num">$970–1000</td><td class="num">$945–975</td><td>Peak Anchored</td><td>Raw Spread holds $840/ST record; PCA 10/21 Q3 earnings and IP EMEA strategic review support sector</td></tr>
+    <tr><td><b>Food-Grade Ivory Board (FBB)</b></td><td>Food Packaging</td><td class="num hot">USD 638 / ton (RMB 4,480)</td><td class="num">$640–660</td><td class="num">$650–680</td><td class="num">$625–655</td><td>Peak Season Run</td><td>+RMB 200/MT hike settled; Oct 18 EU PFHxA ban triggers rush for PFAS-free food board</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- SECTION 4 -->
+<h2 id="s4">4. Feedstock Market Dynamics: Wood Pulp &amp; Recovered Fiber</h2>
+<p>Global wood pulp markets exhibited firm spot pricing alongside active producer supply management and major long-term project updates. In China, imported NBSK spot prices edged up to USD 694/MT (RMB 4,935), while BHKP firmed to USD 628/MT (RMB 4,470) and SHFE NBSK futures settled at RMB 4,872/MT (USD 685). Mainstream port inventories at Qingdao and Changshu recorded their 14th consecutive weekly net outflow, dropping to 2.052M tonnes. On the supply side, four major developments shaped the landscape: first, <b>Suzano</b> implemented October list price increases of <b>+$50/MT in Europe and the Americas</b> (lifting European eucalyptus reference prices to ~$1,360/MT) and <b>+$20/MT in Asia</b>; second, <b>UPM</b> scheduled temporary October production curtailments at its <b>Pietarsaari pulp mill in Finland</b> to optimize wood sourcing following its Kaukas shutdown; third, <b>Stora Enso</b> is executing the permanent H2 2026 closure of its softwood pulp line (Fiberline 3) at Skutskär, Sweden while investing €19M to expand fluff pulp capacity by 10%; fourth, Chile's <b>Arauco</b> reported that its $4.6B <b>Sucuriú grassroot pulp mill in Brazil (3.5M MT/yr single-line BHKP)</b> has reached <b>81% completion</b> ahead of schedule for a Q4 2027 startup, whereas rival <b>CMPC</b> faces credit-rating pressure over its $4.6B Brazilian pulp project.</p>
+<p>In recovered fiber, US 11# OCC held firm at USD 135–137/short ton FAS West Coast and USD 137–139/short ton FAS East Coast. In China, mid-October containerboard price hike announcements (+RMB 50/MT) lifted domestic Grade A OCC quotes by RMB 10 to RMB 2,035/ton (USD 287/ton). Taiwan domestic OCC mill gate prices remained stable at NT$4,200/ton (USD 130.9/ton) amid steady Q4 intake across all four major mills.</p>
+
+<!-- SECTION 5 -->
+<h2 id="s5">5. Finished Products: Containerboard, Cultural &amp; Specialty Papers</h2>
+<p>In industrial containerboard, cross-strait markets entered a synchronized Q4 restocking phase. Following early-October adjustments, <b>leading Chinese containerboard mills (led by Nine Dragons) launched a second wave of +RMB 50/MT price increases in mid-October</b>, and Taiwanese producers operating in China—<b>Long Chen (1909) and YFY (1907)—followed suit</b>, leveraging supply discipline to stimulate downstream box plant restocking ahead of the Singles' Day e-commerce peak. In Western markets, <b>International Paper (IP)</b> confirmed on October 15 that while advancing the planned London Stock Exchange spin-off of its EMEA Packaging business (combined with DS Smith) ahead of a November 3 Capital Markets Day, it is simultaneously evaluating unsolicited buyout inquiries from private equity firms Lone Star and Atlas Holdings valued near $6 billion, driving IP shares up over 7%. Meanwhile, <b>PCA (NYSE: PKG)</b> will report Q3 earnings on October 21 amid record $840/ST raw material spreads, and Europe's <b>Billerud</b> launched an upgraded lightweight fluting material reducing basis weight by up to 25% to help converters mitigate EU PPWR fees.</p>
+<p>In tissue, cultural, and specialty papers, Taiwan's <b>YFY and Cheng Loong both reaffirmed on October 15 that domestic consumer tissue prices will remain frozen</b>, stabilizing retail inflation. In food-grade ivory board and greaseproof grades, China's Bohui Paper achieved record single-shift flat sheet warehousing output; meanwhile, the 48-hour final countdown to the EU PFHxA ban (effective Oct 18) propelled global demand for PFAS-free greaseproof paper, which IndexBox projects will grow at a 4–6% CAGR through 2035 driven by food packaging and electronics interleaving demand.</p>
+
+<!-- SECTION 6: 食品包裝與紙袋/紙模塑/紙盒專欄 -->
+<h2 id="s6">6. Special Feature: Global &amp; Taiwan Food Packaging Insights (Paper Bags, Cups, Molded Fiber, Folding Cartons)</h2>
+<div class="lede">
+  <b>Executive Summary</b>: With the EU PFHxA ban entering its final 48-hour countdown, a Maine water utility suing paper majors over PFAS discharges, and Nippon Paper unveiling its "Non-Aluminum Fuji-Pak" internal printing technology, global food packaging is executing a historic transition toward PFAS-free, foil-free, and all-fiber solutions. This column analyzes <b>Taiwan's domestic supply chain</b> alongside <b>China, Japan, the US, ANZ, and Southeast Asia</b>.
+</div>
+
+<h3>6.1 🇹🇼 Taiwan Market Focus: Big 4 September Revenues Complete, Tissue Price Freeze &amp; PFAS-Free Exports</h3>
+<p><b>YFY Inc. (1907) September Revenue Hits NT$6.653 Billion</b>: Up 3.95% YoY and 3.10% MoM, bringing 1–9M cumulative revenue to NT$57.415 billion (+4.87% YoY). Containerboard cumulative revenues grew across Taiwan, Vietnam, and China, while YFY Consumer Products pledged no domestic tissue price hikes.</p>
+<p><b>Chung Hwa Pulp (1905) September Revenue at NT$1.520 Billion</b>: Up 0.07% MoM (1–9M cumulative NT$13.640B). CHP noted that September's +$20/MT hardwood pulp hike typically transmits to downstream paper prices after a two-month lag, positioning Q4 to outperform Q3 alongside election printing demand and a European export advantage driven by high EU energy costs. CHP's CircuWell non-plastic food board is seeing strong European orders ahead of the Oct 18 PFHxA ban.</p>
+<p><b>Cheng Loong (1904) &amp; Long Chen (1909) Q4 Momentum</b>: Cheng Loong posted September revenue of NT$4.178B (+17.08% YoY) as its Phase 3 Binh Duong Vietnam line ramps up to full capacity for holiday export packaging; Long Chen posted NT$4.790B (+25.29% YoY) with 9M cumulative pre-tax profit reaching NT$599M (pre-tax EPS NT$0.46) and followed mid-October +RMB 50/MT containerboard hikes in China.</p>
+<p><b>Taiwan Water-Based Barrier Coating Supply Chain</b>: Taiwanese chemical leader Nan Pao Resins showcased advanced water-based barrier coating resins, collaborating with local converters (GPPC, Fortunate, Yung Chun, Kwang Yuan) to build a 100% localized PFAS-free cup and bag converting ecosystem.</p>
+
+<h3>6.2 🇨🇳 China Market Scan: Bohui Warehousing Record, Second Containerboard Hike &amp; Upcycled Rice Cups</h3>
+<p><b>Bohui Paper Record Output &amp; FBB Stability</b>: Bohui Paper (600966.SH) set a new single-shift warehousing record in its flat-sheet finishing division via digitalized workflow optimization, while +RMB 200/MT FBB price hikes hold firm into Q4.</p>
+<p><b>Mid-October Containerboard Hike Follow-Through</b>: To overcome initial downstream hesitancy, major mills enforced targeted downtime and issued a second +RMB 50/MT hike in mid-October, catalyzing Double 11 packaging procurement.</p>
+<p><b>Circular Bio-Cup Innovation</b>: Chinese researchers published a circular packaging system evaluation on upcycling waste cooked rice into thermoformed single-use beverage cups, highlighting novel bio-starch fiber composites.</p>
+
+<h3>6.3 🇯🇵 Japan Market Scan: Nippon Paper's "Non-Aluminum Fuji-Pak" Internal Printing &amp; TOKYO PACK 2026</h3>
+<p><b>Nippon Paper Debuts "Non-Aluminum Fuji-Pak" with Internal Printing</b>: On October 14, Nippon Paper announced the commercial rollout of its eco-friendly liquid carton "Non-Aluminum Fuji-Pak," replacing aluminum foil with a transparent high-barrier film that enables ambient storage and standard milk-carton recycling. Crucially, eliminating opaque silver foil allowed Nippon Paper to pioneer <b>"Internal Printing Technology"</b>—printing designs on the paperboard substrate that show through the transparent barrier inside the carton. Partnering with <b>Ito En</b> on its <i>Potassium Vegetable 200ml</i> drink, the inner carton features "Vege-Mikuji" fortune slips that consumers reveal when cutting open and flattening the carton for recycling.</p>
+<p><b>TOKYO PACK 2026 &amp; Daio Paper Financing</b>: At TOKYO PACK 2026, Oji, Nippon Paper, The Pack, and Shimojima showcased CNF barrier pouches and PFAS-free wraps; meanwhile, Daio Paper priced its new 3-year corporate bond 12 bps tighter than its previous issue.</p>
+
+<h3>6.4 🇺🇸 US Market Scan: Maine Water Utility Sues Huhtamaki &amp; Sappi Over PFAS, Dart Expands &amp; PACK EXPO</h3>
+<p><b>Maine Utility Files Federal PFAS Lawsuit Against Paper Giants</b>: The Greater Augusta Utility District filed a federal lawsuit in the U.S. District Court for the District of Maine against <b>Huhtamaki Inc., Sappi North America, Kimberly-Clark</b>, and American Tissue, alleging decades of PFAS-contaminated discharges along the Kennebec River polluted municipal wells (reaching 23.3 ppt above Maine's 20 ppt limit) and seeking &gt;$2M in treatment and remediation damages.</p>
+<p><b>US Foodservice Capacity &amp; M&amp;A</b>: <b>Dart Container</b> announced a capacity expansion at its Lancaster, Pennsylvania packaging facility; <b>Evergreen by Novolex</b> debuted its SmartPour dry filling machine and EverIQ digital platform at PACK EXPO 2026; and <b>TemperPack</b> acquired 23 bio-foam patents from Cruz Foam.</p>
+
+<h3>6.5 🇳🇿/🇦🇺 ANZ Market Scan: Australian Grocer Coles Hikes Paper Bag Prices by 20%</h3>
+<p><b>Coles Raises Checkout Paper Bag Price by 20%</b>: Australian supermarket giant <b>Coles</b> quietly increased the price of its checkout paper shopping bags from 25 cents to <b>30 cents (+20%)</b> in mid-October—surpassing rivals Woolworths and Aldi (25c)—while chiller bags rose from $4.00 to $4.20. Coles cited elevated material and freight costs, proving that plastic bans have turned extensible kraft bags into an inelastic retail staple capable of direct cost pass-through.</p>
+
+<h3>6.6 🌏 Southeast Asia Market Scan: CLSA Bullish on Thailand's SCGP Q3 &amp; Indonesia's Indah Kiat Debt Repayment</h3>
+<p><b>CLSA Reiterates Outperform on SCGP</b>: On October 12, CLSA highlighted a positive Q3 2026 earnings outlook for Thailand's SCG Packaging (SCGP) with a THB 35 target price, citing ASEAN packaging recovery.</p>
+<p><b>Indah Kiat Debt Refinancing &amp; Repayment</b>: APP Indonesia flagship Indah Kiat (INKP.JK) repaid USD 7.315 million in maturing debt on October 14 and advanced its broader debt refinancing program, bolstering balance sheet flexibility.</p>
+
+<!-- SECTION 7 -->
+<h2 id="s7">7. Corporate Strategy &amp; Global Expansion</h2>
+<p><b>YFY Inc. (TWSE: 1907) &amp; Chung Hwa Pulp (TWSE: 1905)</b>: YFY posted September revenue of NT$6.653B (+3.95% YoY; 9M NT$57.415B, +4.87% YoY). CHP posted NT$1.520B, projecting Q4 gains as September's +$20/MT BHKP hike transmits to paper prices after a 2-month lag and high European energy costs favor CHP's specialty exports.</p>
+<p><b>Long Chen (TWSE: 1909) &amp; Cheng Loong (TWSE: 1904)</b>: Long Chen reported 9M cumulative pre-tax profit of NT$599M (pre-tax EPS NT$0.46) on September revenue of NT$4.790B (+25.29% YoY) and followed mid-October +RMB 50/MT hikes in China; Cheng Loong posted NT$4.178B (+17.08% YoY) with Vietnam Binh Duong Phase 3 running at high utilization.</p>
+<p><b>International Paper (NYSE: IP)</b>: Confirmed dual-track execution for its EMEA Packaging unit (DS Smith): advancing its London listing ahead of a Nov 3 Capital Markets Day while evaluating ~$6B buyout bids from Lone Star and Atlas Holdings.</p>
+<p><b>Arauco &amp; CMPC (Chile)</b>: Arauco's $4.6B, 3.5M MT Sucuriú pulp project in Brazil reached 81% completion ahead of schedule (startup Q4 2027), while CMPC navigates credit-rating scrutiny on its $4.6B Brazilian project.</p>
+<p><b>Nippon Paper (TSE: 3863) &amp; Huhtamaki / Sappi</b>: Nippon Paper commercialized "Non-Aluminum Fuji-Pak" internal printing with Ito En; Huhtamaki and Sappi face federal PFAS water utility litigation in Maine.</p>
+
+<!-- SECTION 8 -->
+<h2 id="s8">8. Strategic Procurement &amp; Decision Matrix</h2>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Category</th><th>Market Signals &amp; Intel</th><th>Core Assessment</th><th>Procurement Recommendation</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><b>Containerboard (Liner / Medium)</b></td><td>China majors hike +RMB 50/MT in mid-Oct, Long Chen/YFY follow; US spread $840</td><td>Singles' Day &amp; holiday restocking active; producers enforce strict supply discipline</td><td><b>Lock In Q4 Restocking Volumes</b>: Secure Nov–Dec containerboard allocations before second-wave hikes fully settle.</td></tr>
+    <tr><td><b>Wood Pulp (NBSK / BHKP)</b></td><td>Suzano +$50 EU/US &amp; +$20 Asia; UPM curtails Pietarsaari; CHP notes 2-month lag</td><td>Producer curtailments &amp; hikes solidify pulp floor; Q4 paper price transmission ahead</td><td><b>Capture Pre-Transmission Window</b>: Hold 45–60 days pulp and fine paper inventory ahead of November price transmission.</td></tr>
+    <tr><td><b>Kraft Bags &amp; Liquid Cartons</b></td><td>Australia Coles hikes paper bags +20%; Nippon Paper launches Non-Alu Fuji-Pak</td><td>Plastic bans empower retail bag pass-through; foil-free cartons unlock milk-stream recycling</td><td><b>Adopt Foil-Free &amp; High-Tensile Specs</b>: Beverage and retail brands should transition to aluminum-free barrier cartons.</td></tr>
+    <tr><td><b>PFAS-Free Food Packaging</b></td><td>EU PFHxA ban effective Oct 18 (48h left); Maine utility sues Huhtamaki &amp; Sappi</td><td>PFAS carries both immediate European border bans and severe US environmental lawsuit risks</td><td><b>Enforce 100% PFAS Zero-Tolerance</b>: Switch completely to verified aqueous barrier boards and mandate supplier indemnities.</td></tr>
+    <tr><td><b>Energy &amp; Chemical Additives</b></td><td>Brent crude drops to $74.45/bbl (-6.0%); Taiwan mill SRF reaches 48.8%</td><td>Two-week 19% oil drop significantly reduces latex, AKD sizing, and bunker costs</td><td><b>Renegotiate Q4 Chemical &amp; Freight Contracts</b>: Demand downward adjustments on petrochemical emulsions and BAF surcharges.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- SECTION 9 -->
+<h2 id="s9">9. Global Regulations &amp; ESG Transformation</h2>
+<ul>
+  <li><b>EU PFHxA Prohibition Enters Final 48 Hours (Effective 2026-10-18)</b>: Regulation (EU) 2024/2462 under REACH Annex XVII banning perfluorohexanoic acid (PFHxA) and related substances in food contact paper packaging takes mandatory effect in 2 days.</li>
+  <li><b>US Maine Federal PFAS Water Contamination Lawsuit (Filed Oct 2026)</b>: Greater Augusta Utility District sued Huhtamaki, Sappi North America, and Kimberly-Clark over Kennebec River PFAS discharges (&gt;20 ppt limit), expanding corporate liability to historical mill effluents and sludge.</li>
+  <li><b>EU PPWR 65 Days in Force</b>: While Northern Norwegian growers petitioned for exemptions on vegetable plastic bans due to Arctic logistics, strict Design for Recycling (DfR) and &lt;50 ppm fluorine border enforcement continue across EU ports.</li>
+  <li><b>China GB 4806.10-2025 Active (44 Days)</b>: National food contact coating enforcement drives non-fluorinated water-based barrier adoption past 57% in domestic foodservice packaging.</li>
+  <li><b>EU EUDR (75 Days Left) &amp; Taiwan Carbon Fee (77 Days Left)</b>: EUDR plot-level GPS due diligence enters its final 75-day window; Taiwan paper mills pushed biomass SRF co-firing to 48.8% (steam cost NT$718/ton) to qualify for preferential carbon fee rates on Jan 1, 2027.</li>
+</ul>
+
+<!-- SECTION 10 -->
+<h2 id="s10">10. Strategic Implications for Taiwan's Paper Industry</h2>
+<ol style="margin-left:20px; line-height:1.7; font-size:14.5px;">
+  <li><b>Full Q4 Earnings Acceleration Across All Four Majors</b>: With September revenues complete (YFY NT$6.65B, Long Chen NT$4.79B, Cheng Loong NT$4.18B, CHP NT$1.52B) and Long Chen's 9M pre-tax EPS reaching NT$0.46, mid-October +RMB 50/MT containerboard hikes in China and full-capacity Vietnam operations position Taiwanese mills for peak Q4 profitability.</li>
+  <li><b>Capitalizing on the 2-Month Pulp-to-Paper Lag &amp; European Energy Arbitrage</b>: As CHP highlighted, September's +$20/MT hardwood pulp hike will transmit to fine and specialty paper prices by November, while Europe's elevated energy costs grant Taiwanese mills a structural pricing advantage in EU export markets.</li>
+  <li><b>Consumer Tissue Stability Backed by Oil &amp; Biomass Cost Relief</b>: YFY and Cheng Loong's domestic tissue price freeze is well cushioned by Brent crude's drop to $74.45/bbl (lowering chemical and packaging film costs) and 48.8% biomass SRF co-firing (locking steam at NT$718/ton).</li>
+  <li><b>Adopting Japan's "Aluminum-Free Carton + Internal Printing" Playbook</b>: Nippon Paper and Ito En's Non-Aluminum Fuji-Pak proves that eco-friendly foil elimination can be paired with inside-carton gamified printing to boost both brand engagement and recycling rates.</li>
+</ol>
+
+<!-- SECTION 11 -->
+<h2 id="s11">11. Value Chain Transmission Dynamics</h2>
+<div class="note">
+  <ul>
+    <li><b>Pulp Transmission</b>: Suzano +$50 EU/US &amp; +$20 Asia hikes + UPM Pietarsaari curtailment ➔ China NBSK spot firms to $694/MT, BHKP to $628/MT ➔ ~2-month transmission lag (November) lifts Asian cultural and specialty paper quotes.</li>
+    <li><b>Containerboard Transmission</b>: China containerboard early-Oct hike + mid-Oct second hike (+RMB 50/MT) ➔ Long Chen &amp; YFY China mills follow suit ➔ Downstream box plants accelerate Double 11 and holiday restocking (1–3 weeks lag).</li>
+    <li><b>Food Packaging Substitution</b>: EU PFHxA ban takes effect Oct 18 (48h left) + Maine PFAS lawsuit against mills ➔ Fluorinated wraps exit globally &amp; Australia's Coles hikes paper bags +20% ➔ Water-based barrier boards (CHP CircuWell), foil-free cartons (Nippon Paper), and extensible kraft bags dominate.</li>
+  </ul>
+</div>
+
+<!-- SECTION 12 -->
+<h2 id="s12">12. Key Milestones Calendar</h2>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Target Date</th><th>Regulatory Milestone / Corporate Event</th><th>Value Chain Significance &amp; Strategic Action</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><b>2026-08-12</b></td><td><b>EU PPWR Officially Enforced</b></td><td>In effect 65 days; mandatory Design for Recycling (DfR) and zero-PFAS border audits enforced</td></tr>
+    <tr><td><b>2026-09-02</b></td><td><b>China GB 4806.10-2025 Coating Standard Active</b></td><td>In effect 44 days; bans unauthorized fluorinated coatings; water-based barrier adoption exceeds 57%</td></tr>
+    <tr><td><b>2026-10-12</b></td><td><b>Taiwan Big 4 Paper Mills Complete Sep Revenue Disclosures</b></td><td>YFY NT$6.65B, Long Chen NT$4.79B (9M EPS NT$0.46), Cheng Loong NT$4.18B, CHP NT$1.52B</td></tr>
+    <tr><td><b>2026-10-14</b></td><td><b>Nippon Paper Debuts "Non-Aluminum Fuji-Pak" Internal Printing</b></td><td>Commercialized with Ito En vegetable juice; foil-free ambient barrier enables milk-stream recycling</td></tr>
+    <tr><td><b>2026-10-15</b></td><td><b>China Containerboard +RMB 50 Hike / IP EMEA Dual-Track Review</b></td><td>Long Chen &amp; YFY follow China hikes; IP evaluates ~$6B PE buyout bids alongside London spin-off</td></tr>
+    <tr><td><b>2026-10-18</b></td><td><b>EU PFHxA Prohibition Takes Mandatory Effect (Final 48 Hours)</b></td><td>Perfluorohexanoic acid banned in EU food contact paper packaging; PFAS-free barrier boards take over</td></tr>
+    <tr><td><b>2026-10-21</b></td><td><b>Packaging Corp of America (PCA) Releases Q3 2026 Earnings</b></td><td>Key barometer for North American containerboard ($840/ST raw spread) and Q4 box shipment guidance</td></tr>
+    <tr><td><b>2026-11-03</b></td><td><b>International Paper Hosts DS Smith Capital Markets Day</b></td><td>Details EMEA Packaging London spin-off roadmap vs. private equity acquisition proposals</td></tr>
+    <tr><td><b>2026-12-30</b></td><td><b>EU EUDR Deforestation Regulation Enforcement (75 Days Left)</b></td><td>Plot-level GPS satellite due diligence statements (DDS) mandatory for pulp, paper, and cartons</td></tr>
+    <tr><td><b>2027-01-01</b></td><td><b>Taiwan Carbon Fee Declarations Take Effect (77 Days Left)</b></td><td>Paper sector among top emitters; biomass SRF co-firing at 48.8% qualifies for preferential rates</td></tr>
+  </tbody>
+</table>
+</div>
+
+<footer>
+  <b>Published</b>: 2026-10-16　·　<b>System Version</b>: Paperluz Engine v15.0 (Q4 Peak Season &amp; Regulatory Countdown Special)　·　<b>Publisher</b>: Luznet / Paperluz Market Intelligence
+</footer>
+
+</div>
+</body>
+</html>

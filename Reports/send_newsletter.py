@@ -124,7 +124,7 @@ def build_newsletter_html_zh(issue_num, publish_date):
       <div style="background:rgba(239, 68, 68, 0.12); border-left:4px solid #ef4444; padding:12px 16px; border-radius:4px; margin-bottom:24px;">
         <div style="color:#ef4444; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;">🚨 本週核心戰略焦點</div>
         <div style="color:#f8fafc; font-size:14px; font-weight:600; line-height:1.5;">
-          台灣工紙雙雄 9 月營收創高獲利翻正 × 歐盟 PFHxA 禁令最後 9 天倒數 × 巴克萊降評 UPM 示警新產能壓頂 × Suzano 10 月提漲 20 美元 × 中國工紙包裝微幅提漲 30–50 元 × 日資 1.1 億美元插旗越南同奈擴廠
+          歐盟 PFHxA 禁令最後 48 小時生效 × 美緬因州控告 Huhtamaki 與 Sappi 污染水源 × 台灣四大紙廠 9 月營收全員出爐與雙 11 二輪提價 × IP 啟動 DS Smith 歐洲業務分拆或 60 億美元出售雙軌評估 × 日本製紙無鋁無塑內側印刷紙盒問世
         </div>
       </div>
 
@@ -143,13 +143,13 @@ def build_newsletter_html_zh(issue_num, publish_date):
         <tbody>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">布蘭特原油 (Brent)</td>
-            <td style="padding:10px 12px; color:#22c55e; font-weight:800;">$79.20 / 桶</td>
-            <td style="padding:10px 12px; color:#94a3b8;">週跌 -13.7% · 中東地緣溢價回吐</td>
+            <td style="padding:10px 12px; color:#22c55e; font-weight:800;">$74.45 / 桶</td>
+            <td style="padding:10px 12px; color:#94a3b8;">週續跌 -6.0% · IEA 下調需求預期與地緣緩解</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">中國進口針葉漿 (NBSK)</td>
-            <td style="padding:10px 12px; color:#60a5fa; font-weight:800;">USD 693 / 噸</td>
-            <td style="padding:10px 12px; color:#94a3b8;">附註 RMB 4,930 · 港口庫存連12週去化</td>
+            <td style="padding:10px 12px; color:#60a5fa; font-weight:800;">USD 694 / 噸</td>
+            <td style="padding:10px 12px; color:#94a3b8;">附註 RMB 4,935 · 北歐 UPM/Stora Enso 減產支撐</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">美國 11# OCC 廢紙</td>
@@ -157,19 +157,19 @@ def build_newsletter_html_zh(issue_num, publish_date):
             <td style="padding:10px 12px; color:#94a3b8;">出口強韌 · 亞洲進口 CIF $178/噸</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
-            <td style="padding:10px 12px; font-weight:700;">正隆 / 榮成 9月營收</td>
-            <td style="padding:10px 12px; color:#a78bfa; font-weight:800;">41.8億 / 47.9億</td>
-            <td style="padding:10px 12px; color:#94a3b8;">YoY +17.1% / +25.3% · 榮成單月獲利翻正 7,921 萬</td>
+            <td style="padding:10px 12px; font-weight:700;">台灣四大紙廠 9月營收</td>
+            <td style="padding:10px 12px; color:#a78bfa; font-weight:800;">永豐餘 66.5億</td>
+            <td style="padding:10px 12px; color:#94a3b8;">正隆 41.8億 / 榮成 47.9億 / 華紙 15.2億全員出爐</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">北美工紙 Raw Spread</td>
             <td style="padding:10px 12px; color:#38bdf8; font-weight:800;">$840 / 短噸</td>
-            <td style="padding:10px 12px; color:#94a3b8;">歷史極值 · 牛卡板現貨 $975 vs 廢紙 $135</td>
+            <td style="padding:10px 12px; color:#94a3b8;">歷史極值 · IP 啟動 DS Smith 歐洲 60 億美元雙軌評估</td>
           </tr>
           <tr style="color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">歐盟 PFHxA 禁用條款</td>
-            <td style="padding:10px 12px; color:#ef4444; font-weight:800;">倒數 9 天</td>
-            <td style="padding:10px 12px; color:#94a3b8;">10/18 正式生效 · 無氟防油塗層全面換裝</td>
+            <td style="padding:10px 12px; color:#ef4444; font-weight:800;">倒數 2 天</td>
+            <td style="padding:10px 12px; color:#94a3b8;">10/18 零時強制生效 · 美緬因州提告紙廠索賠</td>
           </tr>
         </tbody>
       </table>
@@ -180,19 +180,19 @@ def build_newsletter_html_zh(issue_num, publish_date):
       </h3>
       <ul style="color:#cbd5e1; font-size:13.5px; line-height:1.7; padding-left:18px; margin-bottom:28px;">
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">台灣工紙雙雄 9 月營收創高：正隆 41.8 億、榮成 47.9 億獲利強勁轉正</strong>：正隆（1904）9 月營收達 41.78 億元（YoY +17.08%，創今年新高）；榮成（1909）自結 9 月合併營收 47.90 億元（YoY +25.29%），自結單月稅前淨利達 7,921 萬元（每股稅前 0.06 元），連續兩個月大幅轉虧為盈，驗證旺季備貨拉動與產品組合優化。
+          <strong style="color:#ffffff;">台灣四大紙廠 9 月營收全員出爐：永豐餘 66.5 億、榮成累賺 5.99 億、家紙雙雄承諾年底前衛生紙凍漲</strong>：永豐餘（1907）9 月營收 66.53 億元（YoY +3.95%，前 9 月 574.15 億元）；華紙（1905）9 月營收 15.20 億元；正隆（1904）41.78 億元（YoY +17.08%）；榮成（1909）47.90 億元（YoY +25.29%，前 9 月累計稅前淨利 5.99 億元、每股稅前盈餘 0.46 元）。永豐餘與正隆於 10/15 雙雙承諾消費品衛生紙年底前絕不漲價。
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">歐盟 PFHxA 禁令最後 9 天倒數：食品接觸紙無氟水性阻隔塗層迎來全面交付潮</strong>：歐盟 Regulation (EU) 2024/2462 限制 PFHxA 及其鹽類將於 2026 年 10 月 18 日正式生效。歐洲各大超市龍頭（Lidl、Carrefour、Aldi）全面清查進口防油紙袋、漢堡包裝紙與防油紙盒，華紙、捷比達、永豐餘等無氟水性塗層產能迎來急單放量。
+          <strong style="color:#ffffff;">歐盟 PFHxA 禁令最後 48 小時強制生效 × 美緬因州控告 Huhtamaki、Sappi 與金百利克拉克污染水源</strong>：歐盟 Regulation (EU) 2024/2462 將於 2026 年 10 月 18 日零時正式生效；大西洋彼岸美國緬因州奧古斯塔公用事業局（GAUD）於 10/15 向聯邦法院正式起訴 Huhtamaki、Sappi North America 及 Kimberly-Clark，指控紙漿與防油紙模塑廠排放 PFAS 致河水超標，求償逾 200 萬美元過濾工程費。
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">全球紙漿雙向博弈：巴克萊降評 UPM 示警新產能壓頂，Suzano 10 月發函提漲 20 美元</strong>：巴克萊（Barclays）將芬蘭紙業巨頭 UPM 投資評級自「增持」降至「持平」，警示 UPM Paso de los Toros（210 萬噸）與 Suzano Cerrado（255 萬噸）新增產能衝擊；然而 Suzano 於 10 月初宣布亞洲 BHKP 全面提漲 20 美元/噸至 580 美元/噸，供需博弈進入白熱化。
+          <strong style="color:#ffffff;">國際紙業（IP）證實對歐洲包裝業務（原 DS Smith）啟動「倫敦上市或 60 億美元私募出售」雙軌評估</strong>：IP 為聚焦高毛利北美市場（Raw Spread 穩居 $840/短噸歷史極值），證實正推進 EMEA 業務倫敦分拆上市（預計 11/3 舉辦資本市場日），同時接獲 Lone Star 與 Atlas Holdings 高達 60 億美元之收購意向。
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">中國工紙包裝微幅提漲：龍頭瓦楞箱板發函漲價 30–50 元/噸，緩解原料倒掛壓力</strong>：玖龍、博匯、山鷹等紙廠針對瓦楞原紙與牛卡板發布 10 月漲價函，提漲幅度約 30–50 元/噸。雖然終端電商旺季拉動力度分化，但在國廢回收成本堅挺與低利潤壓迫下，紙廠藉由微幅提價捍衛現金流利差。
+          <strong style="color:#ffffff;">雙 11 電商旺季備貨點火：玖龍領漲中國箱板瓦楞紙第二輪 +50 元/噸，榮成與永豐餘全面跟進</strong>：隨雙 11 物流紙箱進入最後備貨衝刺，玖龍紙業領銜啟動 10 月中旬第二輪提價（每噸再漲 50 元），台灣榮成與永豐餘大陸廠區同步跟進，單月累計漲幅達 80–100 元/噸。
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">日資 1.1 億美元插旗越南同奈擴廠；澳紐全面禁用單次 EPS，模塑紙餐具出口迎契機</strong>：日本大日本印刷（DNP）與聯合包裝夥伴簽署備忘錄，注資 1.1 億美元於越南同奈省興建現代化高阻隔環保包裝基地；澳洲與紐西蘭各州自 2026 年秋季起全面執行單次 EPS 餐具禁令，帶動蔗渣紙漿模塑與 FSC 牛皮紙餐盒出口訂單加速增長。
+          <strong style="color:#ffffff;">南美闊葉漿擴產與北歐長纖減產對決 × 日本製紙「無鋁無塑內側印刷紙盒」問世</strong>：Arauco 巴西 46 億美元 Sucuriú 項目進度達 81%，CMPC 則因 46 億美元擴產計畫面臨信評降級壓力；北歐 UPM Pietarsaari 漿廠 10 月停機減產、Stora Enso 關閉長纖線支撐 NBSK 報 USD 694/噸。日本製紙推出可併入牛奶盒回收體系之「Non-Aluminum Fuji-Pak」，澳洲超市巨頭 Coles 則調漲結帳紙袋 20% 至 30 澳分。
         </li>
       </ul>
 
@@ -263,7 +263,7 @@ def build_newsletter_html_en(issue_num, publish_date):
       <div style="background:rgba(239, 68, 68, 0.12); border-left:4px solid #ef4444; padding:12px 16px; border-radius:4px; margin-bottom:24px;">
         <div style="color:#ef4444; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;">🚨 Strategic Executive Alert</div>
         <div style="color:#f8fafc; font-size:14px; font-weight:600; line-height:1.5;">
-          Taiwan Packaging Duopoly Sep Rebound (Cheng Loong NT$4.18B, Long Chen NT$4.79B Turnaround) × EU PFHxA Ban Final 9-Day Sprint × Barclays Downgrades UPM on Oversupply Concerns × Suzano Announces +$20/MT October Hike × China Mills Lift Containerboard by RMB 30–50/MT × Japanese Firm Injects $110M into Vietnam Packaging
+          EU PFHxA Ban Enters Final 48-Hour Countdown × Maine Utility Sues Huhtamaki & Sappi Over PFAS × Taiwan Big 4 Complete Sep Earnings & Double 11 Second Hike Wave × IP Evaluates $6B EMEA (DS Smith) Sale vs Spin-Off × Nippon Paper Debuts Non-Aluminum Fuji-Pak
         </div>
       </div>
 
@@ -282,13 +282,13 @@ def build_newsletter_html_en(issue_num, publish_date):
         <tbody>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">Brent Crude Oil</td>
-            <td style="padding:10px 12px; color:#22c55e; font-weight:800;">$79.20 / bbl</td>
-            <td style="padding:10px 12px; color:#94a3b8;">-13.7% WoW pullback · Mideast risk premium unwinds</td>
+            <td style="padding:10px 12px; color:#22c55e; font-weight:800;">$74.45 / bbl</td>
+            <td style="padding:10px 12px; color:#94a3b8;">-6.0% WoW pullback · IEA trims global oil demand outlook</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">China NBSK Import Spot</td>
-            <td style="padding:10px 12px; color:#60a5fa; font-weight:800;">USD 693 / MT</td>
-            <td style="padding:10px 12px; color:#94a3b8;">RMB 4,930 · Port stocks draw down for 12th consecutive week</td>
+            <td style="padding:10px 12px; color:#60a5fa; font-weight:800;">USD 694 / MT</td>
+            <td style="padding:10px 12px; color:#94a3b8;">RMB 4,935 · Nordic UPM/Stora Enso curtailments tighten supply</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">US OCC #11 Export FAS</td>
@@ -296,19 +296,19 @@ def build_newsletter_html_en(issue_num, publish_date):
             <td style="padding:10px 12px; color:#94a3b8;">Resilient export pricing · Asia CIF steady at $178/MT</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
-            <td style="padding:10px 12px; font-weight:700;">Cheng Loong / Long Chen Sep Rev</td>
-            <td style="padding:10px 12px; color:#a78bfa; font-weight:800;">NT$4.18B / NT$4.79B</td>
-            <td style="padding:10px 12px; color:#94a3b8;">YoY +17.1% / +25.3% · Long Chen turns pre-tax positive NT$79M</td>
+            <td style="padding:10px 12px; font-weight:700;">Taiwan Big 4 Sep Revenue</td>
+            <td style="padding:10px 12px; color:#a78bfa; font-weight:800;">YFY NT$6.65B</td>
+            <td style="padding:10px 12px; color:#94a3b8;">Cheng Loong 4.18B / Long Chen 4.79B / CHP 1.52B complete</td>
           </tr>
           <tr style="border-bottom:1px solid #1a294f; color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">US Containerboard Spread</td>
             <td style="padding:10px 12px; color:#38bdf8; font-weight:800;">$840 / ST</td>
-            <td style="padding:10px 12px; color:#94a3b8;">Historic high · Linerboard $975 vs OCC $135 raw spread</td>
+            <td style="padding:10px 12px; color:#94a3b8;">Historic high · IP evaluates $6B EMEA (DS Smith) exit</td>
           </tr>
           <tr style="color:#f8fafc;">
             <td style="padding:10px 12px; font-weight:700;">EU PFHxA Ban Compliance</td>
-            <td style="padding:10px 12px; color:#ef4444; font-weight:800;">9 Days Left</td>
-            <td style="padding:10px 12px; color:#94a3b8;">Enforceable Oct 18 · PFAS-free barrier coating sprint</td>
+            <td style="padding:10px 12px; color:#ef4444; font-weight:800;">2 Days Left</td>
+            <td style="padding:10px 12px; color:#94a3b8;">Enforceable Oct 18 · Maine water utility files PFAS suit</td>
           </tr>
         </tbody>
       </table>
@@ -319,19 +319,19 @@ def build_newsletter_html_en(issue_num, publish_date):
       </h3>
       <ul style="color:#cbd5e1; font-size:13.5px; line-height:1.7; padding-left:18px; margin-bottom:28px;">
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">Taiwan Packaging Duopoly Sep Rebound: Cheng Loong NT$4.18B, Long Chen NT$4.79B Turnaround</strong>: Cheng Loong (1904) posted September revenue of NT$4.178B (+17.08% YoY, year high). Long Chen (1909) recorded NT$4.790B (+25.29% YoY) with pre-tax profit turning positive to NT$79.21M (EPS NT$0.06 pre-tax), demonstrating strong operating leverage heading into peak Q4 shipping.
+          <strong style="color:#ffffff;">Taiwan Big 4 Complete Sep Revenue: YFY NT$6.65B, Long Chen 9M Profit NT$599M, Tissue Freeze Pledged</strong>: YFY (1907) posted Sep revenue of NT$6.653B (+3.95% YoY; 9M NT$57.415B); CHP (1905) recorded NT$1.520B; Cheng Loong (1904) reached NT$4.178B (+17.08% YoY); Long Chen (1909) delivered NT$4.790B (+25.29% YoY) with 9M cumulative pre-tax profit of NT$599M (pre-tax EPS NT$0.46). On Oct 15, YFY and Cheng Loong pledged a consumer tissue price freeze through year-end.
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">EU PFHxA Ban Final 9-Day Sprint: Fluorine-Free Barrier Coatings in Mass Delivery</strong>: EU Regulation (EU) 2024/2462 restricting PFHxA takes full effect on October 18, 2026. European retail giants (Lidl, Carrefour, Aldi) have completed audits for fast-food packaging and greaseproof paper bags, driving rapid order surges for water-based dispersion barriers from Chung Hwa Pulp, GPCP, and regional converters.
+          <strong style="color:#ffffff;">EU PFHxA Ban Final 48-Hour Countdown × Maine Utility Sues Huhtamaki, Sappi & Kimberly-Clark Over PFAS</strong>: EU Regulation (EU) 2024/2462 restricting PFHxA takes full legal effect at 00:00 on October 18, 2026. Simultaneously in the US, Maine's Greater Augusta Utility District filed a federal lawsuit on Oct 15 against Huhtamaki, Sappi North America, and Kimberly-Clark, alleging Kennebec River PFAS contamination (23.3 ppt vs 20 ppt limit) and seeking >$2M in filtration damages.
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">Global Pulp Tug-of-War: Barclays Downgrades UPM on Supply Overhang; Suzano Posts +$20/MT Hike</strong>: Barclays downgraded Finland's UPM from Overweight to Equal Weight, citing structural overcapacity from UPM Paso de los Toros (2.1M MT) and Suzano Cerrado (2.55M MT). However, Suzano announced a +$20/MT price hike for October BHKP in Asia to $580/MT, intensifying market price negotiations.
+          <strong style="color:#ffffff;">International Paper (IP) Evaluates Dual-Track Spin-Off or $6B Private Equity Sale for EMEA Packaging (DS Smith)</strong>: To sharpen its focus on high-margin North American operations ($840/ST Raw Spread peak), IP confirmed it is advancing a London listing for its EMEA business (Nov 3 Capital Markets Day) while entertaining ~$6B buyout bids from Lone Star and Atlas Holdings.
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">China Packaging Paper Selective Hikes: Majors Lift Quotes by RMB 30–50/MT</strong>: Nine Dragons, Bo Hui, and Shanying announced October increases of RMB 30–50/MT for testliner and fluting. While downstream box demand remains fragmented, elevated domestic OCC collection costs and razor-thin gross margins compelled mills to defend cash flows.
+          <strong style="color:#ffffff;">Double 11 Box Restocking Ignites Second October Containerboard Hike Wave (+RMB 50/MT)</strong>: Led by Nine Dragons' mid-October announcement of a second +RMB 50/MT hike across major Chinese bases, Taiwan's Long Chen and YFY followed suit across their mainland mills, bringing cumulative October increases to RMB 80–100/MT.
         </li>
         <li style="margin-bottom:8px;">
-          <strong style="color:#ffffff;">Japanese Packaging Giant Injects $110M into Vietnam; ANZ Bans Single-Use EPS</strong>: Dai Nippon Printing (DNP) and partners signed an MOU to build a $110M advanced sustainable packaging facility in Dong Nai, Vietnam. Meanwhile, Australia and New Zealand enforce bans on single-use EPS containers, accelerating exports of bagasse molded fiber and FSC kraft food boxes.
+          <strong style="color:#ffffff;">South American Megaprojects vs Nordic Curtailments × Nippon Paper Debuts "Non-Aluminum Fuji-Pak"</strong>: Arauco's $4.6B Sucuriú mill in Brazil reached 81% completion while CMPC faces credit-rating pressure over its $4.6B Natureza project; Nordic curtailments at UPM Pietarsaari and Stora Enso Skutskär supported NBSK at USD 694/MT. In food packaging, Nippon Paper commercialized its recyclable "Non-Aluminum Fuji-Pak" with Ito En, while Australian grocer Coles hiked checkout paper bag prices by 20% to 30c.
         </li>
       </ul>
 
@@ -410,7 +410,7 @@ def build_welcome_email_zh(issue_num, publish_date):
           最新出刊：第 {issue_num} 期 ({publish_date}) 深度專題完整版
         </h3>
         <p style="color:#94a3b8; font-size:13px; line-height:1.6; margin-bottom:16px;">
-          包含最新布蘭特原油 $79.20/桶、中國進口針葉漿 NBSK USD 693/噸、美廢 11# 出口價 $135、正隆與榮成 9 月營收報喜獲利翻正、北美工紙 Raw Spread $840 歷史極值與歐盟 PFHxA 禁用新規最後 9 天倒數。
+          包含最新布蘭特原油 $74.45/桶、中國進口針葉漿 NBSK USD 694/噸、台灣四大紙廠 9 月營收全員出爐與雙 11 二輪提價、IP 歐洲業務 60 億美元雙軌評估，以及歐盟 PFHxA 禁用新規最後 48 小時生效與美緬因州 PFAS 水源訴訟。
         </p>
         <div>
           <a href="{web_url}" style="display:inline-block; background:#2563eb; color:#ffffff; text-decoration:none; padding:10px 18px; border-radius:6px; font-size:13px; font-weight:700; margin-right:8px; margin-bottom:8px;">
@@ -489,7 +489,7 @@ def build_welcome_email_en(issue_num, publish_date):
           Latest Release: Issue {issue_num} ({publish_date}) In-Depth Report
         </h3>
         <p style="color:#94a3b8; font-size:13px; line-height:1.6; margin-bottom:16px;">
-          Covering Brent crude at $79.20/bbl, China NBSK import spot at USD 693/MT, US OCC #11 export indices at $135, Taiwan packaging mills revenue surge & turnaround, North American containerboard spread $840 peak, and the final 9-day sprint to the EU PFHxA ban.
+          Covering Brent crude at $74.45/bbl, China NBSK import spot at USD 694/MT, Taiwan Big 4 complete September revenues & Double 11 second containerboard hike wave, IP's $6B EMEA (DS Smith) dual-track exit, and the final 48-hour EU PFHxA ban countdown alongside Maine's federal PFAS water utility lawsuit.
         </p>
         <div>
           <a href="{web_url}" style="display:inline-block; background:#2563eb; color:#ffffff; text-decoration:none; padding:10px 18px; border-radius:6px; font-size:13px; font-weight:700; margin-right:8px; margin-bottom:8px;">

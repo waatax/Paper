@@ -42,4 +42,6 @@ ticker,company,market,year_month,revenue_thousand_twd,mom_pct,yoy_pct,cum_yoy_pc
 1909,榮成,TWSE,2026-08,4410000,1.99,24.80,15.20,https://tw.stock.yahoo.com/quote/1909.TW/revenue
 
 1904,正隆,TWSE,2026-09,4178037,-3.73,17.08,10.35,https://tw.stock.yahoo.com/quote/1904.TW/revenue
+1905,華紙,TWSE,2026-09,1520000,0.07,-0.97,-3.22,https://tw.stock.yahoo.com/quote/1905.TW/revenue
+1907,永豐餘,TWSE,2026-09,6653000,3.10,3.95,4.87,https://tw.stock.yahoo.com/quote/1907.TW/revenue
 1909,榮成,TWSE,2026-09,4790000,4.22,25.29,16.28,https://tw.stock.yahoo.com/quote/1909.TW/revenue
