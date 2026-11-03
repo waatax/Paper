@@ -437,7 +437,116 @@
     }
     .delta-up { background: var(--red-bg); color: var(--red); }
     .delta-down { background: var(--green-bg); color: var(--green); }
-    .delta-flat { background: var(--gold-bg); color: var(--gold); }
+    .delta-flat, .delta-neutral { background: var(--gold-bg); color: var(--gold); }
+
+    /* ── Decision Support UI/UX Enhancements ── */
+    .calc-presets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+    .preset-btn {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--fg-muted);
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      font-family: inherit;
+    }
+    .preset-btn:hover, .preset-btn.active {
+      border-color: var(--accent);
+      color: var(--accent-hover);
+      background: var(--accent-glow);
+    }
+    .cost-bar-wrap {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+    }
+    .cost-bar-track {
+      display: flex;
+      height: 10px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--border);
+      margin: 6px 0 8px 0;
+    }
+    .cost-seg { height: 100%; transition: width 0.25s ease; }
+    .cost-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--fg-muted);
+      font-weight: 600;
+    }
+    .news-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .news-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--fg-muted);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      font-family: inherit;
+    }
+    .news-pill:hover, .news-pill.active {
+      background: var(--accent-glow);
+      border-color: var(--accent);
+      color: var(--accent-hover);
+    }
+    .news-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .news-score-badge {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--green-bg);
+      color: var(--green);
+      font-variant-numeric: tabular-nums;
+    }
+    .modal-toolbar-btn {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--fg);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: inherit;
+    }
+    .modal-toolbar-btn:hover, .modal-toolbar-btn.active {
+      border-color: var(--accent);
+      color: var(--accent-hover);
+      background: var(--accent-glow);
+    }
 
     /* ── Main Layout ── */
     main.main-content {
@@ -1375,9 +1484,9 @@
     <div class="container alert-banner-inner">
       <span class="alert-tag">🚨 Latest Release</span>
       <span class="alert-text">
-        <b>Oct 16: Issue 012 Released · EU PFHxA Ban Enters Final 48-Hour Countdown × Maine Utility Sues Huhtamaki & Sappi Over PFAS × Taiwan Big 4 Complete Sep Earnings & Double 11 Second Hike Wave</b>: YFY posts NT$6.65B, Long Chen 9M profit hits NT$599M, tissue freeze pledged; IP evaluates $6B EMEA (DS Smith) sale vs spin-off; Nippon Paper debuts Non-Aluminum Fuji-Pak.
+        <b>Oct 30: Issue 014 Released · Suzano Announces +$50/MT Nov Hardwood Pulp Hike (Lifting European List to $1,410/MT) × Sun Paper 9M Net Profit Surges +16.88% YoY (RMB 921M in Q3) × North American Earnings Divergence: Smurfit Westrock Plunges 10% vs. PCA 93% Rate Beat × IP Accelerates EMEA ($6B) Spin-Off</b>: EU PFHxA routine border checks extend CHP CircuWell order book to 2027Q1 while Zhongxin builds a 50k-MT Indonesia molded fiber hub; Taiwan mills reach 49.2% SRF substitution locking steam at NT$718/t.
       </span>
-      <a href="#archives" class="alert-link" onclick="openReader('../Reports/PaperLuz-012_2026-10-16_EN.html', 'Paperluz Weekly Issue 012 (2026-10-16)')">Read Issue 012 In-Depth Report ➔</a>
+      <a href="#archives" class="alert-link" onclick="openReader('../Reports/PaperLuz-014_2026-10-30_EN.html', 'Paperluz Weekly Issue 014 (2026-10-30)')">Read Issue 014 In-Depth Report ➔</a>
     </div>
   </div>
 
@@ -1385,7 +1494,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero-tagline">
-        <span>⚡ 2026-10-16 Issue 012 Released · EU PFHxA 48h Countdown · Maine PFAS Suit · Taiwan Big 4 Sep Complete · Double 11 Second Hike +RMB 50 · IP $6B EMEA Exit Evaluation</span>
+        <span>⚡ 2026-10-30 Issue 014 Released · Suzano Nov +$50/MT Hike ($1,410 List) · Sun Paper 9M Profit +16.88% · US Divergence: SW -10% vs. PCA Beat · IP EMEA $6B Spin-Off · CHP CircuWell Booked to 2027Q1</span>
       </div>
       <h1 class="hero-title">
         Global Pulp & Paper Industry Intelligence Hub<br>
@@ -1395,11 +1504,11 @@
         Deep integration of global virgin wood pulp commodities, geopolitical energy & maritime logistics, North American/European containerboard price hikes, financial performance across Asian mills, and full-chain "Energy × Pulp × Paper" forward forecasting matrices. Published weekly on Fridays at 07:00 AM with Markdown, HTML, and print-ready A4 Zero-Gap PDF deliverables.
       </p>
       <div class="hero-cta-group">
-        <button onclick="openReader('../Reports/PaperLuz-012_2026-10-16_EN.html', 'Paperluz Weekly Issue 012 (2026-10-16)')" class="btn btn-primary">
+        <button onclick="openReader('../Reports/PaperLuz-014_2026-10-30_EN.html', 'Paperluz Weekly Issue 014 (2026-10-30)')" class="btn btn-primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 1 3-3h7z"></path></svg>
-          Read Latest Weekly (Issue 012)
+          Read Latest Weekly (Issue 014)
         </button>
-        <a href="../Reports/PaperLuz-012_2026-10-16_EN.pdf" target="_blank" class="btn btn-secondary">
+        <a href="../Reports/PaperLuz-014_2026-10-30_EN.pdf" target="_blank" class="btn btn-secondary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           Download Latest A4 PDF
         </a>
@@ -1417,43 +1526,43 @@
       <div class="metric-grid">
         <div class="metric-card">
           <div class="metric-title">Brent Crude Oil Futures</div>
-          <div class="metric-value val-green">$74.45</div>
-          <div class="metric-desc">IEA trims oil demand · WoW -6.0%</div>
+          <div class="metric-value val-green">$73.80</div>
+          <div class="metric-desc">Base building · Taiwan SRF hits 49.2% locking steam at NT$718</div>
         </div>
         <div class="metric-card">
           <div class="metric-title">China Imported NBSK Spot Price</div>
-          <div class="metric-value val-blue">USD 694</div>
-          <div class="metric-desc">Note RMB 4,935/MT · Nordic curtailments</div>
+          <div class="metric-value val-blue">USD 700</div>
+          <div class="metric-desc">Note RMB 4,960/MT (+20) · Port stocks down 16 wks to 2.018M MT</div>
         </div>
         <div class="metric-card">
           <div class="metric-title">China Imported BHKP Spot Price</div>
-          <div class="metric-value val-blue">USD 628</div>
-          <div class="metric-desc">Note RMB 4,470/MT · Arauco 81% complete</div>
+          <div class="metric-value val-blue">USD 632</div>
+          <div class="metric-desc">Note RMB 4,490/MT · Suzano announces +$50/MT Nov hike ($1,410)</div>
         </div>
         <div class="metric-card">
           <div class="metric-title">US 11# OCC Export FAS</div>
-          <div class="metric-value val-gold">$135 / ST</div>
-          <div class="metric-desc">Resilient export FAS · Asia CIF steady $178/MT</div>
+          <div class="metric-value val-gold">$136 / ST</div>
+          <div class="metric-desc">Export FAS firm · Peak Double 11 lifts CN OCC to RMB 2,050</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">US Containerboard Raw Spread</div>
-          <div class="metric-value val-purple">$840 Peak</div>
-          <div class="metric-desc">IP evaluates $6B EMEA (DS Smith) exit</div>
+          <div class="metric-title">US Spread & Earnings Divergence</div>
+          <div class="metric-value val-purple">$839 Divergence</div>
+          <div class="metric-desc">PCA (93% rate) cash conversion vs. Smurfit Westrock -10% miss</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">Taiwan Big 4 Sep Revenue</div>
-          <div class="metric-value val-green">YFY NT$6.65B</div>
-          <div class="metric-desc">Long Chen 9M NT$599M · Tissue freeze pledge</div>
+          <div class="metric-title">Sun Paper Q3 & Taiwan Big 4</div>
+          <div class="metric-value val-green">Sun Profit +16.9%</div>
+          <div class="metric-desc">Laos integrated moat shines · CHP backed by Nov pulp hike</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">Nippon Paper Liquid Cartons</div>
-          <div class="metric-value val-green">Alu-Free Launch</div>
-          <div class="metric-desc">Ito En adoption · Milk carton stream recycling</div>
+          <div class="metric-title">EU PFHxA Checks & ASEAN Expansion</div>
+          <div class="metric-value val-red">25 ppb Enforced</div>
+          <div class="metric-desc">CHP CircuWell booked to 2027Q1 · Zhongxin 50k-MT Indonesia plant</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">EU PFHxA Ban Prohibition</div>
-          <div class="metric-value val-red">2 Days Left</div>
-          <div class="metric-desc">Binding Oct 18 · Maine federal PFAS lawsuit</div>
+          <div class="metric-title">IP Accelerates EMEA Divestiture</div>
+          <div class="metric-value val-gold">$6B Valuation</div>
+          <div class="metric-desc">Oct 30 call confirms London spin-off or PE sale ahead of Nov 3 CMD</div>
         </div>
       </div>
 
@@ -1461,53 +1570,63 @@
       <div class="ticker-bar">
         <div class="ticker-label">
           <span class="ticker-dot"></span>
-          Live Market Quotes (10/16 Session)
+          Live Market Quotes (10/30 Session)
         </div>
         <div class="ticker-items">
           <div class="ticker-item">
             <span class="ticker-name">BRENT Crude:</span>
-            <span class="ticker-val">$74.45</span>
-            <span class="ticker-delta delta-down">-6.0%</span>
+            <span class="ticker-val">$73.80</span>
+            <span class="ticker-delta delta-neutral">Base Building</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">NBSK Wood Pulp:</span>
-            <span class="ticker-val">4,935 RMB</span>
-            <span class="ticker-delta delta-up">+5 RMB</span>
+            <span class="ticker-val">4,960 RMB ($700)</span>
+            <span class="ticker-delta delta-up">+20 RMB</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">BHKP Hardwood:</span>
-            <span class="ticker-val">4,470 RMB</span>
-            <span class="ticker-delta delta-up">+5 RMB</span>
+            <span class="ticker-val">4,490 RMB ($632)</span>
+            <span class="ticker-delta delta-up">Suzano Nov +$50</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-name">NBSK-BHKP Spread:</span>
+            <span class="ticker-val">470 RMB ($68)</span>
+            <span class="ticker-delta delta-neutral">Below Safety Line</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">US OCC 11#:</span>
-            <span class="ticker-val">$135/ST</span>
+            <span class="ticker-val">$136/ST</span>
             <span class="ticker-delta delta-neutral">Flat</span>
           </div>
           <div class="ticker-item">
-            <span class="ticker-name">Containerboard Spread:</span>
-            <span class="ticker-val">$840/ST</span>
-            <span class="ticker-delta delta-up">Historic Peak</span>
+            <span class="ticker-name">US Earnings Divergence:</span>
+            <span class="ticker-val">PCA Beat vs. SW -10%</span>
+            <span class="ticker-delta delta-up">Spread $839</span>
           </div>
           <div class="ticker-item">
-            <span class="ticker-name">Double 11 Hike:</span>
-            <span class="ticker-val">2nd +50 RMB</span>
-            <span class="ticker-delta delta-up">ND / Long Chen</span>
+            <span class="ticker-name">Sun Paper Q3:</span>
+            <span class="ticker-val">Net Profit +16.88%</span>
+            <span class="ticker-delta delta-up">RMB 921M</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">SCFI Freight:</span>
-            <span class="ticker-val">3,345.8 pts</span>
-            <span class="ticker-delta delta-down">-1.0%</span>
+            <span class="ticker-val">3,310.2 pts</span>
+            <span class="ticker-delta delta-down">-0.5%</span>
           </div>
           <div class="ticker-item">
-            <span class="ticker-name">YFY / CHP Sep:</span>
-            <span class="ticker-val">NT$6.65B / 1.52B</span>
-            <span class="ticker-delta delta-up">+3.95% / Steady</span>
+            <span class="ticker-name">CHP CircuWell:</span>
+            <span class="ticker-val">Booked to 2027Q1</span>
+            <span class="ticker-delta delta-up">PFHxA Shift</span>
           </div>
           <div class="ticker-item">
             <span class="ticker-name">USD/TWD:</span>
-            <span class="ticker-val">32.080</span>
+            <span class="ticker-val">32.150</span>
             <span class="ticker-delta delta-up">NTD -0.03</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-name">EU EUDR:</span>
+            <span class="ticker-val">61 Days Left</span>
+            <span class="ticker-delta delta-down">Dec 30 Mandate</span>
           </div>
         </div>
       </div>
@@ -1603,13 +1722,16 @@
               <div id="subStatusMsg" class="sub-status-msg"></div>
 
               <div class="sub-privacy-note">
-                🔒 Zero spam pledge · 1-click unsubscribe anytime · Includes Issue 012 A4 PDF gift
+                🔒 Zero spam pledge · 1-click unsubscribe anytime · Includes Issue 014 A4 PDF gift
               </div>
             </form>
 
-            <div style="margin-top: 14px; text-align: center; font-size: 12.5px;">
-              <a href="#archives" onclick="openReader('../Reports/PaperLuz-012_2026-10-16_EN.html', 'Paperluz Weekly Issue 012 (2026-10-16)')" style="color: var(--accent-hover); font-weight: 600;">
-                Preview Latest Issue 012 Sample ➔
+            <div style="margin-top: 14px; text-align: center; font-size: 12.5px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+              <a href="#archives" onclick="openReader('../Reports/PaperLuz-014_2026-10-30_EN.html', 'Paperluz Weekly Issue 014 (2026-10-30)')" style="color: var(--accent-hover); font-weight: 600;">
+                📖 Read Latest Issue 014 Report ➔
+              </a>
+              <a href="#archives" onclick="openReader('../Reports/newsletter_preview_en.html', 'Paperluz Executive Email Dispatch Preview (Issue 014)')" style="color: var(--gold); font-weight: 600;">
+                ✉️ Preview Weekly Email Layout ➔
               </a>
             </div>
           </div>
@@ -1631,7 +1753,7 @@
             <span class="search-icon">🔍</span>
             <input type="text" id="issueSearch" class="search-input" placeholder="Search issues, themes, keywords (e.g. Packaging, Paper Bag, Molded Fiber, Iran, Long Chen, Cheng Loong, PPWR, NBSK, OCC)...">
           </div>
-          <button class="filter-btn active" data-filter="all">All Issues (12)</button>
+          <button class="filter-btn active" data-filter="all">All Issues (14)</button>
           <button class="filter-btn" data-filter="pulp">Wood Pulp</button>
           <button class="filter-btn" data-filter="board">Containerboard</button>
           <button class="filter-btn" data-filter="packaging">Food Packaging</button>
@@ -1643,11 +1765,85 @@
         <!-- Issues Cards -->
         <div class="issue-grid" id="issueGrid">
 
-          <!-- Issue 012 (Latest) -->
+          <!-- Issue 014 (Latest) -->
           <article class="issue-card featured" data-tags="pulp board packaging energy reg mill">
             <div>
               <div class="issue-badge-row">
-                <span class="issue-num-badge">Issue 012 · Latest Edition</span>
+                <span class="issue-num-badge">Issue 014 · Latest Edition</span>
+                <span class="issue-date">2026-10-30 (W44)</span>
+              </div>
+              <h3 class="issue-card-title">Global Pulp Leader Suzano Announces Additional +$50/MT Hardwood Pulp Hike for Europe & Americas Effective Nov 1 (Lifting European List to $1,410/MT) × China Leader Sun Paper 9M Net Profit Surges +16.88% YoY (RMB 921M in Q3, Validating Laos Integrated Moat) × North American Packaging Earnings Divergence: Smurfit Westrock Sinks 10% on Q3 Cost Inflation vs. PCA 93% Operating Rate Cash Conversion × International Paper Q3 Call Confirms Acceleration of EMEA ($6B / London Spin-Off) Divestiture Ahead of Nov 3 Capital Markets Day × EU PFHxA Ban Enters Routine Customs Enforcement; CHP CircuWell Booked to 2027Q1 & Zhongxin Accelerates 50k-MT Indonesia Molded Fiber Expansion × Brent Crude Builds Base at $73.80/bbl; Taiwan Mills Reach 49.2% Biomass SRF Substitution to Lock Steam at NT$718/t</h3>
+              <p class="issue-theme">
+                In-depth analysis of world-leading market pulp producer Suzano announcing on Oct 28–29 a fresh +$50/MT price increase for bleached eucalyptus kraft pulp (BEKP/BHKP) in Europe and the Americas effective Nov 1 (lifting European CIF list to $1,410/MT) as Chinese main port inventories fall for a 16th straight week to 2.018M MT, propelling China imported NBSK spot to $700/MT (RMB 4,960) and BHKP to $632/MT (RMB 4,490); China's integrated leader Sun Paper (002078.SZ) posting Q3 net profit of RMB 921M and 9M net profit up +16.88% YoY, validating its Laos forest-pulp-paper self-sufficiency moat; dramatic North American Q3 earnings divergence as Smurfit Westrock (SW) plunges 10% on fiber/energy cost inflation and post-merger friction in contrast to PCA's 93% operating rate beat; International Paper (IP) confirming on its Oct 30 Q3 call the accelerated dual-track London spin-off or ~$6B PE sale of its EMEA unit (former DS Smith) while Clearwater Paper reviews operational failures at its acquired Augusta SBS mill; routine EU PFHxA 25 ppb customs checks extending Chung Hwa Pulp's (1905) CircuWell order book into Q1 2027 alongside Zhongxin's 50,000-MT Indonesia bagasse molded fiber hub; and Brent crude building a base at $73.80/bbl while Taiwanese mills push SRF substitution to 49.2% (locking steam at NT$718/t).
+              </p>
+              <div class="issue-kpi-pills">
+                <span class="kpi-pill pill-blue">Suzano Nov +$50 ($1,410 List)</span>
+                <span class="kpi-pill pill-green">Sun Paper Profit +16.88% (RMB 921M)</span>
+                <span class="kpi-pill pill-red">Smurfit Westrock Q3 Plunges 10%</span>
+                <span class="kpi-pill pill-purple">IP Accelerates EMEA $6B Spin-Off</span>
+                <span class="kpi-pill pill-gold">CHP CircuWell Booked to 2027Q1</span>
+                <span class="kpi-pill pill-green">Zhongxin 50k-MT Indonesia Plant</span>
+                <span class="kpi-pill pill-blue">NBSK $700 (RMB 4,960)</span>
+                <span class="kpi-pill pill-blue">BHKP $632 (RMB 4,490)</span>
+                <span class="kpi-pill pill-green">Brent Crude $73.80 Base</span>
+                <span class="kpi-pill pill-green">Mill Steam NT$718 (SRF 49.2%)</span>
+              </div>
+            </div>
+            <div class="issue-card-actions">
+              <button class="card-btn" onclick="openReader('../Reports/PaperLuz-014_2026-10-30_EN.html', 'Paperluz Weekly Issue 014 (2026-10-30)')">
+                📖 Online Reader
+              </button>
+              <a href="../Reports/PaperLuz-014_2026-10-30_EN.pdf" target="_blank" class="card-btn pdf-btn">
+                📄 A4 PDF
+              </a>
+              <a href="../Reports/PaperLuz-014_2026-10-30_EN.md" target="_blank" class="card-btn">
+                📝 MD
+              </a>
+            </div>
+          </article>
+
+          <!-- Issue 013 -->
+          <article class="issue-card" data-tags="pulp board packaging energy reg mill">
+            <div>
+              <div class="issue-badge-row">
+                <span class="issue-num-badge">Issue 013</span>
+                <span class="issue-date">2026-10-23 (W43)</span>
+              </div>
+              <h3 class="issue-card-title">North American Containerboard Leader PCA Q3 Earnings Beat (Validates $840 Historic Peak Spread Converted to Cash Flow) × EU PFHxA Ban Fully Enforced Oct 18 (Zero Day Passed, PFAS-Free Boards Take Over) × Chung Hwa Pulp Surges on Stronger Realized Prices × China Containerboard Completes Two Price Hike Waves (+RMB 100/MT) as Double 11 Restocking Sparks Domestic OCC Rebound × Historic Puli Mill Supplies Manila Abaca Paper Yarn to Balenciaga Luxury Denims × Brent Crude Bottoms at $74, Taiwan Mill Biomass Rate Hits 49% Locking Steam at NT$718</h3>
+              <p class="issue-theme">
+                In-depth research on North American packaging giant Packaging Corporation of America (PCA, NYSE: PKG) releasing Q3 2026 earnings on Oct 22 with net sales of $2.18B beating consensus, corrugated shipments up 5.2% YoY, and containerboard mill operating rate at 93%, validating full absorption of the $140/ST price hike and realization of the $840/ST Raw Material Spread into massive operating cash flow; EU Regulation (EU) 2024/2462 restricting PFHxA taking full effect on Oct 18 with European customs aggressively screening 25 ppb total fluorine limits, driving full-capacity shipments of CHP's CircuWell water-based barrier boards; Liberty Times reporting CHP (1905.TW) surging on pulp/paper price hikes and Q4 Double 11 restocking momentum; Nine Dragons and Shanying completing two containerboard price hikes totaling +RMB 100/MT, lifting domestic Grade A OCC to RMB 2,045/MT; historic Puli mill spinning ultra-thin abaca paper into high-strength yarn adopted in Balenciaga luxury apparel; Brent crude stabilizing at $74.30/bbl easing sizing/coating and freight costs, while Taiwanese mills push SRF biomass substitution to 49.0% locking steam cost at a record-low NT$718/MT.
+              </p>
+              <div class="issue-kpi-pills">
+                <span class="kpi-pill pill-green">PCA Q3 Earnings Beat</span>
+                <span class="kpi-pill pill-purple">$840 Spread Monetized</span>
+                <span class="kpi-pill pill-red">PFHxA Enforced Oct 18</span>
+                <span class="kpi-pill pill-gold">CHP Surges on Price Hikes</span>
+                <span class="kpi-pill pill-gold">China Board Waves +RMB 100</span>
+                <span class="kpi-pill pill-purple">Abaca Yarn in Balenciaga</span>
+                <span class="kpi-pill pill-blue">NBSK $695 (RMB 4,940)</span>
+                <span class="kpi-pill pill-blue">BHKP $629 (RMB 4,475)</span>
+                <span class="kpi-pill pill-green">Brent Crude $74.30 Bottom</span>
+                <span class="kpi-pill pill-green">Mill Steam NT$718 ($22.3)</span>
+              </div>
+            </div>
+            <div class="issue-card-actions">
+              <button class="card-btn" onclick="openReader('../Reports/PaperLuz-013_2026-10-23_EN.html', 'Paperluz Weekly Issue 013 (2026-10-23)')">
+                📖 Online Reader
+              </button>
+              <a href="../Reports/PaperLuz-013_2026-10-23_EN.pdf" target="_blank" class="card-btn pdf-btn">
+                📄 A4 PDF
+              </a>
+              <a href="../Reports/PaperLuz-013_2026-10-23_EN.md" target="_blank" class="card-btn">
+                📝 MD
+              </a>
+            </div>
+          </article>
+
+          <!-- Issue 012 -->
+          <article class="issue-card" data-tags="pulp board packaging energy reg mill">
+            <div>
+              <div class="issue-badge-row">
+                <span class="issue-num-badge">Issue 012</span>
                 <span class="issue-date">2026-10-16 (W42)</span>
               </div>
               <h3 class="issue-card-title">EU PFHxA Ban Enters Final 48-Hour Countdown × Maine Utility Sues Huhtamaki & Sappi Over PFAS × Taiwan Big 4 Complete Sep Earnings & Double 11 Second Hike Wave × IP Evaluates $6B EMEA (DS Smith) Sale vs Spin-Off × Nippon Paper Debuts Non-Aluminum Fuji-Pak</h3>
@@ -2071,34 +2267,71 @@
       <section id="news" style="scroll-margin-top: 80px; margin-bottom: 60px;">
         <div class="section-header" style="margin-bottom: 16px;">
           <div>
-            <h2 class="section-title">Instant News Feed & Intelligence Radar</h2>
-            <p class="section-subtitle">Real-time tracking of papermaking, geopolitical energy, environmental regulations, and logistics</p>
+            <h2 class="section-title">Instant News Feed &amp; Intelligence Radar</h2>
+            <p class="section-subtitle">Curated by Paperluz v6.0 4-Tier Quality Gate · Deduplicated &amp; Tier-1 Authority Verified</p>
+          </div>
+          <div class="news-filter-bar" id="newsFilterBar">
+            <button class="news-pill active" onclick="filterNewsCards('all', this)">All Signals (6)</button>
+            <button class="news-pill" onclick="filterNewsCards('earnings', this)">📊 Earnings &amp; Spreads</button>
+            <button class="news-pill" onclick="filterNewsCards('pulp', this)">🌲 Pulp &amp; Board</button>
+            <button class="news-pill" onclick="filterNewsCards('reg', this)">⚖️ Regulations &amp; PFAS</button>
+            <button class="news-pill" onclick="filterNewsCards('packaging', this)">🍱 Packaging &amp; ASEAN</button>
           </div>
         </div>
-        <div class="news-grid">
-          <div class="news-card">
-            <span class="news-tag tag-energy">Geopolitics / Energy</span>
-            <h3 class="news-title">Aug 20: US Enacts Total Economic Blockade on Iran "Operation Economic Fury" Oil Tops $93</h3>
-            <p class="news-excerpt">The US Treasury launched unprecedented secondary sanctions alongside Persian Gulf tanker blockades, pushing Brent crude to $93.80/bbl. Papermaking specialty chemicals (SBR latex, PE extrusion) and maritime fuel surcharges (BSS) face immediate cost inflation, while mills with self-sufficient biomass power retain strong moat protection.</p>
-            <span class="news-date">2026-08-21</span>
+        <div class="news-grid" id="newsGrid">
+          <div class="news-card" data-news-cat="earnings">
+            <span class="news-tag tag-report">US Earnings / Spread</span>
+            <h3 class="news-title">PCA (NYSE: PKG) Posts Q3 Earnings Beat ($2.18B Sales), Validating $840/ST Peak Spread Cash Conversion</h3>
+            <p class="news-excerpt">Packaging Corporation of America reported Q3 net sales of $2.18B with corrugated shipments up +5.2% YoY and 93% mill operating rates, confirming full realization of its $140/ST price hike and converting record $840/ST raw spreads into massive cash flow.</p>
+            <div class="news-meta-row">
+              <span class="news-date">📅 2026-10-22 · SEC / Fastmarkets</span>
+              <span class="news-score-badge">★ 9.6 / 10</span>
+            </div>
           </div>
-          <div class="news-card">
-            <span class="news-tag tag-market">Corporate</span>
-            <h3 class="news-title">Long Chen Announces Spin-Off Holding Restructuring; 7-Month Pre-tax Profit Reaches $13.3M USD</h3>
-            <p class="news-excerpt">Long Chen's board approved spinning off its Taiwan box and containerboard operations into "Long Chen Low-Carbon Packaging", restructuring the parent into an Investment Holding Company. Benefiting from 15% cumulative price hikes across Chinese containerboard, H2 operational elasticity significantly outperforms H1.</p>
-            <span class="news-date">2026-08-18</span>
+          <div class="news-card" data-news-cat="reg">
+            <span class="news-tag tag-reg">EU Regulation / PFAS-Free</span>
+            <h3 class="news-title">EU PFHxA Ban Enters Mandatory Customs Enforcement on Oct 18; CHP CircuWell Exports Surge</h3>
+            <p class="news-excerpt">Regulation (EU) 2024/2462 crossed its zero-day threshold on Oct 18 with EU border authorities screening food-contact paper against the strict 25 ppb total fluorine limit. Chung Hwa Pulp (1905.TW) reports full-capacity European orders for CircuWell aqueous barrier board.</p>
+            <div class="news-meta-row">
+              <span class="news-date">📅 2026-10-24 · ECHA / Liberty Times</span>
+              <span class="news-score-badge">★ 9.5 / 10</span>
+            </div>
           </div>
-          <div class="news-card">
-            <span class="news-tag tag-market">Market</span>
-            <h3 class="news-title">North American Boxboard Sept 1 Price Hike in Final 11-Day Countdown; AICC Protests 63% Oligopoly</h3>
-            <p class="news-excerpt">With PCA (+$140/t), IP (+$80/t), and Smurfit Westrock (+$100/t) taking effect Sept 1, mill Raw Material Spreads surge to a 3-year high of $720/t. Geopolitical energy price surges have further reinforced mill price hike determination.</p>
-            <span class="news-date">2026-08-19</span>
+          <div class="news-card" data-news-cat="pulp">
+            <span class="news-tag tag-market">Global Pulp / Pricing</span>
+            <h3 class="news-title">Suzano Announces +$50/MT Q4 BHKP Price Hike Across Asia &amp; West; Sun Paper Q3 Net Profit +16.9%</h3>
+            <p class="news-excerpt">Global market pulp leader Suzano announced fresh +$50/MT hardwood pulp hikes for Q4 as port inventories fell for a 15th straight week to 2.04M MT. Meanwhile, Shandong Sun Paper (002078.SZ) posted Q3 net profit of RMB 921M (+16.91% YoY).</p>
+            <div class="news-meta-row">
+              <span class="news-date">📅 2026-10-30 · Fastmarkets / CNINFO</span>
+              <span class="news-score-badge">★ 9.2 / 10</span>
+            </div>
           </div>
-          <div class="news-card">
-            <span class="news-tag tag-reg">Regulation</span>
-            <h3 class="news-title">EU PPWR Mandatory for 9 Days; PFAS Phase-Out & DfR Audits Trigger Substitution Surge</h3>
-            <p class="news-excerpt">European export packaging has entered mandatory Digital Product Passport (DPP) and Design for Recycling (DfR) compliance. Strict enforcement of the 25 ppb PFAS limit for food-contact packaging is accelerating explosive adoption of plastic-free aqueous barrier board.</p>
-            <span class="news-date">2026-08-21</span>
+          <div class="news-card" data-news-cat="earnings">
+            <span class="news-tag tag-market">Cross-Strait / Containerboard</span>
+            <h3 class="news-title">China Containerboard Two-Wave Hikes (+RMB 100/MT Total) Enacted; Grade-A OCC Rebounds to RMB 2,045</h3>
+            <p class="news-excerpt">Nine Dragons and Shanying completed their second +RMB 50/MT October price increase alongside Taiwanese peers Long Chen (9M pre-tax EPS NT$0.46) and YFY, spurring active box plant restocking ahead of Double 11 e-commerce peak.</p>
+            <div class="news-meta-row">
+              <span class="news-date">📅 2026-10-23 · RISI / TWSE MOPS</span>
+              <span class="news-score-badge">★ 8.9 / 10</span>
+            </div>
+          </div>
+          <div class="news-card" data-news-cat="packaging">
+            <span class="news-tag tag-reg">Molded Fiber / ASEAN</span>
+            <h3 class="news-title">Zhongxin Expands 50,000-MT Bagasse Molded Fiber Plant in Indonesia as DNP Invests $110M in Vietnam</h3>
+            <p class="news-excerpt">Targeting global plastic-ban substitution and tariff resilience, Zhongxin accelerated its 50k-MT Indonesian molded fiber tableware base while Dai Nippon Printing committed $110M to expand aseptic carton manufacturing in Dong Nai, Vietnam.</p>
+            <div class="news-meta-row">
+              <span class="news-date">📅 2026-10-28 · Nikkei / Exchange Filing</span>
+              <span class="news-score-badge">★ 8.7 / 10</span>
+            </div>
+          </div>
+          <div class="news-card" data-news-cat="packaging">
+            <span class="news-tag tag-energy">Specialty Paper / Energy</span>
+            <h3 class="news-title">Taiwan Puli Heritage Mill Supplies Abaca Paper Yarn to Balenciaga; Mills Lock Steam at $22.3/MT</h3>
+            <p class="news-excerpt">A historic paper mill in Puli engineered high-tensile Manila hemp "Paper Yarn" adopted by Balenciaga for luxury denim. Simultaneously, Brent crude stabilized at $74.30/bbl while Taiwan mills raised SRF biomass substitution to 49.0%.</p>
+            <div class="news-meta-row">
+              <span class="news-date">📅 2026-10-23 · Commercial Times</span>
+              <span class="news-score-badge">★ 8.6 / 10</span>
+            </div>
           </div>
         </div>
       </section>
@@ -2119,13 +2352,13 @@
           </div>
           <div class="news-card">
             <span class="news-tag tag-reg">Compliance</span>
-            <h3 class="news-title">PFAS / PFHxA Total Elimination (51-Day Countdown)</h3>
-            <p class="news-excerpt">With EU PFHxA restrictions effective Oct 11 and China GB 4806.10 food coating standards taking effect Sept 2, fluorine-free barrier formulations have become the top R&D priority, accelerating the obsolescence of fluorinated greaseproof papers.</p>
+            <h3 class="news-title">EU PFHxA Ban Legally Enforced & Maine PFAS Lawsuit (Oct 18 Zero Day Passed)</h3>
+            <p class="news-excerpt">Regulation (EU) 2024/2462 is now legally binding as of Oct 18. EU customs border checks enforce 25 ppb total fluorine limits on food contact paper. Meanwhile, Maine's GAUD lawsuit against Huhtamaki and Sappi accelerates global paper mills' transition to water-based PFAS-free dispersion barriers like CHP's CircuWell.</p>
           </div>
           <div class="news-card">
             <span class="news-tag tag-energy">Petrochemical</span>
-            <h3 class="news-title">Oil Surges to $93.80: SBR Latex & Polyethylene Cost Transmission</h3>
-            <p class="news-excerpt">The Aug 20 US Iran blockade pushed upstream crude higher, raising butadiene, styrene, and ethylene monomer costs. Coated white board latex and PE extrusion laminates face a 3-5% cost increase, prompting mills to lift finished paper quotes.</p>
+            <h3 class="news-title">Brent Crude Consolidates at $74: Papermaking AKD, SBR Latex & Bunker Relief</h3>
+            <p class="news-excerpt">Brent crude fell over 20% from September peaks to stabilize near $74.30/bbl due to easing geopolitical risk and trimmed demand projections. AKD internal sizing, SBR coating latex, and PE extrusion resin prices retreated 4–7%, easing cost pressures for corrugated and paperboard converters alongside lower marine bunker surcharges.</p>
           </div>
         </div>
       </section>
@@ -2153,51 +2386,51 @@
             <tbody>
               <tr>
                 <td><b>Cheng Loong (1904)</b></td>
-                <td>2026-08</td>
-                <td>43.40 (NT$4.34B)</td>
-                <td class="val-pos">+8.20%</td>
-                <td class="val-pos">+11.50% (+23.0%)</td>
-                <td>August consolidated revenue reached NT$4.34B (20-month peak); Vietnam Binh Duong 1M MT capacity running at full speed for electronics and Mid-Autumn export surges</td>
+                <td>2026-09 (9M)</td>
+                <td>41.78 (335.70)</td>
+                <td class="val-neg">-3.73%</td>
+                <td class="val-pos">+17.08%</td>
+                <td>September consolidated revenue NT$4.178B remained high; Vietnam Binh Duong mill operated at 95% full capacity for Western Christmas export packaging.</td>
               </tr>
               <tr>
                 <td><b>Long Chen (1909)</b></td>
-                <td>2026-08 (8M)</td>
-                <td>44.10 (329.45)</td>
-                <td class="val-pos">+10.80%</td>
-                <td class="val-pos">+24.80% (+15.3%)</td>
-                <td>August revenue jumped nearly 25% YoY; 8-month cumulative pre-tax net profit reached NT$495M; pre-holiday mill downtime protects spreads</td>
+                <td>2026-09 (9M)</td>
+                <td>47.90 (377.35)</td>
+                <td class="val-pos">+4.22%</td>
+                <td class="val-pos">+25.29%</td>
+                <td>September revenue surged 25.3% YoY; 9-month cumulative pre-tax profit reached NT$599M (EPS NT$0.46 pre-tax turnaround); China containerboard hikes (+100 RMB) fully implemented.</td>
               </tr>
               <tr>
                 <td><b>YFY (1907)</b></td>
-                <td>2026-08</td>
-                <td>66.80 (445.40)</td>
-                <td class="val-pos">+7.50%</td>
-                <td class="val-pos">+7.50%</td>
-                <td>August revenue up 7.50% MoM; packaging board volumes brisk, ShenFoong specialty latex rebounds, all-paper packaging inquiries surge under PPWR</td>
+                <td>2026-09 (9M)</td>
+                <td>66.53 (574.15)</td>
+                <td class="val-pos">+3.10%</td>
+                <td class="val-pos">+3.95%</td>
+                <td>September revenue reached NT$6.653B, pushing 9M total to NT$574.15B (+4.87% YoY); Taiwanese, Vietnamese, and Chinese board markets grew in tandem; consumer tissue freeze offsets energy declines.</td>
               </tr>
               <tr>
                 <td><b>Chung Hwa Pulp (1905)</b></td>
-                <td>2026-08</td>
-                <td>15.19</td>
-                <td class="val-pos">+1.65%</td>
-                <td class="val-pos">+1.65%</td>
-                <td>Returns to positive revenue growth; supply discipline takes hold; non-plastic foodboard benefits from China GB 4806.10 and EU PPWR demand</td>
+                <td>2026-09 (9M)</td>
+                <td>15.20 (136.40)</td>
+                <td class="val-pos">+0.07%</td>
+                <td class="val-neg">-0.97%</td>
+                <td>September hardwood pulp price hikes successfully transmitted into October paper prices; CircuWell PFAS-free barrier board surged in European exports; stock price rallied strongly Oct 24.</td>
               </tr>
               <tr>
-                <td><b>Indah Kiat (APP)</b></td>
-                <td>2026-H1</td>
-                <td>Net Profit $295M</td>
-                <td class="val-pos">+127.3% (YoY)</td>
-                <td class="val-pos">Profit Doubled</td>
-                <td>Low-cost integrated forestry-pulp-paper fortress delivers earnings explosion; packaging and cultural paper prices expand; issues IDR 3.5T green bond</td>
+                <td><b>PCA (PKG)</b></td>
+                <td>2026-Q3</td>
+                <td>Net Sales $2.18B</td>
+                <td class="val-pos">Earnings Beat</td>
+                <td class="val-pos">Shipments +5.2%</td>
+                <td>Corrugated packaging shipments rose 5.2% YoY, paper mill operating rate held at 93%; validates full realization of $140/ST price hike and conversion of $840 Raw Spread into cash flow.</td>
               </tr>
               <tr>
-                <td><b>CMPC / Suzano</b></td>
-                <td>2026-09</td>
-                <td>US$ 300M Port Terminal</td>
-                <td class="val-pos">Deep-Water Strategy</td>
-                <td class="val-pos">Direct Long-Haul</td>
-                <td>CMPC authorized to build dedicated terminal at Port of Itapoa (>3M MT throughput); Suzano buys Imetame stake, solidifying ocean freight control</td>
+                <td><b>Suzano / Arauco</b></td>
+                <td>2026-10</td>
+                <td>Global Hikes Realized</td>
+                <td class="val-pos">US/EU +$50</td>
+                <td class="val-pos">Sucuriú 82%</td>
+                <td>Suzano fully implemented its $50/MT October hardwood pulp price increase in Europe/US (European list price $1,360/MT); Arauco's 3.5M MT Brazilian Sucuriú project reached 82% completion.</td>
               </tr>
             </tbody>
           </table>
@@ -2208,201 +2441,283 @@
       <section id="radar" class="radar-section" style="scroll-margin-top: 80px;">
         <div class="section-header" style="margin-bottom: 16px;">
           <div>
-            <h2 class="section-title">Market Data & Spread Trends Radar</h2>
-            <p class="section-subtitle">Click tabs to switch across 5 core analytical dimensions · Tracking price transmission lags and mill gross margin boundaries</p>
+            <h2 class="section-title">Continuous Industry Intelligence Radar (6 Core Dimensions)</h2>
+            <p class="section-subtitle">Multi-week time-series tracking across Pulp, Paper, Energy, Freight, FX, and Mill Revenue · Tracking price transmission lags and mill gross margin boundaries</p>
           </div>
         </div>
 
         <div class="radar-tabs">
-          <button class="radar-tab active" onclick="switchRadarTab(0)">1. NBSK - BHKP Virgin Pulp Spread</button>
-          <button class="radar-tab" onclick="switchRadarTab(1)">2. NA Containerboard vs. OCC Spread</button>
-          <button class="radar-tab" onclick="switchRadarTab(2)">3. Taiwan Top 4 Mills YoY Revenue</button>
-          <button class="radar-tab" onclick="switchRadarTab(3)">4. Europe vs. North America Price Hikes</button>
-          <button class="radar-tab" onclick="switchRadarTab(4)">5. Geopolitical Oil & Freight Indices</button>
+          <button class="radar-tab active" onclick="switchRadarTab(0)">1. Virgin Wood Pulp Spot Prices & Spread (Pulp & Spread)</button>
+          <button class="radar-tab" onclick="switchRadarTab(1)">2. Global Containerboard & Raw Material Spread ($840 Peak)</button>
+          <button class="radar-tab" onclick="switchRadarTab(2)">3. Geopolitical Energy & Mill Steam Costs (Energy & Steam)</button>
+          <button class="radar-tab" onclick="switchRadarTab(3)">4. Global Ocean Freight Indices (SCFI & BDI Freight)</button>
+          <button class="radar-tab" onclick="switchRadarTab(4)">5. Core Foreign Exchange Rates (USD/TWD, USD/CNY, EUR/USD)</button>
+          <button class="radar-tab" onclick="switchRadarTab(5)">6. Taiwan Top 4 Mills Monthly Revenue YoY% (Cheng Loong, Long Chen, YFY, CHP)</button>
         </div>
 
-        <!-- Chart Tab 1 -->
+        <!-- Radar Tab 0: Pulp Prices & Spread -->
         <div class="chart-container active" id="chartTab0">
           <div class="chart-box">
-            <svg viewBox="0 0 700 280" role="img">
-              <line x1="70" y1="230" x2="650" y2="230" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="170" x2="650" y2="170" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="110" x2="650" y2="110" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="50" x2="650" y2="50" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <text x="60" y="234" text-anchor="end" fill="var(--fg-muted)" font-size="11">$550/t</text>
-              <text x="60" y="174" text-anchor="end" fill="var(--fg-muted)" font-size="11">$625/t</text>
-              <text x="60" y="114" text-anchor="end" fill="var(--fg-muted)" font-size="11">$700/t</text>
-              <text x="60" y="54" text-anchor="end" fill="var(--fg-muted)" font-size="11">$775/t</text>
+            <svg viewBox="0 0 760 280" role="img">
+              <line x1="70" y1="220" x2="710" y2="220" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="165" x2="710" y2="165" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="110" x2="710" y2="110" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="55" x2="710" y2="55" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <text x="60" y="224" text-anchor="end" fill="var(--fg-muted)" font-size="11">4,200</text>
+              <text x="60" y="169" text-anchor="end" fill="var(--fg-muted)" font-size="11">4,600</text>
+              <text x="60" y="114" text-anchor="end" fill="var(--fg-muted)" font-size="11">5,000</text>
+              <text x="60" y="59" text-anchor="end" fill="var(--fg-muted)" font-size="11">5,400</text>
               
-              <!-- Bars for Q1, Q2, Aug -->
-              <rect x="130" y="72.5" width="55" height="157.5" fill="#3b82f6" rx="4"/>
-              <rect x="195" y="160" width="55" height="70" fill="#f59e0b" rx="4"/>
-              <text x="157.5" y="64" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">$743</text>
-              <text x="222.5" y="152" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">$641</text>
+              <!-- Shaded spread area -->
+              <polygon points="90,70 170,115 250,130 330,135 410,128 490,123 570,120 640,119 700,118 700,182 640,183 570,186 490,191 410,199 330,206 250,192 170,175 90,170" fill="rgba(124, 58, 237, 0.16)"/>
               
-              <rect x="310" y="113.5" width="55" height="116.5" fill="#3b82f6" rx="4"/>
-              <rect x="375" y="167" width="55" height="63" fill="#f59e0b" rx="4"/>
-              <text x="337.5" y="105" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">$695</text>
-              <text x="402.5" y="159" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">$633</text>
+              <!-- NBSK Line (Blue) -->
+              <polyline points="90,70 170,115 250,130 330,135 410,128 490,123 570,120 640,119 700,118" fill="none" stroke="#2563eb" stroke-width="3.2"/>
+              <!-- BHKP Line (Amber) -->
+              <polyline points="90,170 170,175 250,192 330,206 410,199 490,191 570,186 640,183 700,182" fill="none" stroke="#f59e0b" stroke-width="3.2"/>
               
-              <rect x="490" y="116" width="55" height="114" fill="#3b82f6" rx="4"/>
-              <rect x="555" y="188" width="55" height="42" fill="#f59e0b" rx="4"/>
-              <text x="517.5" y="108" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">$692</text>
-              <text x="582.5" y="180" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">$607</text>
+              <!-- Data Points -->
+              <circle cx="700" cy="118" r="5" fill="#2563eb"/>
+              <text x="700" y="106" text-anchor="end" fill="#2563eb" font-size="11.5" font-weight="800">NBSK RMB 4,940/MT (USD 695)</text>
               
-              <text x="190" y="252" text-anchor="middle" fill="var(--fg-muted)" font-size="12">2026 Q1 (Spread $102/t)</text>
-              <text x="370" y="252" text-anchor="middle" fill="var(--fg-muted)" font-size="12">2026 Q2 (Spread $62/t)</text>
-              <text x="550" y="252" text-anchor="middle" fill="var(--fg-muted)" font-size="12">2026-08 (NBSK $692 / Spread $85/t)</text>
+              <circle cx="700" cy="182" r="5" fill="#f59e0b"/>
+              <text x="700" y="200" text-anchor="end" fill="#f59e0b" font-size="11.5" font-weight="800">BHKP RMB 4,475/MT (USD 629)</text>
+              
+              <text x="500" y="158" text-anchor="middle" fill="#7c3aed" font-size="11.5" font-weight="800">Spread RMB 465/MT ($66) · Below Safety Line</text>
+              
+              <!-- X-Axis Labels -->
+              <text x="90" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2026 Q1</text>
+              <text x="170" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2026 Q2</text>
+              <text x="250" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">7/31 (W31)</text>
+              <text x="330" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">8/14 (W33)</text>
+              <text x="410" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">9/04 (W36)</text>
+              <text x="490" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">9/25 (W39)</text>
+              <text x="570" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">10/09 (W41)</text>
+              <text x="640" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">10/16 (W42)</text>
+              <text x="700" y="246" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">10/23 (W43)</text>
             </svg>
             <p class="chart-caption">
-              <b>Chart 1 Analysis:</b> The NBSK-BHKP virgin pulp spread narrowed from $102/MT in Q1 to its low before expanding back to $85/MT (RMB 600/t) in August as softwood rebounded. Hardwood-for-softwood substitution has halted, solidifying softwood's bottom support and narrowing futures basis discounts.
+              <b>Chart 1 Analysis (Wood Pulp & Spread):</b> From late July through October 23 (Issue 013), softwood and hardwood wood pulp spot prices established a healthy bottom consolidation. China NBSK spot settled at RMB 4,940/MT (USD 695) while BHKP held firm at RMB 4,475/MT (USD 629). The NBSK-BHKP spread stabilized at RMB 465/MT ($66/MT), comfortably below the RMB 500/MT fiber substitution threshold. Port inventory declined for 15 consecutive weeks to 2.04M MT, confirming robust real-demand destocking.
             </p>
           </div>
         </div>
 
-        <!-- Chart Tab 2 -->
+        <!-- Radar Tab 1: Containerboard & Raw Spread -->
         <div class="chart-container" id="chartTab1">
           <div class="chart-box">
-            <svg viewBox="0 0 700 280" role="img">
-              <line x1="70" y1="220" x2="650" y2="220" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="165" x2="650" y2="165" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="110" x2="650" y2="110" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="55" x2="650" y2="55" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <text x="60" y="224" text-anchor="end" fill="var(--fg-muted)" font-size="11">0</text>
-              <text x="60" y="169" text-anchor="end" fill="var(--fg-muted)" font-size="11">+$50</text>
-              <text x="60" y="114" text-anchor="end" fill="var(--fg-muted)" font-size="11">+$100</text>
-              <text x="60" y="59" text-anchor="end" fill="var(--fg-muted)" font-size="11">+$150</text>
+            <svg viewBox="0 0 760 280" role="img">
+              <line x1="70" y1="220" x2="710" y2="220" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="165" x2="710" y2="165" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="110" x2="710" y2="110" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="55" x2="710" y2="55" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <text x="60" y="224" text-anchor="end" fill="var(--fg-muted)" font-size="11">$0</text>
+              <text x="60" y="169" text-anchor="end" fill="var(--fg-muted)" font-size="11">+$300</text>
+              <text x="60" y="114" text-anchor="end" fill="var(--fg-muted)" font-size="11">+$600</text>
+              <text x="60" y="59" text-anchor="end" fill="var(--fg-muted)" font-size="11">+$900</text>
               
-              <polygon points="490,110 630,55 630,20" fill="rgba(139, 92, 246, 0.15)"/>
-              <polyline points="70,220 140,242 210,198 280,165 350,165 420,110 490,110" fill="none" stroke="#8b5cf6" stroke-width="3"/>
-              <polyline points="490,110 630,55" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-dasharray="5 4"/>
-              <polyline points="490,110 630,20" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-dasharray="5 4"/>
+              <!-- Spread polygon -->
+              <polygon points="90,105 180,88 270,72 360,58 450,48 530,42 610,42 700,42 700,195 610,195 530,196 450,196 360,196 270,197 180,197 90,198" fill="rgba(139, 92, 246, 0.16)"/>
               
-              <circle cx="490" cy="110" r="4.5" fill="#8b5cf6"/>
-              <circle cx="630" cy="55" r="4.5" fill="#8b5cf6"/>
-              <circle cx="630" cy="20" r="4.5" fill="#8b5cf6"/>
-              <text x="490" y="98" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">+$100</text>
-              <text x="630" y="45" text-anchor="end" fill="var(--fg)" font-size="11" font-weight="700">+$180</text>
-              <text x="630" y="15" text-anchor="end" fill="var(--fg)" font-size="11" font-weight="700">+$240</text>
+              <!-- Linerboard curve -->
+              <polyline points="90,105 180,88 270,72 360,58 450,48 530,42 610,42 700,42" fill="none" stroke="#2563eb" stroke-width="3.2"/>
+              <!-- US OCC curve -->
+              <polyline points="90,198 180,197 270,197 360,196 450,196 530,196 610,195 700,195" fill="none" stroke="#059669" stroke-width="3.2"/>
               
-              <text x="70" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Jan</text>
-              <text x="210" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Mar</text>
-              <text x="350" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">May</text>
-              <text x="490" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Jul</text>
-              <text x="630" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Sept (Effective)</text>
+              <!-- Data Points -->
+              <circle cx="700" cy="42" r="5" fill="#2563eb"/>
+              <text x="700" y="30" text-anchor="end" fill="#2563eb" font-size="11.5" font-weight="800">NA Linerboard $975/ST (Full Realization)</text>
+              
+              <circle cx="700" cy="195" r="5" fill="#059669"/>
+              <text x="700" y="214" text-anchor="end" fill="#059669" font-size="11.5" font-weight="800">US OCC #11 $136/ST FAS</text>
+              
+              <text x="470" y="115" fill="#7c3aed" font-size="12" font-weight="800">Raw Spread $839–$840/ST (PCA Q3 Beat Verifies Cash Flow)</text>
+              
+              <!-- X-Axis Labels -->
+              <text x="90" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2026-Q1</text>
+              <text x="180" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2026-04</text>
+              <text x="270" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2026-06</text>
+              <text x="360" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2026-07</text>
+              <text x="450" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">8/28</text>
+              <text x="530" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">9/18</text>
+              <text x="610" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">10/09</text>
+              <text x="700" y="246" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">10/23 (W43)</text>
             </svg>
             <p class="chart-caption">
-              <b>Chart 2 Analysis:</b> The announced September North American containerboard hike of +$80–140/short ton occurs while OCC recovered paper costs remain flat at $130–135/t. This expands mill Raw Material Spreads to a historical high of $720/short ton, dramatically boosting EBITDA margins.
+              <b>Chart 2 Analysis (Containerboard & Raw Spread):</b> The $140/short ton North American containerboard price hike enacted September 1 has been fully absorbed, lifting Kraftliner to $975/ST. PCA's Q3 2026 earnings on Oct 22 reported a 5.2% YoY shipment increase and 93% mill operating rate, validating that the historic Raw Material Spread of $839–$840/ST has materialized into robust cash flows. Simultaneously, Chinese mills executed two price hike rounds (+RMB 100/MT total), enabling Long Chen and YFY to restore packaging margins.
             </p>
           </div>
         </div>
 
-        <!-- Chart Tab 3 -->
+        <!-- Radar Tab 2: Energy & Steam Cost -->
         <div class="chart-container" id="chartTab2">
           <div class="chart-box">
-            <svg viewBox="0 0 700 280" role="img">
-              <line x1="70" y1="230" x2="650" y2="230" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="180" x2="650" y2="180" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="130" x2="650" y2="130" stroke="var(--border)"/>
-              <line x1="70" y1="80" x2="650" y2="80" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="30" x2="650" y2="30" stroke="var(--border)" stroke-dasharray="4 4"/>
+            <svg viewBox="0 0 760 280" role="img">
+              <line x1="70" y1="210" x2="710" y2="210" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="160" x2="710" y2="160" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="110" x2="710" y2="110" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="60" x2="710" y2="60" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <text x="60" y="214" text-anchor="end" fill="var(--fg-muted)" font-size="11">$65</text>
+              <text x="60" y="164" text-anchor="end" fill="var(--fg-muted)" font-size="11">$75</text>
+              <text x="60" y="114" text-anchor="end" fill="var(--fg-muted)" font-size="11">$85</text>
+              <text x="60" y="64" text-anchor="end" fill="var(--fg-muted)" font-size="11">$95</text>
+              
+              <!-- Taiwan SRF Steam Line (Green dashed) -->
+              <line x1="70" y1="172" x2="710" y2="172" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6 4"/>
+              <text x="700" y="164" fill="#10b981" font-size="11.5" font-weight="800" text-anchor="end">Taiwan Mills SRF Biomass Rate 49.0% Locks Steam Cost at NT$718/MT ($22.3)</text>
+
+              <!-- Brent Oil Line (Red) -->
+              <polyline points="90,135 170,115 250,130 330,85 410,65 490,150 580,166 650,167 700,168" fill="none" stroke="#ef4444" stroke-width="3.2"/>
+              <circle cx="700" cy="168" r="5" fill="#ef4444"/>
+              <text x="700" y="156" fill="#ef4444" font-size="11.5" font-weight="800" text-anchor="end">10/23 Brent Crude $74.30 / bbl (Bottoming Out)</text>
+
+              <!-- WTI Oil Line (Amber dashed) -->
+              <polyline points="90,155 170,135 250,150 330,105 410,85 490,168 580,182 650,183 700,184" fill="none" stroke="#f59e0b" stroke-width="2.2" stroke-dasharray="4 3"/>
+              <circle cx="700" cy="184" r="4" fill="#f59e0b"/>
+              <text x="700" y="198" fill="#f59e0b" font-size="10.5" font-weight="700" text-anchor="end">WTI Crude $70.50 / bbl</text>
+
+              <!-- X-Axis Labels -->
+              <text x="90" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2026-Q1</text>
+              <text x="170" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2026-04</text>
+              <text x="250" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2026-06</text>
+              <text x="330" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">8/17</text>
+              <text x="410" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">9/18 Peak $93.9</text>
+              <text x="490" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">10/09</text>
+              <text x="580" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">10/16</text>
+              <text x="700" y="246" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">10/23 (W43)</text>
+            </svg>
+            <p class="chart-caption">
+              <b>Chart 3 Analysis (Energy & Steam Cost):</b> As Middle Eastern geopolitical risk premia subsided and the IEA pared demand expectations, Brent crude fell over 20% from its September high of $93.90 to consolidate around $74.30/bbl in late October. Chemical additives (AKD sizing agents, SBR coating latex, and PE film resins) declined by 4–7%. Simultaneously, Taiwanese paper mills increased solid recovered fuel (SRF) biomass substitution to 49.0%, locking steam generation costs at a record low of NT$718/MT ($22.3/MT) to form a robust cost moat.
+            </p>
+          </div>
+        </div>
+
+        <!-- Radar Tab 3: Global Freight & Logistics -->
+        <div class="chart-container" id="chartTab3">
+          <div class="chart-box">
+            <svg viewBox="0 0 760 280" role="img">
+              <line x1="70" y1="210" x2="710" y2="210" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="160" x2="710" y2="160" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="110" x2="710" y2="110" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="60" x2="710" y2="60" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <text x="60" y="214" text-anchor="end" fill="var(--fg-muted)" font-size="11">1,500</text>
+              <text x="60" y="164" text-anchor="end" fill="var(--fg-muted)" font-size="11">2,500</text>
+              <text x="60" y="114" text-anchor="end" fill="var(--fg-muted)" font-size="11">3,500</text>
+              <text x="60" y="64" text-anchor="end" fill="var(--fg-muted)" font-size="11">4,500</text>
+              
+              <!-- SCFI Container Line (Purple) -->
+              <polyline points="90,132 180,95 270,121 360,117 450,112 530,116 610,118 700,119" fill="none" stroke="#8b5cf6" stroke-width="3.2"/>
+              <circle cx="700" cy="119" r="5" fill="#8b5cf6"/>
+              <text x="700" y="107" fill="#8b5cf6" font-size="11.5" font-weight="800" text-anchor="end">SCFI Container 3,325.40 pts (Ample Vessel Capacity)</text>
+
+              <!-- BDI Dry Bulk Line (Teal) -->
+              <polyline points="90,195 180,188 270,196 360,141 450,192 530,193 610,194 700,195" fill="none" stroke="#0d9488" stroke-width="2.5" stroke-dasharray="5 3"/>
+              <circle cx="700" cy="195" r="4.5" fill="#0d9488"/>
+              <text x="700" y="212" fill="#0d9488" font-size="11" font-weight="700" text-anchor="end">BDI Dry Bulk 1,840 pts (Woodchip Carriers Stable)</text>
+
+              <!-- X-Axis Labels -->
+              <text x="90" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">May</text>
+              <text x="180" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">June</text>
+              <text x="270" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">July</text>
+              <text x="360" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">8/17 Peak</text>
+              <text x="450" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">9/18</text>
+              <text x="530" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">10/09</text>
+              <text x="610" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">10/16</text>
+              <text x="700" y="246" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">10/23 (W43)</text>
+            </svg>
+            <p class="chart-caption">
+              <b>Chart 4 Analysis (Ocean Freight Indices):</b> The Shanghai Containerized Freight Index (SCFI) edged slightly down post-holidays to 3,325.40 pts, while transpacific reliability improved significantly (USWC quotes at $6,420/FEU, USEC at $9,210/FEU). The Baltic Dry Index (BDI) settled at 1,840 pts. Abundant ocean carrier space and falling bunker fuel surcharges guarantee smooth, uninhibited export logistics for Taiwanese PFAS-free foodboards to Europe and Cheng Loong Vietnam's packaging boxes to the US Christmas peak.
+            </p>
+          </div>
+        </div>
+
+        <!-- Radar Tab 4: Currency Exchange Rates -->
+        <div class="chart-container" id="chartTab4">
+          <div class="chart-box">
+            <svg viewBox="0 0 760 280" role="img">
+              <line x1="70" y1="210" x2="710" y2="210" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="160" x2="710" y2="160" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="110" x2="710" y2="110" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="60" x2="710" y2="60" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <text x="60" y="214" text-anchor="end" fill="var(--fg-muted)" font-size="11">31.80</text>
+              <text x="60" y="164" text-anchor="end" fill="var(--fg-muted)" font-size="11">32.10</text>
+              <text x="60" y="114" text-anchor="end" fill="var(--fg-muted)" font-size="11">32.40</text>
+              <text x="60" y="64" text-anchor="end" fill="var(--fg-muted)" font-size="11">32.70</text>
+              
+              <!-- USD/TWD Line (Blue) -->
+              <polyline points="90,120 180,100 270,135 360,168 450,165 540,164 630,163 700,161" fill="none" stroke="#2563eb" stroke-width="3.2"/>
+              <circle cx="700" cy="161" r="5" fill="#2563eb"/>
+              <text x="700" y="150" fill="#2563eb" font-size="11.5" font-weight="800" text-anchor="end">USD/TWD 32.120 (Steady NTD)</text>
+
+              <!-- USD/CNY (Amber dashed) -->
+              <polyline points="90,130 180,140 270,145 360,150 450,158 540,162 630,163 700,164" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="5 3"/>
+              <circle cx="700" cy="164" r="4.5" fill="#f59e0b"/>
+              <text x="700" y="180" fill="#f59e0b" font-size="11" font-weight="700" text-anchor="end">USD/CNY 7.1250 (Stable RMB)</text>
+
+              <!-- EUR/USD (Purple) -->
+              <polyline points="90,75 180,80 270,72 360,78 450,85 540,92 630,95 700,98" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+              <circle cx="700" cy="98" r="4.5" fill="#7c3aed"/>
+              <text x="700" y="86" fill="#7c3aed" font-size="11" font-weight="700" text-anchor="end">EUR/USD 1.0850 (Euro Softening)</text>
+
+              <!-- X-Axis Labels -->
+              <text x="90" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">July</text>
+              <text x="180" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">August</text>
+              <text x="270" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">9/04</text>
+              <text x="360" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">9/25</text>
+              <text x="450" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">10/02</text>
+              <text x="540" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">10/09</text>
+              <text x="630" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">10/16</text>
+              <text x="700" y="246" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">10/23 (W43)</text>
+            </svg>
+            <p class="chart-caption">
+              <b>Chart 5 Analysis (Exchange Rates & FX):</b> The US Dollar Index held firm with USD/TWD trading at 32.120, USD/CNY at 7.1250, and EUR/USD easing to 1.0850. Stable New Taiwan Dollar valuation provides high cost predictability for Asian mills importing American recovered paper (OCC) and South American wood pulp. In addition, high European industrial power tariffs ensure that Taiwanese PFAS-free aqueous barrier boards (e.g. CHP CircuWell) retain a 15–20% delivered cost advantage in European ports.
+            </p>
+          </div>
+        </div>
+
+        <!-- Radar Tab 5: Taiwan Big 4 Revenue YoY% -->
+        <div class="chart-container" id="chartTab5">
+          <div class="chart-box">
+            <svg viewBox="0 0 760 280" role="img">
+              <line x1="70" y1="230" x2="710" y2="230" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="180" x2="710" y2="180" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="130" x2="710" y2="130" stroke="var(--fg)" stroke-width="1.5"/>
+              <line x1="70" y1="80" x2="710" y2="80" stroke="var(--border)" stroke-dasharray="4 4"/>
+              <line x1="70" y1="30" x2="710" y2="30" stroke="var(--border)" stroke-dasharray="4 4"/>
               <text x="60" y="234" text-anchor="end" fill="var(--fg-muted)" font-size="11">−40%</text>
               <text x="60" y="184" text-anchor="end" fill="var(--fg-muted)" font-size="11">−20%</text>
               <text x="60" y="134" text-anchor="end" fill="var(--fg-muted)" font-size="11">0%</text>
               <text x="60" y="84" text-anchor="end" fill="var(--fg-muted)" font-size="11">+20%</text>
               <text x="60" y="34" text-anchor="end" fill="var(--fg-muted)" font-size="11">+40%</text>
               
-              <polyline points="70,90 160,190 250,110 340,95 430,105 520,135 610,75" fill="none" stroke="#2563eb" stroke-width="3"/>
-              <polyline points="70,50 160,195 250,130 340,120 430,105 520,35 610,80" fill="none" stroke="#8b5cf6" stroke-width="3"/>
-              <polyline points="70,110 160,180 250,120 340,115 430,115 520,105 610,115" fill="none" stroke="#10b981" stroke-width="2.5"/>
-              <polyline points="70,130 160,210 250,125 340,145 430,125 520,132 610,128" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+              <!-- Positive lines -->
+              <polyline points="90,82 160,170 230,100 300,88 370,94 440,124 510,74 580,68 640,86 700,78" fill="none" stroke="#2563eb" stroke-width="3"/>
+              <polyline points="90,41 160,166 230,116 300,106 370,95 440,32 510,80 580,76 640,69 700,62" fill="none" stroke="#059669" stroke-width="3"/>
+              <polyline points="90,96 160,161 230,110 300,103 370,105 440,95 510,107 580,102 640,112 700,108" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+              <polyline points="90,114 160,191 230,111 300,131 370,114 440,121 510,142 580,135 640,122 700,95" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3"/>
               
-              <circle cx="610" cy="75" r="4.5" fill="#2563eb"/>
-              <text x="618" y="70" fill="#2563eb" font-size="11" font-weight="700">Cheng Loong +22.8%</text>
-              <circle cx="610" cy="80" r="4.5" fill="#8b5cf6"/>
-              <text x="618" y="92" fill="#8b5cf6" font-size="11" font-weight="700">Long Chen +20.3%</text>
+              <circle cx="700" cy="62" r="5" fill="#059669"/>
+              <text x="690" y="52" fill="#059669" font-size="11.5" font-weight="800" text-anchor="end">Long Chen Sep NT$4.79B (+25.3% / 9M Profit NT$599M)</text>
+              <circle cx="700" cy="78" r="5" fill="#2563eb"/>
+              <text x="690" y="74" fill="#2563eb" font-size="11" font-weight="700" text-anchor="end">Cheng Loong Sep NT$4.18B (+17.1%)</text>
+              <circle cx="700" cy="95" r="5" fill="#d97706"/>
+              <text x="690" y="94" fill="#d97706" font-size="11.5" font-weight="800" text-anchor="end">Chung Hwa Pulp (1905) Surges (Pulp Price Pass-Through)</text>
+              <circle cx="700" cy="108" r="4.5" fill="#7c3aed"/>
+              <text x="690" y="118" fill="#7c3aed" font-size="11" font-weight="700" text-anchor="end">YFY Sep NT$6.65B (+3.95%)</text>
               
-              <text x="70" y="252" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Jan</text>
-              <text x="160" y="252" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Feb</text>
-              <text x="250" y="252" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Mar</text>
-              <text x="340" y="252" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Apr</text>
-              <text x="430" y="252" text-anchor="middle" fill="var(--fg-muted)" font-size="11">May</text>
-              <text x="520" y="252" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Jun</text>
-              <text x="610" y="252" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Jul Revenue</text>
+              <!-- X-Axis Labels -->
+              <text x="90" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Jan</text>
+              <text x="160" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Feb</text>
+              <text x="230" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Mar</text>
+              <text x="300" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Apr</text>
+              <text x="370" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">May</text>
+              <text x="440" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Jun</text>
+              <text x="510" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Jul</text>
+              <text x="580" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Aug</text>
+              <text x="640" y="246" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Sep (All Out)</text>
+              <text x="700" y="246" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">Q4 Peak Season</text>
             </svg>
             <p class="chart-caption">
-              <b>Chart 3 Analysis:</b> Cheng Loong July revenue surged +22.82% YoY to a 19-month peak, while Long Chen sustained >20% growth for two consecutive months ($13.3M USD 7M pre-tax turnaround). Industrial packaging leads revenue and margin rebounds, while cultural printing paper (Chung Hwa Pulp) consolidates near the zero line.
-            </p>
-          </div>
-        </div>
-
-        <!-- Chart Tab 4 -->
-        <div class="chart-container" id="chartTab3">
-          <div class="chart-box">
-            <svg viewBox="0 0 700 280" role="img">
-              <line x1="70" y1="210" x2="650" y2="210" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="160" x2="650" y2="160" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="110" x2="650" y2="110" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="60" x2="650" y2="60" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <text x="60" y="214" text-anchor="end" fill="var(--fg-muted)" font-size="11">0</text>
-              <text x="60" y="164" text-anchor="end" fill="var(--fg-muted)" font-size="11">+$40</text>
-              <text x="60" y="114" text-anchor="end" fill="var(--fg-muted)" font-size="11">+$80</text>
-              <text x="60" y="64" text-anchor="end" fill="var(--fg-muted)" font-size="11">+$120</text>
-              
-              <polyline points="150,230 300,210 450,70 600,70" fill="none" stroke="#2563eb" stroke-width="3"/>
-              <polyline points="150,210 300,185 450,150 600,45" fill="none" stroke="#f59e0b" stroke-width="3"/>
-              
-              <circle cx="450" cy="70" r="4.5" fill="#2563eb"/>
-              <text x="450" y="58" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">Europe +€120 (+$131)</text>
-              <circle cx="600" cy="45" r="4.5" fill="#f59e0b"/>
-              <text x="600" y="32" text-anchor="middle" fill="var(--fg)" font-size="11" font-weight="700">North America +$140</text>
-              
-              <text x="150" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2025 Q4</text>
-              <text x="300" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2026 Q1</text>
-              <text x="450" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2026 Q2</text>
-              <text x="600" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">2026 Q3 (Announced)</text>
-            </svg>
-            <p class="chart-caption">
-              <b>Chart 4 Analysis:</b> Europe led the upcycle in Q2 with Smurfit Westrock driving +€120/MT (+$131/MT) increases, followed by North American producers announcing up to +$140/short ton hikes for Sept 1. Transatlantic pricing power establishes dominant global seller's market positioning.
-            </p>
-          </div>
-        </div>
-
-        <!-- Chart Tab 5 -->
-        <div class="chart-container" id="chartTab4">
-          <div class="chart-box">
-            <svg viewBox="0 0 700 280" role="img">
-              <line x1="70" y1="210" x2="650" y2="210" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="160" x2="650" y2="160" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="110" x2="650" y2="110" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <line x1="70" y1="60" x2="650" y2="60" stroke="var(--border)" stroke-dasharray="4 4"/>
-              <text x="60" y="214" text-anchor="end" fill="var(--fg-muted)" font-size="11">70</text>
-              <text x="60" y="164" text-anchor="end" fill="var(--fg-muted)" font-size="11">80</text>
-              <text x="60" y="114" text-anchor="end" fill="var(--fg-muted)" font-size="11">90</text>
-              <text x="60" y="64" text-anchor="end" fill="var(--fg-muted)" font-size="11">100</text>
-              
-              <line x1="70" y1="140" x2="650" y2="140" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6 4"/>
-              <text x="640" y="132" fill="#10b981" font-size="11" font-weight="700" text-anchor="end">Taiwan SRF Biomass Cost Ceiling ($22.5–24.2/MT)</text>
-
-              <!-- Brent Oil Line -->
-              <polyline points="70,175 180,185 290,170 400,180 510,160 610,95" fill="none" stroke="#ef4444" stroke-width="3"/>
-              <circle cx="610" cy="95" r="5" fill="#ef4444"/>
-              <text x="610" y="82" fill="#ef4444" font-size="11" font-weight="800" text-anchor="middle">8/20 Iran Blockade $93.80</text>
-
-              <!-- SCFI Line -->
-              <polyline points="70,100 180,85 290,70 400,65 510,80 610,72" fill="none" stroke="#8b5cf6" stroke-width="2.5"/>
-              <circle cx="610" cy="72" r="4.5" fill="#8b5cf6"/>
-              <text x="610" y="60" fill="#8b5cf6" font-size="11" font-weight="700" text-anchor="middle">SCFI 3,355 pts (BSS Support)</text>
-
-              <text x="70" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Mar</text>
-              <text x="180" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">May</text>
-              <text x="290" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Jun</text>
-              <text x="400" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Jul</text>
-              <text x="510" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">Mid-Aug</text>
-              <text x="610" y="248" text-anchor="middle" fill="var(--fg-muted)" font-size="11">8/21 Shockwave</text>
-            </svg>
-            <p class="chart-caption">
-              <b>Chart 5 Analysis:</b> Following the US economic blockade on Iran, Brent crude broke above $93.80/bbl, lifting tanker and marine bunker fuel surcharges (BSS). However, Taiwanese papermakers benefit from solid recovered fuel (SRF) and co-generation, locking steam energy costs at $22.5–24.2/MT (NT$720–780) to insulate margins from fossil inflation.
+              <b>Chart 6 Analysis (Taiwan Big 4 Mill Trends):</b> Full 9-month revenue disclosures reveal solid operational momentum across Taiwanese papermakers: Long Chen posted cumulative pre-tax profit of NT$599M (EPS NT$0.46 turnaround); Cheng Loong grew 17.1% YoY in September as Vietnam Phase 3 ran at full capacity; YFY exceeded NT$574B cumulatively; and Chung Hwa Pulp rallied strongly in late October on the successful pass-through of September pulp price hikes into finished paper quotes. All four mills now enter the Q4 Double 11 and holiday shipping surge.
             </p>
           </div>
         </div>
@@ -2438,38 +2753,45 @@
                 <tbody>
                   <tr style="border-bottom: 1px solid var(--border);">
                     <td style="padding: 9px 6px; font-weight: 700;">Brent Crude</td>
-                    <td style="padding: 9px 6px;">$93.90/bbl</td>
-                    <td style="padding: 9px 6px;">$92–98</td>
-                    <td style="padding: 9px 6px;">$85–92</td>
-                    <td style="padding: 9px 6px;"><span class="kpi-pill pill-red">Elevated</span></td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid var(--border);">
-                    <td style="padding: 9px 6px; font-weight: 700;">Thermal Coal CIF</td>
-                    <td style="padding: 9px 6px;">$132.5/MT</td>
-                    <td style="padding: 9px 6px;">$135–142</td>
-                    <td style="padding: 9px 6px;">$130–138</td>
-                    <td style="padding: 9px 6px;"><span class="kpi-pill pill-green">Softening</span></td>
+                    <td style="padding: 9px 6px;">$74.30/bbl</td>
+                    <td style="padding: 9px 6px;">$72–78</td>
+                    <td style="padding: 9px 6px;">$70–80</td>
+                    <td style="padding: 9px 6px;"><span class="kpi-pill pill-green">Consolidating</span></td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border);">
                     <td style="padding: 9px 6px; font-weight: 700;">NBSK Softwood Pulp</td>
-                    <td style="padding: 9px 6px;">$692/MT ($690-750)</td>
-                    <td style="padding: 9px 6px;">$700–760</td>
-                    <td style="padding: 9px 6px;">$720–780</td>
-                    <td style="padding: 9px 6px;"><span class="kpi-pill pill-red">Rebounding</span></td>
+                    <td style="padding: 9px 6px;">USD 695 (RMB 4,940)</td>
+                    <td style="padding: 9px 6px;">$695–715</td>
+                    <td style="padding: 9px 6px;">$700–725</td>
+                    <td style="padding: 9px 6px;"><span class="kpi-pill pill-blue">Firm Support</span></td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border);">
                     <td style="padding: 9px 6px; font-weight: 700;">BHKP Hardwood Pulp</td>
-                    <td style="padding: 9px 6px;">$607/MT</td>
-                    <td style="padding: 9px 6px;">$600–620</td>
-                    <td style="padding: 9px 6px;">$590–630</td>
-                    <td style="padding: 9px 6px;"><span class="kpi-pill pill-blue">Range-bound</span></td>
+                    <td style="padding: 9px 6px;">USD 629 (RMB 4,475)</td>
+                    <td style="padding: 9px 6px;">$625–645</td>
+                    <td style="padding: 9px 6px;">$630–650</td>
+                    <td style="padding: 9px 6px;"><span class="kpi-pill pill-blue">Solid Bottom</span></td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border);">
+                    <td style="padding: 9px 6px; font-weight: 700;">US 11# OCC FAS</td>
+                    <td style="padding: 9px 6px;">$136/ST</td>
+                    <td style="padding: 9px 6px;">$135–140</td>
+                    <td style="padding: 9px 6px;">$138–145</td>
+                    <td style="padding: 9px 6px;"><span class="kpi-pill pill-gold">Resilient</span></td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border);">
+                    <td style="padding: 9px 6px; font-weight: 700;">NA Containerboard</td>
+                    <td style="padding: 9px 6px;">$975/ST</td>
+                    <td style="padding: 9px 6px;">$970–990</td>
+                    <td style="padding: 9px 6px;">$970–1000</td>
+                    <td style="padding: 9px 6px;"><span class="kpi-pill pill-purple">Peak Spread</span></td>
                   </tr>
                   <tr>
-                    <td style="padding: 9px 6px; font-weight: 700;">Containerboard (US/TW)</td>
-                    <td style="padding: 9px 6px;">+$140 / +10%</td>
-                    <td style="padding: 9px 6px;">Full Realization</td>
-                    <td style="padding: 9px 6px;">Firm (+30$)</td>
-                    <td style="padding: 9px 6px;"><span class="kpi-pill pill-purple">Bullish</span></td>
+                    <td style="padding: 9px 6px; font-weight: 700;">Food Packaging Board</td>
+                    <td style="padding: 9px 6px;">USD 639 (RMB 4,485)</td>
+                    <td style="padding: 9px 6px;">$640–665</td>
+                    <td style="padding: 9px 6px;">$655–685</td>
+                    <td style="padding: 9px 6px;"><span class="kpi-pill pill-green">PFHxA Boom</span></td>
                   </tr>
                 </tbody>
               </table>
@@ -2478,46 +2800,73 @@
 
           <!-- Right Column: Interactive Calculator -->
           <div class="calc-card" id="calculator">
-            <h3 style="font-size: 17px; font-weight: 800; margin-bottom: 14px; color: var(--fg);">
-              🧮 Mill Gross Margin Sensitivity Calculator
-            </h3>
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+              <h3 style="font-size: 17px; font-weight: 800; color: var(--fg); margin:0;">
+                🧮 Mill Gross Margin Sensitivity Calculator
+              </h3>
+              <span style="font-size:11px; color:var(--fg-muted); font-weight:600;">1-Click Stress Scenarios:</span>
+            </div>
+            <div class="calc-presets">
+              <button type="button" class="preset-btn active" onclick="applyCalcPreset(136, 975, 718, this)">📊 W44 Baseline</button>
+              <button type="button" class="preset-btn" onclick="applyCalcPreset(142, 1010, 718, this)">🚀 Q4 Peak Hike (+$35)</button>
+              <button type="button" class="preset-btn" onclick="applyCalcPreset(155, 940, 960, this)">⚡ Energy &amp; OCC Spike</button>
+              <button type="button" class="preset-btn" onclick="applyCalcPreset(185, 780, 1050, this)">🛡️ Downcycle Squeeze</button>
+            </div>
             
             <div class="calc-input-group">
               <div class="calc-label">
                 <span>US OCC #11 Procurement Cost:</span>
-                <span id="occVal" style="color:var(--gold)">$135 / short ton</span>
+                <span id="occVal" style="color:var(--gold)">$136 / short ton</span>
               </div>
-              <input type="range" id="occSlider" class="calc-slider" min="90" max="220" value="135" step="5">
+              <input type="range" id="occSlider" class="calc-slider" min="90" max="220" value="136" step="1">
             </div>
 
             <div class="calc-input-group">
               <div class="calc-label">
                 <span>Containerboard Finished Price:</span>
-                <span id="linerVal" style="color:var(--accent)">$855 / short ton</span>
+                <span id="linerVal" style="color:var(--accent)">$975 / short ton</span>
               </div>
-              <input type="range" id="linerSlider" class="calc-slider" min="650" max="1100" value="855" step="10">
+              <input type="range" id="linerSlider" class="calc-slider" min="650" max="1200" value="975" step="5">
             </div>
 
             <div class="calc-input-group">
               <div class="calc-label">
                 <span>Steam Energy Cost per Ton:</span>
-                <span id="steamVal" style="color:var(--green)">$23.3 / MT (NT$750)</span>
+                <span id="steamVal" style="color:var(--green)">$22.3 / MT (NT$718)</span>
               </div>
-              <input type="range" id="steamSlider" class="calc-slider" min="500" max="1200" value="750" step="25">
+              <input type="range" id="steamSlider" class="calc-slider" min="500" max="1200" value="718" step="1">
             </div>
 
             <div class="calc-result-box">
               <div class="result-row">
                 <span style="color:var(--fg-muted)">Raw Material Spread:</span>
-                <span class="result-val" id="spreadRes" style="color:var(--gold);">$720 / ton</span>
+                <span class="result-val" id="spreadRes" style="color:var(--purple);">$839 / ton</span>
               </div>
               <div class="result-row">
                 <span style="color:var(--fg-muted)">Estimated EBITDA Margin:</span>
-                <span class="result-val" id="marginRes" style="color:var(--green);">24.8 %</span>
+                <span class="result-val" id="marginRes" style="color:var(--green);">64.2 %</span>
               </div>
               <div class="result-row" style="margin-bottom:0">
                 <span style="color:var(--fg-muted)">Procurement Strategy:</span>
-                <span id="stratRes" class="kpi-pill pill-green">High Spread · Maximize Production & Exports</span>
+                <span id="stratRes" class="kpi-pill pill-green">Historic Peak Spread · Maximize Production &amp; Exports</span>
+              </div>
+              <div class="cost-bar-wrap">
+                <div style="display:flex; justify-content:space-between; font-size:11.5px; font-weight:700; color:var(--fg);">
+                  <span>Per-Ton Revenue Breakdown (Cost &amp; EBITDA Structure)</span>
+                  <span id="totalCostLabel" style="color:var(--fg-muted);">Total Cost: $349 / ST</span>
+                </div>
+                <div class="cost-bar-track">
+                  <div id="segOcc" class="cost-seg" style="width:15%; background:#f59e0b;" title="OCC Fiber Cost"></div>
+                  <div id="segSteam" class="cost-seg" style="width:3%; background:#3b82f6;" title="Steam Energy Cost"></div>
+                  <div id="segFixed" class="cost-seg" style="width:18%; background:#64748b;" title="Fixed Converting & Depreciation"></div>
+                  <div id="segMargin" class="cost-seg" style="width:64%; background:#10b981;" title="EBITDA Margin"></div>
+                </div>
+                <div class="cost-legend">
+                  <span>🟨 OCC Fiber <b id="legOcc">15%</b></span>
+                  <span>🟦 Steam Energy <b id="legSteam">2%</b></span>
+                  <span>⬜ Fixed/Conv. <b id="legFixed">18%</b></span>
+                  <span>🟩 EBITDA Margin <b id="legMargin">64%</b></span>
+                </div>
               </div>
             </div>
           </div>
@@ -2539,13 +2888,25 @@
           <div class="reg-card">
             <div>
               <div class="reg-flag">🇪🇺</div>
+              <h3 class="reg-title">EU PFHxA Perfluorohexanoic Acid Ban Enforced</h3>
+              <div class="reg-date">Mandatory Since 2026-10-18</div>
+              <p class="reg-desc">
+                Regulation (EU) 2024/2462 is in full legal effect! 25 ppb total fluorine limit strictly checked at EU customs. PFAS-coated food packaging banned; water-based barrier boards take over.
+              </p>
+            </div>
+            <span class="reg-status" style="background:var(--red-bg);color:var(--red);">🚨 Enforced (Day 9) · Strict Customs Checks Active</span>
+          </div>
+
+          <div class="reg-card">
+            <div>
+              <div class="reg-flag">🇪🇺</div>
               <h3 class="reg-title">EU Packaging & Packaging Waste (PPWR)</h3>
               <div class="reg-date">Mandatory Since 2026-08-12</div>
               <p class="reg-desc">
-                All packaging imported into the EU enters mandatory Design for Recycling (DfR) and Digital Product Passport (DPP) audits. Non-compliant packaging faces customs rejection and eco-fees.
+                All packaging imported into the EU enters mandatory Design for Recycling (DfR) and Digital Product Passport (DPP) audits. Non-compliant packaging faces border rejections.
               </p>
             </div>
-            <span class="reg-status" style="background:var(--red-bg);color:var(--red);">🚨 Enforced (Day 9)</span>
+            <span class="reg-status" style="background:var(--green-bg);color:var(--green);">✅ Enforced (Day 76)</span>
           </div>
 
           <div class="reg-card">
@@ -2554,22 +2915,10 @@
               <h3 class="reg-title">China GB 4806.10 Food Contact Coatings</h3>
               <div class="reg-date">Mandatory 2026-09-02</div>
               <p class="reg-desc">
-                Paper cups, extrusion boxes, and greaseproof packaging coatings fully regulated, strictly limiting bisphenols and hazardous extractables.
+                Paper cups, extrusion boxes, and greaseproof coatings fully regulated. Meituan and Ele.me delivery platforms report fluorine-free packaging adoption exceeding 58.5%.
               </p>
             </div>
-            <span class="reg-status" style="background:var(--gold-bg);color:var(--gold);">⏳ Countdown: 12 Days</span>
-          </div>
-
-          <div class="reg-card">
-            <div>
-              <div class="reg-flag">🇪🇺</div>
-              <h3 class="reg-title">EU PFHxA Perfluorohexanoic Acid Ban</h3>
-              <div class="reg-date">Mandatory 2026-10-11</div>
-              <p class="reg-desc">
-                Total ban on PFAS chemistry in paper packaging greaseproofing (strict 25 ppb limit), driving the transition to aqueous dispersion barrier boards.
-              </p>
-            </div>
-            <span class="reg-status" style="background:var(--purple-bg);color:var(--purple);">⏳ Countdown: 51 Days</span>
+            <span class="reg-status" style="background:var(--green-bg);color:var(--green);">✅ Enforced (Day 55)</span>
           </div>
 
           <div class="reg-card">
@@ -2578,22 +2927,22 @@
               <h3 class="reg-title">EU Deforestation Regulation (EUDR)</h3>
               <div class="reg-date">Mandatory 2026-12-30</div>
               <p class="reg-desc">
-                Imported wood pulp, paper, and timber must provide GPS plot-level zero-deforestation Due Diligence Statements (DDS). Pulp traceability mandatory.
+                Imported wood pulp, paper, and timber must provide GPS plot-level zero-deforestation Due Diligence Statements (DDS). Global pulp giants accelerate polygon mapping.
               </p>
             </div>
-            <span class="reg-status" style="background:var(--gold-bg);color:var(--gold);" id="eudrCountdown">⏳ Countdown: 131 Days</span>
+            <span class="reg-status" style="background:var(--gold-bg);color:var(--gold);" id="eudrCountdown">⏳ Final 64 Days Countdown</span>
           </div>
 
           <div class="reg-card">
             <div>
               <div class="reg-flag">🇹🇼</div>
-              <h3 class="reg-title">Taiwan 2026 Carbon Fee & Resource Law</h3>
-              <div class="reg-date">Applicable Jan 1, 2026</div>
+              <h3 class="reg-title">Taiwan 2026 Carbon Fee Implementation</h3>
+              <div class="reg-date">Applicable Jan 1, 2027 (Audits 2026)</div>
               <p class="reg-desc">
-                Papermaking listed among initial carbon audit sectors at $9.3–15.5/MT (NT$300~500). Major mills accelerate solid recovered fuel (SRF) conversion.
+                Papermaking listed among initial carbon audit sectors at NT$300~500/MT. Major mills increase SRF biomass to 49.0% locking steam cost at NT$718 to claim preferential rates.
               </p>
             </div>
-            <span class="reg-status" style="background:var(--green-bg);color:var(--green);">Biomass Substitution >40-50%</span>
+            <span class="reg-status" style="background:var(--purple-bg);color:var(--purple);">⏳ 65 Days Left (Biomass 49%)</span>
           </div>
 
         </div>
@@ -2605,11 +2954,18 @@
   <!-- ── In-App Modal Reader ── -->
   <div id="modalOverlay" class="modal-overlay" onclick="closeReaderOnOverlay(event)">
     <div class="modal-container">
-      <div class="modal-header">
-        <span id="modalTitle" class="modal-title">Paperluz Weekly Online Reader</span>
-        <div class="modal-actions">
-          <a id="modalExternalLink" href="#" target="_blank" class="card-btn" style="padding:4px 10px;font-size:12px;">Open in Tab ↗</a>
-          <button class="modal-close-btn" onclick="closeReader()">&times;</button>
+      <div class="modal-header" style="flex-wrap:wrap; gap:10px;">
+        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+          <button type="button" class="modal-toolbar-btn" id="modalPrevBtn" onclick="navigateModalIssue(-1)" title="Previous Issue">◀ Prev</button>
+          <span id="modalTitle" class="modal-title">Paperluz Weekly Online Reader</span>
+          <button type="button" class="modal-toolbar-btn" id="modalNextBtn" onclick="navigateModalIssue(1)" title="Next Issue">Next ▶</button>
+        </div>
+        <div class="modal-actions" style="flex-wrap:wrap; gap:6px;">
+          <a id="modalPdfLink" href="../Reports/PaperLuz-014_2026-10-30_EN.pdf" target="_blank" class="modal-toolbar-btn" title="Download Print-Ready A4 PDF">📄 A4 PDF</a>
+          <a id="modalMdLink" href="../Reports/PaperLuz-014_2026-10-30_EN.md" target="_blank" class="modal-toolbar-btn" title="View Markdown Source">📝 MD</a>
+          <button type="button" class="modal-toolbar-btn" onclick="printModalReport()" title="Print Report">🖨️ Print</button>
+          <a id="modalExternalLink" href="#" target="_blank" class="modal-toolbar-btn">Open in Tab ↗</a>
+          <button class="modal-close-btn" onclick="closeReader()" aria-label="Close">&times;</button>
         </div>
       </div>
       <div class="modal-body">
@@ -2626,16 +2982,16 @@
       <h3 class="sub-modal-title">Thank You for Subscribing!</h3>
       <p class="sub-modal-text">
         You are now subscribed to the <strong id="modalEditionBadge" style="color:var(--accent-hover);">English Edition</strong>.<br>
-        We have immediately dispatched the <strong>【Welcome Briefing】</strong> and <strong>【Latest Issue 012 Newsletter】</strong> to your inbox! Friday 07:00 AM weekly deliveries are active.
+        We have immediately dispatched the <strong>【Welcome Briefing】</strong> and <strong>【Latest Issue 014 Newsletter】</strong> to your inbox! Friday 07:00 AM weekly deliveries are active.
       </p>
 
       <!-- Welcome Gift -->
       <div class="sub-modal-gift">
         <div>
           <div style="font-size:11.5px; font-weight:800; color:var(--gold); text-transform:uppercase;">🎁 Welcome Gift</div>
-          <div style="font-size:13.5px; font-weight:700; color:var(--fg);">Issue 012 Full High-Resolution A4 Zero-Gap PDF</div>
+          <div style="font-size:13.5px; font-weight:700; color:var(--fg);">Issue 014 Full High-Resolution A4 Zero-Gap PDF</div>
         </div>
-        <a href="../Reports/PaperLuz-012_2026-10-16_EN.pdf" target="_blank" class="btn btn-primary" style="padding:6px 12px; font-size:12px; white-space:nowrap; text-decoration:none;">
+        <a href="../Reports/PaperLuz-014_2026-10-30_EN.pdf" target="_blank" class="btn btn-primary" style="padding:6px 12px; font-size:12px; white-space:nowrap; text-decoration:none;">
           Download ➔
         </a>
       </div>
@@ -2665,7 +3021,7 @@
       </div>
 
       <div class="footer-meta">
-        <b>Published</b>: 2026-10-16　·　<b>System Engine</b>: Paperluz Engine v12.6 (AI Enhanced Global Edition)　·　<b>Publisher</b>: Luznet / Paperluz Industry Intelligence
+        <b>Published</b>: 2026-10-30　·　<b>System Engine</b>: Paperluz Engine v16.0 (AI Enhanced Global Edition)　·　<b>Publisher</b>: Luznet / Paperluz Industry Intelligence
       </div>
       <div style="font-size: 12px; opacity: 0.75;">
         All benchmark data is sourced from 59 globally registered authorities, verified through 4-tier AI cross-audits, and preserved in immutable SQLite database version control.
@@ -2767,30 +3123,73 @@
 
       occVal.textContent = `$${occ} / short ton`;
       linerVal.textContent = `$${liner} / short ton`;
-      const steamUsd = steam / 32.25;
+      const steamUsd = steam / 32.12;
       steamVal.textContent = `$${steamUsd.toFixed(1)} / MT (NT$${steam})`;
 
       const spread = liner - occ;
       spreadRes.textContent = `$${spread.toFixed(0)} / ton`;
 
-      const totalCost = occ * 1.08 + steamUsd + 180;
+      const occCost = occ * 1.08;
+      const steamUsd = steam / 32.12;
+      const fixedCost = 180;
+      const totalCost = occCost + steamUsd + fixedCost;
       const margin = Math.max(0, ((liner - totalCost) / liner) * 100);
 
       marginRes.textContent = `${margin.toFixed(1)} %`;
 
-      if (margin >= 20) {
+      // Update Visual Cost & Margin Breakdown Bar
+      const occPct = Math.min(100, (occCost / liner) * 100);
+      const steamPct = Math.min(100 - occPct, (steamUsd / liner) * 100);
+      const fixedPct = Math.min(100 - occPct - steamPct, (fixedCost / liner) * 100);
+      const marginPct = Math.max(0, 100 - occPct - steamPct - fixedPct);
+
+      const segOcc = document.getElementById("segOcc");
+      const segSteam = document.getElementById("segSteam");
+      const segFixed = document.getElementById("segFixed");
+      const segMargin = document.getElementById("segMargin");
+      if (segOcc) {
+        segOcc.style.width = `${occPct.toFixed(1)}%`;
+        segSteam.style.width = `${steamPct.toFixed(1)}%`;
+        segFixed.style.width = `${fixedPct.toFixed(1)}%`;
+        segMargin.style.width = `${marginPct.toFixed(1)}%`;
+        document.getElementById("legOcc").textContent = `${occPct.toFixed(0)}%`;
+        document.getElementById("legSteam").textContent = `${steamPct.toFixed(0)}%`;
+        document.getElementById("legFixed").textContent = `${fixedPct.toFixed(0)}%`;
+        document.getElementById("legMargin").textContent = `${marginPct.toFixed(0)}%`;
+        document.getElementById("totalCostLabel").textContent = `Total Cost: $${totalCost.toFixed(0)} / ST`;
+      }
+
+      if (margin >= 25) {
         marginRes.style.color = "var(--green)";
         stratRes.className = "kpi-pill pill-green";
-        stratRes.textContent = "High Spread · Maximize Production & Exports";
-      } else if (margin >= 10) {
+        stratRes.textContent = "Historic Peak Spread · Maximize Production & Exports";
+      } else if (margin >= 15) {
         marginRes.style.color = "var(--gold)";
         stratRes.className = "kpi-pill pill-gold";
-        stratRes.textContent = "Normal Spread · Manage Fiber Stock & Long-Term Price Locks";
+        stratRes.textContent = "Healthy Spread · Expand Orders & Lock Long-Term Contracts";
       } else {
         marginRes.style.color = "var(--red)";
         stratRes.className = "kpi-pill pill-red";
-        stratRes.textContent = "Margin Pressure · Schedule Maintenance & Pass-through Price Hikes";
+        stratRes.textContent = "Margin Under Pressure · Initiate Maintenance Curtailment & Price Hikes";
       }
+    }
+
+    function applyCalcPreset(occ, liner, steam, btnEl) {
+      occSlider.value = occ;
+      linerSlider.value = liner;
+      steamSlider.value = steam;
+      document.querySelectorAll(".preset-btn").forEach(b => b.classList.remove("active"));
+      if (btnEl) btnEl.classList.add("active");
+      updateCalculator();
+    }
+
+    function filterNewsCards(cat, btnEl) {
+      document.querySelectorAll("#newsFilterBar .news-pill").forEach(b => b.classList.remove("active"));
+      if (btnEl) btnEl.classList.add("active");
+      document.querySelectorAll("#newsGrid .news-card").forEach(card => {
+        const c = card.getAttribute("data-news-cat") || "";
+        card.style.display = (cat === "all" || c === cat) ? "flex" : "none";
+      });
     }
 
     occSlider.addEventListener("input", updateCalculator);
@@ -2804,21 +3203,67 @@
     const diffDays = Math.max(0, Math.ceil((eudrTarget - now) / (1000 * 60 * 60 * 24)));
     const eudrEl = document.getElementById("eudrCountdown");
     if (eudrEl) {
-      eudrEl.textContent = `⏳ Countdown: ${diffDays} Days`;
+      eudrEl.textContent = `⏳ Final ${diffDays} Days Countdown`;
     }
 
-    // ── Modal Reader Functions ──
+    // ── Modal Reader Functions & Issue Navigation ──
     const modalOverlay = document.getElementById("modalOverlay");
     const modalIframe = document.getElementById("modalIframe");
     const modalTitle = document.getElementById("modalTitle");
     const modalExternalLink = document.getElementById("modalExternalLink");
+    const modalPdfLink = document.getElementById("modalPdfLink");
+    const modalMdLink = document.getElementById("modalMdLink");
+
+    const ISSUE_CATALOG_EN = [
+      { num: "001", date: "2026-07-31" },
+      { num: "002", date: "2026-08-07" },
+      { num: "003", date: "2026-08-14" },
+      { num: "004", date: "2026-08-21" },
+      { num: "005", date: "2026-08-28" },
+      { num: "006", date: "2026-09-04" },
+      { num: "007", date: "2026-09-11" },
+      { num: "008", date: "2026-09-18" },
+      { num: "009", date: "2026-09-25" },
+      { num: "010", date: "2026-10-02" },
+      { num: "011", date: "2026-10-09" },
+      { num: "012", date: "2026-10-16" },
+      { num: "013", date: "2026-10-23" },
+      { num: "014", date: "2026-10-30" }
+    ];
+    let currentModalIssueIdx = ISSUE_CATALOG_EN.length - 1;
 
     function openReader(url, title) {
       modalIframe.src = url;
       modalTitle.textContent = title;
       modalExternalLink.href = url;
+      const m = url.match(/PaperLuz-(\d{3})_(\d{4}-\d{2}-\d{2})/);
+      if (m) {
+        const idx = ISSUE_CATALOG_EN.findIndex(item => item.num === m[1]);
+        if (idx !== -1) currentModalIssueIdx = idx;
+        if (modalPdfLink) modalPdfLink.href = `../Reports/PaperLuz-${m[1]}_${m[2]}_EN.pdf`;
+        if (modalMdLink) modalMdLink.href = `../Reports/PaperLuz-${m[1]}_${m[2]}_EN.md`;
+      }
       modalOverlay.classList.add("active");
       document.body.style.overflow = "hidden";
+    }
+
+    function navigateModalIssue(delta) {
+      const nextIdx = currentModalIssueIdx + delta;
+      if (nextIdx >= 0 && nextIdx < ISSUE_CATALOG_EN.length) {
+        const item = ISSUE_CATALOG_EN[nextIdx];
+        openReader(`../Reports/PaperLuz-${item.num}_${item.date}_EN.html`, `Paperluz Weekly Issue ${item.num} (${item.date})`);
+      }
+    }
+
+    function printModalReport() {
+      try {
+        if (modalIframe && modalIframe.contentWindow) {
+          modalIframe.contentWindow.focus();
+          modalIframe.contentWindow.print();
+        }
+      } catch (e) {
+        window.open(modalExternalLink.href, "_blank");
+      }
     }
 
     function closeReader() {
@@ -2843,8 +3288,8 @@
     const NEWSLETTER_CONFIG = {
       webhookUrl: "", // Optional webhook endpoint (Google Apps Script / Formspree / Custom API)
       storageKey: "paperluz_newsletter_sub",
-      latestIssuePdf: "../Reports/PaperLuz-012_2026-10-16_EN.pdf",
-      latestIssueNum: "012"
+      latestIssuePdf: "../Reports/PaperLuz-014_2026-10-30_EN.pdf",
+      latestIssueNum: "014"
     };
 
     let selectedLang = "en";
@@ -2951,7 +3396,7 @@
           openSubSuccessModal();
 
           subStatusMsg.className = "sub-status-msg success";
-          subStatusMsg.innerHTML = `✅ Successfully registered ${email} (${langMap[selectedLang]}). Dispatched 【Welcome Email】 and 【Latest Issue 012】 to your inbox! Friday 07:00 AM delivery scheduled.`;
+          subStatusMsg.innerHTML = `✅ Successfully registered ${email} (${langMap[selectedLang]}). Dispatched 【Welcome Email】 and 【Latest Issue 013】 to your inbox! Friday 07:00 AM delivery scheduled.`;
           subStatusMsg.style.display = "block";
         }, 350);
       });

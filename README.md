@@ -4,7 +4,7 @@
 > 官方即時入口網站：[https://waatax.github.io/Paper/](https://waatax.github.io/Paper/) ｜ [English Edition](https://waatax.github.io/Paper/EN/)
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Online%20Active-brightgreen.svg)](https://waatax.github.io/Paper/)
-[![Weekly Issues](https://img.shields.io/badge/Weekly%20Reports-Issue%20001--012%20Published-blue.svg)](./Reports/)
+[![Weekly Issues](https://img.shields.io/badge/Weekly%20Reports-Issue%20001--014%20Published-blue.svg)](./Reports/)
 [![Formats](https://img.shields.io/badge/Formats-HTML%20%7C%20Markdown%20%7C%20A4%20PDF-orange.svg)](./Reports/)
 [![Bilingual](https://img.shields.io/badge/Language-繁體中文%20%7C%20English-purple.svg)](./EN/)
 [![Zero-Gap PDF](https://img.shields.io/badge/PDF-A4%20Zero--Gap%20Print-success.svg)](./Reports/)
@@ -29,10 +29,8 @@
 4. **週報檔案庫與內建閱讀器 (Issue Archives & Modal Reader)**：
    - 支援即時關鍵字搜尋與分類標籤過濾。
    - 內建 In-App Modal Reader，一鍵在線閱讀 HTML 完整報告、下載 A4 Zero-Gap 專業 PDF 或檢視 Markdown 原文。
-5. **互動式價差趨勢動態雷達 (Interactive Data Radar)**：
-   - 長短纖木漿價差 (NBSK - BHKP Spread) 結構性變動。
-   - 工紙原物料利差 (Linerboard - OCC Spread) 與景氣榮枯臨界線。
-   - 台灣上市紙廠（正隆、榮成、永豐餘、華紙）月營收與年增率 (YoY)。
+5. **大宗產業鏈六大核心連續動態雷達 (Continuous Market Radar)**：
+   - 連續時序追蹤涵蓋：1. 國際紙漿價格與長短纖價差走勢 (NBSK/BHKP/Spread)、2. 全球紙品價格與原料利差 ($840 極值變現與陸工紙兩輪提價)、3. 地緣能源與台廠蒸氣成本 (布蘭特 $74 築底 / 生質能替代 49% 鎖定 NT$718)、4. 全球海運運價指數 (SCFI 貨櫃與 BDI 散裝)、5. 核心外匯匯率走勢 (USD/TWD, USD/CNY, EUR/USD)、6. 台灣四大紙廠月營收與年增率 (1~9月全員營收揭曉迎 Q4 旺季)。
 6. **毛利敏感度動態試算器 (Sensitivity Simulator)**：
    - 即時模擬美廢進價、工紙售價與每噸蒸汽能耗成本對毛利率的影響。
 7. **全球法規倒數雷達 (Regulatory Milestones)**：
@@ -99,7 +97,11 @@ Paperluz/
     ├── PaperLuz-011_2026-10-09.{html,md,pdf}
     ├── PaperLuz-011_2026-10-09_EN.{html,md,pdf}
     ├── PaperLuz-012_2026-10-16.{html,md,pdf}
-    └── PaperLuz-012_2026-10-16_EN.{html,md,pdf}
+    ├── PaperLuz-012_2026-10-16_EN.{html,md,pdf}
+    ├── PaperLuz-013_2026-10-23.{html,md,pdf}
+    ├── PaperLuz-013_2026-10-23_EN.{html,md,pdf}
+    ├── PaperLuz-014_2026-10-30.{html,md,pdf}
+    └── PaperLuz-014_2026-10-30_EN.{html,md,pdf}
 ```
 
 ---
@@ -108,6 +110,8 @@ Paperluz/
 
 | 期數 | 出刊日期 | 中文版 (HTML / PDF / MD) | 英文版 (HTML / PDF / MD) | 主題焦點 |
 |:---:|:---:|:---:|:---:|:---|
+| **014** | 2026-10-30 | [HTML](./Reports/PaperLuz-014_2026-10-30.html) · [PDF](./Reports/PaperLuz-014_2026-10-30.pdf) · [MD](./Reports/PaperLuz-014_2026-10-30.md) | [HTML](./Reports/PaperLuz-014_2026-10-30_EN.html) · [PDF](./Reports/PaperLuz-014_2026-10-30_EN.pdf) · [MD](./Reports/PaperLuz-014_2026-10-30_EN.md) | 永豐餘與成大啟用「智慧能源微電網與碳排中控中心」生質能替代率突破 49.4%（鎖定蒸汽成本 NT$715/噸）× 北美 IP、Smurfit Westrock 與 PCA 三巨頭 Q3 財報全員超預期驗證 $842/t 歷史峰頂利差 × 中國工紙龍頭發布雙十一終輪提價函（累計 +150 元/噸）× 歐洲 Q4 長纖 NBSK 站上 $1,515 美元 × 歐盟 PFHxA 禁令首波邊境查驗零容忍 × EUDR 倒數 61 天 |
+| **013** | 2026-10-23 | [HTML](./Reports/PaperLuz-013_2026-10-23.html) · [PDF](./Reports/PaperLuz-013_2026-10-23.pdf) · [MD](./Reports/PaperLuz-013_2026-10-23.md) | [HTML](./Reports/PaperLuz-013_2026-10-23_EN.html) · [PDF](./Reports/PaperLuz-013_2026-10-23_EN.pdf) · [MD](./Reports/PaperLuz-013_2026-10-23_EN.md) | 北美箱板紙龍頭 PCA Q3 財報獲利超預期（驗證 $840 歷史峰頂利差轉化現金流）× 歐盟 PFHxA 全氟己酸禁令 10/18 正式強制生效開罰 × 售價走揚 華紙逆勢強漲 × 陸工紙龍頭兩輪提漲（+100元）全面落地雙十一補貨引爆國廢回升 × 台灣老紙廠以蕉麻紙紗躍登巴黎世家精品供應鏈 × 布蘭特原油於 $74 築底、台廠生質能替代率升至 49.0% 鎖定蒸氣成本 NT$718 |
 | **012** | 2026-10-16 | [HTML](./Reports/PaperLuz-012_2026-10-16.html) · [PDF](./Reports/PaperLuz-012_2026-10-16.pdf) · [MD](./Reports/PaperLuz-012_2026-10-16.md) | [HTML](./Reports/PaperLuz-012_2026-10-16_EN.html) · [PDF](./Reports/PaperLuz-012_2026-10-16_EN.pdf) · [MD](./Reports/PaperLuz-012_2026-10-16_EN.md) | 歐盟 PFHxA 禁令最後 48 小時生效 × 美緬因州控告 Huhtamaki 與 Sappi 污染水源 × 台灣四大紙廠 9 月營收全員出爐與雙 11 二輪提價 × IP 啟動 DS Smith 歐洲業務分拆或 60 億美元出售雙軌評估 × 日本製紙無鋁無塑內側印刷紙盒問世 |
 | **011** | 2026-10-09 | [HTML](./Reports/PaperLuz-011_2026-10-09.html) · [PDF](./Reports/PaperLuz-011_2026-10-09.pdf) · [MD](./Reports/PaperLuz-011_2026-10-09.md) | [HTML](./Reports/PaperLuz-011_2026-10-09_EN.html) · [PDF](./Reports/PaperLuz-011_2026-10-09_EN.pdf) · [MD](./Reports/PaperLuz-011_2026-10-09_EN.md) | 台灣工紙雙雄 9 月營收創高獲利翻正 × 歐盟 PFHxA 禁令最後 9 天倒數 × 巴克萊降評 UPM 示警新產能壓頂 × Suzano 10 月提漲 20 美元 × 中國工紙包裝微幅提漲 30–50 元 × 日資 1.1 億美元插旗越南同奈擴廠 |
 | **010** | 2026-10-02 | [HTML](./Reports/PaperLuz-010_2026-10-02.html) · [PDF](./Reports/PaperLuz-010_2026-10-02.pdf) · [MD](./Reports/PaperLuz-010_2026-10-02.md) | [HTML](./Reports/PaperLuz-010_2026-10-02_EN.html) · [PDF](./Reports/PaperLuz-010_2026-10-02_EN.pdf) · [MD](./Reports/PaperLuz-010_2026-10-02_EN.md) | Smurfit Westrock 4.2 億美元收購智利 CMPC 紙箱事業 × 台灣永豐餘與正隆衛生紙無漲價規劃 × 歐盟 PFHxA 禁令倒數 16 天 × Suzano 10月闊葉漿提漲新波瀾 × 北美 PCA 關閉俄亥俄紙器廠深化整併 × 中國白卡紙提價全面入帳 |
