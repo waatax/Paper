@@ -110,7 +110,7 @@ Paperluz/
 
 | 期數 | 出刊日期 | 中文版 (HTML / PDF / MD) | 英文版 (HTML / PDF / MD) | 主題焦點 |
 |:---:|:---:|:---:|:---:|:---|
-| **014** | 2026-10-30 | [HTML](./Reports/PaperLuz-014_2026-10-30.html) · [PDF](./Reports/PaperLuz-014_2026-10-30.pdf) · [MD](./Reports/PaperLuz-014_2026-10-30.md) | [HTML](./Reports/PaperLuz-014_2026-10-30_EN.html) · [PDF](./Reports/PaperLuz-014_2026-10-30_EN.pdf) · [MD](./Reports/PaperLuz-014_2026-10-30_EN.md) | 永豐餘與成大啟用「智慧能源微電網與碳排中控中心」生質能替代率突破 49.4%（鎖定蒸汽成本 NT$715/噸）× 北美 IP、Smurfit Westrock 與 PCA 三巨頭 Q3 財報全員超預期驗證 $842/t 歷史峰頂利差 × 中國工紙龍頭發布雙十一終輪提價函（累計 +150 元/噸）× 歐洲 Q4 長纖 NBSK 站上 $1,515 美元 × 歐盟 PFHxA 禁令首波邊境查驗零容忍 × EUDR 倒數 61 天 |
+| **014** | 2026-10-30 | [HTML](./Reports/PaperLuz-014_2026-10-30.html) · [PDF](./Reports/PaperLuz-014_2026-10-30.pdf) · [MD](./Reports/PaperLuz-014_2026-10-30.md) | [HTML](./Reports/PaperLuz-014_2026-10-30_EN.html) · [PDF](./Reports/PaperLuz-014_2026-10-30_EN.pdf) · [MD](./Reports/PaperLuz-014_2026-10-30_EN.md) | 全球漿王 Suzano 宣告 11 月起歐美闊葉漿再漲 $50/噸（歐洲牌價衝上 $1,410/噸）× 陸龍頭太陽紙業前三季歸母淨利大增 16.88%（Q3 淨利 9.21 億元）× 北美包裝雙雄業績分化：Smurfit Westrock Q3 因成本通膨重挫 10% 對比 PCA 93% 稼動率強勁變現 × 國際紙業 IP Q3 法說會證實加速推進 EMEA 業務倫敦分拆或 60 億美元出售 × 歐盟 PFHxA 禁令執法邁入常態化、華紙「益利疊」與眾鑫印尼 5 萬噸紙模塑外銷爆單 × 布蘭特原油於 $73.80 築底、台廠生質能替代率升至 49.2% 穩鎖蒸氣成本 NT$718 |
 | **013** | 2026-10-23 | [HTML](./Reports/PaperLuz-013_2026-10-23.html) · [PDF](./Reports/PaperLuz-013_2026-10-23.pdf) · [MD](./Reports/PaperLuz-013_2026-10-23.md) | [HTML](./Reports/PaperLuz-013_2026-10-23_EN.html) · [PDF](./Reports/PaperLuz-013_2026-10-23_EN.pdf) · [MD](./Reports/PaperLuz-013_2026-10-23_EN.md) | 北美箱板紙龍頭 PCA Q3 財報獲利超預期（驗證 $840 歷史峰頂利差轉化現金流）× 歐盟 PFHxA 全氟己酸禁令 10/18 正式強制生效開罰 × 售價走揚 華紙逆勢強漲 × 陸工紙龍頭兩輪提漲（+100元）全面落地雙十一補貨引爆國廢回升 × 台灣老紙廠以蕉麻紙紗躍登巴黎世家精品供應鏈 × 布蘭特原油於 $74 築底、台廠生質能替代率升至 49.0% 鎖定蒸氣成本 NT$718 |
 | **012** | 2026-10-16 | [HTML](./Reports/PaperLuz-012_2026-10-16.html) · [PDF](./Reports/PaperLuz-012_2026-10-16.pdf) · [MD](./Reports/PaperLuz-012_2026-10-16.md) | [HTML](./Reports/PaperLuz-012_2026-10-16_EN.html) · [PDF](./Reports/PaperLuz-012_2026-10-16_EN.pdf) · [MD](./Reports/PaperLuz-012_2026-10-16_EN.md) | 歐盟 PFHxA 禁令最後 48 小時生效 × 美緬因州控告 Huhtamaki 與 Sappi 污染水源 × 台灣四大紙廠 9 月營收全員出爐與雙 11 二輪提價 × IP 啟動 DS Smith 歐洲業務分拆或 60 億美元出售雙軌評估 × 日本製紙無鋁無塑內側印刷紙盒問世 |
 | **011** | 2026-10-09 | [HTML](./Reports/PaperLuz-011_2026-10-09.html) · [PDF](./Reports/PaperLuz-011_2026-10-09.pdf) · [MD](./Reports/PaperLuz-011_2026-10-09.md) | [HTML](./Reports/PaperLuz-011_2026-10-09_EN.html) · [PDF](./Reports/PaperLuz-011_2026-10-09_EN.pdf) · [MD](./Reports/PaperLuz-011_2026-10-09_EN.md) | 台灣工紙雙雄 9 月營收創高獲利翻正 × 歐盟 PFHxA 禁令最後 9 天倒數 × 巴克萊降評 UPM 示警新產能壓頂 × Suzano 10 月提漲 20 美元 × 中國工紙包裝微幅提漲 30–50 元 × 日資 1.1 億美元插旗越南同奈擴廠 |
@@ -156,10 +156,10 @@ Paperluz 支援將最新發布之產業情報自動寄送至訂閱者信箱（�
 
 ```bash
 # 本地 Dry-Run 模擬生成 HTML 預覽與檢查派送名冊 (不發送郵件)
-python Reports/send_newsletter.py --issue 009 --dry-run
+python Reports/send_newsletter.py --issue 014 --dry-run
 
 # 單一信箱測試寄送
-python Reports/send_newsletter.py --issue 009 --test-email user@example.com --lang zh
+python Reports/send_newsletter.py --issue 014 --test-email user@example.com --lang zh
 
 # 檢視目前資料庫訂閱者名冊
 python Reports/data/manage_db.py list-subscribers
